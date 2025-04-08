@@ -14,6 +14,8 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import Home from './layout/Home.tsx';
 import Dashboard from './features/Dashboard/Dashboard.tsx';
 import { ToastContainer } from 'react-toastify';
+import SellCar from './features/SellCar/SellCar.tsx';
+import BuyCar from './features/BuyCar/BuyCar.tsx';
 
 const stores = { authStore };
 const router = createBrowserRouter([
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <Dashboard />,
       },
+      {
+        path:"/sell-your-car",
+        element:<SellCar/>
+      },
+      {
+        path:"/buy-your-car",
+        element:<BuyCar/>
+      }
     ]
   },
   //NO sidebar or navbar pages

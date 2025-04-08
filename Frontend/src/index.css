@@ -5,3 +5,12 @@
 @tailwind utilities;
 
 
+.chevron-button .chevron-icon {
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .chevron-button:hover .chevron-icon {
+    opacity: 1;
+    transform: translateX(8px);
+  }

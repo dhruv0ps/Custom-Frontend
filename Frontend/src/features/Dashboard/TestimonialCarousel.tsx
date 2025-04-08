@@ -1,6 +1,6 @@
 import type React from "react"
 import { useRef } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import {  ChevronRight } from "lucide-react"
 
 import test1 from "@/assets/Review/Reviews-Sophie.webp"
 import test2 from "@/assets/Review/review1.webp"
@@ -18,6 +18,7 @@ import test13 from "@/assets/Review/review11.webp"
 import test14 from "@/assets/Review/review12.webp"
 import test15 from "@/assets/Review/review13.webp"
 import ausMap from "@/assets/Homepage/Layer_1.png"
+import { BiChevronLeft } from "react-icons/bi"
 const reviewImages = [
   test1,
   test2,
@@ -78,10 +79,10 @@ const ReviewCarousel: React.FC = () => {
           {/* Left Button */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 text-primary rounded-full p-2 shadow-lg transition-all"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 text-white rounded-full p-2 shadow-lg transition-all"
             aria-label="Scroll left"
           >
-            <ChevronLeft className="h-6 w-6" />
+            <BiChevronLeft className="h-6 w-6 text-white" />
           </button>
 
           {/* Scroll Container */}
