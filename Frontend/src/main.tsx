@@ -16,6 +16,8 @@ import Dashboard from './features/Dashboard/Dashboard.tsx';
 import { ToastContainer } from 'react-toastify';
 import SellCar from './features/SellCar/SellCar.tsx';
 import BuyCar from './features/BuyCar/BuyCar.tsx';
+import DemoPreOwnedCar from './features/Demo-PreOwned/DemoPreOwned.tsx';
+import Tradepromotion from './features/TradePromotion/Tradepromotion.tsx';
 
 const stores = { authStore };
 const router = createBrowserRouter([
@@ -34,6 +36,12 @@ const router = createBrowserRouter([
       {
         path:"/buy-your-car",
         element:<BuyCar/>
+      },  {
+        path:"/demo-pre-owned",
+        element:<DemoPreOwnedCar/>
+      },{
+        path:"/trade-promotion",
+        element:<Tradepromotion/>
       }
     ]
   },

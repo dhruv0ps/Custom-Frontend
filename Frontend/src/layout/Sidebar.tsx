@@ -4,11 +4,11 @@ interface SidebarProps {
   }
   
   const menuItems = [
-    { label: "All Services", href: "#", highlight: true },
-    { label: "Sell Your Car", href: "https://wheelz.au/sell-your-car/" },
-    { label: "Buy A New Car", href: "https://wheelz.au/buy-your-car/" },
-    { label: "Demo & Pre-Owned", href: "https://wheelz.au/demo-pre-owned/" },
-    { label: "Trade Promotion", href: "https://wheelz.au/trade-promotion/" },
+    { label: "All Services", href: "/", highlight: true },
+    { label: "Sell Your Car", href: "/sell-your-car" },
+    { label: "Buy A New Car", href: "/buy-your-car" },
+    { label: "Demo & Pre-Owned", href: "/demo-pre-owned" },
+    { label: "Trade Promotion", href: "/trade-promotion" },
     { label: "Virtual Tours", href: "https://wheelz.au/virtual-tours/" },
     { label: "Mates Rates", href: "https://wheelz.au/mates-rates-discounts/" },
     { label: "Membership", href: "https://wheelz.au/membership/" },

@@ -50,7 +50,7 @@ export default function Navbar() {
               />
             </Link>
 
-            {/* Desktop dropdown menu - hidden on mobile */}
+       
             <div className="hidden md:block">
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-2 px-6 py-2 rounded hover:bg-gray-100 text-sm font-medium text-gray-700">
@@ -78,7 +78,7 @@ export default function Navbar() {
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <Link
-                      to="https://wheelz.au/demo-pre-owned/"
+                      to="/demo-pre-owned"
                       className="block px-2 py-1 rounded hover:bg-gray-100"
                     >
                       Demo & Pre-Owned
@@ -86,7 +86,7 @@ export default function Navbar() {
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <Link
-                      to="https://wheelz.au/trade-promotion/"
+                      to="trade-promotion"
                       className="block px-2 py-1 rounded hover:bg-gray-100"
                     >
                       Trade Promotion

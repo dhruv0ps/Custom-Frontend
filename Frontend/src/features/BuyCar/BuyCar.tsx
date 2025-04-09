@@ -159,7 +159,7 @@ export default function BuyCar() {
                             </div>
                         </div>
 
-                        {/* Step 2 */}
+                        
                         <div className="flex items-start text-left gap-4 px-2">
                             <div className="text-[100px] md:text-[120px] font-extrabold leading-none text-white">2</div>
                             <div>
