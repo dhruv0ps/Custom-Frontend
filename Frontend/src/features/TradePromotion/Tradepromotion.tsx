@@ -6,7 +6,7 @@ import img2 from "@/assets/Join-Wheelz.webp";
 import img3 from "@/assets/Haapy-Customer-at-Wheelz-Australia.webp";
 import TradePromotionGrid from './TradePromotionGrid';
 import WhyChooseUs from './WhyChooseUs';
-import SellFooterSection from '../SellCar/SellFooterSection';
+import AllFooterSection from '@/util/AllFooterSection';
 const Tradepromotion: React.FC = () => {
   const navigate = useNavigate();
 
@@ -137,7 +137,15 @@ const Tradepromotion: React.FC = () => {
       </div>
       <TradePromotionGrid />
       <WhyChooseUs />
-      <SellFooterSection />
+      <AllFooterSection
+  content={[
+    `<strong>Important:</strong> The platform reserves the right to modify program terms and conditions, including rewards, redemption criteria, and associated policies, to ensure flexibility and adaptability. Any changes will be communicated to members in advance, maintaining transparency and enabling informed participation in the evolving program.`,
+
+    `Our trade promotion entries cannot be transferred or exchanged for any alternatives.`,
+
+    `All prizes awarded in the Trade Promotion comply fully with state regulations, ensuring that no individual prize exceeds the legal limits. For detailed information on prize limitations in your state, please refer to the <strong>Competition Terms</strong>.`,
+  ]}
+/>
     </>
   );
 }

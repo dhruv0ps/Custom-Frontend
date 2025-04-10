@@ -6,7 +6,7 @@ import gif1 from "@/assets/Stars.webp";
 import Video1 from "@/assets/Pre-Owned-Wheelz-Australia.mp4";
 import gif2 from "@/assets/Wheelz-Australia-Coming-Soon-icon.webp"
 import gif3 from "@/assets/Stars-icon.webp"
-import SellFooterSection from "../SellCar/SellFooterSection";
+
 import img11 from "@/assets/Mazda-Car.webp"
 import img12 from "@/assets/Mazda-Car-DJ-Series.png"
 import img13 from "@/assets/Ford-Car.webp"
@@ -19,6 +19,7 @@ import logo2 from "@/assets/Ford-Car-Logo.webp"
 import logo3 from "@/assets/Land-Rover-Car-Logo.webp"
 import logo4 from "@/assets/KIA-Car-Logo.webp"
 import logo5 from "@/assets/BMW-Car-Logo.webp"
+import AllFooterSection from "@/util/AllFooterSection";
 export default function DemoPreCar() {
   const navigate = useNavigate();
   const [state, setState] = useState("");
@@ -258,7 +259,9 @@ export default function DemoPreCar() {
     View All
   </button>
 </div>
-<SellFooterSection/>
+<AllFooterSection content={[
+  `Important: All information regarding demonstrator and pre-owned vehicles is provided directly by the dealership. We do not take responsibility for the accuracy, completeness, or reliability of this information. Deals for demonstrator and pre-owned vehicles are solely between the Buyer and the Seller, with no involvement from us in the negotiation, execution, or outcome of these deals.`
+]}/>
     </>
   );
 }

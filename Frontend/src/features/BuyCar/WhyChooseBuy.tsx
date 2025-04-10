@@ -32,7 +32,7 @@ export default function WhyChooseBuy() {
         {/* Left: Features */}
         <div>
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center md:text-left">
-            Why Selling With Us Is Your Smart Choice
+          Benefits Of Buying A Car With Us
           </h2>
           <ul className="space-y-6">
             {features.map((feature, idx) => (

@@ -18,6 +18,7 @@ import SellCar from './features/SellCar/SellCar.tsx';
 import BuyCar from './features/BuyCar/BuyCar.tsx';
 import DemoPreOwnedCar from './features/Demo-PreOwned/DemoPreOwned.tsx';
 import Tradepromotion from './features/TradePromotion/Tradepromotion.tsx';
+import VirtualTours from './features/virtual-tours/VirtualTours.tsx';
 
 const stores = { authStore };
 const router = createBrowserRouter([
@@ -42,6 +43,9 @@ const router = createBrowserRouter([
       },{
         path:"/trade-promotion",
         element:<Tradepromotion/>
+      },{
+        path:"/virtual-tours",
+        element:<VirtualTours/>
       }
     ]
   },

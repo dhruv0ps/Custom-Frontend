@@ -10,7 +10,7 @@ interface NewsVideoSectionProps {
 }
 
 export default function NewsSection({
-  videoId = "TMAlw9_LvYQ",
+  videoId = "Wk_nS9plbkQ",
   title = "The number one scam in Australia costing victims millions every year | A Current Affair",
   source = "A Current Affair",
   className,
@@ -39,11 +39,11 @@ export default function NewsSection({
               loading="lazy"
               title="The number one scam in Australia | A Current Affair"
               src="https://www.youtube.com/embed/Wk_nS9plbkQ?feature=oembed"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              name="fitvid0"
-              className="w-full h-full border-none"
+              className="absolute top-0 left-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                name="fitvid0"
             />
             ) : (
               <div className="absolute inset-0">

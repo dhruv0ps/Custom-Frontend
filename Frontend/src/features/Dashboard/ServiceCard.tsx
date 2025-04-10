@@ -127,59 +127,56 @@ const services = [
 ]
 export default function ServiceCards() {
   return (
-    <div className="container max-w-[1200px] mx-auto px-4 py-8">
-    {/* Mobile view - vertical stack */}
-    <div className="block lg:hidden space-y-4">
-      {services.map((service, index) => (
-        <Card
-          key={index}
-          className={`rounded-2xl flex flex-row lg:flex-col px-0 py-0 shadow-lg overflow-hidden ${
-            index < 5 ? "text-white" : "text-black"
-          }`}
-          style={{ backgroundColor: service.bg }}
-        >
-          <div className="flex flex-col items-center text-center w-full p-6">
-            <div className="w-16 h-16 mb-4 bg-white shadow-md rounded-lg flex items-center justify-center">
-              <img
-                src={service.image}
-                alt={service.title}
-                loading="lazy"
-                decoding="async"
-                className="w-14 h-14 object-contain"
-              />
-            </div>
-            
-            <h3 className="text-lg font-bold mb-2">
-              {service.title}
-            </h3>
-            
-            <p className="text-sm text-center mb-4">
-              {service.description.replace('\n', ' ')}
-            </p>
-            
-            {service.counterGif && (
-              <div className="my-2">
-                <img
-                  src={service.counterGif}
-                  alt="Counter"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-10 object-contain mx-auto"
-                />
-              </div>
-            )}
-            
-            <button
-              className={`mt-2 px-8 py-2 font-semibold text-sm rounded-full 
-                bg-white text-primary hover:bg-gray-50 
-                transition-transform hover:scale-105`}
-            >
-              {service.buttonText}
-            </button>
+    <div className="container max-w-full sm:max-w-[80%] mx-auto px-4 py-8">
+   <div className="block lg:hidden space-y-4">
+  {services.map((service, index) => (
+    <Card
+      key={index}
+      className={`rounded-2xl flex items-center px-4 py-4 shadow-lg overflow-hidden space-x-4 ${
+        index < 5 ? "text-white" : "text-black"
+      }`}
+      style={{ backgroundColor: service.bg }}
+    >
+      
+      <div className="flex-shrink-0 w-20 h-20 bg-white shadow-md rounded-lg flex items-center justify-center mr-4">
+        <img
+          src={service.image}
+          alt={service.title}
+          loading="lazy"
+          decoding="async"
+          className="w-16 h-16 object-contain"
+        />
+      </div>
+
+      {/* Content on the right */}
+      <div className="flex flex-col flex-grow justify-end">
+        <h3 className="text-base font-bold mb-1 text-right">{service.title}</h3>
+        <p className="text-sm mb-2  text-right">{service.description.replace('\n', ' ')}</p>
+
+        {service.counterGif && (
+          <div className="mb-2">
+            <img
+              src={service.counterGif}
+              alt="Counter"
+              loading="lazy"
+              decoding="async"
+              className="h-8 object-contain"
+            />
           </div>
-        </Card>
-      ))}
-    </div>
+        )}
+        <div className="flex justify-end">        <button
+          className={`mt-1 w-fit px-6 py-1.5 font-semibold text-xs rounded-full 
+            bg-white text-primary hover:bg-gray-100 transition-transform hover:scale-105 `}
+        >
+          {service.buttonText}
+        </button>
+        </div>
+
+      </div>
+    </Card>
+  ))}
+</div>
+
     
     {/* Desktop view - grid layout */}
     <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">

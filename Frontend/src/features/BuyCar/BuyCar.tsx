@@ -10,7 +10,8 @@ import img7 from "@/assets/SellCar/3-Buy-a-car.jpg"
 import NewsSection from "./NewsBuySection"
 import WhyChooseBuy from "./WhyChooseBuy"
 import { ChevronRight } from "lucide-react"
-import SellFooterSection from "../SellCar/SellFooterSection"
+
+import AllFooterSection from "@/util/AllFooterSection"
 export default function BuyCar() {
     return (
         <>
@@ -244,12 +245,18 @@ export default function BuyCar() {
                 </div>
             </div>
             <NewsSection
-                videoId="TMAlw9_LvYQ"
-                title="Student scammed out of almost $30,000 after online marketplace car scam"
-                source="9 News Australia"
+                videoId="Wk_nS9plbkQ"
+                title="The number one scam in Australia costing victims millions every year | A Current Affair"
+                source=" A Current Affair"
             />
             <WhyChooseBuy />
-            <SellFooterSection />
+            <AllFooterSection
+  content={[
+    `Important: The platform retains the right to adjust terms and conditions, including features and policies in the buying process. While our technology connects customers with optimal dealerships to enhance purchase discounts, it’s important to note that the decision to buy rests solely with the customer. Final sale amounts are mutually agreed upon with the dealership, and we play no role in the buyer’s decision making. Any modifications will be promptly communicated, ensuring transparency and a smooth experience for our valued buyers.`,
+
+    `<strong>Disclaimer:</strong> The video content embedded on this page is sourced from Channel 9, A Current Affair, and is publicly available on YouTube. The views, opinions, and statements expressed in the video are those of the original news organisation and do not necessarily reflect the views or opinions of this website or its owners. The inclusion of this video is solely for informational purposes and to provide relevant news coverage to our audience. We advise viewers to visit the original source for full context and further information. Any trademarks, service marks, or trade names mentioned in the video are the property of their respective owners.`
+  ]}
+/>
         </>
     )
 }

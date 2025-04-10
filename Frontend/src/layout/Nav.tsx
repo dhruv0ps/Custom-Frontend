@@ -93,7 +93,7 @@ export default function Navbar() {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="https://wheelz.au/virtual-tours/" className="block px-2 py-1 rounded hover:bg-gray-100">
+                    <Link to="/virtual-tours" className="block px-2 py-1 rounded hover:bg-gray-100">
                       Virtual Tours
                     </Link>
                   </DropdownMenuItem>

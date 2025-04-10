@@ -6,6 +6,7 @@ import img2 from "@/assets/Homepage/Demo-Pre-Owned-Services-by-Wheelz.webp"
 import img3 from "@/assets/Homepage/Mates-Rates-Services-by-Wheelz.webp"
 import img4 from "@/assets/Homepage/Membership-Services-by-Wheelz.webp"
 import img5 from "@/assets/Homepage/Sell-Your-Car-Services-by-Wheelz.webp"
+import img6 from "@/assets/Homepage/Trade-Promotion-Services-by-Wheelz.webp"
 
 import Typed from "react-typed"
 
@@ -13,7 +14,7 @@ import Typed from "react-typed"
 import { Button } from "@/components/ui/button"
 const slides = [
     {
-      img: img3,
+      img: img5,
      
     },
     {
@@ -25,7 +26,7 @@ const slides = [
      
     },
     {
-        img: img3,
+        img: img6,
       
     },
     {
@@ -33,15 +34,15 @@ const slides = [
      
     },
     {
-        img: img5,
+        img: img3,
      
     },
     {
-        img: img3,
+        img: img5,
     
     },
     {
-        img: img3,
+        img: img6,
     
     },
   ];
@@ -50,7 +51,7 @@ export default function HomeSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start", skipSnaps: false }, 
 
-    [Autoplay({ delay: 2000 })]
+    [Autoplay({ delay: 5000 })]
   )
   const [isTransitioning, setIsTransitioning] = React.useState(false);
 
@@ -79,14 +80,14 @@ export default function HomeSlider() {
     <div className="relative w-full">
     {/* Blue section - wider and more prominent */}
     <div className="bg-primary py-12 md:py-20 z-10 relative mb-6 px-6 md:px-12 lg:px-24 w-full">
-      <div className="text-left text-white max-w-[80%] md:max-w-3xl mx-auto md:ml-12">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-black">We empower you to,</h2>
+      <div className="text-left text-white max-w-full sm:max-w-[80%]  mx-auto md:ml-12">
+      <h2 className="text-[25px] font-bold leading-tight text-black">
+  We empower you to,
+</h2>
 
-        <p
-  className={`text-xl md:text-3xl text-white font-semibold transition-all duration-300 ease-in-out ${
-    isTransitioning
-      ? "opacity-0 -translate-y-2"
-      : "opacity-100 translate-y-0"
+<p
+  className={`text-[19px] font-semibold text-white transition-all duration-300 ease-in-out ${
+    isTransitioning ? "opacity-0 -translate-y-2" : "opacity-100 translate-y-0"
   }`}
 >
   <Typed
@@ -122,12 +123,13 @@ export default function HomeSlider() {
   />
 </p>
 
+
       </div>
     </div>
 
     {/* Carousel section - centered and responsive */}
     <div className="-mt-16 relative z-20 w-full px-4">
-      <div className="max-w-[80%] mx-auto overflow-hidden" ref={emblaRef}>
+      <div className="max-w-full sm:max-w-[80%] mx-auto  overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide, i) => (
             <div
