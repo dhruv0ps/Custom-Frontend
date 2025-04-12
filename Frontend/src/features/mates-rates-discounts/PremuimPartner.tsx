@@ -62,7 +62,7 @@ const PremiumPartner = () => {
 
   return (
     <div className="bg-[#1cbeff] py-16 px-4 mt-6">
-      <div className="max-w-[80%] mx-auto text-center text-white">
+      <div className=" max-w-full sm:max-w-[80%] mx-auto text-center text-white">
         <div className="flex justify-center items-center mb-6">
           <img
             src={logo}

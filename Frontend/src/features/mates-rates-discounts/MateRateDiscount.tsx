@@ -36,6 +36,8 @@ import img32 from "@/assets/MateRate/Buy-Car-Icon.png"
 import img33 from "@/assets/MateRate/Test-Drive-Icon.png"
 import img34 from "@/assets/MateRate/Demo-Used-Car.webp"
 import img35 from "@/assets/MateRate/soon.webp"
+
+import img40 from "@/assets/Discount-Offers-at-Wheelz-Australia-for-Mobile-Version.webp"
 import PremuimPartner from './PremuimPartner';
 import WhyChooseUs from './WhyChooseus';
 import AllFooterSection from '@/util/AllFooterSection';
@@ -99,7 +101,7 @@ const MateRateDiscount: React.FC = () => {
   <p className="text-gray-600 font-semibold mt-2 text-lg">Here’s Our Diverse Range Of Services</p>
 </div>
 
-<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 pb-16">
+<div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 pb-16">
   {[
   { name: "Mechanic", img: img1 },
   { name: "Tyres", img: img2 },
@@ -175,6 +177,23 @@ const MateRateDiscount: React.FC = () => {
       </div>
   
       </div>
+      <div className="block sm:hidden px-4 pb-6 bg-[#0E3F7B] ">
+       
+        <h2 className="text-white text-center text-3xl font-extrabold uppercase mb-3 mt-4 py-6">Unlock Your Saving</h2>
+  <div className="bg-[#ff3d00] text-white p-4 rounded-xl shadow">
+    <h3 className="font-bold text-lg uppercase text-end mb-2">MATES RATES</h3>
+    <p className="text-sm mb-4 text-end">
+      Members automatically qualify for exclusive discounts from our partners,
+      with great deals and special savings available year round.
+    </p>
+    <img
+      src={img40}
+      alt="Discounts"
+      className="w-full object-contain rounded"
+    />
+  </div>
+
+</div>
       <PremuimPartner/>
       <WhyChooseUs/>
       <AllFooterSection content={[
