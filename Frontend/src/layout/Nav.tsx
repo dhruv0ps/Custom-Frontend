@@ -99,7 +99,7 @@ export default function Navbar() {
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <Link
-                      to="https://wheelz.au/mates-rates-discounts/"
+                      to="/mates-rates-discounts"
                       className="block px-2 py-1 rounded hover:bg-gray-100"
                     >
                       Mates Rates

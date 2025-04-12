@@ -10,7 +10,7 @@ interface SidebarProps {
     { label: "Demo & Pre-Owned", href: "/demo-pre-owned" },
     { label: "Trade Promotion", href: "/trade-promotion" },
     { label: "Virtual Tours", href: "/virtual-tours" },
-    { label: "Mates Rates", href: "https://wheelz.au/mates-rates-discounts/" },
+    { label: "Mates Rates", href: "/mates-rates-discounts" },
     { label: "Membership", href: "https://wheelz.au/membership/" },
     { label: "Finance", href: "https://wheelz.au/finance/" },
     { label: "Insurance", href: "https://wheelz.au/insurance/" },
