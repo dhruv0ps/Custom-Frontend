@@ -1,40 +1,42 @@
-import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
-import { ChevronDown, Home, Menu, X } from "lucide-react"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Sidebar } from "./Sidebar"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { ChevronDown, Home, Menu } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen)
-  }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10)
-    }
+      setScrolled(window.scrollY > 10);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  // Prevent scrolling when sidebar is open
   useEffect(() => {
-    if (isSidebarOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = ""
-    }
+    const handleOutsideClick = (e: any) => {
+      if (isMenuOpen && 
+          !e.target.closest('.mobile-menu') && 
+          !e.target.closest('.mobile-menu-button')) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
     return () => {
-      document.body.style.overflow = ""
-    }
-  }, [isSidebarOpen])
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [isMenuOpen]);
 
   return (
-    <>
+    <div className="relative">
       <header
         className={`bg-white shadow border-b sticky top-0 left-0 right-0 z-40 transition-all duration-300 ease-in-out ${
           scrolled ? "py-3" : "py-6"
@@ -50,7 +52,6 @@ export default function Navbar() {
               />
             </Link>
 
-       
             <div className="hidden md:block">
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-2 px-6 py-2 rounded hover:bg-gray-100 text-sm font-medium text-gray-700">
@@ -66,107 +67,65 @@ export default function Navbar() {
                     borderTopWidth: "4px",
                   }}
                 >
-                  <DropdownMenuItem asChild>
-                    <Link to="/sell-your-car" className="block px-2 py-1 rounded hover:bg-gray-100">
-                      Sell Your Car
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/buy-your-car" className="block px-2 py-1 rounded hover:bg-gray-100">
-                      Buy A New Car
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link
-                      to="/demo-pre-owned"
-                      className="block px-2 py-1 rounded hover:bg-gray-100"
-                    >
-                      Demo & Pre-Owned
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link
-                      to="trade-promotion"
-                      className="block px-2 py-1 rounded hover:bg-gray-100"
-                    >
-                      Trade Promotion
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/virtual-tours" className="block px-2 py-1 rounded hover:bg-gray-100">
-                      Virtual Tours
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link
-                      to="/mates-rates-discounts"
-                      className="block px-2 py-1 rounded hover:bg-gray-100"
-                    >
-                      Mates Rates
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="https://wheelz.au/membership/" className="block px-2 py-1 rounded hover:bg-gray-100">
-                      Membership
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="https://wheelz.au/finance/" className="block px-2 py-1 rounded hover:bg-gray-100">
-                      Finance
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="https://wheelz.au/insurance/" className="block px-2 py-1 rounded hover:bg-gray-100">
-                      Insurance
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="https://wheelz.au/fleet/" className="block px-2 py-1 rounded hover:bg-gray-100">
-                      Fleet
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="https://wheelz.au/overhauled-2/" className="block px-2 py-1 rounded hover:bg-gray-100">
-                      Overhauled
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="https://wheelz.au/fundraisers/" className="block px-2 py-1 rounded hover:bg-gray-100">
-                      Charities
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link
-                      to="https://wheelz.au/prize-draw-winners/"
-                      className="block px-2 py-1 rounded hover:bg-gray-100"
-                    >
-                      Prize Draw Winners
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link
-                      to="https://wheelz.au/business-partners/"
-                      className="block px-2 py-1 rounded hover:bg-gray-100"
-                    >
-                      Business Partners
-                    </Link>
-                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/sell-your-car" className="block px-2 py-1 rounded hover:bg-gray-100">Sell Your Car</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/buy-your-car" className="block px-2 py-1 rounded hover:bg-gray-100">Buy A New Car</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/demo-pre-owned" className="block px-2 py-1 rounded hover:bg-gray-100">Demo & Pre-Owned</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/trade-promotion" className="block px-2 py-1 rounded hover:bg-gray-100">Trade Promotion</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/virtual-tours" className="block px-2 py-1 rounded hover:bg-gray-100">Virtual Tours</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/mates-rates-discounts" className="block px-2 py-1 rounded hover:bg-gray-100">Mates Rates</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/membership" className="block px-2 py-1 rounded hover:bg-gray-100">Membership</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/finance" className="block px-2 py-1 rounded hover:bg-gray-100">Finance</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="https://wheelz.au/insurance/" className="block px-2 py-1 rounded hover:bg-gray-100">Insurance</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="https://wheelz.au/fleet/" className="block px-2 py-1 rounded hover:bg-gray-100">Fleet</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="https://wheelz.au/overhauled-2/" className="block px-2 py-1 rounded hover:bg-gray-100">Overhauled</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="https://wheelz.au/fundraisers/" className="block px-2 py-1 rounded hover:bg-gray-100">Charities</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="https://wheelz.au/prize-draw-winners/" className="block px-2 py-1 rounded hover:bg-gray-100">Prize Draw Winners</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="https://wheelz.au/business-partners/" className="block px-2 py-1 rounded hover:bg-gray-100">Business Partners</Link></DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
 
-            {/* Mobile menu button */}
-            <button className="text-gray-700 p-2 md:hidden" onClick={toggleSidebar} aria-label="Toggle Sidebar">
-              {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
+            <button 
+              className="text-gray-700 p-2 md:hidden mobile-menu-button" 
+              onClick={toggleMenu} 
+              aria-label="Toggle Menu"
+            >
+              <Menu size={24} />
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile sidebar */}
-      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-    </>
-  )
+      {isMenuOpen && (
+        <div className="absolute top-full left-0 right-0 bg-white shadow-lg z-50 md:hidden mobile-menu">
+          <div className="bg-white py-2">
+            <Link to="/" className="block px-4 py-2 hover:bg-gray-100">
+              <div className="flex items-center">
+                <Home className="mr-2" size={16} />
+                Home
+              </div>
+            </Link>
+
+            <div className="border-t border-gray-100 my-2"></div>
+            <h3 className="px-4 py-2 text-sm font-medium text-gray-500">All Services</h3>
+
+            <Link to="/sell-your-car" className="block px-4 py-2 hover:bg-gray-100">Sell Your Car</Link>
+            <Link to="/buy-your-car" className="block px-4 py-2 hover:bg-gray-100">Buy A New Car</Link>
+            <Link to="/demo-pre-owned" className="block px-4 py-2 hover:bg-gray-100">Demo & Pre-Owned</Link>
+            <Link to="/trade-promotion" className="block px-4 py-2 hover:bg-gray-100">Trade Promotion</Link>
+            <Link to="/virtual-tours" className="block px-4 py-2 hover:bg-gray-100">Virtual Tours</Link>
+            <Link to="/mates-rates-discounts" className="block px-4 py-2 hover:bg-gray-100">Mates Rates</Link>
+            <Link to="/membership" className="block px-4 py-2 hover:bg-gray-100">Membership</Link>
+            <Link to="/finance" className="block px-4 py-2 hover:bg-gray-100">Finance</Link>
+            <Link to="https://wheelz.au/insurance/" className="block px-4 py-2 hover:bg-gray-100">Insurance</Link>
+            <Link to="https://wheelz.au/fleet/" className="block px-4 py-2 hover:bg-gray-100">Fleet</Link>
+            <Link to="https://wheelz.au/overhauled-2/" className="block px-4 py-2 hover:bg-gray-100">Overhauled</Link>
+            <Link to="https://wheelz.au/fundraisers/" className="block px-4 py-2 hover:bg-gray-100">Charities</Link>
+            <Link to="https://wheelz.au/prize-draw-winners/" className="block px-4 py-2 hover:bg-gray-100">Prize Draw Winners</Link>
+            <Link to="https://wheelz.au/business-partners/" className="block px-4 py-2 hover:bg-gray-100">Business Partners</Link>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
-
-

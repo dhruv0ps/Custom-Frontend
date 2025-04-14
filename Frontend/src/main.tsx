@@ -20,6 +20,8 @@ import DemoPreOwnedCar from './features/Demo-PreOwned/DemoPreOwned.tsx';
 import Tradepromotion from './features/TradePromotion/Tradepromotion.tsx';
 import VirtualTours from './features/virtual-tours/VirtualTours.tsx';
 import MateRateDiscount from './features/mates-rates-discounts/MateRateDiscount.tsx';
+import Membership from './features/Membership/Membership.tsx';
+import Finance from './features/Finance/Finance.tsx';
 
 const stores = { authStore };
 const router = createBrowserRouter([
@@ -50,6 +52,13 @@ const router = createBrowserRouter([
       },{
         path:"/mates-rates-discounts",
         element:<MateRateDiscount/>
+      },{
+        path:"/membership",
+        element :<Membership/>
+      },{
+        path:"finance",
+        element:<Finance/>
+
       }
     ]
   },

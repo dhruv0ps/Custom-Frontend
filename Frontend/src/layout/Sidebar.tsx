@@ -1,52 +1,69 @@
-interface SidebarProps {
-    isOpen: boolean
-    onClose: () => void
-  }
-  
-  const menuItems = [
-    { label: "All Services", href: "/", highlight: true },
-    { label: "Sell Your Car", href: "/sell-your-car" },
-    { label: "Buy A New Car", href: "/buy-your-car" },
-    { label: "Demo & Pre-Owned", href: "/demo-pre-owned" },
-    { label: "Trade Promotion", href: "/trade-promotion" },
-    { label: "Virtual Tours", href: "/virtual-tours" },
-    { label: "Mates Rates", href: "/mates-rates-discounts" },
-    { label: "Membership", href: "https://wheelz.au/membership/" },
-    { label: "Finance", href: "https://wheelz.au/finance/" },
-    { label: "Insurance", href: "https://wheelz.au/insurance/" },
-    { label: "Fleet", href: "https://wheelz.au/fleet/" },
-    { label: "Overhauled", href: "https://wheelz.au/overhauled-2/" },
-    { label: "Charities", href: "https://wheelz.au/fundraisers/" },
-    { label: "Prize Draw Winners", href: "https://wheelz.au/prize-draw-winners/" },
-    { label: "Business Partners", href: "https://wheelz.au/business-partners/" },
-  ]
-  
-  export function Sidebar({ isOpen, onClose }: SidebarProps) {
-    if (!isOpen) return null
-  
-    return (
-      <div className="fixed inset-0 z-50 bg-white overflow-y-auto transition-transform duration-300 ease-in-out md:hidden">
-        <nav className="py-6 px-4">
-          <ul className="space-y-1">
-            {menuItems.map((item, index) => (
-              <li key={index}>
-                <a
-                  href={item.href}
-                  onClick={onClose}
-                  className={`block px-4 py-3 text-sm font-medium rounded-md ${
-                    item.highlight
-                      ? "bg-gray-100 text-black font-semibold"
-                      : "hover:bg-gray-50"
-                  }`}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+import { Link } from "react-router-dom";
+
+
+interface MobileSidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export function MobileSidebar({ isOpen, onClose }: MobileSidebarProps) {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed top-[70px] left-0 right-0 z-50 bg-white shadow-lg rounded-b-lg mx-auto max-w-md">
+      <div className="overflow-y-auto max-h-[80vh] py-2">
+        <div className="flex flex-col">
+          <Link to="/" className="flex items-center px-6 py-3 hover:bg-gray-100" onClick={onClose}>
+            <span className="text-gray-700">Home</span>
+          </Link>
+          
+          <div className="border-t border-gray-100 my-2"></div>
+          <h3 className="px-6 py-2 text-sm font-medium text-gray-500">All Services</h3>
+          
+          <Link to="/sell-your-car" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Sell Your Car
+          </Link>
+          <Link to="/buy-your-car" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Buy A New Car
+          </Link>
+          <Link to="/demo-pre-owned" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Demo & Pre-Owned
+          </Link>
+          <Link to="/trade-promotion" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Trade Promotion
+          </Link>
+          <Link to="/virtual-tours" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Virtual Tours
+          </Link>
+          <Link to="/mates-rates-discounts" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Mates Rates
+          </Link>
+          <Link to="https://wheelz.au/membership/" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Membership
+          </Link>
+          <Link to="https://wheelz.au/finance/" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Finance
+          </Link>
+          <Link to="https://wheelz.au/insurance/" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Insurance
+          </Link>
+          <Link to="https://wheelz.au/fleet/" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Fleet
+          </Link>
+          <Link to="https://wheelz.au/overhauled-2/" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Overhauled
+          </Link>
+          <Link to="https://wheelz.au/fundraisers/" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Charities
+          </Link>
+          <Link to="https://wheelz.au/prize-draw-winners/" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Prize Draw Winners
+          </Link>
+          <Link to="https://wheelz.au/business-partners/" onClick={onClose} className="px-6 py-3 hover:bg-gray-100">
+            Business Partners
+          </Link>
+        </div>
       </div>
-    )
-  }
-  
-  
+    </div>
+  );
+}

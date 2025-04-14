@@ -149,9 +149,10 @@ const VirtualTours: React.FC = () => {
     </div>
     <div className="bg-[#0e3f80] py-12">
                 <div className="max-w-[80%]  mx-auto text-center">
-                    <h2 className="text-2xl text-[#1cbeff] md:text-3xl font-bold mb-12">Putting You First</h2>
-
-
+                    <h2 className="text-2xl text-[#1cbeff] md:text-3xl font-bold ">Virtual Tours
+                   </h2>
+                    <h4 className='mb-12 text-white font-semibold'>Explore The Future Of Car Shopping Today</h4>
+                   
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
                         {/* Feature Card 1 */}
                         <div className="flex flex-col items-center text-center">
@@ -179,7 +180,7 @@ const VirtualTours: React.FC = () => {
                         <div className="flex flex-col items-center text-center">
                             <img src={img3} alt="Connection Icon" className="rounded-xl shadow-md mb-4 w-[107px] h-[107px] object-contain bg-white" />
                             <h3 className="font-bold text-sm mb-2 text-[#1cbeff]">Comprehensive Selection</h3>
-                            <p className="text-sm text-gray-700 px-2">
+                            <p className="text-sm text-white px-2">
                             Explore a wide range of vehicles virtually, allowing you to compare and contrast different models effortlessly
                             </p>
                         </div>
@@ -188,7 +189,7 @@ const VirtualTours: React.FC = () => {
                         <div className="flex flex-col items-center text-center">
                             <img src={img4} alt="Network Icon" className="rounded-xl shadow-md mb-4 w-[107px] h-[107px] object-contain bg-white" />
                             <h3 className="font-bold text-sm mb-2 text-[#1cbeff]">Expert Guidance</h3>
-                            <p className="text-sm text-gray-700 px-2">
+                            <p className="text-sm text-white px-2">
                             Receive expert guidance and insights during virtual tours to make informed decisions about your next purchase
                             </p>
                         </div>
@@ -203,7 +204,7 @@ const VirtualTours: React.FC = () => {
                 <span className="text-primary">CONVENIENCE</span>
               </h2>
             </div>
-            <button className="group relative px-6 py-3 font-semibold text-base rounded-full bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden transition">
+            <button className="group relative px-6 py-3 font-semibold text-base rounded-full bg-primary text-white border border-primary shadow hover:scale-105 overflow-hidden transition">
               <span className="block group-hover:opacity-0 transition-opacity duration-200">View All</span>
               <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
               View All <span className="ml-1"><ChevronRight/></span>
