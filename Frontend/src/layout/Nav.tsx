@@ -10,7 +10,9 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  const handleNavLinkClick = () => {
+    setIsMenuOpen(false);
+  };
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -75,9 +77,9 @@ export default function Navbar() {
                   <DropdownMenuItem asChild><Link to="/mates-rates-discounts" className="block px-2 py-1 rounded hover:bg-gray-100">Mates Rates</Link></DropdownMenuItem>
                   <DropdownMenuItem asChild><Link to="/membership" className="block px-2 py-1 rounded hover:bg-gray-100">Membership</Link></DropdownMenuItem>
                   <DropdownMenuItem asChild><Link to="/finance" className="block px-2 py-1 rounded hover:bg-gray-100">Finance</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="https://wheelz.au/insurance/" className="block px-2 py-1 rounded hover:bg-gray-100">Insurance</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="https://wheelz.au/fleet/" className="block px-2 py-1 rounded hover:bg-gray-100">Fleet</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="https://wheelz.au/overhauled-2/" className="block px-2 py-1 rounded hover:bg-gray-100">Overhauled</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/insurance" className="block px-2 py-1 rounded hover:bg-gray-100">Insurance</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/fleet" className="block px-2 py-1 rounded hover:bg-gray-100">Fleet</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/overhauled-2/" className="block px-2 py-1 rounded hover:bg-gray-100">Overhauled</Link></DropdownMenuItem>
                   <DropdownMenuItem asChild><Link to="https://wheelz.au/fundraisers/" className="block px-2 py-1 rounded hover:bg-gray-100">Charities</Link></DropdownMenuItem>
                   <DropdownMenuItem asChild><Link to="https://wheelz.au/prize-draw-winners/" className="block px-2 py-1 rounded hover:bg-gray-100">Prize Draw Winners</Link></DropdownMenuItem>
                   <DropdownMenuItem asChild><Link to="https://wheelz.au/business-partners/" className="block px-2 py-1 rounded hover:bg-gray-100">Business Partners</Link></DropdownMenuItem>
@@ -97,35 +99,36 @@ export default function Navbar() {
       </header>
 
       {isMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white shadow-lg z-50 md:hidden mobile-menu">
-          <div className="bg-white py-2">
-            <Link to="/" className="block px-4 py-2 hover:bg-gray-100">
-              <div className="flex items-center">
-                <Home className="mr-2" size={16} />
-                Home
-              </div>
-            </Link>
-
-            <div className="border-t border-gray-100 my-2"></div>
-            <h3 className="px-4 py-2 text-sm font-medium text-gray-500">All Services</h3>
-
-            <Link to="/sell-your-car" className="block px-4 py-2 hover:bg-gray-100">Sell Your Car</Link>
-            <Link to="/buy-your-car" className="block px-4 py-2 hover:bg-gray-100">Buy A New Car</Link>
-            <Link to="/demo-pre-owned" className="block px-4 py-2 hover:bg-gray-100">Demo & Pre-Owned</Link>
-            <Link to="/trade-promotion" className="block px-4 py-2 hover:bg-gray-100">Trade Promotion</Link>
-            <Link to="/virtual-tours" className="block px-4 py-2 hover:bg-gray-100">Virtual Tours</Link>
-            <Link to="/mates-rates-discounts" className="block px-4 py-2 hover:bg-gray-100">Mates Rates</Link>
-            <Link to="/membership" className="block px-4 py-2 hover:bg-gray-100">Membership</Link>
-            <Link to="/finance" className="block px-4 py-2 hover:bg-gray-100">Finance</Link>
-            <Link to="https://wheelz.au/insurance/" className="block px-4 py-2 hover:bg-gray-100">Insurance</Link>
-            <Link to="https://wheelz.au/fleet/" className="block px-4 py-2 hover:bg-gray-100">Fleet</Link>
-            <Link to="https://wheelz.au/overhauled-2/" className="block px-4 py-2 hover:bg-gray-100">Overhauled</Link>
-            <Link to="https://wheelz.au/fundraisers/" className="block px-4 py-2 hover:bg-gray-100">Charities</Link>
-            <Link to="https://wheelz.au/prize-draw-winners/" className="block px-4 py-2 hover:bg-gray-100">Prize Draw Winners</Link>
-            <Link to="https://wheelz.au/business-partners/" className="block px-4 py-2 hover:bg-gray-100">Business Partners</Link>
-          </div>
+  <div className="absolute top-full left-0 right-0 bg-white shadow-lg z-50 md:hidden mobile-menu">
+    <div className="bg-white py-2">
+      <Link to="/" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">
+        <div className="flex items-center">
+          <Home className="mr-2" size={16} />
+          Home
         </div>
-      )}
+      </Link>
+
+      <div className="border-t border-gray-100 my-2"></div>
+      <h3 className="px-4 py-2 text-sm font-medium text-gray-500">All Services</h3>
+
+      <Link to="/sell-your-car" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Sell Your Car</Link>
+      <Link to="/buy-your-car" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Buy A New Car</Link>
+      <Link to="/demo-pre-owned" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Demo & Pre-Owned</Link>
+      <Link to="/trade-promotion" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Trade Promotion</Link>
+      <Link to="/virtual-tours" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Virtual Tours</Link>
+      <Link to="/mates-rates-discounts" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Mates Rates</Link>
+      <Link to="/membership" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Membership</Link>
+      <Link to="/finance" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Finance</Link>
+      <Link to="/insurance" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Insurance</Link>
+      <Link to="/fleet" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Fleet</Link>
+      <Link to="/overhauled" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Overhauled</Link>
+      <Link to="https://wheelz.au/fundraisers/" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Charities</Link>
+      <Link to="https://wheelz.au/prize-draw-winners/" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Prize Draw Winners</Link>
+      <Link to="https://wheelz.au/business-partners/" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Business Partners</Link>
+    </div>
+  </div>
+)}
+
     </div>
   );
 }

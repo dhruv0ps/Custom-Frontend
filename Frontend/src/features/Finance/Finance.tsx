@@ -110,7 +110,7 @@ const Finance:React.FC = () => {
 </div>
 <WhyChooseUs/>
 <AllFooterSection content={[
-    `mportant: It’s vital to emphasise that while finance offers many advantages, maintaining responsible and ethical financial practices is crucial for long-term sustainability and positive outcomes. These benefits listed above are merely examples and are subject to individual financial circumstances and policy arrangements. For personalised guidance, it’s advisable to seek professional financial advice tailored to your specific situation, ensuring informed decision-making.`
+    `Important: It’s vital to emphasise that while finance offers many advantages, maintaining responsible and ethical financial practices is crucial for long-term sustainability and positive outcomes. These benefits listed above are merely examples and are subject to individual financial circumstances and policy arrangements. For personalised guidance, it’s advisable to seek professional financial advice tailored to your specific situation, ensuring informed decision-making.`
 ]}/>
     </>
   )

@@ -22,6 +22,9 @@ import VirtualTours from './features/virtual-tours/VirtualTours.tsx';
 import MateRateDiscount from './features/mates-rates-discounts/MateRateDiscount.tsx';
 import Membership from './features/Membership/Membership.tsx';
 import Finance from './features/Finance/Finance.tsx';
+import Insurance from './features/Insurance/Insurance.tsx';
+import Fleet from './features/Fleet/Fleet.tsx';
+import Overhauled from './features/overhauled-2/Overhauled.tsx';
 
 const stores = { authStore };
 const router = createBrowserRouter([
@@ -56,9 +59,18 @@ const router = createBrowserRouter([
         path:"/membership",
         element :<Membership/>
       },{
-        path:"finance",
+        path:"/finance",
         element:<Finance/>
 
+      },{
+        path:"/insurance",
+        element  : <Insurance/>
+      },{
+        path:"/fleet",
+        element: <Fleet/>
+      },{
+        path:"/overhauled",
+        element:<Overhauled/>
       }
     ]
   },
