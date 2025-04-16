@@ -25,6 +25,8 @@ import Finance from './features/Finance/Finance.tsx';
 import Insurance from './features/Insurance/Insurance.tsx';
 import Fleet from './features/Fleet/Fleet.tsx';
 import Overhauled from './features/overhauled-2/Overhauled.tsx';
+import Fundraisers from './features/Fundraiser/Fundraisers.tsx';
+import Prizedrawwinners from './features/prize-draw-winners/Prizedrawwinners.tsx';
 
 const stores = { authStore };
 const router = createBrowserRouter([
@@ -71,6 +73,12 @@ const router = createBrowserRouter([
       },{
         path:"/overhauled",
         element:<Overhauled/>
+      },{
+        path:"/fundraisers",
+        element:<Fundraisers/>
+      },{
+        path:"/prize-draw-winners",
+        element:<Prizedrawwinners/>
       }
     ]
   },

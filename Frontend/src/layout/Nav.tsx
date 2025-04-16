@@ -79,9 +79,9 @@ export default function Navbar() {
                   <DropdownMenuItem asChild><Link to="/finance" className="block px-2 py-1 rounded hover:bg-gray-100">Finance</Link></DropdownMenuItem>
                   <DropdownMenuItem asChild><Link to="/insurance" className="block px-2 py-1 rounded hover:bg-gray-100">Insurance</Link></DropdownMenuItem>
                   <DropdownMenuItem asChild><Link to="/fleet" className="block px-2 py-1 rounded hover:bg-gray-100">Fleet</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/overhauled-2/" className="block px-2 py-1 rounded hover:bg-gray-100">Overhauled</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="https://wheelz.au/fundraisers/" className="block px-2 py-1 rounded hover:bg-gray-100">Charities</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="https://wheelz.au/prize-draw-winners/" className="block px-2 py-1 rounded hover:bg-gray-100">Prize Draw Winners</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/overhauled" className="block px-2 py-1 rounded hover:bg-gray-100">Overhauled</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/fundraisers" className="block px-2 py-1 rounded hover:bg-gray-100">Charities</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/prize-draw-winners" className="block px-2 py-1 rounded hover:bg-gray-100">Prize Draw Winners</Link></DropdownMenuItem>
                   <DropdownMenuItem asChild><Link to="https://wheelz.au/business-partners/" className="block px-2 py-1 rounded hover:bg-gray-100">Business Partners</Link></DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -99,7 +99,7 @@ export default function Navbar() {
       </header>
 
       {isMenuOpen && (
-  <div className="absolute top-full left-0 right-0 bg-white shadow-lg z-50 md:hidden mobile-menu">
+  <div className="absolute top-full left-0 right-0 ml-10 mr-10 bg-white shadow-lg z-50 md:hidden mobile-menu border-t-4 border-[#1cbeff]">
     <div className="bg-white py-2">
       <Link to="/" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">
         <div className="flex items-center">
@@ -108,7 +108,7 @@ export default function Navbar() {
         </div>
       </Link>
 
-      <div className="border-t border-gray-100 my-2"></div>
+      <div className="border-t border-gray-100 text-[#] my-2"></div>
       <h3 className="px-4 py-2 text-sm font-medium text-gray-500">All Services</h3>
 
       <Link to="/sell-your-car" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Sell Your Car</Link>
@@ -122,8 +122,8 @@ export default function Navbar() {
       <Link to="/insurance" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Insurance</Link>
       <Link to="/fleet" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Fleet</Link>
       <Link to="/overhauled" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Overhauled</Link>
-      <Link to="https://wheelz.au/fundraisers/" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Charities</Link>
-      <Link to="https://wheelz.au/prize-draw-winners/" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Prize Draw Winners</Link>
+      <Link to="/fundraisers" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Charities</Link>
+      <Link to="/prize-draw-winners" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Prize Draw Winners</Link>
       <Link to="https://wheelz.au/business-partners/" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Business Partners</Link>
     </div>
   </div>
