@@ -1,51 +1,65 @@
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
-import img1 from "@/assets/Homepage/Buy-New-Car-by-Wheelz-Australia.webp"
-import img2 from "@/assets/Homepage/Demo-Pre-Owned-Services-by-Wheelz.webp"
-import img3 from "@/assets/Homepage/Mates-Rates-Services-by-Wheelz.webp"
-import img4 from "@/assets/Homepage/Membership-Services-by-Wheelz.webp"
-import img5 from "@/assets/Homepage/Sell-Your-Car-Services-by-Wheelz.webp"
-import img6 from "@/assets/Homepage/Trade-Promotion-Services-by-Wheelz.webp"
-
+import img1 from "@/assets/Become-Member/VIP.png";
+import img2 from "@/assets/Become-Member/RegistrationRequest.png";
+import img3 from "@/assets/SellYourCar.png";
+import img4 from "@/assets/BuyNewCar.png";
+import img5 from "@/assets/Dealer Demo/dealerDemo.jpg";
+import img6 from "@/assets/MateRates.png";
+import img7 from "@/assets/Trade Promotion/tradePromotionHeader.jpg";
+import img8 from "@/assets/Virtual Tour/virtualTour.jpg";
+import img9 from "@/assets/Finance/finance.jpg";
+import img10 from "@/assets/Insurance/Insurance.jpg";
+import img11 from "@/assets/Overhauled/overhauled.jpg";
+import img12 from "@/assets/Charity/Charity.jpg";
+import img13 from "@/assets/Savings/Saving.jpg";
+import img14 from "@/assets/Reports1.jpg";
+import img15 from "@/assets/FleetManagement.png";
 import Typed from "react-typed"
 
 
 import { Button } from "@/components/ui/button"
-const slides = [
-    {
-      img: img5,
-     
-    },
-    {
-        img: img1,
-     
-    },
-    {
-        img: img2,
-     
-    },
-    {
-        img: img6,
-      
-    },
-    {
-        img: img4,
-     
-    },
-    {
-        img: img3,
-     
-    },
-    {
-        img: img5,
-    
-    },
-    {
-        img: img6,
-    
-    },
-  ];
+const images = [
+  img1,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12,
+  img2,
+  img15,
+  img13,
+  img14,
+];
+const texts = [
+  { heading: "Membership", route: "/become-member/membership" },
+  { heading: "Sell Your Car", route: "/sell/rego" },
+  { heading: "Buy A New Car", route: "/buy" },
+  { heading: "Demo & Pre-owned", route: "/demo-preowned" },
+  { heading: "Mates Rates", route: "/mates-rates" },
+  { heading: "Trade Promotion Draws", route: "/trade-promotion" },
+  { heading: "Virtual Tours", route: "/request-virtual-tour" },
+  { heading: "Finance", route: "/finance" },
+  { heading: "Insurance", route: "/insurance" },
+  { heading: "Overhauled Competition", route: "/overhauled" },
+  { heading: "We Support Charities", route: "/charities" },
+  {
+    heading: "Premium Partners",
+    route: "/business-partner/register-partner",
+  },
+  {
+    heading: "Fleet Enquiry",
+    route: "/business-partner/fleet-management",
+  },
+  { heading: "Registered Vehicle Tracker", route: "/savings-tracker" },
+  { heading: "Total Activity Report", route: "/my-reports" },
+];
   
 export default function HomeSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -80,7 +94,7 @@ export default function HomeSlider() {
     <div className="relative w-full">
     {/* Blue section - wider and more prominent */}
     <div className="bg-primary py-12 md:py-20 z-10 relative mb-6 px-6 md:px-12 lg:px-24 w-full">
-      <div className="text-left text-white max-w-full sm:max-w-[80%]  mx-auto md:ml-12">
+      <div className="text-left text-white max-w-full sm:max-w-[80%]  mx-auto md:ml-12 sm:mb-16 py-2 ">
       <h2 className="text-[25px] font-bold leading-tight text-black">
   We empower you to,
 </h2>
@@ -128,19 +142,24 @@ export default function HomeSlider() {
     </div>
 
     {/* Carousel section - centered and responsive */}
-    <div className="-mt-16 relative z-20 w-full px-4">
+    <div className="-mt-36 relative z-20 w-full px-4">
       <div className="max-w-full sm:max-w-[80%] mx-auto  overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {slides.map((slide, i) => (
+          {images.map((slide, index) => (
             <div
-              key={i}
+              key={index}
               className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_calc(33.333%-16px)] min-w-0 mx-2 bg-white rounded-3xl overflow-hidden shadow-lg relative"
             >
               <img 
-                src={slide.img || "/placeholder.svg"} 
-                alt={`Slide ${i+1}`}
+                src={slide || "/placeholder.svg"} 
+                alt={`Slide ${index+1}`}
                 className="object-cover h-64 w-full" 
               />
+              <div className="absolute bottom-7 left-0 right-0 p-2 bg-white/90 rounded-r-3xl md:w-[50%] w-[80%]">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+                      {texts[index].heading}
+                    </h3>
+                  </div>
             </div>
           ))}
         </div>

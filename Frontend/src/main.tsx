@@ -27,6 +27,13 @@ import Fleet from './features/Fleet/Fleet.tsx';
 import Overhauled from './features/overhauled-2/Overhauled.tsx';
 import Fundraisers from './features/Fundraiser/Fundraisers.tsx';
 import Prizedrawwinners from './features/prize-draw-winners/Prizedrawwinners.tsx';
+import Businesspartners from './features/Business-Partner/Businesspartners.tsx';
+import ContactUs from './features/Legal/ContactUs.tsx';
+import TermsAndConditions from './features/Legal/Terms&Condition.tsx';
+import PrivacyPolicy from './features/Legal/PrivacyPolicy.tsx';
+import FAQsPage from './features/Legal/FAQsPages.tsx';
+import Periodictradepromotiondraws from './features/Legal/Periodictradepromotiondraws.tsx';
+import AboutUs from './features/Legal/AboutUs.tsx';
 
 const stores = { authStore };
 const router = createBrowserRouter([
@@ -79,6 +86,27 @@ const router = createBrowserRouter([
       },{
         path:"/prize-draw-winners",
         element:<Prizedrawwinners/>
+      },{
+        path:"/business-partners",
+        element :<Businesspartners/>
+      },{
+        path:"/contact-us",
+        element :<ContactUs/>
+      },{
+        path:"/terms-and-conditions",
+        element :<TermsAndConditions/>
+      },{
+        path : "/privacy-policy-2",
+        element :<PrivacyPolicy/>
+      },{
+        path: "/general-faqs",
+        element :<FAQsPage/>
+      },{
+        path :"/periodic-trade-promotion-draws",
+        element :<Periodictradepromotiondraws/>
+      },{
+        path:"/about-us",
+        element:<AboutUs/>
       }
     ]
   },

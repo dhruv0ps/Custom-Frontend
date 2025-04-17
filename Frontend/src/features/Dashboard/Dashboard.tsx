@@ -3,18 +3,23 @@ import AllServices from "./AllServices";
 import BusinessPartnerSection from "./BusinessPartnerSelection";
 import FleetEnterpriseServices from "./Fleetenterpriseservices";
 import FooterSection from "./FooterSection";
-import HomoSlider from "./HomoSlider";
 import NewsVideoSection from "./NewsVideoSection";
 import ServiceCards from "./ServiceCard";
 import SupportCharitiesSection from "./SupportCharitiesSection";
 import ReviewCarousel from "./TestimonialCarousel";
 import TurtleSection from "./TurtleSection";
 import { VirtualToursCard } from "./VirtualToursCard";
+import HomeSlider from "./HomoSlider";
 
 const Dashboard = () => {
   return (
     <div >
-    <HomoSlider/>
+   
+
+
+
+  
+<HomeSlider/>
     <TurtleSection/>
     <AllServices/>
     <ServiceCards/>

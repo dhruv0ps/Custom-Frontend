@@ -132,29 +132,26 @@ const FooterSection: React.FC = () => {
   </div>
 
   {/* Legal Column */}
-<div className="flex flex-col justify-between h-full">
+  <div className="flex flex-col justify-between h-full">
   <div>
     <h4 className="text-lg font-semibold text-primary mb-4">Legal</h4>
     <ul className="space-y-2">
-      {[
-        "Terms and Conditions",
-        "Privacy Policy",
-        "General FAQs",
-        "Trade Promotion Draws",
-        "Competition Terms",
-        "About Us",
-        "Contact Us",
-      ].map((item, i) => (
+    {[
+    { label: "Terms and Conditions", route: "/terms-and-conditions" },
+    { label: "Privacy Policy", route: "/privacy-policy-2" },
+    { label: "General FAQs", route: "/general-faqs" },
+    { label: "Trade Promotion Draws", route: "/periodic-trade-promotion-draws" },
+    { label: "Competition Terms", route: "/competition-terms" },
+    { label: "About Us", route: "/about-us" },
+    { label: "Contact Us", route: "/contact-us" },
+  ].map(({ label, route }, i) => (
         <li className="flex items-center" key={i}>
           <span className="text-primary mr-2">•</span>
-          {item}
+          <a href={route} className="hover:text-primary transition-colors">{label}</a>
         </li>
       ))}
     </ul>
   </div>
-
-  {/* Social Icons aligned at bottom */}
-  
 </div>
 <div className="flex gap-4 mt-12 md:items-end">
     <a href="#"><img src={facebook} alt="Facebook" className="h-10 w-10" /></a>

@@ -82,7 +82,7 @@ export default function Navbar() {
                   <DropdownMenuItem asChild><Link to="/overhauled" className="block px-2 py-1 rounded hover:bg-gray-100">Overhauled</Link></DropdownMenuItem>
                   <DropdownMenuItem asChild><Link to="/fundraisers" className="block px-2 py-1 rounded hover:bg-gray-100">Charities</Link></DropdownMenuItem>
                   <DropdownMenuItem asChild><Link to="/prize-draw-winners" className="block px-2 py-1 rounded hover:bg-gray-100">Prize Draw Winners</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="https://wheelz.au/business-partners/" className="block px-2 py-1 rounded hover:bg-gray-100">Business Partners</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/business-partners" className="block px-2 py-1 rounded hover:bg-gray-100">Business Partners</Link></DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -124,7 +124,7 @@ export default function Navbar() {
       <Link to="/overhauled" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Overhauled</Link>
       <Link to="/fundraisers" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Charities</Link>
       <Link to="/prize-draw-winners" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Prize Draw Winners</Link>
-      <Link to="https://wheelz.au/business-partners/" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Business Partners</Link>
+      <Link to="/business-partners" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Business Partners</Link>
     </div>
   </div>
 )}

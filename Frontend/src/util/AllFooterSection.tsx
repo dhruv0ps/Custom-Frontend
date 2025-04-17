@@ -8,9 +8,10 @@ import logo from "@/assets/logo.png";
 
 interface FooterContentProps {
   content: string[];
+  mode?: "full" | "compact";
 }
 
-const AllFooterSection: React.FC<FooterContentProps> = ({ content }) => {
+const AllFooterSection: React.FC<FooterContentProps> = ({ content, mode = "full" }) => {
   const contact = {
     phone: "1300 098 765",
     email: "hello@wheelz.au",
@@ -24,8 +25,13 @@ const AllFooterSection: React.FC<FooterContentProps> = ({ content }) => {
   ];
 
   const legal = [
-    "Terms and Conditions", "Privacy Policy", "General FAQs",
-    "Trade Promotion Draws", "Competition Terms", "About Us", "Contact Us"
+    { label: "Terms and Conditions", path: "/terms-and-conditions" },
+    { label: "Privacy Policy", path: "/privacy-policy-2" },
+    { label: "General FAQs", path: "/general-faqs" },
+    { label: "Trade Promotion Draws", path: "/periodic-trade-promotion-draws" },
+    { label: "Competition Terms", path: "/" }, // if exists
+    { label: "About Us", path: "/about-us" },
+    { label: "Contact Us", path: "/contact-us" }
   ];
 
   const copyright = "© Wheelz Pty Ltd 2025, All Rights Reserved";
@@ -33,14 +39,16 @@ const AllFooterSection: React.FC<FooterContentProps> = ({ content }) => {
   return (
     <footer className="bg-white text-gray-700 mt-6">
       <div className="max-w-[80%] mx-auto">
-        <img
-          src={logo}
-          alt="Wheelz Australia Black and Blue Color"
-          title="Wheelz Australia Black and Blue Color"
-          loading="lazy"
-          decoding="async"
-          className="w-[237px] h-[52.1px] object-contain mb-6"
-        />
+        {mode !== "compact" && (
+          <img
+            src={logo}
+            alt="Wheelz Australia Black and Blue Color"
+            title="Wheelz Australia Black and Blue Color"
+            loading="lazy"
+            decoding="async"
+            className="w-[237px] h-[52.1px] object-contain mb-6"
+          />
+        )}
 
         <div className="mb-8 space-y-4 mt-2">
           {content.map((para, i) => (
@@ -57,7 +65,7 @@ const AllFooterSection: React.FC<FooterContentProps> = ({ content }) => {
                 <span>{contact.phone}</span>
               </li>
               <li className="flex items-start gap-2">
-                <Mail className="h-4 w-4 text-[#00b2ff] mt-1 flex-shrink-0" />
+                <Mail className="h-4 w-4 text-[#00b2ff]  mt-1 flex-shrink-0" />
                 <span>{contact.email}</span>
               </li>
               <li className="flex items-start gap-2">
@@ -89,7 +97,9 @@ const AllFooterSection: React.FC<FooterContentProps> = ({ content }) => {
               {legal.map((item, i) => (
                 <li className="flex items-center" key={i}>
                   <span className="text-[#00b2ff] mr-2">•</span>
-                  <a href="#" className="hover:text-[#00b2ff] transition-colors">{item}</a>
+                  <a href={item.path} className="hover:text-[#00b2ff] transition-colors">
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </ul>
