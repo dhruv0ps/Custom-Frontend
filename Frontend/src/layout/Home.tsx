@@ -4,7 +4,7 @@ import { observer } from 'mobx-react-lite'
 
 const Home = observer(() => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative">
       {/* Fixed Navbar */}
       <div className="fixed top-0 left-0 right-0 z-50">
         <NavBar />

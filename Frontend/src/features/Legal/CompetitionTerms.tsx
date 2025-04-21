@@ -1,68 +1,93 @@
-import React, { useState } from "react";
-
-  
-  type StateCode = 'VIC' | 'NSW' | 'QLD' | 'WA' | 'TAS' | 'ACT' | 'NT' | 'SA';
+import React from "react";
+import banner from "@/assets/Legal/Competition-Terms-by-Wheelz-scaled.webp"
 const CompetitionTerms:React.FC = () => {
-    const [activeState, setActiveState] = useState<StateCode>("VIC");
-
   const states = [
-    { value: "VIC", label: "Victoria" },
-    { value: "NSW", label: "New South Wales" },
-    { value: "QLD", label: "Queensland" },
-    { value: "WA", label: "Western Australia" },
-    { value: "TAS", label: "Tasmania" },
-    { value: "ACT", label: "Australian Capital Territory" },
-    { value: "NT", label: "Northern Territory" },
-    { value: "SA", label: "South Australia" },
+    { 
+      value: "VIC", 
+      label: "Victoria",
+      fullName: "VICTORIA",
+      prizeLimit: "Victorian regulations" ,
+      prizes: [
+        "Bucks Bonanza VIC: Cash reward only for VIC",
+        "Bill Crusher VIC: VIC-specific bills covered",
+      ],
+      privacy: [
+        "Data handled per VIC law",
+        "No third-party sharing without VIC resident consent"
+      ],
+      howToParticipate: [
+        "Signup using VIC form",
+        "Only VIC residents above 18",
+      ]
+    },
+    { 
+      value: "NSW", 
+      label: "New South Wales",
+      fullName: "NEW SOUTH WALES",
+      prizeLimit: "New South Wales regulations, ensuring no individual prize exceeds $10,000" ,
+      prizes: [
+        "Glow Goals NSW Edition",
+        "Fuel Filler: NSW cars only"
+      ],
+      privacy: [
+        "NSW privacy act compliance",
+        "Data used only for NSW draw processing"
+      ],
+      howToParticipate: [
+        "NSW members only",
+        "Follow NSW-specific entry process"
+      ]
+    },
+    { 
+      value: "QLD", 
+      label: "Queensland",
+      fullName: "QUEENSLAND",
+      prizeLimit: "Queensland regulations" 
+    },
+    { 
+      value: "WA", 
+      label: "Western Australia",
+      fullName: "WESTERN AUSTRALIA",
+      prizeLimit: "Western Australia regulations" 
+    },
+    { 
+      value: "TAS", 
+      label: "Tasmania",
+      fullName: "TASMANIA",
+      prizeLimit: "Tasmanian regulations" 
+    },
+    { 
+      value: "ACT", 
+      label: "Australian Capital Territory",
+      fullName: "AUSTRALIAN CAPITAL TERRITORY",
+      prizeLimit: "ACT regulations, ensuring no individual prize exceeds $3,000" 
+    },
+    { 
+      value: "NT", 
+      label: "Northern Territory",
+      fullName: "NORTHERN TERRITORY",
+      prizeLimit: "Northern Territory regulations, ensuring no individual prize exceeds $5,000" 
+    },
+    { 
+      value: "SA", 
+      label: "South Australia",
+      fullName: "SOUTH AUSTRALIA",
+      prizeLimit: "South Australian regulations, ensuring no individual prize exceeds $5,000" 
+    }
   ];
 
-  const renderStateSection = (state: StateCode) => {
-    const stateInfo = {
-      VIC: {
-        fullName: "VICTORIA",
-        prizeLimit: "Victorian regulations",
-      },
-      NSW: {
-        fullName: "NEW SOUTH WALES",
-        prizeLimit: "New South Wales regulations, ensuring no individual prize exceeds $10,000",
-      },
-      QLD: {
-        fullName: "QUEENSLAND",
-        prizeLimit: "Queensland regulations",
-      },
-      WA: {
-        fullName: "WESTERN AUSTRALIA",
-        prizeLimit: "Western Australia regulations",
-      },
-      TAS: {
-        fullName: "TASMANIA",
-        prizeLimit: "Tasmanian regulations",
-      },
-      ACT: {
-        fullName: "AUSTRALIAN CAPITAL TERRITORY",
-        prizeLimit: "ACT regulations, ensuring no individual prize exceeds $3,000",
-      },
-      NT: {
-        fullName: "NORTHERN TERRITORY",
-        prizeLimit: "Northern Territory regulations, ensuring no individual prize exceeds $5,000",
-      },
-      SA: {
-        fullName: "SOUTH AUSTRALIA",
-        prizeLimit: "South Australian regulations, ensuring no individual prize exceeds $5,000",
-      },
-    };
-
+  const renderStateSection = (state:any) => {
     return (
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-black mb-2">{stateInfo[state].fullName}</h2>
+      <section key={state.value} className="mb-16 ">
+        <h2 className="text-2xl font-bold text-black mb-2">{state.fullName}</h2>
         <h3 className="text-lg font-semibold text-gray-700 mb-2">
-          Trade Promotion for {state}: Membership Giveaway
+          Trade Promotion for {state.value}: Membership Giveaway
         </h3>
 
         <div className="space-y-4 text-sm text-gray-700">
           <p className="font-bold">Introduction</p>
           <p>
-            Welcome to our Wheelz Trade Promotion Membership Giveaway! This exciting promotion offers fantastic cash prizes to our valued members. All prizes comply with {stateInfo[state].prizeLimit}, ensuring transparency and fairness.
+            Welcome to our Wheelz Trade Promotion Membership Giveaway! This exciting promotion offers fantastic cash prizes to our valued members. All prizes comply with {state.prizeLimit}, ensuring transparency and fairness.
           </p>
 
           <p className="font-bold">Membership Entry Structure</p>
@@ -103,7 +128,7 @@ const CompetitionTerms:React.FC = () => {
 
           <p className="font-bold">Terms and Conditions</p>
           <ul className="list-disc list-inside ml-4 space-y-1">
-            <li>Eligibility: Open to all active members of Wheelz Pty Ltd who are residents of {stateInfo[state].fullName.charAt(0) + stateInfo[state].fullName.slice(1).toLowerCase()} and over 18 years of age.</li>
+            <li>Eligibility: Open to all active members of Wheelz Pty Ltd who are residents of {state.label} and over 18 years of age.</li>
             <li>Entry: VIP membership provides 1 entry per draw. No additional purchase is necessary beyond the membership fee.</li>
             <li>Promotion Period: The promotion runs for as long as we deem appropriate. The Platform reserves the right to change or terminate the promotion at any time.</li>
             <li>Prize Draws: Draws will occur periodically throughout the promotion period. Specific prize amounts will be determined and shared prior to each draw.</li>
@@ -111,7 +136,7 @@ const CompetitionTerms:React.FC = () => {
             <li>Privacy: Personal information collected will be handled in accordance with Wheelz Pty Ltd privacy policy.</li>
             <li>Limitation of Liability: Wheelz Pty Ltd is not responsible for any technical issues or errors during the entry process or the prize draw.</li>
             <li>General Conditions: Wheelz Pty Ltd reserves the right to modify, suspend, or terminate the promotion if necessary.</li>
-            <li>Compliance: This promotion complies with the relevant regulations of {stateInfo[state].fullName.charAt(0) + stateInfo[state].fullName.slice(1).toLowerCase()}.</li>
+            <li>Compliance: This promotion complies with the relevant regulations of {state.label}.</li>
           </ul>
 
           <p className="font-bold">Privacy Policy</p>
@@ -134,38 +159,34 @@ const CompetitionTerms:React.FC = () => {
   };
 
   return (
-    <div className="max-w-[80%] mx-auto py-12 px-4">
+    <>
+    <div className="relative w-full h-[200px] sm:h-[400px] md:h-[500px]">
+        <img src={banner} alt="Contact Banner" className="w-full h-full object-cover" />
+       </div>    <div className=" max-w-full sm:max-w-[80%] mx-auto py-12 px-4">
+
+
       <h1 className="text-3xl font-bold text-center mb-4">Competition Terms:<br />Wheelz Trade Promotion</h1>
       <p className="text-primary font-semibold text-sm mb-8 text-center">Last Updated: January 2025</p>
       
-      <div className="mb-8">
-        <label htmlFor="state-select" className="block text-sm font-medium text-gray-700 mb-2">
-          Select Your State/Territory:
-        </label>
-        <select
-          id="state-select"
-          value={activeState}
-          onChange={(e) => setActiveState(e.target.value as StateCode)}
-          className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
-        >
-          {states.map((state) => (
-            <option key={state.value} value={state.value}>
-              {state.label}
-            </option>
-          ))}
-        </select>
-      </div>
+      
+     
 
-      {/* Render the section for the selected state */}
-      {renderStateSection(activeState)}
+      {/* Render sections for all states */}
+      {states.map((state) => (
+        <div id={state.value} key={state.value}>
+          {renderStateSection(state)}
+        </div>
+      ))}
 
-      <div className="mt-8 pt-8 border-t border-gray-200">
+      <div className="mt-8 pt-8 ">
         <h3 className="text-lg font-semibold mb-2">Contact Information</h3>
         <p className="text-sm text-gray-700">
           For any enquiries or further information, please contact us via our email address at: <a href="mailto:hello@wheelz.au" className="text-blue-600 hover:underline">hello@wheelz.au</a>
         </p>
       </div>
     </div>
+    </>
+
   );
 };
 

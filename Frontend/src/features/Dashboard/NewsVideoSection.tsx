@@ -25,8 +25,8 @@ export default function NewsVideoSection({
   }
 
   return (
-    <div className={cn("w-full bg-gray-200 ", className)}>
-      <div className="max-w-4xl mx-auto">
+    <div className={cn(" bg-gray-200 ", className)}>
+      <div className="max-w-[97%] sm:max-w-4xl mx-auto">
         <div className="flex items-end justify-end ">
           <h2 className="text-[14px] font-bold uppercase text-primary text-right pb-[10px] leading-[1em] mt-4">
             POLICE HUNT THIEVES AFTER ONLINE PRIVATE SALE | {source}

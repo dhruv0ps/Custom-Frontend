@@ -4,8 +4,8 @@ import { ChevronRight } from "lucide-react"
 
 export default function BusinessPartnerSection() {
   return (
-    <section className="bg-[#eef9ff] py-16 mt-6">
-      <div className="container max-w-[80%] mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10">
+    <section className="bg-[#eef9ff]  ">
+      <div className="container max-w-full  sm:max-w-[80%] mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between gap-10">
         
         <div className="w-full md:w-1/2">
           <img
@@ -18,12 +18,15 @@ export default function BusinessPartnerSection() {
         {/* Right Content */}
         <div className="w-full md:w-1/2 relative">
           {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-primary mb-6 text-center md:text-left">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-primary mb-6 ">
             Business Partner Opportunities
           </h2>
           
           {/* Rocket icon */}
-          <div className="absolute top-0 right-0 hidden md:block w-20 h-20">
+          <div className="absolute top-0 right-0 hidden md:block w-20 h-20"
+          style={{
+            boxShadow: "inset 0px 0px 8px rgba(0, 0, 0, 0.3)",
+          }}>
              <img src={rocket} alt="Rocket icon" className="w-full h-full object-contain" loading="lazy" />
           </div>
           

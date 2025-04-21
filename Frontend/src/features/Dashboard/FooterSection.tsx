@@ -1,25 +1,31 @@
 import React from "react";
-
-import { Mail, MapPin, Phone, Building2 } from "lucide-react";
 import facebook from "@/assets/Homepage/Facebook-Icon.png";
 import instagram from "@/assets/Homepage/Instagram-Icon.png";
 import xIcon from "@/assets/Homepage/Twitter-Icon.png";
 import tiktok from "@/assets/Homepage/Tiktok-Icon.png";
 import logo from "@/assets/logo.png";
+import { BsBuildingFill } from "react-icons/bs";
+import { FaYoutube } from "react-icons/fa6";
+import { IoIosCall } from "react-icons/io";
+import { IoMdMail } from "react-icons/io";
+import { FaLocationDot } from "react-icons/fa6";
 
 const FooterSection: React.FC = () => {
   return (
+    <>
     <footer className="bg-white text-gray-700 px-6 md:px-12 py-16 space-y-12">
-      {/* Disclaimer / Info Block */}
-      <div className="max-w-[80%] mx-auto space-y-6 text-sm leading-relaxed">
-      <img
- src={logo}
-  alt="Wheelz Australia Black and Blue Color"
-  title="Wheelz Australia Black and Blue Color"
-  loading="lazy"
-  decoding="async"
- className="w-[237px] h-[52.1px] object-contain"
-/>
+      
+      <div className="max-w-[85%] mx-auto space-y-6 text-sm leading-relaxed">
+      <div className="flex justify-start">
+    <img
+      src={logo}
+      alt="Wheelz Australia Black and Blue Color"
+      title="Wheelz Australia Black and Blue Color"
+      loading="lazy"
+      decoding="async"
+      className="w-[237px] h-12 "
+    />
+  </div>
 
 
         <p>
@@ -70,30 +76,40 @@ const FooterSection: React.FC = () => {
         </p>
       </div>
 
-      <div className="border-t border-gray-200 mb-12"></div>
+      <div className=" mb-12"></div>
 
-<div className="max-w-[80%] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-20 items-start">
+      <div className=" max-w-full sm:max-w-[85%] mx-auto px-4 md:px-2 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-20 items-start">
   {/* Contact */}
   <div>
     <h4 className="text-lg font-semibold text-primary mb-4">Contact Us</h4>
-    <ul className="space-y-2">
-      <li className="flex items-start gap-2">
-        <Phone className="h-4 w-4 text-primary mt-1" />
-        1300 098 765
-      </li>
-      <li className="flex items-start gap-2">
-        <Mail className="h-4 w-4 text-primary mt-1" />
-        hello@wheelz.au
-      </li>
-      <li className="flex items-start gap-2">
-        <MapPin className="h-4 w-4 text-primary mt-1" />
-        <span>Melbourne | Sydney | Brisbane | Perth | Adelaide | Hobart | Darwin | Canberra</span>
-      </li>
-      <li className="flex items-start gap-2">
-        <Building2 className="h-4 w-4 text-primary mt-1" />
-        <span>HQ: 470 St Kilda Road, Melbourne VIC 3004</span>
-      </li>
-    </ul>
+    <ul className="space-y-2 ">
+  {/* Phone */}
+  <li className="flex items-center space-x-3">
+    <IoIosCall className="h-5 w-5 text-primary shrink-0" />
+    <span className="whitespace-nowrap">1300 098 765</span>
+  </li>
+
+  {/* Email */}
+  <li className="flex items-center space-x-3">
+    <IoMdMail className="h-5 w-5 text-primary shrink-0" />
+    <span className="whitespace-nowrap">hello@wheelz.au</span>
+  </li>
+
+  {/* City List */}
+  <li className="flex items-start space-x-3">
+    <FaLocationDot className="h-5 w-5 text-primary mt-1 shrink-0" />
+    <span>
+      Melbourne | Sydney | Brisbane | Perth | Adelaide | Hobart | Darwin | Canberra
+    </span>
+  </li>
+
+  {/* HQ Address */}
+  <li className="flex items-start space-x-3">
+    <BsBuildingFill className="h-5 w-5 text-primary mt-1 shrink-0" />
+    <span>HQ: 470 St Kilda Road, Melbourne VIC 3004</span>
+  </li>
+</ul>
+
   </div>
 
   {/* Services */}
@@ -153,21 +169,43 @@ const FooterSection: React.FC = () => {
     </ul>
   </div>
 </div>
-<div className="flex gap-4 mt-12 md:items-end">
-    <a href="#"><img src={facebook} alt="Facebook" className="h-10 w-10" /></a>
-    <a href="#"><img src={instagram} alt="Instagram" className="h-10 w-10" /></a>
-    <a href="#"><img src={xIcon} alt="X" className="h-10 w-10" /></a>
-    <a href="#"><img src={tiktok} alt="TikTok" className="h-10 w-10" /></a>
+<div className="w-full mt-12 ">
+  <div className="flex justify-start gap-6 min-w-[280px]">
+    <a href="#">
+      <img src={facebook} alt="Facebook" className="h-10 w-10 object-contain" />
+    </a>
+    <a href="#">
+      <img src={instagram} alt="Instagram" className="h-10 w-10 object-contain" />
+    </a>
+    <a href="#">
+      <img src={xIcon} alt="X" className="h-10 w-10 object-contain" />
+    </a>
+    <a href="#">
+      <img src={tiktok} alt="TikTok" className="h-10 w-10 object-contain" />
+    </a>
+    <a
+      href="https://youtube.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-red-600"
+    >
+      <FaYoutube className="h-10 w-10" />
+    </a>
   </div>
 </div>
 
-<div className="border-t border-gray-200"></div>
+
+</div>
+
+
 
 {/* Footer Bottom */}
-<div className="bg-primary text-white text-center text-sm font-semibold py-4">
+
+    </footer>
+    <div className="bg-primary text-black text-center text-sm font-semibold py-4">
   © Wheelz Pty Ltd 2025, All Rights Reserved
 </div>
-    </footer>
+    </>
   );
 };
 

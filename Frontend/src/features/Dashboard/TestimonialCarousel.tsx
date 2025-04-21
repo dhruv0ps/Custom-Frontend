@@ -118,12 +118,12 @@ const ReviewCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-    <section className="bg-white py-16 px-4 max-w-[80%] mx-auto font-poppins">
+    <section className="bg-white py-8 px-4 max-w-[80%] mx-auto font-poppins">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left Text Content */}
         <div className="max-w-xl text-center md:text-left">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Luckily for you, we service <span className="text-black">Australia wide</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:text-nowrap">
+            Luckily for you, we service Australia wide
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed">
             Our services are available in all major cities Australia-wide.
@@ -138,7 +138,7 @@ const ReviewCarousel: React.FC = () => {
           <img
             src={ausMap}
             alt="Australia Map"
-            className="w-[320px] md:w-[400px] h-auto object-contain"
+            className="w-[320px] md:w-[400px] h-[280px] object-contain"
           />
         </div>
       </div>

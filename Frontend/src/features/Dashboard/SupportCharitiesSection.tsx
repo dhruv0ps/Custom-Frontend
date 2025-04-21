@@ -38,7 +38,7 @@ const SupportCharitiesSection: React.FC = () => {
             We're Building Hope, One Donation At A Time
           </h3></div>
 
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center md:items-end text-center md:text-right">
   <p className="text-gray-700 mb-6 max-w-xl leading-relaxed">
     We contribute to supported charities on behalf of our members and all users who utilise
     our services for buying and selling cars. <br className="hidden md:block" />

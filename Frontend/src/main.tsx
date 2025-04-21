@@ -34,6 +34,7 @@ import PrivacyPolicy from './features/Legal/PrivacyPolicy.tsx';
 import FAQsPage from './features/Legal/FAQsPages.tsx';
 import Periodictradepromotiondraws from './features/Legal/Periodictradepromotiondraws.tsx';
 import AboutUs from './features/Legal/AboutUs.tsx';
+import CompetitionTerms from './features/Legal/CompetitionTerms.tsx';
 
 const stores = { authStore };
 const router = createBrowserRouter([
@@ -107,6 +108,9 @@ const router = createBrowserRouter([
       },{
         path:"/about-us",
         element:<AboutUs/>
+      },{
+        path:"/competition-terms",
+        element:<CompetitionTerms/>
       }
     ]
   },

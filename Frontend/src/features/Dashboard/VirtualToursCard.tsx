@@ -70,7 +70,7 @@ export const VirtualToursCard: React.FC = () => {
             <div className="max-w-full sm:max-w-[80%] mx-auto px-4">
                {/* Top Title - visible only on md and up */}
 <div className="hidden md:flex justify-end mb-12">
-  <h2 className="text-4xl font-bold text-cyan-400">Virtual Tours Await</h2>
+  <h2 className="text-4xl font-bold text-primary">Virtual Tours Await</h2>
 </div>
 
 {/* Main Content */}
@@ -98,7 +98,7 @@ export const VirtualToursCard: React.FC = () => {
   </div>
 
   
-  <h2 className="text-2xl font-bold text-primary text-right">Virtual Tours Await</h2>
+  <h2 className="text-2xl font-bold text-[#00b2ff] text-right">Virtual Tours Await</h2>
 </div>
 
 

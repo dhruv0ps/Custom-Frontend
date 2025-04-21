@@ -99,13 +99,15 @@ const FleetEnterpriseServices: React.FC = () => {
 
        
         <div className="flex-1 relative">
-        <div className="aspect-[19/11] max-w-[564px] w-full">
+        <div className="w-full max-w-[700px] sm:mt-16">
   <img
     src={imgIcon}
     alt="Car Coming"
-    className="w-full h-full object-cover rounded-2xl shadow-lg"
+    className="w-full object-cover rounded-2xl shadow-lg"
+    style={{ maxHeight: "560px" }}
   />
 </div>
+
 
 
           <button

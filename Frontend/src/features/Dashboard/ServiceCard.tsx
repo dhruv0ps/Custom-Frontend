@@ -138,13 +138,13 @@ export default function ServiceCards() {
       style={{ backgroundColor: service.bg }}
     >
       
-      <div className="flex-shrink-0 w-20 h-20 bg-white shadow-md rounded-lg flex items-center justify-center mr-4">
+      <div className="flex-shrink-0 w-24 h-24 bg-white shadow-md rounded-lg flex items-center justify-center mr-4">
         <img
           src={service.image}
           alt={service.title}
           loading="lazy"
           decoding="async"
-          className="w-16 h-16 object-contain"
+          className="w-20 h-20 object-contain"
         />
       </div>
 
@@ -183,19 +183,19 @@ export default function ServiceCards() {
       {services.map((service, index) => (
         <Card
           key={index}
-          className={`rounded-2xl flex flex-col text-center px-6 py-8 shadow-lg min-h-[370px] ${
+          className={`rounded-2xl flex flex-col text-center px-6 py-8 shadow-lg min-h-[350px] ${
             index < 5 ? "text-white" : "text-black"
           }`}
           style={{ backgroundColor: service.bg }}
         >
           <div className="flex flex-col items-center flex-grow">
-            <div className="w-16 h-16 mb-4 bg-white shadow-xl rounded-lg">
+          <div className="w-24 h-24 mb-4 bg-white shadow-xl rounded-lg flex items-center justify-center">
               <img
                 src={service.image}
                 alt={service.title}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-contain rounded-2xl shadow-md"
+                className="w-20 h-20 object-contain "
               />
             </div>
         

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ChevronDown, Home, Menu } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
@@ -44,9 +44,9 @@ export default function Navbar() {
           scrolled ? "py-3" : "py-6"
         }`}
       >
-        <div className="max-w-[90%] md:max-w-[80%] mx-auto">
-          <div className="flex items-center gap-2 px-2 md:px-6 justify-between transition-all duration-300 ease-in-out">
-            <Link to="https://wheelz.au">
+        <div className="max-w-[80%] mx-auto">
+          <div className="flex items-center  px-2  justify-between transition-all duration-300 ease-in-out">
+            <Link to="/">
               <img
                 src="https://wheelz.au/wp-content/uploads/2024/09/Wheelz-Australia-Black-and-Blue-Color-scaled.webp"
                 alt="Wheelz Logo"
@@ -69,20 +69,146 @@ export default function Navbar() {
                     borderTopWidth: "4px",
                   }}
                 >
-                  <DropdownMenuItem asChild><Link to="/sell-your-car" className="block px-2 py-1 rounded hover:bg-gray-100">Sell Your Car</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/buy-your-car" className="block px-2 py-1 rounded hover:bg-gray-100">Buy A New Car</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/demo-pre-owned" className="block px-2 py-1 rounded hover:bg-gray-100">Demo & Pre-Owned</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/trade-promotion" className="block px-2 py-1 rounded hover:bg-gray-100">Trade Promotion</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/virtual-tours" className="block px-2 py-1 rounded hover:bg-gray-100">Virtual Tours</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/mates-rates-discounts" className="block px-2 py-1 rounded hover:bg-gray-100">Mates Rates</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/membership" className="block px-2 py-1 rounded hover:bg-gray-100">Membership</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/finance" className="block px-2 py-1 rounded hover:bg-gray-100">Finance</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/insurance" className="block px-2 py-1 rounded hover:bg-gray-100">Insurance</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/fleet" className="block px-2 py-1 rounded hover:bg-gray-100">Fleet</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/overhauled" className="block px-2 py-1 rounded hover:bg-gray-100">Overhauled</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/fundraisers" className="block px-2 py-1 rounded hover:bg-gray-100">Charities</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/prize-draw-winners" className="block px-2 py-1 rounded hover:bg-gray-100">Prize Draw Winners</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/business-partners" className="block px-2 py-1 rounded hover:bg-gray-100">Business Partners</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/sell-your-car" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Sell Your Car
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/buy-your-car" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Buy A New Car
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/demo-pre-owned" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Demo & Pre-Owned
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/trade-promotion" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Trade Promotion
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/virtual-tours" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Virtual Tours
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/mates-rates-discounts" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Mates Rates
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/membership" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Membership
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/finance" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Finance
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/insurance" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Insurance
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/fleet" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Fleet
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/overhauled" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Overhauled
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/fundraisers" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Charities
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/prize-draw-winners" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Prize Draw Winners
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <NavLink 
+                      to="/business-partners" 
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      Business Partners
+                    </NavLink>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -99,36 +225,153 @@ export default function Navbar() {
       </header>
 
       {isMenuOpen && (
-  <div className="absolute top-full left-0 right-0 ml-10 mr-10 bg-white shadow-lg z-50 md:hidden mobile-menu border-t-4 border-[#1cbeff]">
-    <div className="bg-white py-2">
-      <Link to="/" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">
-        <div className="flex items-center">
-          <Home className="mr-2" size={16} />
-          Home
+      <div className="absolute top-full left-0 right-0 ml-10 mr-10 bg-white shadow-lg z-50 md:hidden mobile-menu border-t-4 border-[#1cbeff]">
+        <div className="bg-white py-2">
+          <NavLink 
+            to="/" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            <div className="flex items-center">
+              <Home className="mr-2" size={16} />
+              Home
+            </div>
+          </NavLink>
+
+          <div className="border-t border-gray-100 my-2"></div>
+          <h3 className="px-4 py-2 text-sm font-medium text-gray-500">All Services</h3>
+
+          <NavLink
+            to="/sell-your-car"
+            onClick={handleNavLinkClick}
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Sell Your Car
+          </NavLink>
+          <NavLink 
+            to="/buy-your-car" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Buy A New Car
+          </NavLink>
+          <NavLink 
+            to="/demo-pre-owned" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Demo & Pre-Owned
+          </NavLink>
+          <NavLink 
+            to="/trade-promotion" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Trade Promotion
+          </NavLink>
+          <NavLink 
+            to="/virtual-tours" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Virtual Tours
+          </NavLink>
+          <NavLink 
+            to="/mates-rates-discounts" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Mates Rates
+          </NavLink>
+          <NavLink 
+            to="/membership" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Membership
+          </NavLink>
+          <NavLink 
+            to="/finance" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Finance
+          </NavLink>
+          <NavLink 
+            to="/insurance" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Insurance
+          </NavLink>
+          <NavLink 
+            to="/fleet" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Fleet
+          </NavLink>
+          <NavLink 
+            to="/overhauled" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Overhauled
+          </NavLink>
+          <NavLink 
+            to="/fundraisers" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Charities
+          </NavLink>
+          <NavLink 
+            to="/prize-draw-winners" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Prize Draw Winners
+          </NavLink>
+          <NavLink 
+            to="/business-partners" 
+            onClick={handleNavLinkClick} 
+            className={({ isActive }) =>
+              `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+            }
+          >
+            Business Partners
+          </NavLink>
         </div>
-      </Link>
-
-      <div className="border-t border-gray-100 text-[#] my-2"></div>
-      <h3 className="px-4 py-2 text-sm font-medium text-gray-500">All Services</h3>
-
-      <Link to="/sell-your-car" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Sell Your Car</Link>
-      <Link to="/buy-your-car" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Buy A New Car</Link>
-      <Link to="/demo-pre-owned" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Demo & Pre-Owned</Link>
-      <Link to="/trade-promotion" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Trade Promotion</Link>
-      <Link to="/virtual-tours" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Virtual Tours</Link>
-      <Link to="/mates-rates-discounts" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Mates Rates</Link>
-      <Link to="/membership" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Membership</Link>
-      <Link to="/finance" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Finance</Link>
-      <Link to="/insurance" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Insurance</Link>
-      <Link to="/fleet" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Fleet</Link>
-      <Link to="/overhauled" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Overhauled</Link>
-      <Link to="/fundraisers" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Charities</Link>
-      <Link to="/prize-draw-winners" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Prize Draw Winners</Link>
-      <Link to="/business-partners" onClick={handleNavLinkClick} className="block px-4 py-2 hover:bg-gray-100">Business Partners</Link>
-    </div>
-  </div>
-)}
-
+      </div>
+      )}
     </div>
   );
 }

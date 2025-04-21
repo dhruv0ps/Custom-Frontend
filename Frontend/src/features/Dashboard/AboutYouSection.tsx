@@ -4,7 +4,7 @@ import { PlusCircle, XCircle } from "lucide-react"
 import { ChevronRight } from "lucide-react"
 import * as HoverCard from "@radix-ui/react-hover-card"
 import img1 from "@/assets/Homepage/03-Helpdesk.gif"
-const AboutYouSection: React.FC = () => {
+const   AboutYouSection: React.FC = () => {
   const [expanded, setExpanded] = useState(false)
 
   return (
@@ -24,12 +24,15 @@ const AboutYouSection: React.FC = () => {
           <div className="flex items-center justify-between">
             <h4 className="font-medium text-gray-700  md:text-lg">Read More</h4>
             <button
-              className="text-primary hover:scale-110 transition-transform"
-              onClick={() => setExpanded(!expanded)}
-              aria-label={expanded ? "Collapse content" : "Expand content"}
-            >
-              {expanded ? <XCircle size={20} /> : <PlusCircle size={20} />}
-            </button>
+  className="text-primary hover:scale-110 transition-transform"
+  onClick={(e) => {
+    e.stopPropagation();
+    setExpanded(!expanded);
+  }}
+  aria-label={expanded ? "Collapse content" : "Expand content"}
+>
+  {expanded ? <XCircle size={20} /> : <PlusCircle size={20} />}
+</button>
           </div>
 
           {expanded && (
@@ -58,10 +61,10 @@ const AboutYouSection: React.FC = () => {
       </div>
     </div>
 
-    <div className="bg-primary py-20 px-4 flex flex-col items-center justify-center text-center">
+    <div className="bg-primary py-12 px-4 flex flex-col items-center justify-center text-center">
       <div className="max-w-md mx-auto flex flex-col items-center">
         {/* Customer Service Icon Card */}
-        <div className="bg-white  rounded-lg shadow-md mb-6 w-40 h-40 flex items-center justify-center">
+        <div className="bg-white  rounded-lg shadow-md mb-6 w-36 h-36 flex items-center justify-center">
          <img
          src={img1} 
          loading="lazy"
