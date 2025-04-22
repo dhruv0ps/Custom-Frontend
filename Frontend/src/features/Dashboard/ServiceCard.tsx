@@ -16,6 +16,8 @@ import gif15 from "@/assets/Homepage/Teddy-Bear.gif"
 import gif16 from "@/assets/Homepage/megaphone.gif"
 import { ChevronRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import { useState,useEffect } from "react"
+import { useRef } from "react"
 const services = [
   {
     title: "Sell Your Car",
@@ -126,6 +128,86 @@ const services = [
   
 ]
 export default function ServiceCards() {
+  const HoverButton = ({ service, index }: { service: any; index: number }) => {
+    const [hovered, setHovered] = useState(false);
+    
+    
+    const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    
+    const handleMouseEnter = () => {
+      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+      setHovered(true);
+    };
+    
+    const handleMouseLeave = () => {
+      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = setTimeout(() => {
+        setHovered(false);
+      }, 50);
+    };
+    
+    
+    useEffect(() => {
+      return () => {
+        if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+      };
+    }, []);
+  
+    const isRed = index === 13;
+    
+    return (
+      <button
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          width: "100%",
+          position: "relative",
+          padding: "0.375rem 1.25rem",
+          fontWeight: 600,
+          fontSize: "0.875rem",
+          borderRadius: "9999px",
+          transition: "transform 0.3s ease",
+          transform: hovered ? "scale(1.05)" : "scale(1)",
+          overflow: "hidden",
+          backgroundColor: "#ffffff",
+          color: isRed ? "#ef4444" : "#00b2ff",
+          border: `1px solid ${isRed ? "#ef4444" : "#00b2ff"}`,
+          boxShadow: `0 4px 12px ${
+            isRed ? "rgba(239, 68, 68, 0.3)" : "rgba(0, 178, 255, 0.3)"
+          }`,
+        }}
+      >
+       
+        <span
+          style={{
+            opacity: hovered ? 0 : 1,
+            transition: "opacity 0.3s ease",
+            position: "relative",
+            zIndex: 2,
+            display: "block",
+          }}
+        >
+          {service.buttonText}
+        </span>
+  
+        <span
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            opacity: hovered ? 1 : 0,
+            transition: "opacity 0.3s ease",
+            zIndex: 3,
+          }}
+        >
+          {service.buttonText}
+          <ChevronRight style={{ marginLeft: "0.25rem", width: 16, height: 16 }} />
+        </span>
+      </button>
+    );
+  };
   return (
     <div className="container max-w-full sm:max-w-[80%] mx-auto px-4 py-8">
       <h2 className="font-bold text-[#1cbeff] text-center text-3xl mb-6 ">ALL Services</h2>
@@ -222,7 +304,7 @@ export default function ServiceCards() {
             <div className="flex-grow" />
           </div>
         
-          <button
+          {/* <button
             className={`w-full group relative px-5 py-1.5 font-semibold text-sm rounded-full transition 
             bg-white overflow-hidden
             ${
@@ -235,7 +317,8 @@ export default function ServiceCards() {
             <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
               {service.buttonText} <ChevronRight className="ml-1 h-4 w-4" />
             </span>
-          </button>
+          </button> */}
+           <HoverButton service={service} index={index} />
         </Card>
       ))}
     </div>

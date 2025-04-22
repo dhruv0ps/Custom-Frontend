@@ -1,4 +1,4 @@
-import  { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import AboutYouSection from "./AboutYouSection";
 import AllServices from "./AllServices";
 import BusinessPartnerSection from "./BusinessPartnerSelection";
@@ -12,35 +12,34 @@ import TurtleSection from "./TurtleSection";
 import { VirtualToursCard } from "./VirtualToursCard";
 import HomeSlider from "./HomoSlider";
 import video from "@/assets/Home/3sec.mp4";
+import { useLoadingContext } from "../../layout/Home"
 
 const Dashboard = () => {
   const allServicesRef = useRef<HTMLDivElement>(null);
-  const [loading, setLoading] = useState(true);
-
+  const { isLoading, setIsLoading } = useLoadingContext(); // Use the context
+  
   const scrollToAllServices = () => {
     if (!allServicesRef.current) return;
-  
+    
     const offsetTop = allServicesRef.current.offsetTop;
-  
     window.scrollTo({
-      top: offsetTop - 60, 
+      top: offsetTop - 60,
       behavior: "smooth",
     });
   };
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false);
+      setIsLoading(false);
     }, 3000);
     return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
+  }, [setIsLoading]);
+  
+  if (isLoading) {
     return (
       <div className="w-screen h-screen flex items-center justify-center bg-white">
-        <div className="w-full max-w-md  px-4">
+        <div className="w-full max-w-md px-4">
           <div className="relative w-full pb-[56.25%]">
-            {" "}
-           
             <video autoPlay muted playsInline className="absolute inset-0 w-full h-full object-contain">
               <source src={video} type="video/mp4" />
               Your browser does not support the video tag.
@@ -50,7 +49,7 @@ const Dashboard = () => {
       </div>
     )
   }
-
+  
   return (
     <div>
       <HomeSlider scrollToAllServices={scrollToAllServices} />

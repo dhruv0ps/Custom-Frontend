@@ -21,7 +21,7 @@ import Typed from "react-typed"
 interface HomeSliderProps {
   scrollToAllServices: () => void;
 }
-import { Button } from "@/components/ui/button"
+import { ChevronDown } from "lucide-react";
 const images = [
   img1,
   img3,
@@ -217,13 +217,13 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
 
       {/* Button section */}
       <div className="flex justify-center mt-12 ">
-        <Button
-       onClick={scrollToAllServices}
-          className="bg-primary text-white text-lg md:text-xl font-semibold px-6 py-3 rounded-full shadow-md hover:bg-primary transition duration-300 w-40 md:w-48 h-12"
-        >
-          See All Services
-        </Button>
-      </div>
+      <button
+      onClick={scrollToAllServices}
+      className="bg-primary text-white text-lg md:text-xl font-semibold px-6 py-3 rounded-full shadow-md hover:bg-primary/90 transition duration-300 w-40 md:w-48 h-12 flex items-center justify-center group"
+    >
+      <span className="whitespace-nowrap">See All Services</span>
+      <ChevronDown className=" h-5 w-5 transition-transform duration-300 opacity-0 group-hover:opacity-100" />
+    </button>      </div>
 
 
     </div>
