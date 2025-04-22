@@ -143,7 +143,7 @@ export const VirtualToursCard: React.FC = () => {
 
                         <div className="flex md:hidden items-center justify-between w-full mb-6">
 
-                            <div className="w-28 h-28 ">
+                            <div className="w-24 h-24 ">
                                 <img
                                     src={speedometerIcon}
                                     alt="Speedometer Icon"

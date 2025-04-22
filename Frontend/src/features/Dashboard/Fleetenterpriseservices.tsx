@@ -74,7 +74,7 @@ const FleetEnterpriseServices: React.FC = () => {
         </div>
       </div>
       <div className="bg-[#e5f6ff] py-6 px-4 md:px-8 sm:py-16">
-        <div className=" max-w-full sm:max-w-[80%] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+        <div className=" max-w-[97%] sm:max-w-[80%] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           {/* Left Side */}
           <div className="flex-1">
             <div className="flex flex-row-reverse gap-x-16 sm:flex-col sm:items-start justify-between gap-4 mb-6">
@@ -94,7 +94,7 @@ const FleetEnterpriseServices: React.FC = () => {
               </div>
 
               {/* Icon */}
-              <div className="bg-white rounded-xl shadow-md w-32 h-20 sm:w-32 sm:h-32 flex items-center justify-center">
+              <div className="bg-white rounded-xl shadow-md w-24 h-20 sm:w-32 sm:h-32 flex items-center justify-center">
                 <img
                   src={carImage}
                   alt="Competition Icon"

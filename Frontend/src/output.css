@@ -2369,6 +2369,10 @@ input[type="range"]::-ms-fill-lower{
   max-width: 20rem;
 }
 
+.max-w-\[97\]{
+  max-width: 97;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }

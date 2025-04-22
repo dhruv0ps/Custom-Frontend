@@ -59,38 +59,38 @@ const ReviewCarousel = () => {
     }
   }, [])
 
-  // Auto-scroll functionality
   useEffect(() => {
-    if (isMobile && !isPaused) {
+    if (!isPaused) {
       const interval = setInterval(() => {
         scroll("right")
-      }, 3000) // Auto-scroll every 3 seconds on mobile
+      }, 3000) 
 
       return () => clearInterval(interval)
     }
-  }, [isPaused, isMobile, currentIndex])
+  }, [isPaused,  currentIndex,isMobile])
 
   const scroll = (direction: "left" | "right") => {
-    const container = scrollContainerRef.current
-    if (!container) return
-
-    const imagesPerView = isMobile ? 1 : 4
-    const scrollAmount = container.clientWidth
-
+    const container = scrollContainerRef.current;
+    if (!container) return;
+  
+    const totalImages = reviewImages.length;
+    const imagesPerView = isMobile ? 1 : 4;
+    const singleImageWidth = container.scrollWidth / totalImages;
+    const scrollAmount = singleImageWidth;
+  
+    let newIndex = currentIndex;
+  
     if (direction === "left") {
-      container.scrollBy({ left: -scrollAmount, behavior: "smooth" })
+      newIndex = Math.max(0, currentIndex - 1);
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     } else {
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" })
+      newIndex = Math.min(totalImages - imagesPerView, currentIndex + 1);
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
-
-    // Update current index for auto-scroll tracking
-    setTimeout(() => {
-      if (container) {
-        const newIndex = Math.round(container.scrollLeft / (container.clientWidth / imagesPerView))
-        setCurrentIndex(newIndex)
-      }
-    }, 300)
-  }
+  
+    setCurrentIndex(newIndex);
+  };
+  
 
   // Handle user interaction
   const handleMouseEnter = () => {
