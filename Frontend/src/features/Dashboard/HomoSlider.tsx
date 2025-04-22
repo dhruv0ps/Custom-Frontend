@@ -3,19 +3,19 @@ import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
 import img1 from "@/assets/Become-Member/VIP.png";
 import img2 from "@/assets/Become-Member/RegistrationRequest.png";
-import img3 from "@/assets/SellYourCar.png";
-import img4 from "@/assets/BuyNewCar.png";
+import img3 from "@/assets/Sell-Your-car.jpg";
+import img4 from "@/assets/Home/BuyANewCar.jpg";
 import img5 from "@/assets/Dealer Demo/dealerDemo.jpg";
-import img6 from "@/assets/MateRates.png";
-import img7 from "@/assets/Trade Promotion/tradePromotionHeader.jpg";
-import img8 from "@/assets/Virtual Tour/virtualTour.jpg";
-import img9 from "@/assets/Finance/finance.jpg";
-import img10 from "@/assets/Insurance/Insurance.jpg";
-import img11 from "@/assets/Overhauled/overhauled.jpg";
-import img12 from "@/assets/Charity/Charity.jpg";
+import img6 from "@/assets/Home/MatesRates.jpg";
+import img7 from "@/assets/Home/TradePromotionDraws.jpg";
+import img8 from "@/assets/Home/Virtual-Tours.jpg";
+import img9 from "@/assets/Home/Finance-page.jpg";
+import img10 from "@/assets/Home/Insurance-image.jpg";
+import img11 from "@/assets/Home/OverhauledCompetition.jpg";
+import img12 from "@/assets/Home/Charities-img.jpg";
 import img13 from "@/assets/Savings/Saving.jpg";
 import img14 from "@/assets/Reports1.jpg";
-import img15 from "@/assets/FleetManagement.png";
+import img15 from "@/assets/Home/FleetEnquiries.jpg";
 import Typed from "react-typed"
 
 interface HomeSliderProps {

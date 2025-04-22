@@ -18,9 +18,15 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
 
   const scrollToAllServices = () => {
-    allServicesRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (!allServicesRef.current) return;
+  
+    const offsetTop = allServicesRef.current.offsetTop;
+  
+    window.scrollTo({
+      top: offsetTop - 60, 
+      behavior: "smooth",
+    });
   };
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);

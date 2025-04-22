@@ -61,45 +61,62 @@ const   AboutYouSection: React.FC = () => {
       </div>
     </div>
 
-    <div className="bg-primary py-12 px-4 flex flex-col items-center justify-center text-center">
-      <div className="max-w-md mx-auto flex flex-col items-center">
-        {/* Customer Service Icon Card */}
-        <div className="bg-white  rounded-lg shadow-md mb-6 w-36 h-36 flex items-center justify-center">
-         <img
-         src={img1} 
-         loading="lazy"
-         />
+    <div className="bg-[#ade7ff] sm:bg-primary py-6 sm:py-12 px-4">
+      {/* Mobile view - matches the image */}
+      <div className="sm:hidden flex flex-row items-center justify-between space-x-6">
+        
+        <div className="bg-white rounded-lg shadow-md w-32 h-28 flex items-center justify-center">
+          <img src={img1} alt="Customer service" loading="lazy" className="w-24 h-24" />
         </div>
 
-        {/* Heading */}
-        <h3 className="text-white text-3xl font-bold mb-2">Contact Us</h3>
+        {/* Right side - Content */}
+        <div className="flex flex-col items-end text-right">
+          <h3 className="text-white text-3xl font-bold mb-1">Contact Us</h3>
+          <p className="text-black font-semibold text-base mb-3">We Would Love To Hear From You</p>
+          
+          <button 
+            className="bg-[#18b6ff] text-white px-4 py-2 rounded-full font-medium text-base hover:bg-[#0ca3eb] transition-colors"
+            onClick={() => (window.location.href = "/contact")}
+          >
+            Get In Touch
+          </button>
+        </div>
+      </div>
 
-        {/* Subheading */}
-        <p className="text-white text-xl mb-8">We Would Love To Hear From You</p>
+      {/* Desktop view - preserved from original */}
+      <div className="hidden sm:flex flex-col items-center justify-center text-center">
+        <div className="max-w-md mx-auto flex flex-col items-center">
+          {/* Customer Service Icon Card */}
+          <div className="bg-white rounded-lg shadow-md mb-6 w-36 h-36 flex items-center justify-center">
+            <img src={img1} alt="Customer service" loading="lazy" />
+          </div>
 
-        {/* Contact Button with Hover Effect */}
-        <HoverCard.Root openDelay={0} closeDelay={100}>
-        <HoverCard.Trigger asChild>
-  <button
-    className="group bg-white text-primary px-8 py-3 rounded-full font-medium text-lg flex items-center transition-transform hover:scale-105"
-    onClick={() => (window.location.href = "/contact")}
-  >
-  <span className="block group-hover:opacity-0 transition-opacity duration-200">
-    Get In Touch
-  </span>
+          {/* Heading */}
+          <h3 className="text-white text-3xl font-bold mb-2">Contact Us</h3>
 
-  {/* Hover state: text + arrow appears in the center */}
-  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-  Get In Touch
-    <ChevronRight className="ml-1 h-4 w-4" />
-  </span>
-  </button>
-</HoverCard.Trigger>
+          {/* Subheading */}
+          <p className="text-white text-xl mb-8">We Would Love To Hear From You</p>
 
-          <HoverCard.Portal>
-            
-          </HoverCard.Portal>
-        </HoverCard.Root>
+          {/* Contact Button with Hover Effect */}
+          <HoverCard.Root openDelay={0} closeDelay={100}>
+            <HoverCard.Trigger asChild>
+              <button
+                className="group bg-white text-primary px-8 py-3 rounded-full font-medium text-lg flex items-center transition-transform hover:scale-105"
+                onClick={() => (window.location.href = "/contact")}
+              >
+                <span className="block group-hover:opacity-0 transition-opacity duration-200">
+                  Get In Touch
+                </span>
+                {/* Hover state: text + arrow appears in the center */}
+                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Get In Touch
+                  <ChevronRight className="ml-1 h-4 w-4" />
+                </span>
+              </button>
+            </HoverCard.Trigger>
+            <HoverCard.Portal></HoverCard.Portal>
+          </HoverCard.Root>
+        </div>
       </div>
     </div>
     </>

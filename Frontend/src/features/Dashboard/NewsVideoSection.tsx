@@ -75,7 +75,7 @@ export default function NewsVideoSection({
           </AspectRatio.Root>
 
           {/* Connected title and source section without any gap */}
-          <div className="bg-black text-white px-4 py-3 border-t-0 rounded-b-lg mb-2">
+          <div className="bg-black text-white px-4 py-3 border-t-0 rounded-b-lg ">
             <p className="text-[15px] font-bold leading-snug">
               {title} | {source}
             </p>

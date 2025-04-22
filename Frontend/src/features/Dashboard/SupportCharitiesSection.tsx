@@ -1,59 +1,175 @@
 import React from "react";
-import teddyImage from "@/assets/Charity/Charity.jpg"; 
-import donateGif from "@/assets/Homepage/Donate.gif"; 
+import teddyImage from "@/assets/Home/Charities-img.jpg";
+import donateGif from "@/assets/Homepage/Donate.gif";
+import { ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const SupportCharitiesSection: React.FC = () => {
+  const DonateNowButton = () => {
+    const [hovered, setHovered] = useState(false);
+
+    return (
+      <button
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className={`
+        relative 
+        py-2 sm:py-3 
+        px-4 sm:px-6 
+        font-semibold 
+        text-sm sm:text-lg
+        rounded-full 
+        bg-red-600 
+        text-white 
+        border-none 
+        shadow-md 
+        transition-transform duration-300 
+        overflow-hidden 
+        min-w-[120px] sm:min-w-[170px] 
+        text-center
+        ${hovered ? 'scale-105' : 'scale-100'}
+      `}
+    >
+      {/* Static Text */}
+      <span
+        className={`
+          relative 
+          z-10 
+          flex 
+          justify-center 
+          items-center 
+          w-full 
+          transition-opacity duration-200
+          ${hovered ? 'opacity-0' : 'opacity-100'}
+        `}
+      >
+        Donate Now
+      </span>
+
+      {/* Hover Text + Arrow */}
+      <span
+        className={`
+          absolute 
+          inset-0 
+          flex 
+          items-center 
+          justify-center 
+          transition-opacity duration-200
+          z-20
+          ${hovered ? 'opacity-100' : 'opacity-0'}
+        `}
+      >
+        Donate Now
+        <ChevronRight className="ml-1 w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+      </span>
+    </button>
+    );
+  };
+
   return (
-    <div className="bg-[#feedf4] py-20 px-6">
-      <div className="max-w-[80%] mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+    <div className="bg-[#feedf4]">
+      {/* Mobile View - Matching the image */}
+      <div className="md:hidden flex flex-col p-6">
+        <h2 className="text-4xl font-bold text-red-600 text-end mb-1">
+          We Support Charities
+        </h2>
+        <h3 className="text-sm font-bold text-blue-400 text-end mb-6">
+          We're Building Hope, One Donation At A Time
+        </h3>
         
-        {/* Left - Teddy Image */}
-        <div className="flex-1 flex justify-center">
+        <div className="flex justify-center mb-6">
           <img
             src={teddyImage}
             alt="Teddy with Heart"
-           className="rounded-[40px] shadow-xl w-[471px] h-[360px] object-cover"
+            className="rounded-3xl shadow-xl w-78 h-64 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="flex">
+        <p className="text-gray-600 text-sm mb-4 text-left">
+          We contribute to supported charities on behalf of our members
+          and all users who utilise our services for buying and selling cars.
+          Each donation is a stepping stone toward a future filled with hope and
+          opportunity. Discover more on our Charity page today.
+        </p>
+        
+        <div className="flex flex-col mb-6 items-center">
+          <img
+            src={donateGif}
+            alt="Donate Icon"
+            loading="lazy"
+            className="w-24 h-24 object-contain bg-white rounded-md shadow-md "
+          />
+          <div className="flex-1"></div>
+          <DonateNowButton />
+        </div>
+        </div>
+      </div>
+
+      {/* Desktop View - Kept unchanged */}
+      <div className="max-w-full sm:max-w-[80%] mx-auto hidden md:flex flex-col md:flex-row items-center justify-between gap-12 py-10 px-3">
+        {/* Left - Teddy Image */}
+        <div className="flex-1 flex justify-center sm:mt-6">
+          <img
+            src={teddyImage}
+            alt="Teddy with Heart"
+            className="rounded-[40px] shadow-xl sm:w-[500px] sm:h-[420px] w-[200px] h-[240px] object-cover"
             loading="lazy"
           />
         </div>
 
         {/* Right - Content */}
-        <div className="flex-1  md:text-left">
-            <div className="flex justify-end items-end mb-4">
+        <div className="flex-1 md:text-left">
+          <div className="flex justify-end items-end mb-4">
             <h2 className="text-4xl font-bold text-red-600 mb-4">We Support Charities</h2>
-            </div>
-         
+          </div>
 
           {/* Donation Icon */}
-          <div className="mb-6 flex justify-center md:justify-end">
-            <img
-              src={donateGif}
-              alt="Donate Icon"
-            className="w-[115px] h-[115px] rounded-xl shadow-md bg-white p-2 object-contain"
-              loading="lazy"
-            />
+          <div className="mb-6 flex w-full justify-end">
+            <div className="relative sm:w-[115px] sm:h-[115px]">
+              <img
+                src={donateGif}
+                alt="Donate Icon"
+                loading="lazy"
+                className="w-full h-full object-contain rounded-xl bg-white shadow-md"
+                style={{
+                  boxShadow: "inset 0px 0px 8px 0px rgba(0, 0, 0, 0.3)",
+                }}
+              />
+
+              <div
+                className="box-shadow-overlay"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  zIndex: 10,
+                  pointerEvents: "none",
+                }}
+              />
+            </div>
           </div>
-<div className="flex justify-end">
-          <h3 className="text-xl font-bold text-primary mb-4">
-            We're Building Hope, One Donation At A Time
-          </h3></div>
+
+          <div className="flex justify-end">
+            <h3 className="text-xl font-bold text-primary mb-4">
+              We're Building Hope, One Donation At A Time
+            </h3>
+          </div>
 
           <div className="flex flex-col items-center md:items-end text-center md:text-right">
-  <p className="text-gray-700 mb-6 max-w-xl leading-relaxed">
-    We contribute to supported charities on behalf of our members and all users who utilise
-    our services for buying and selling cars. <br className="hidden md:block" />
-    Each donation is a stepping stone toward a future filled with hope and opportunity.
-    <br className="hidden md:block" />
-    Discover more on our charity page today.
-  </p>
+            <p className="text-gray-700 mb-6 max-w-xl leading-relaxed">
+              We contribute to supported charities on behalf of our members and all users who utilise
+              our services for buying and selling cars. <br className="hidden md:block" />
+              Each donation is a stepping stone toward a future filled with hope and opportunity.
+              Discover more on our charity page today.
+            </p>
 
-  <div className="flex items-end justify-end md:justify-start w-full">
-    <button className="bg-red-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow hover:scale-105 transition-all">
-      Donate Now
-    </button>
-  </div>
-</div>
-
+            <div className="flex justify-end">
+              <DonateNowButton />
+            </div>
+          </div>
         </div>
       </div>
     </div>

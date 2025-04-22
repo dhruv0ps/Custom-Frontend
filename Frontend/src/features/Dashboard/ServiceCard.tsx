@@ -128,6 +128,7 @@ const services = [
 export default function ServiceCards() {
   return (
     <div className="container max-w-full sm:max-w-[80%] mx-auto px-4 py-8">
+      <h2 className="font-bold text-[#1cbeff] text-center text-3xl mb-6 ">ALL Services</h2>
    <div className="block lg:hidden space-y-4">
   {services.map((service, index) => (
     <Card

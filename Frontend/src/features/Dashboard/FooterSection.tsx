@@ -15,7 +15,7 @@ const FooterSection: React.FC = () => {
     <>
     <footer className="bg-white text-gray-700 px-6 md:px-12 py-16 space-y-12">
       
-      <div className="max-w-[85%] mx-auto space-y-6 text-sm leading-relaxed">
+      <div className=" max-w-[97%] sm:max-w-[85%] mx-auto space-y-6 text-sm leading-relaxed">
       <div className="flex justify-start">
     <img
       src={logo}
