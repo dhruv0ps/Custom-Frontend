@@ -32,7 +32,7 @@ export default function NewsVideoSection({
             POLICE HUNT THIEVES AFTER ONLINE PRIVATE SALE | {source}
           </h2>
         </div>
-
+  
         <div className="relative overflow-hidden rounded-lg shadow-lg">
           <AspectRatio.Root ratio={16 / 9}>
             {isPlaying ? (
