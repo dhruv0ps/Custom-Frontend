@@ -1,6 +1,6 @@
 import type React from "react"
 import img1 from "@/assets/Homepage/Fleet.gif"
-import imgIcon from "@/assets/Homepage/Car-Coming.webp";
+import imgIcon from "@/assets/Home/OverhauledCompetition.jpg";
 import carImage from "@/assets/Homepage/Car-Washing.gif"
 import { ChevronRight } from "lucide-react";
 
@@ -12,12 +12,10 @@ const FleetEnterpriseServices: React.FC = () => {
 
           <div className="flex flex-row-reverse gap-x-8 items-center justify-between md:block mt-2 ">
 
-            <h2 className="text-3xl sm:text-2xl md:text-4xl font-bold text-primary  text-right sm:text-left">
-              <span className="inline-block">Fleet</span>
-              <br className="block sm:hidden" />
-              <span className="text-base sm:text-2xl md:text-4xl inline-block">Enterprise Services</span>
-            </h2>
-
+          <h2 className="text-3xl sm:text-2xl md:text-4xl font-bold text-primary text-right sm:text-left flex flex-col sm:flex-row sm:items-baseline sm:gap-4">
+  <span>Fleet</span>
+  <span className="text-lg sm:text-2xl md:text-4xl">Enterprise Services</span>
+</h2>
 
             <div className="bg-white rounded-xl shadow-lg w-32 h-28 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center p-3 mt-0 md:mt-4">
               <img
@@ -61,7 +59,7 @@ const FleetEnterpriseServices: React.FC = () => {
           </div>
 
           {/* Learn More Button */}
-          <div className="flex justify-end mt-12 mb-2">
+          <div className="flex justify-end mt-12 mb-6">
             <button className="group relative px-6 py-3 font-semibold text-base rounded-full transition bg-primary text-white shadow hover:scale-105 overflow-hidden">
               <span className="block group-hover:opacity-0 transition-opacity duration-200">
                 Learn More
@@ -84,7 +82,7 @@ const FleetEnterpriseServices: React.FC = () => {
 
                   <span className="block sm:hidden">
                     <span className="block text-3xl">Overhauled</span>
-                    <span className="block text-base">Competition</span>
+                    <span className="block text-3xl">Competition</span>
                   </span>
                   <span className="hidden sm:inline whitespace-nowrap">Overhauled Competition</span>
                 </h2>
@@ -94,7 +92,7 @@ const FleetEnterpriseServices: React.FC = () => {
               </div>
 
               {/* Icon */}
-              <div className="bg-white rounded-xl shadow-md w-24 h-20 sm:w-32 sm:h-32 flex items-center justify-center">
+              <div className="bg-white rounded-xl shadow-md w-32 h-28 sm:w-32 sm:h-32 flex items-center justify-center">
                 <img
                   src={carImage}
                   alt="Competition Icon"
@@ -115,7 +113,7 @@ const FleetEnterpriseServices: React.FC = () => {
             </ul>
 
             {/* How To Enter */}
-            <h4 className="text-primary font-bold text-lg mb-2">How To Enter</h4>
+            <h4 className="text-primary font-bold text-xl md:text-2xl mb-2">How To Enter</h4>
             <ul className="text-gray-700 space-y-2">
               <li>• Get in to win</li>
               <li>• Share your unique automotive story</li>
@@ -130,7 +128,7 @@ const FleetEnterpriseServices: React.FC = () => {
                 src={imgIcon}
                 alt="Car Coming"
                 className="w-full h-auto object-cover rounded-2xl shadow-lg"
-                style={{ maxHeight: "900px" }}
+                style={{ maxHeight: "500px" }}
               />
             </div>
 

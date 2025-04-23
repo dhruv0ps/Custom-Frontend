@@ -26,7 +26,7 @@ export default function NewsVideoSection({
 
   return (
     <div className={cn(" bg-gray-200 ", className)}>
-      <div className="max-w-[97%] sm:max-w-4xl mx-auto">
+      <div className="max-w-[92%] sm:max-w-4xl mx-auto pb-8">
         <div className="flex items-end justify-end ">
           <h2 className="text-[14px] font-bold uppercase text-primary text-right pb-[10px] leading-[1em] mt-4">
             POLICE HUNT THIEVES AFTER ONLINE PRIVATE SALE | {source}
@@ -75,7 +75,7 @@ export default function NewsVideoSection({
           </AspectRatio.Root>
 
           {/* Connected title and source section without any gap */}
-          <div className="bg-black text-white px-4 py-3 border-t-0 rounded-b-lg ">
+          <div className="bg-black text-white px-4 py-3 border-t-0 rounded-b-lg  ">
             <p className="text-[15px] font-bold leading-snug">
               {title} | {source}
             </p>

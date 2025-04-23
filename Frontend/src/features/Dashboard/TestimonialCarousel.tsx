@@ -10,7 +10,7 @@ import test4 from "@/assets/Review/review3.webp"
 import test5 from "@/assets/Review/review4.webp"
 import test6 from "@/assets/Review/review5.webp"
 import test7 from "@/assets/Review/review6.webp"
-import test8 from "@/assets/Review/review7.webp"
+
 import test9 from "@/assets/Review/review7.webp"
 import test10 from "@/assets/Review/review8.webp"
 import test11 from "@/assets/Review/review9.webp"
@@ -28,7 +28,7 @@ const reviewImages = [
   test5,
   test6,
   test7,
-  test8,
+
   test9,
   test10,
   test11,
@@ -81,15 +81,26 @@ const ReviewCarousel = () => {
     let newIndex = currentIndex;
   
     if (direction === "left") {
-      newIndex = Math.max(0, currentIndex - 1);
-      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      newIndex = currentIndex - 1;
+      if (newIndex < 0) {
+        newIndex = totalImages - imagesPerView;
+        container.scrollTo({ left: newIndex * scrollAmount, behavior: "auto" });
+      } else {
+        container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      }
     } else {
-      newIndex = Math.min(totalImages - imagesPerView, currentIndex + 1);
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      newIndex = currentIndex + 1;
+      if (newIndex > totalImages - imagesPerView) {
+        newIndex = 0;
+        container.scrollTo({ left: 0, behavior: "auto" });
+      } else {
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
     }
   
     setCurrentIndex(newIndex);
   };
+  
   
 
   // Handle user interaction
@@ -104,10 +115,10 @@ const ReviewCarousel = () => {
   return (
     <div>
       <div className="w-full bg-primary text-white py-10 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-full sm:max-w-[80%] mx-auto">
           <h3 className="text-xl font-medium mb-2">Testimonials</h3>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-2">Countless Aussies can't be wrong!</h2>
-          <p className="text-2xl mb-8">Here's what people have to say...</p>
+          <h2 className="text-[21px] sm:text-4xl font-bold mb-2 whitespace-nowrap">Countless Aussies can't be wrong!</h2>
+          <p className="text-xl mb-8">Here's what people have to say...</p>
 
           <div
             className="relative"
@@ -156,7 +167,7 @@ const ReviewCarousel = () => {
         </div>
       </div>
 
-      <section className="bg-white py-8 px-4 max-w-[80%] mx-auto font-poppins">
+      <section className="bg-white py-8 px-4  sm:max-w-[80%] mx-auto font-poppins">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           {/* Left Text Content */}
           <div className="max-w-xl text-center md:text-left">
@@ -164,10 +175,10 @@ const ReviewCarousel = () => {
               Luckily for you, we service Australia wide
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Our services are available in all major cities Australia-wide. Whether you're in Melbourne, Sydney,
-              Canberra, Brisbane, Darwin, Perth, Adelaide, Hobart, or anywhere in between, we're here to serve you.
-              Discover how we can assist you today.
-            </p>
+  Our services are available in all major cities Australia-wide. Whether you're in Melbourne, Sydney,
+  Canberra, Brisbane, Darwin, Perth, Adelaide, Hobart, or anywhere in between, we're here to serve you.
+  Discover how we can assist you&nbsp;today.
+</p>
           </div>
 
           {/* Right Image */}

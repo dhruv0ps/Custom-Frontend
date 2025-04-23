@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import personImage from "@/assets/Homepage/Virtual-Tours-by-Wheelz.webp";
+import personImage from "@/assets/Home/Virtual-Tours.jpg";
 import speedometerIcon from "@/assets/Homepage/Car-Speedometer.gif";
 import { ChevronRight } from "lucide-react";
 
@@ -131,11 +131,13 @@ export const VirtualToursCard: React.FC = () => {
                 <div className="flex flex-col md:flex-row items-start gap-16">
                     {/* Left Image */}
                     <div className="w-full md:w-1/2">
-                        <img
-                            src={personImage}
-                            alt="Virtual Tour Host"
-                            className="rounded-2xl shadow-xl w-full h-auto"
-                        />
+                        <div className="relative w-full aspect-[628/419]">
+                            <img
+                                src={personImage}
+                                alt="Virtual Tour Host"
+                                className="absolute top-0 left-0 w-full h-full object-cover rounded-2xl shadow-xl scale-x-[-1]"
+                            />
+                        </div>
                     </div>
 
                     {/* Right Side */}
@@ -187,38 +189,38 @@ export const VirtualToursCard: React.FC = () => {
                 </div>
 
 
-              
+
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-    {videos.map((video, index) => (
-        <div
-            key={index}
-            className="w-full max-w-[520px] flex flex-col items-center gap-4"
-        >
-            <div
-                className="w-full rounded-xl overflow-hidden"
-                style={{ 
-                    boxShadow: "10px 10px 10px 0px #1cbeff"
-                }}
-            >
-                <iframe
-                    src={`${video.url}?modestbranding=1&showinfo=0&rel=0&fs=1`}
-                    title={video.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    loading="lazy"
-                    className="w-full h-auto aspect-video"
-                    style={{
-                        border: "none",
-                        backgroundColor: "#000" 
-                    }}
-                />
-            </div>
-            
-            <HoverButton />
-        </div>
-    ))}
-</div>
+                    {videos.map((video, index) => (
+                        <div
+                            key={index}
+                            className="w-full max-w-[520px] flex flex-col items-center gap-4"
+                        >
+                            <div
+                                className="w-full rounded-xl overflow-hidden"
+                                style={{
+                                    boxShadow: "10px 10px 10px 0px #1cbeff"
+                                }}
+                            >
+                                <iframe
+                                    src={`${video.url}?modestbranding=1&showinfo=0&rel=0&fs=1`}
+                                    title={video.title}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                    loading="lazy"
+                                    className="w-full h-auto aspect-video"
+                                    style={{
+                                        border: "none",
+                                        backgroundColor: "#000"
+                                    }}
+                                />
+                            </div>
+
+                            <HoverButton />
+                        </div>
+                    ))}
+                </div>
                 <div className="mt-16 flex flex-row sm:flex-row sm:justify-end sm:items-center gap-4 w-full">
                     <h3 className="text-2xl font-bold text-white sm:mr-4 sm:mb-0 text-nowrap">More Reviews</h3>
 

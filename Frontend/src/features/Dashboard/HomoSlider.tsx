@@ -14,7 +14,7 @@ import img10 from "@/assets/Home/Insurance-image.jpg";
 import img11 from "@/assets/Home/OverhauledCompetition.jpg";
 import img12 from "@/assets/Home/Charities-img.jpg";
 import img13 from "@/assets/Savings/Saving.jpg";
-import img14 from "@/assets/Reports1.jpg";
+import img14 from "@/assets/Home/TotalActivityTracker.jpg";
 import img15 from "@/assets/Home/FleetEnquiries.jpg";
 import Typed from "react-typed"
 
@@ -43,8 +43,8 @@ const texts = [
   { heading: "Membership", route: "/become-member/membership" },
   { heading: "Sell Your Car", route: "/sell/rego" },
   { heading: "Buy A New Car", route: "/buy" },
-  { heading: "Demo & Pre-owned", route: "/demo-preowned" },
-  { heading: "Mates Rates", route: "/mates-rates" },
+  { heading: "Demo & Pre-owned Cars", route: "/demo-preowned" },
+  { heading: "Mates Rates Discounts", route: "/mates-rates" },
   { heading: "Trade Promotion Draws", route: "/trade-promotion" },
   { heading: "Virtual Tours", route: "/request-virtual-tour" },
   { heading: "Finance", route: "/finance" },
@@ -56,7 +56,7 @@ const texts = [
     route: "/business-partner/register-partner",
   },
   {
-    heading: "Fleet Enquiry",
+    heading: "Fleet Enquiries",
     route: "/business-partner/fleet-management",
   },
   { heading: "Registered Vehicle Tracker", route: "/savings-tracker" },
@@ -65,9 +65,18 @@ const texts = [
 
 export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: "start", skipSnaps: false },
-
-    [Autoplay({ delay: 5000 })]
+    {
+      loop: true,
+      align: "start",
+      skipSnaps: false,
+    },
+    [
+      Autoplay({
+        delay: 4000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: false,
+      }),
+    ]
   )
   const [isTransitioning, setIsTransitioning] = React.useState(false);
 
@@ -95,8 +104,8 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
   return (
     <div className="relative w-full">
       {/* Blue section - wider and more prominent */}
-      <div className="bg-primary  pt-16 pb-32  md:py-20 z-10 relative mb-6 px-6 md:px-12 lg:px-24 w-full">
-      <div className="block md:hidden  text-left">
+      <div className="bg-primary  pt-16 pb-36 md:py-20 z-10 relative mb-6 px-6 md:px-12 lg:px-24 w-full">
+      <div className="block md:hidden  text-left mb-20">
   <h2 className="text-[22px] font-bold leading-tight text-black">
     We empower you to,
   </h2>
@@ -132,13 +141,13 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
     />
   </p>
 </div>
-<div className="hidden md:block text-white max-w-full sm:max-w-[80%] sm:px-4 mx-auto md:ml-12 sm:mb-16">
-  <h2 className="text-[25px] font-bold leading-tight text-black">
+<div className="hidden md:block text-white max-w-full sm:max-w-[80%] sm:px-4 mx-auto md:ml-16 sm:mb-16">
+  <h2 className="text-[25px] font-bold leading-tight text-black sm:mb-2 ">
     We empower you to,
   </h2>
 
   <p
-    className={`text-[19px] font-semibold text-white transition-all duration-300 ease-in-out ${
+    className={`text-[19px] font-semibold text-white  transition-all duration-300 ease-in-out ${
       isTransitioning ? "opacity-0 -translate-y-2" : "opacity-100 translate-y-0"
     }`}
   >
@@ -179,10 +188,10 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
       </div>
 
       {/* Carousel section - centered and responsive */}
-      <div className=" -mt-36 sm:-mt-36 relative z-20 w-full px-4 ">
+      <div className=" mt-[-14.3rem] sm:-mt-36 relative z-20 w-full px-4 ">
         <div className="max-w-full sm:max-w-[80%] mx-auto  overflow-hidden" ref={emblaRef}>
           <div className="flex">
-            {images.map((slide, index) => (
+            {images.map((slide:any, index) => (
               <div
                 key={index}
                 className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_calc(33.333%-12px)] min-w-0 mx-2 bg-white rounded-3xl overflow-hidden shadow-lg relative"

@@ -9,7 +9,7 @@ import gif5 from "@/assets/Homepage/Refuel.gif";
 const AutomotiveSavings = () => {
   const services = [
     {
-      title: "Seamless & Free Car Trading Service",
+      title: "Seamless & Free Car Trading ",
       description: "Effortlessly buy and sell cars through our nationwide dealership network at no cost.",
       image: gif1,
     },
@@ -37,7 +37,7 @@ const AutomotiveSavings = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-6 md:py-12 md:mt-2 md:max-w-[80%]">
+    <div className="container mx-auto px-4 py-6 md:py-12 md:mt-20 md:max-w-[80%]">
       <div className="text-center mb-6 md:mb-16">
         <h2 className="text-xl md:text-3xl lg:text-4xl font-bold md:font-extrabold">Accelerate Your Savings With Us</h2>
         <p className="text-primary text-sm md:text-xl mt-1 md:mt-2">Join Australia's #1 Automotive Ecosystem Today!</p>
@@ -101,7 +101,7 @@ const AutomotiveSavings = () => {
               />
             </Card>
             
-            <h5 className="font-semibold text-[14px] sm:text-[15px] text-gray-900 text-center mt-4 mb-2 leading-snug tracking-tight">
+            <h5 className="font-semibold text-[14px] sm:text-[15px] text-gray-900 text-center mt-4 mb-2 leading-snug tracking-tight whitespace-nowrap">
               {service.title}
             </h5>
             

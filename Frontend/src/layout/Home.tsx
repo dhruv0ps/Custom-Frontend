@@ -3,7 +3,7 @@ import NavBar from './Nav'
 import { observer } from 'mobx-react-lite'
 import { useState } from 'react'
 
-// Define a type for the context if using TypeScript
+
 type LoadingContextType = {
   isLoading: boolean;
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
@@ -21,7 +21,7 @@ const Home = observer(() => {
         </div>
       )}
       
-      {/* Content area with padding only when navbar is visible */}
+      
       <div className={isLoading ? "" : "pt-20"}>
         <Outlet context={{ isLoading, setIsLoading }} />
       </div>
@@ -29,7 +29,7 @@ const Home = observer(() => {
   )
 })
 
-// Helper function to use the loading context in child components
+
 export function useLoadingContext() {
   return useOutletContext<LoadingContextType>();
 }

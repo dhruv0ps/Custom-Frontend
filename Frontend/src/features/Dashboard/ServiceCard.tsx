@@ -34,22 +34,22 @@ const services = [
     bg: "#004281",
   },
   {
-    title: "Demonstrator & Pre-Owned",
+    title: "Demo & Pre-Owned Cars",
     description: "Best of Both Worlds, Quality And Savings In One Location",
     image: gif3,
     buttonText: "Shop Now",
     bg: "#0156a7",
   },
   {
-    title: "Trade Promotion",
-    description: "Receive VIP Access To Free Draws For A Chance To Win Cash Prizes",
+    title: "Trade Promotion Draws",
+    description: "VIP Members Only: Free Draws. Real Cash Prizes. Your Chance To Win Starts Now.",
     image: gif4,
     buttonText: "Enter Now",
     bg: "#027cb2",
   },
   {
     title: "Membership",
-    description: "Cut Your Expenses & Save More",
+    description: "Cut Costs & Keep Money In Your Pocket",
     image: gif5,
     buttonText: "Join Now",
     bg: "#3c9cd6", 
@@ -57,14 +57,14 @@ const services = [
   },
   {
     title: "Virtual Tours",
-    description: "Explore The Future Of Car Shopping",
+    description: "Explore The Future Of Car Shopping From Home",
     image: gif6,
     buttonText: "Tour Now",
     bg: "#5ccbf5",
   },
   {
-    title: "Mates Rates",
-    description: "Unlock Your Savings Potential For All Things Automotive",
+    title: "Mates Rates Discounts",
+    description: "Lock In Your Special Price Today",
     image: gif7,
     buttonText: "Get Deals",
     bg: "#86d1fc",
@@ -92,27 +92,27 @@ const services = [
   },
   {
     title: "Overhauled",
-    description: "Bring Your Dream Build To Life",
+    description: "Bring Your Dream Car Build To Life",
     image: gif12, 
     buttonText: "Enter Now",
     bg: "rgba(204, 237, 255, 0.5)",
   },
   {
     title: "Business Partnership",
-    description: "Invest In Your Future Success",
+    description: "We’re seeking automotive businesses to partner with us and grow together",
     image: gif13,
     buttonText: "Partner Up",
     bg: "rgba(229, 246, 255, 0.5)",
   },
   {
-    title: "Winners",
+    title: "Prize Draw Winners",
     description: "Kudos To Our Victorious Members",
     image: gif14,
     buttonText: "Apply Now",
     bg: "rgba(242, 250, 255, 0.5)",
   },
   {
-    title: "Fundraisers",
+    title: "We Support Charities",
     description: "Your Participation Will Aid Worthy Causes",
     image: gif15,
     buttonText: "Learn More",
@@ -210,7 +210,7 @@ export default function ServiceCards() {
   };
   return (
     <div className="container max-w-full sm:max-w-[80%] mx-auto px-4 py-8">
-      <h2 className="font-bold text-[#1cbeff] text-center text-3xl mb-6 ">ALL Services</h2>
+      <h2 className="font-bold text-[#1cbeff] text-center text-3xl mb-6 ">All Services</h2>
    <div className="block lg:hidden space-y-4">
   {services.map((service, index) => (
     <Card

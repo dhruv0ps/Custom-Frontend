@@ -13,7 +13,7 @@ import { FaLocationDot } from "react-icons/fa6";
 const FooterSection: React.FC = () => {
   return (
     <>
-    <footer className="bg-white text-gray-700 px-6 md:px-12 py-16 space-y-12">
+    <footer className="bg-white text-[#666] px-6 md:px-12 py-16 space-y-12">
       
       <div className=" max-w-[97%] sm:max-w-[85%] mx-auto space-y-6 text-sm leading-relaxed">
       <div className="flex justify-start">
@@ -78,7 +78,7 @@ const FooterSection: React.FC = () => {
 
       <div className=" mb-12"></div>
 
-      <div className=" max-w-full sm:max-w-[85%] mx-auto px-4 md:px-2 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-20 items-start">
+      <div className=" max-w-full sm:max-w-[85%] mx-auto  md:px-2 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-20 items-start">
   {/* Contact */}
   <div>
     <h4 className="text-lg font-semibold text-primary mb-4">Contact Us</h4>
@@ -106,7 +106,7 @@ const FooterSection: React.FC = () => {
   {/* HQ Address */}
   <li className="flex items-start space-x-3">
     <BsBuildingFill className="h-5 w-5 text-primary mt-1 shrink-0" />
-    <span>HQ: 470 St Kilda Road, Melbourne VIC 3004</span>
+    <span className=" whitespace-nowrap sm:whitespace-normal ">HQ: 470 St Kilda Road, Melbourne VIC 3004</span>
   </li>
 </ul>
 
@@ -170,7 +170,7 @@ const FooterSection: React.FC = () => {
   </div>
 </div>
 <div className="w-full mt-12 ">
-  <div className="flex justify-start gap-6 min-w-[280px]">
+  <div className="flex justify-center sm:justify-start gap-6 min-w-[280px]">
     <a href="#">
       <img src={facebook} alt="Facebook" className="h-10 w-10 object-contain" />
     </a>

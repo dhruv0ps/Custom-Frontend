@@ -44,7 +44,7 @@ export default function Navbar() {
           scrolled ? "py-3" : "py-6"
         }`}
       >
-        <div className="max-w-[80%] mx-auto">
+        <div className="max-w-[97%] sm:max-w-[80%] mx-auto">
           <div className="flex items-center  px-2  justify-between transition-all duration-300 ease-in-out">
             <Link to="/">
               <img
