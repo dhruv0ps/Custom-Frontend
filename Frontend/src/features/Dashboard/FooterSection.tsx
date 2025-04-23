@@ -83,7 +83,7 @@ const FooterSection: React.FC = () => {
   <div>
     <h4 className="text-lg font-semibold text-primary mb-4">Contact Us</h4>
     <ul className="space-y-2 ">
-  {/* Phone */}
+  
   <li className="flex items-center space-x-3">
     <IoIosCall className="h-5 w-5 text-primary shrink-0" />
     <span className="whitespace-nowrap">1300 098 765</span>
