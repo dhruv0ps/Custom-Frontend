@@ -2,7 +2,6 @@ import type React from "react"
 import { useState } from "react"
 import { PlusCircle, XCircle } from "lucide-react"
 import { ChevronRight } from "lucide-react"
-import * as HoverCard from "@radix-ui/react-hover-card"
 import img1 from "@/assets/Homepage/03-Helpdesk.gif"
 const AboutYouSection: React.FC = () => {
   const [expanded, setExpanded] = useState(false)
@@ -97,25 +96,23 @@ const AboutYouSection: React.FC = () => {
             {/* Subheading */}
             <p className="text-white text-xl mb-8">We Would Love To Hear From You</p>
 
-            {/* Contact Button with Hover Effect */}
-            <HoverCard.Root openDelay={0} closeDelay={100}>
-              <HoverCard.Trigger asChild>
-                <button
-                  className="group bg-white text-primary px-8 py-3 rounded-full font-medium text-lg flex items-center transition-transform hover:scale-105"
-                
-                >
-                  <span className="block group-hover:opacity-0 transition-opacity duration-200">
-                    Get In Touch
-                  </span>
-                  {/* Hover state: text + arrow appears in the center */}
-                  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    Get In Touch
-                    <ChevronRight className="ml-1 h-4 w-4" />
-                  </span>
-                </button>
-              </HoverCard.Trigger>
-              <HoverCard.Portal></HoverCard.Portal>
-            </HoverCard.Root>
+            
+            <button
+  className="group relative bg-white text-primary px-8 py-3 rounded-full font-medium text-lg flex items-center justify-center overflow-hidden transition-transform hover:scale-105 cursor-pointer"
+>
+  {/* Default state */}
+  <span className="transition-opacity duration-200 group-hover:opacity-0">
+    Get In Touch
+  </span>
+
+  {/* Hover state */}
+  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+    Get In Touch
+    <ChevronRight className="ml-1 h-4 w-4" />
+  </span>
+</button>
+  
+
           </div>
         </div>
       </div>

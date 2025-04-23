@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import turtleVideo from "@/assets/Homepage/iStock-464391536.mp4"; 
-
+import { ChevronRight } from "lucide-react";
 const TurtleSection: React.FC = () => {
   return (
     <div className="relative bg-black      ">
@@ -33,9 +33,18 @@ const TurtleSection: React.FC = () => {
           <p className="text-white text-center mt-6 sm:mt-0 md:text-right text-base md:text-2xl font-semibold mb-4 md:mb-0">
             You're probably wondering how I ended up in this situation...
           </p>
-          <Button className="bg-primary hover:bg-sky-500 text-white font-semibold rounded-full px-4 md:px-6 py-2 shadow transition">
-            Learn More
-          </Button>
+          <Button className="group relative bg-primary hover:bg-sky-500 text-white font-semibold rounded-full px-4 md:px-6 py-2 shadow transition-all flex items-center justify-center overflow-hidden">
+  {/* Default Text */}
+  <span className="transition-opacity duration-200 group-hover:opacity-0">
+    Learn More
+  </span>
+
+  {/* Hover State with Arrow */}
+  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+    Learn More
+    <ChevronRight className=" h-5 w-5" />
+  </span>
+</Button>
         </div>
       </div>
     </div>
