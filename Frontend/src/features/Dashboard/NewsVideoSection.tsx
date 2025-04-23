@@ -1,14 +1,10 @@
-
-
-import * as React from "react"
-import * as AspectRatio from "@radix-ui/react-aspect-ratio"
-import { cn } from "@/lib/utils"
+import * as React from "react";
 
 interface NewsVideoSectionProps {
-  videoId: string
-  title: string
-  source: string
-  className?: string
+  videoId: string;
+  title: string;
+  source: string;
+  className?: string;
 }
 
 export default function NewsVideoSection({
@@ -17,52 +13,47 @@ export default function NewsVideoSection({
   source = "7 NEWS",
   className,
 }: NewsVideoSectionProps) {
-  const [_isLoaded, setIsLoaded] = React.useState(false)
-  const [isPlaying, setIsPlaying] = React.useState(false)
-
-  const handlePlayClick = () => {
-    setIsPlaying(true)
-  }
-
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  
+  // Use useCallback to memoize the handler
+  const handlePlayClick = React.useCallback(() => {
+    setIsPlaying(true);
+  }, []);
+  
   return (
-    <div className={cn(" bg-gray-200 ", className)}>
+    <div className={`bg-gray-200 ${className || ""}`}>
       <div className="max-w-[92%] sm:max-w-4xl mx-auto pb-8">
-        <div className="flex items-end justify-end ">
+        <div className="flex items-end justify-end">
           <h2 className="text-[14px] font-bold uppercase text-primary text-right pb-[10px] leading-[1em] mt-4">
             POLICE HUNT THIEVES AFTER ONLINE PRIVATE SALE | {source}
           </h2>
         </div>
-  
+        
         <div className="relative overflow-hidden rounded-lg shadow-lg">
-          <AspectRatio.Root ratio={16 / 9}>
+          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}> {/* 16:9 aspect ratio */}
             {isPlaying ? (
-              <div className="w-full aspect-[16/9] relative overflow-hidden">
-                <iframe
-                  loading="lazy"
-                  title={title}
-                  src={`https://www.youtube.com/embed/${videoId}?feature=oembed&autoplay=1`}
-                  className="top-0 left-0 w-full h-full block relative z-[1] leading-[0]"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  name="fitvid0"
-                  onLoad={() => setIsLoaded(true)}
-                ></iframe>
-              </div>
+              <iframe
+                loading="lazy"
+                title={title}
+                src={`https://www.youtube.com/embed/${videoId}?feature=oembed&autoplay=1`}
+                className="absolute top-0 left-0 w-full h-full block z-[1]"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             ) : (
-              <div className="relative w-full aspect-[16/9] bg-black rounded-t-lg overflow-hidden">
-                <div className="absolute inset-0">
-                  <img
-                    src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-                    alt={title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
+              <div className="absolute inset-0 bg-black rounded-t-lg overflow-hidden">
+                <img
+                  src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                  alt={title}
+                  className="w-full h-full object-cover"
+                />
+                
                 <button
                   onClick={handlePlayClick}
-                  className="absolute inset-0 flex items-center justify-center"
+                  className="absolute inset-0 flex items-center justify-center cursor-pointer"
                   aria-label="Play video"
+                  type="button"
                 >
                   {/* YouTube-style play button */}
                   <div className="w-[68px] h-[48px] bg-red-600 opacity-80 hover:opacity-100 rounded-lg flex items-center justify-center transition-opacity">
@@ -72,10 +63,10 @@ export default function NewsVideoSection({
                 </button>
               </div>
             )}
-          </AspectRatio.Root>
-
+          </div>
+          
           {/* Connected title and source section without any gap */}
-          <div className="bg-black text-white px-4 py-3 border-t-0 rounded-b-lg  ">
+          <div className="bg-black text-white px-4 py-3 border-t-0 rounded-b-lg">
             <p className="text-[15px] font-bold leading-snug">
               {title} | {source}
             </p>
@@ -84,6 +75,5 @@ export default function NewsVideoSection({
         </div>
       </div>
     </div>
-  )
+  );
 }
-
