@@ -1665,6 +1665,10 @@ input[type="range"]::-ms-fill-lower{
   margin-top: auto;
 }
 
+.mt-14{
+  margin-top: 3.5rem;
+}
+
 .block{
   display: block;
 }
@@ -2375,6 +2379,10 @@ input[type="range"]::-ms-fill-lower{
 
 .max-w-xs{
   max-width: 20rem;
+}
+
+.max-w-\[95\]{
+  max-width: 95;
 }
 
 .flex-1{

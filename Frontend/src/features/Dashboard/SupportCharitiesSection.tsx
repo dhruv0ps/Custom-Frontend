@@ -69,7 +69,7 @@ const SupportCharitiesSection: React.FC = () => {
   return (
     <div className="bg-[#feedf4]">
       {/* Mobile View - Matching the image */}
-      <h3 className="text-sm sm:text-base font-bold text-primary text-end mb-6 break-words">
+      <h3 className="text-sm sm:text-base  block md:hidden font-bold text-primary text-end mb-6 break-words">
   We're Building Hope, One Donation At A Time
 </h3>
 

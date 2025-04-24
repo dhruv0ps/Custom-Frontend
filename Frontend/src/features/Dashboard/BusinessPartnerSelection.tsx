@@ -50,7 +50,7 @@ export default function BusinessPartnerSection() {
             </p>
 
             <div
-              className="p-4 mb-8 border rounded-lg border-gray-100 mt-16"
+              className="p-4 mb-8 border rounded-lg border-gray-100 mt-4"
               style={{
                 backgroundColor: "#FFFFFF",
                 overflow: "hidden",
