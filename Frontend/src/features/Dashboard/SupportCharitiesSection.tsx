@@ -69,7 +69,7 @@ const SupportCharitiesSection: React.FC = () => {
   return (
     <div className="bg-[#feedf4]">
       {/* Mobile View - Matching the image */}
-      <div className="md:hidden flex flex-col p-4">
+      <div className="md:hidden flex flex-col p-4 max-w-[97%]">
         <h2 className="text-4xl font-bold text-[#ff0000] text-end mb-1">
           We Support Charities
         </h2>
@@ -155,7 +155,7 @@ const SupportCharitiesSection: React.FC = () => {
           </div>
 
           <div className="flex justify-end">
-            <h3 className="text-2xl font-bold text-primary mb-4">
+            <h3 className="text-2xl whitespace-nowrap font-bold text-primary mb-4">
               We're Building Hope, One Donation At A Time
             </h3>
           </div>

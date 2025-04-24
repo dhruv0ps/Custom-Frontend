@@ -71,8 +71,8 @@ const FleetEnterpriseServices: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#e5f6ff] py-6 px-4 md:px-8 sm:py-16">
-        <div className=" max-w-[97%] sm:max-w-[80%] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="bg-[#e5f6ff] py-6 px-4 md:px-8 sm:py-16 overflow-hidden">
+      <div className="max-w-[95%] sm:max-w-[80%] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           {/* Left Side */}
           <div className="flex-1">
             <div className="flex flex-row-reverse gap-x-16 sm:flex-col sm:items-start justify-between gap-4 mb-6">

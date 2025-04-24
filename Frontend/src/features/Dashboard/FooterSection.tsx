@@ -9,8 +9,9 @@ import { FaYoutube } from "react-icons/fa6";
 import { IoIosCall } from "react-icons/io";
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
-
+import { useNavigate } from "react-router-dom";
 const FooterSection: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <>
     <footer className="bg-white text-[#666] px-6 md:px-12 py-16 space-y-12">
@@ -23,7 +24,7 @@ const FooterSection: React.FC = () => {
       title="Wheelz Australia Black and Blue Color"
       loading="lazy"
       decoding="async"
-      className="w-[237px] h-12 "
+      className="h-12 "
     />
   </div>
 
@@ -52,10 +53,7 @@ const FooterSection: React.FC = () => {
         All trademarks, service marks, and trade names mentioned are the property of their respective owners. This website is not responsible for the content or accuracy of external links.
         </p>
 
-        <p>
-          This website assumes no responsibility for the content or accuracy of the information
-          provided in these videos.
-        </p>
+        
       </div>
 
       <div className=" mb-12"></div>
@@ -96,38 +94,60 @@ const FooterSection: React.FC = () => {
 
   {/* Services */}
   <div>
-    <h4 className="text-lg font-semibold text-primary mb-4">Services</h4>
-    <ul className="space-y-2">
-      <li className="flex items-center">
-        <span className="text-primary mr-2">•</span>
-        Sell Your Car
-      </li>
-      <li className="flex items-center">
-        <span className="text-primary mr-2">•</span>
-        Buy A New Car
-      </li>
-      <li className="flex items-center">
-        <span className="text-primary mr-2">•</span>
-        Demo & Pre–Owned
-      </li>
-      <li className="flex items-center">
-        <span className="text-primary mr-2">•</span>
-        Mates Rates
-      </li>
-      <li className="flex items-center">
-        <span className="text-primary mr-2">•</span>
-        Trade Promotion
-      </li>
-      <li className="flex items-center">
-        <span className="text-primary mr-2">•</span>
-        Prize Draw Winners
-      </li>
-      <li className="flex items-center">
-        <span className="text-primary mr-2">•</span>
-        Membership
-      </li>
-    </ul>
-  </div>
+  <h4 className="text-lg font-semibold text-primary mb-4">Services</h4>
+  <ul className="space-y-2">
+    <li
+      className="flex items-center cursor-pointer  hover:text-primary"
+      onClick={() => navigate("/sell-your-car")}
+    >
+      <span className="text-primary mr-2">•</span>
+      Sell Your Car
+    </li>
+    <li
+      className="flex items-center cursor-pointer  hover:text-primary"
+      onClick={() => navigate("/buy-your-car")}
+    >
+      <span className="text-primary mr-2">•</span>
+      Buy A New Car
+    </li>
+    <li
+      className="flex items-center cursor-pointer  hover:text-primary"
+      onClick={() => navigate("/demo-pre-owned")}
+    >
+      <span className="text-primary mr-2">•</span>
+      Demo & Pre–Owned
+    </li>
+    <li
+      className="flex items-center cursor-pointer  hover:text-primary"
+      onClick={() => navigate("/mates-rates-discounts")}
+    >
+      <span className="text-primary mr-2">•</span>
+      Mates Rates
+    </li>
+    <li
+      className="flex items-center cursor-pointer  hover:text-primary"
+      onClick={() => navigate("/trade-promotion")}
+    >
+      <span className="text-primary mr-2">•</span>
+      Trade Promotion
+    </li>
+    <li
+      className="flex items-center cursor-pointer  hover:text-primary"
+      onClick={() => navigate("/prize-draw-winners")}
+    >
+      <span className="text-primary mr-2">•</span>
+      Prize Draw Winners
+    </li>
+    <li
+      className="flex items-center cursor-pointer  hover:text-primary"
+      onClick={() => navigate("/membership")}
+    >
+      <span className="text-primary mr-2">•</span>
+      Membership
+    </li>
+  </ul>
+</div>
+
 
   {/* Legal Column */}
   <div className="flex flex-col justify-between h-full">
@@ -158,28 +178,28 @@ const FooterSection: React.FC = () => {
     target="_blank"
     rel="noopener noreferrer"
   >
-      <img src={facebook} alt="Facebook" className="h-10 w-10 object-contain" />
+      <img src={facebook} alt="Facebook" className="h-9 w-9 object-contain" />
     </a>
     <a
     href="https://www.instagram.com/wheelzau"
     target="_blank"
     rel="noopener noreferrer"
   >
-      <img src={instagram} alt="Instagram" className="h-10 w-10 object-contain" />
+      <img src={instagram} alt="Instagram" className="h-9 w-9 object-contain" />
     </a>
     <a
     href="https://x.com/Wheelzau"
     target="_blank"
     rel="noopener noreferrer"
   >
-      <img src={xIcon} alt="X" className="h-10 w-10 object-contain" />
+      <img src={xIcon} alt="X" className="h98 w-9 object-contain" />
     </a>
     <a
     href="https://www.tiktok.com/@wheelzau"
     target="_blank"
     rel="noopener noreferrer"
   >
-      <img src={tiktok} alt="TikTok" className="h-10 w-10 object-contain" />
+      <img src={tiktok} alt="TikTok" className="h-9 w-9 object-contain" />
     </a>
     <a
       href="https://youtube.com"
@@ -187,7 +207,7 @@ const FooterSection: React.FC = () => {
       rel="noopener noreferrer"
       className="text-red-600"
     >
-      <FaYoutube className="h-10 w-10" />
+      <FaYoutube className="h-9 w-9" />
     </a>
   </div>
 </div>

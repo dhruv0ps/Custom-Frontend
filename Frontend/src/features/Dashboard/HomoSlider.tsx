@@ -192,12 +192,13 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
                 className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_calc(33.333%-12px)] min-w-0 mx-2 bg-white rounded-3xl overflow-hidden shadow-lg relative group"
               >
                
-                <div className="overflow-hidden h-64 w-full">
+               <div className="overflow-hidden h-64 w-full relative">
                   <img
                     src={slide || "/placeholder.svg"}
                     alt={`Slide ${index + 1}`}
-                    className="object-cover h-64 w-full rounded-t-3xl border-none outline-none transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    className="object-cover h-64 w-full rounded-t-3xl border-none outline-none transition-all duration-700 ease-out group-hover:scale-125 "
                   />
+ 
                 </div>
                 <div className="absolute bottom-7 left-0 right-0 p-2 bg-white/90 rounded-r-3xl md:w-[90%] w-[80%]">
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 text-nowrap">
