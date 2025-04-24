@@ -1,5 +1,3 @@
-import * as React from "react";
-
 interface NewsVideoSectionProps {
   videoId: string;
   title: string;
@@ -13,13 +11,6 @@ export default function NewsVideoSection({
   source = "7 NEWS",
   className,
 }: NewsVideoSectionProps) {
-  const [isPlaying, setIsPlaying] = React.useState(false);
-  
-  // Use useCallback to memoize the handler
-  const handlePlayClick = React.useCallback(() => {
-    setIsPlaying(true);
-  }, []);
-  
   return (
     <div className={`bg-gray-200 ${className || ""}`}>
       <div className="max-w-[92%] sm:max-w-4xl mx-auto pb-8">
@@ -28,44 +19,22 @@ export default function NewsVideoSection({
             POLICE HUNT THIEVES AFTER ONLINE PRIVATE SALE | {source}
           </h2>
         </div>
-        
+
         <div className="relative overflow-hidden rounded-lg shadow-lg">
-          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}> {/* 16:9 aspect ratio */}
-            {isPlaying ? (
-              <iframe
-                loading="lazy"
-                title={title}
-                src={`https://www.youtube.com/embed/${videoId}?feature=oembed&autoplay=1`}
-                className="absolute top-0 left-0 w-full h-full block z-[1]"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            ) : (
-              <div className="absolute inset-0 bg-black rounded-t-lg overflow-hidden">
-                <img
-                  src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-                  alt={title}
-                  className="w-full h-full object-cover"
-                />
-                
-                <button
-                  onClick={handlePlayClick}
-                  className="absolute inset-0 flex items-center justify-center cursor-pointer"
-                  aria-label="Play video"
-                  type="button"
-                >
-                  {/* YouTube-style play button */}
-                  <div className="w-[68px] h-[48px] bg-red-600 opacity-80 hover:opacity-100 rounded-lg flex items-center justify-center transition-opacity">
-                    {/* Triangle play symbol */}
-                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[20px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
-                  </div>
-                </button>
-              </div>
-            )}
-          </div>
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&showinfo=0&rel=0&fs=1`}
+            title={title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            loading="lazy"
+            className="w-full h-auto aspect-video"
+            style={{
+              border: "none",
+              backgroundColor: "#000",
+            }}
+          />
           
-          {/* Connected title and source section without any gap */}
           <div className="bg-black text-white px-4 py-3 border-t-0 rounded-b-lg">
             <p className="text-[15px] font-bold leading-snug">
               {title} | {source}
