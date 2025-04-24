@@ -69,42 +69,9 @@ const SupportCharitiesSection: React.FC = () => {
   return (
     <div className="bg-[#feedf4]">
       {/* Mobile View - Matching the image */}
-      <div className="md:hidden flex flex-col p-4 max-w-[97%]">
-        <h2 className="text-4xl font-bold text-[#ff0000] text-end mb-1">
-          We Support Charities
-        </h2>
-        <h3 className="text-base font-bold text-primary text-end mb-6 whitespace-nowrap">
-          We're Building Hope, One Donation At A Time
-        </h3>
-        
-        <div className="flex justify-center mb-6">
-          <img
-            src={teddyImage}
-            alt="Teddy with Heart"
-            className="rounded-3xl shadow-xl w-78 h-64 object-cover"
-            loading="lazy"
-          />
-        </div>
-        <div className="flex">
-        <p className="text-gray-600 text-sm mb-4 text-left">
-          We contribute to supported charities on behalf of our members
-          and all users who utilise our services for buying and selling cars.
-          Each donation is a stepping stone toward a future filled with hope and
-          opportunity. Discover more on our Charity page today.
-        </p>
-        
-        <div className="flex flex-col mb-6 items-center">
-          <img
-            src={donateGif}
-            alt="Donate Icon"
-            loading="lazy"
-            className="w-24 h-24 object-contain bg-white rounded-md shadow-md "
-          />
-          <div className="flex-1 "></div>
-          <DonateNowButton />
-        </div>
-        </div>
-      </div>
+      <h3 className="text-sm sm:text-base font-bold text-primary text-end mb-6 break-words">
+  We're Building Hope, One Donation At A Time
+</h3>
 
       {/* Desktop View - Kept unchanged */}
       <div className="max-w-full sm:max-w-[80%] mx-auto hidden md:flex flex-col md:flex-row items-center justify-between gap-12 py-10 ">

@@ -18,9 +18,14 @@ module.exports = {
           '0%': { opacity: '0', transform: 'translateY(-20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         fadeTop: 'fadeTop 1s cubic-bezier(.77,0,.175,1) both',
+        marquee: 'marquee 25s linear infinite',
       },
     },
   },

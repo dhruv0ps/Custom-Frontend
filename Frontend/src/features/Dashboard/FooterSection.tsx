@@ -178,7 +178,7 @@ const FooterSection: React.FC = () => {
     target="_blank"
     rel="noopener noreferrer"
   >
-      <img src={facebook} alt="Facebook" className="h-9 w-9 object-contain" />
+      <img src={facebook} alt="Facebook" className="h-9 w- object-contain" />
     </a>
     <a
     href="https://www.instagram.com/wheelzau"

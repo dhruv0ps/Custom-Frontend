@@ -235,7 +235,7 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
     </span>
 
     {/* Hover state */}
-    <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+    <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
       See All Services
       <ChevronDown className="mt-1 h-12 w-7" />
     </span>

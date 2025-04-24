@@ -3,7 +3,7 @@ import { useState } from "react"
 import { PlusCircle, XCircle } from "lucide-react"
 import { ChevronRight } from "lucide-react"
 import img1 from "@/assets/Homepage/03-Helpdesk.gif"
-const AboutYouSection: React.FC = () => {
+const   AboutYouSection: React.FC = () => {
   const [expanded, setExpanded] = useState(false)
 
   return (
