@@ -76,74 +76,70 @@ const FleetEnterpriseServices: React.FC = () => {
         {/* Left Side */}
         <div className="flex-1">
           <div className="flex flex-row-reverse gap-x-8 sm:gap-x-16 sm:flex-col sm:items-start justify-between gap-4 mb-6">
-            <div className="max-w-[210px] sm:max-w-none">
+            <div className="max-w-[180px] sm:max-w-none">
               <h2 className="text-2xl sm:text-4xl md:text-4xl font-bold text-primary text-right sm:text-left">
-                  <span className="block sm:hidden">
-                    <span className="block text-3xl">Overhauled</span>
-                    <span className="block text-3xl">Competition</span>
-                  </span>
-                  <span className="hidden sm:inline whitespace-nowrap">Overhauled Competition</span>
-                </h2>
-                <p className="text-base sm:text-lg md:text-xl mt-4 sm:mt-2 font-semibold text-gray-800 text-right sm:text-left">
-                  Coming soon...
-                </p>
-              </div>
-
-              {/* Icon */}
-              <div className="bg-white rounded-xl shadow-md w-32 h-28 sm:w-32 sm:h-32 p-3 flex items-center justify-center">
-                <img
-                  src={carImage}
-                  alt="Competition Icon"
-                    className="w-20 h-20 sm:w-24 sm:h-24 "
-                />
-              </div>
+                <span className="block sm:hidden">
+                  <span className="block text-3xl">Overhauled</span>
+                  <span className="block text-3xl">Competition</span>
+                </span>
+                <span className="hidden sm:inline text-nowrap">Overhauled Competition</span>
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl mt-4 sm:mt-2 font-semibold text-gray-800 text-right sm:text-left">
+                Coming soon...
+              </p>
             </div>
 
-            {/* Main Heading */}
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-              Your Dream Build Awaits!
-            </h3>
-
-            {/* Description List */}
-            <ul className="text-gray-700 space-y-2 mb-4 whitespace-nowrap">
-              <li>• We're turning the spotlight on you</li>
-              <li>• Your car will undergo a stunning transformation</li>
-            </ul>
-
-            {/* How To Enter */}
-            <h4 className="text-primary font-bold text-xl md:text-2xl mb-2">How To Enter</h4>
-            <ul className="text-gray-700 space-y-2">
-              <li>• Get in to win</li>
-              <li>• Share your unique automotive story</li>
-              <li>• Turn your dream build into a reality</li>
-            </ul>
-          </div>
-
-
-          <div className="basis-full md:basis-[60%] relative">
-            <div className="w-full max-w-full sm:mt-24 mx-auto">
+            {/* Icon */}
+            <div className="bg-white rounded-xl shadow-md w-28 h-28 sm:w-32 sm:h-32 p-3 flex items-center justify-center">
               <img
-                src={imgIcon}
-                alt="Car Coming"
-                className="w-full h-auto object-cover rounded-2xl shadow-lg"
-                style={{ maxHeight: "500px" }}
+                src={carImage || "/placeholder.svg"}
+                alt="Competition Icon"
+                className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
               />
             </div>
-
-            <button
-              className="group absolute bottom-4 right-4 bg-primary text-white px-6 py-2 rounded-full font-semibold text-base shadow-md hover:scale-105 transition-transform overflow-hidden"
-              onClick={() => console.log("Enter Now clicked")}
-            >
-              <span className="block group-hover:opacity-0 transition-opacity duration-200">
-                Enter Now
-              </span>
-              <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                Enter Now <ChevronRight className="ml-1 h-4 w-4" />
-              </span>
-            </button>
           </div>
+
+          {/* Main Heading */}
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">Your Dream Build Awaits!</h3>
+
+          {/* Description List */}
+          <ul className="text-gray-700 space-y-2 mb-4">
+            <li>• We&apos;re turning the spotlight on you</li>
+            <li>• Your car will undergo a stunning transformation</li>
+          </ul>
+
+          {/* How To Enter */}
+          <h4 className="text-primary font-bold text-xl md:text-2xl mb-2">How To Enter</h4>
+          <ul className="text-gray-700 space-y-2">
+            <li>• Get in to win</li>
+            <li>• Share your unique automotive story</li>
+            <li>• Turn your dream build into a reality</li>
+          </ul>
+        </div>
+
+        {/* Right Side - Image */}
+        <div className="basis-full md:basis-[60%] relative">
+          <div className="w-full max-w-full sm:mt-24 mx-auto">
+            <img
+              src={imgIcon || "/placeholder.svg"}
+              alt="Car Coming"
+              className="w-full h-auto object-cover rounded-2xl shadow-lg"
+              style={{ maxHeight: "500px" }}
+            />
+          </div>
+
+          <button
+            className="group absolute bottom-4 right-4 bg-primary text-white px-6 py-2 rounded-full font-semibold text-base shadow-md hover:scale-105 transition-transform overflow-hidden"
+            onClick={() => console.log("Enter Now clicked")}
+          >
+            <span className="block group-hover:opacity-0 transition-opacity duration-200">Enter Now</span>
+            <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              Enter Now <ChevronRight className="ml-1 h-4 w-4" />
+            </span>
+          </button>
         </div>
       </div>
+    </div>
     </>
   )
 }
