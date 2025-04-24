@@ -73,7 +73,7 @@ const SupportCharitiesSection: React.FC = () => {
         <h2 className="text-4xl font-bold text-[#ff0000] text-end mb-1">
           We Support Charities
         </h2>
-        <h3 className="text-base font-bold text-primary text-end text-nowrap mb-2">
+        <h3 className="text-base font-bold text-primary text-end  mb-2">
           We're Building Hope, One Donation At A Time
         </h3>
         
