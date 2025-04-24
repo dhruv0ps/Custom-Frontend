@@ -18,6 +18,7 @@ import { ChevronRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { useState,useEffect } from "react"
 import { useRef } from "react"
+import { useNavigate } from "react-router-dom"
 const services = [
   {
     title: "Sell Your Car",
@@ -25,13 +26,15 @@ const services = [
     image: gif1,
     buttonText: "Sell Now",
     bg: "#002b63",
+    route: "/sell-your-car",
   },
   {
-    title: "Buy a New Car",
+    title: "Buy A New Car",
     description: "Great Deals Via Manufacturer Approved Dealerships",
     image: gif2,
     buttonText: "Buy Now",
     bg: "#004281",
+    route: "/buy-your-car",
   },
   {
     title: "Demo & Pre-Owned Cars",
@@ -39,6 +42,7 @@ const services = [
     image: gif3,
     buttonText: "Shop Now",
     bg: "#0156a7",
+    route: "/demo-pre-owned",
   },
   {
     title: "Trade Promotion Draws",
@@ -46,14 +50,16 @@ const services = [
     image: gif4,
     buttonText: "Enter Now",
     bg: "#027cb2",
+    route: "/trade-promotion",
   },
   {
     title: "Membership",
-    description: "Cut Costs & Keep Money In Your Pocket",
+    description: "Cut Automotive Costs & Keep Money In Your Pocket",
     image: gif5,
     buttonText: "Join Now",
     bg: "#3c9cd6", 
     counterGif: gif11,
+    route: "/membership",
   },
   {
     title: "Virtual Tours",
@@ -61,6 +67,7 @@ const services = [
     image: gif6,
     buttonText: "Tour Now",
     bg: "#5ccbf5",
+    route: "/virtual-tours",
   },
   {
     title: "Mates Rates Discounts",
@@ -68,6 +75,7 @@ const services = [
     image: gif7,
     buttonText: "Get Deals",
     bg: "#86d1fc",
+    route: "/mates-rates-discounts",
   },
   {
     title: "Finance",
@@ -75,13 +83,15 @@ const services = [
     image: gif8,
     buttonText: "Apply Now",
     bg: "#b1e3ff",
+    route: "/finance",
   },
   {
     title: "Insurance",
-    description: "Maximise Protection\nMinimise Costs",
+    description: "Maximise Your Protection\nMinimise The Costs",
     image: gif9,
     buttonText: "Get Quote",
     bg: "#b1e3ff",
+    route: "/insurance",
   },
   {
     title: "Fleet",
@@ -89,20 +99,23 @@ const services = [
     image: gif10,
     buttonText: "Learn More",
     bg: "rgba(177,227,255,0.63)",
+    route: "/fleet",
   },
   {
-    title: "Overhauled",
+    title: "Overhauled Competition",
     description: "Bring Your Dream Car Build To Life",
     image: gif12, 
     buttonText: "Enter Now",
     bg: "rgba(204, 237, 255, 0.5)",
+    route: "/overhauled",
   },
   {
     title: "Business Partnership",
-    description: "We’re seeking automotive businesses to partner with us and grow together",
+    description: "We’re Seeking Automotive Businesses To Partner With Us And Grow Together",
     image: gif13,
     buttonText: "Partner Up",
     bg: "rgba(229, 246, 255, 0.5)",
+    route: "/business-partners",
   },
   {
     title: "Prize Draw Winners",
@@ -110,13 +123,15 @@ const services = [
     image: gif14,
     buttonText: "Apply Now",
     bg: "rgba(242, 250, 255, 0.5)",
+    route: "/prize-draw-winners",
   },
   {
     title: "We Support Charities",
-    description: "Your Participation Will Aid Worthy Causes",
+    description: "Your Participation Will Aid Worthy Causes For A Lasting Impact",
     image: gif15,
     buttonText: "Learn More",
     bg: "#feedf4",
+    route: "/fundraisers",
   },
   {
     title: "Made You Look",
@@ -124,13 +139,15 @@ const services = [
     image: gif16,
     buttonText: "Enquire Now",
     bg: "#ebecec",
+    route: "/",
   },
   
 ]
 export default function ServiceCards() {
+  const navigate = useNavigate();
   const HoverButton = ({ service, index }: { service: any; index: number }) => {
     const [hovered, setHovered] = useState(false);
-    
+   
     
     const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     
@@ -215,6 +232,7 @@ export default function ServiceCards() {
   {services.map((service, index) => (
     <Card
       key={index}
+      onClick={() => navigate(service.route)}
       className={`rounded-2xl flex items-center px-4 py-4 shadow-lg overflow-hidden space-x-4 ${
         index < 5 ? "text-white" : "text-black"
       }`}
@@ -237,16 +255,16 @@ export default function ServiceCards() {
         <p className="text-sm mb-2  text-right">{service.description.replace('\n', ' ')}</p>
 
         {service.counterGif && (
-          <div className="mb-2">
-            <img
-              src={service.counterGif}
-              alt="Counter"
-              loading="lazy"
-              decoding="async"
-              className="h-8 object-contain"
-            />
-          </div>
-        )}
+  <div className="mb-2 flex justify-end">
+    <img
+      src={service.counterGif}
+      alt="Counter"
+      loading="lazy"
+      decoding="async"
+      className="h-8 object-contain ml-auto"
+    />
+  </div>
+)}
         <div className="flex justify-end">        <button
           className={`mt-1 w-fit px-6 py-1.5 font-semibold text-xs rounded-full 
             bg-white text-primary hover:bg-gray-100 transition-transform hover:scale-105 `}
@@ -266,6 +284,7 @@ export default function ServiceCards() {
       {services.map((service, index) => (
         <Card
           key={index}
+          onClick={() => navigate(service.route)}
           className={`rounded-2xl flex flex-col text-center px-6 py-8 shadow-lg min-h-[350px] ${
             index < 5 ? "text-white" : "text-black"
           }`}

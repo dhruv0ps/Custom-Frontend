@@ -17,7 +17,7 @@ import img13 from "@/assets/Savings/Saving.jpg";
 import img14 from "@/assets/Home/TotalActivityTracker.jpg";
 import img15 from "@/assets/Home/FleetEnquiries.jpg";
 import Typed from "react-typed"
-
+import { useNavigate } from "react-router-dom"; 
 interface HomeSliderProps {
   scrollToAllServices: () => void;
 }
@@ -40,27 +40,21 @@ const images = [
   img14,
 ];
 const texts = [
-  { heading: "Membership", route: "/become-member/membership" },
-  { heading: "Sell Your Car", route: "/sell/rego" },
-  { heading: "Buy A New Car", route: "/buy" },
-  { heading: "Demo & Pre-owned Cars", route: "/demo-preowned" },
-  { heading: "Mates Rates Discounts", route: "/mates-rates" },
+  { heading: "Membership", route: "/membership" },
+  { heading: "Sell Your Car", route: "/sell-your-car" },
+  { heading: "Buy A New Car", route: "/buy-your-car" },
+  { heading: "Demo & Pre-owned Cars", route: "/demo-pre-owned" },
+  { heading: "Mates Rates Discounts", route: "/mates-rates-discounts" },
   { heading: "Trade Promotion Draws", route: "/trade-promotion" },
-  { heading: "Virtual Tours", route: "/request-virtual-tour" },
+  { heading: "Virtual Tours", route: "/virtual-tours" },
   { heading: "Finance", route: "/finance" },
   { heading: "Insurance", route: "/insurance" },
   { heading: "Overhauled Competition", route: "/overhauled" },
-  { heading: "We Support Charities", route: "/charities" },
-  {
-    heading: "Premium Partners",
-    route: "/business-partner/register-partner",
-  },
-  {
-    heading: "Fleet Enquiries",
-    route: "/business-partner/fleet-management",
-  },
-  { heading: "Registered Vehicle Tracker", route: "/savings-tracker" },
-  { heading: "Total Activity Report", route: "/my-reports" },
+  { heading: "We Support Charities", route: "/fundraisers" },
+  { heading: "Premium Partners", route: "/business-partners" },
+  { heading: "Fleet Enquiries", route: "/fleet" },
+  { heading: "Registered Vehicle Tracker", route: "/" },
+  { heading: "Total Activity Report", route: "/" },
 ];
 
 export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
@@ -80,7 +74,7 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
   )
   const [isTransitioning, setIsTransitioning] = React.useState(false);
 
-
+  const navigate = useNavigate();
   const [selectedIndex, setSelectedIndex] = React.useState(0)
   const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([])
 
@@ -193,10 +187,11 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
           <div className="flex">
             {images.map((slide, index) => (
               <div
-                key={index}
+              key={index}
+              onClick={() => navigate(texts[index].route)}
                 className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_calc(33.333%-12px)] min-w-0 mx-2 bg-white rounded-3xl overflow-hidden shadow-lg relative group"
               >
-                {/* Image with hover effect */}
+               
                 <div className="overflow-hidden h-64 w-full">
                   <img
                     src={slide || "/placeholder.svg"}

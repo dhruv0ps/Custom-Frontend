@@ -16,7 +16,7 @@ export default function NewsVideoSection({
       <div className="max-w-[92%] sm:max-w-4xl mx-auto pb-8">
         <div className="flex items-end justify-end">
           <h2 className="text-[14px] font-bold uppercase text-primary text-right pb-[10px] leading-[1em] mt-4">
-            POLICE HUNT THIEVES AFTER ONLINE PRIVATE SALE | {source}
+            POLICE HUNT THIEVES AFTER ONLINE PRIVATE SALE 
           </h2>
         </div>
 

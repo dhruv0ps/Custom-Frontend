@@ -11,17 +11,17 @@ const AboutYouSection: React.FC = () => {
 
       <div className="bg-white py-16 px-4 md:px-4">
         <div className="max-w-[80%] mx-auto">
-          <h3 className="text-xl md:text-4xl font-bold text-primary mb-4">It's About You</h3>
+          <h3 className="text-xl md:text-4xl font-bold text-primary mb-4 text-center sm:text-left">It's About You</h3>
 
-          <p className="text-gray-700 mb-6 text-base md:text-[17px] leading-relaxed max-w-[80%]">
+          <p className="text-gray-700 mb-6 text-base md:text-[17px] leading-relaxed  text-center sm:text-left">
             Welcome to our cutting-edge automotive platform, meticulously crafted by industry leaders
             committed to revolutionising the automotive experience for Australians while offering
             substantial savings.
           </p>
 
-          <div className="border border-gray-200 rounded-md p-4 md:p-6 relative">
+          <div className="border border-gray-200 rounded-md p-4 md:p-6 relative ">
             <div className="flex items-center justify-between">
-              <h4 className="font-medium text-gray-700  md:text-lg">Read More</h4>
+              <h4 className="font-medium text-gray-700  md:text-lg ">Read More</h4>
               <button
                 className="text-primary hover:scale-110 transition-transform"
                 onClick={(e) => {
@@ -35,7 +35,7 @@ const AboutYouSection: React.FC = () => {
             </div>
 
             {expanded && (
-              <ul className="list-decimal list-inside text-gray-700 space-y-3 text-sm md:text-base mt-3">
+              <ul className="list-decimal list-inside text-gray-700 space-y-3 text-sm md:text-base mt-3 text-center sm:text-left">
                 <li>
                   Powered by advanced technology and dynamic tools, we empower users to make informed
                   decisions. With a user-friendly interface and genuine discounts, we cater to all your
@@ -64,7 +64,7 @@ const AboutYouSection: React.FC = () => {
         {/* Mobile view - matches the image */}
         <div className="sm:hidden flex flex-row items-center justify-between space-x-6">
 
-          <div className="bg-white rounded-lg shadow-md w-36 h-28 flex items-center justify-center">
+          <div className="bg-white rounded-xl shadow-lg w-36 h-28 flex items-center p-3 justify-center">
             <img src={img1} alt="Customer service" loading="lazy" className="w-26 h-24" />
           </div>
 

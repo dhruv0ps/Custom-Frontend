@@ -89,7 +89,7 @@ export default function BusinessPartnerSection() {
 
             <div className="flex flex-row mt-12">
               <div className="relative w-24 h-full overflow-hidden rounded-xl">
-                <img src={rocket} alt="Rocket icon" className="w-20 h-full object-contain " />
+                <img src={rocket} alt="Rocket icon" className="w-full h-full object-contain " />
                 <div
                   className="absolute inset-0 pointer-events-none z-10"
                   style={{ boxShadow: "inset 0px 0px 8px rgba(0, 0, 0, 0.3)" }}

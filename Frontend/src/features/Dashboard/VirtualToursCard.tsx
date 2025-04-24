@@ -168,7 +168,7 @@ export const VirtualToursCard: React.FC = () => {
                             />
                         </div>
 
-                        <h3 className="text-2xl font-bold mb-6 text-right">
+                        <h3 className=" text-lg sm:text-2xl font-bold mb-6 text-right">
                             Customer Insights For Informed Choices
                         </h3>
                         <p className="text-lg leading-relaxed text-right">
@@ -183,7 +183,7 @@ export const VirtualToursCard: React.FC = () => {
 
                 {/* Bottom Title */}
                 <div className="mt-16 text-center">
-                    <h3 className="text-3xl font-bold text-white">
+                    <h3 className="text-xl sm:text-3xl font-bold text-white">
                         This Months Top Virtual Tours
                     </h3>
                 </div>

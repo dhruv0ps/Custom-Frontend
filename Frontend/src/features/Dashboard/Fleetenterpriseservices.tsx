@@ -7,24 +7,24 @@ import { ChevronRight } from "lucide-react";
 const FleetEnterpriseServices: React.FC = () => {
   return (
     <>
-      <div className="bg-white  px-4 md:px-8 md:py-16">
+      <div className="bg-white  px-4  md:px-12 md:py-16">
         <div className=" max-w-full sm:max-w-[80%] mx-auto">
 
-          <div className="flex flex-row-reverse gap-x-8 items-center justify-between md:block mt-2 ">
+          <div className="flex flex-row-reverse gap-x-6 items-center justify-between md:block mt-2 ">
 
           <h2 className="text-3xl sm:text-2xl md:text-4xl font-bold text-primary text-right sm:text-left flex flex-col sm:flex-row sm:items-baseline sm:gap-4">
   <span>Fleet</span>
   <span className="text-lg sm:text-2xl md:text-4xl">Enterprise Services</span>
 </h2>
 
-            <div className="bg-white rounded-xl shadow-lg w-32 h-28 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center p-3 mt-0 md:mt-4">
-              <img
-                src={img1}
-                alt="Fleet Icon"
-                loading="lazy"
-                className="w-full h-full object-contain"
-              />
-            </div>
+<div className="bg-white rounded-xl shadow-lg w-31 h-28 sm:w-24 sm:h-24 md:w-32 md:h-32 flex items-center justify-center p-3 mt-0 md:mt-4">
+  <img
+    src={img1}
+    alt="Fleet Icon"
+    loading="lazy"
+    className="w-full h-full"
+  />
+</div>
           </div>
 
           <div className="flex flex-col md:flex-row md:items-start gap-10 mt-6">
@@ -86,13 +86,13 @@ const FleetEnterpriseServices: React.FC = () => {
                   </span>
                   <span className="hidden sm:inline whitespace-nowrap">Overhauled Competition</span>
                 </h2>
-                <p className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 text-right sm:text-left">
+                <p className="text-base sm:text-lg md:text-xl mt-4 sm:mt-2 font-semibold text-gray-800 text-right sm:text-left">
                   Coming soon...
                 </p>
               </div>
 
               {/* Icon */}
-              <div className="bg-white rounded-xl shadow-md w-32 h-28 sm:w-32 sm:h-32 flex items-center justify-center">
+              <div className="bg-white rounded-xl shadow-md w-32 h-28 sm:w-32 sm:h-32 p-3 flex items-center justify-center">
                 <img
                   src={carImage}
                   alt="Competition Icon"
@@ -107,7 +107,7 @@ const FleetEnterpriseServices: React.FC = () => {
             </h3>
 
             {/* Description List */}
-            <ul className="text-gray-700 space-y-2 mb-4">
+            <ul className="text-gray-700 space-y-2 mb-4 whitespace-nowrap">
               <li>• We're turning the spotlight on you</li>
               <li>• Your car will undergo a stunning transformation</li>
             </ul>

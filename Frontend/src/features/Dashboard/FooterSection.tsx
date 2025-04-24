@@ -29,45 +29,27 @@ const FooterSection: React.FC = () => {
 
 
         <p>
-          As pioneers within the automotive ecosystem, we are actively reshaping the industry
-          landscape. Embracing our role as industry disruptors, we are introducing innovative
-          solutions that redefine standards, offering you enhanced benefits and elevated services
-          within the automotive realm. Committed to pushing the boundaries of what’s possible, we
-          remain dedicated to providing you with the latest advancements. Your continued
-          participation in this transformative journey is truly appreciated.
+        As pioneers in the automotive industry, we are committed to transforming the space with innovative solutions and enhanced services. Your support enables us to continue pushing boundaries, providing greater value to our community, and ensuring even more significant savings for you through Australia’s first and leading automotive ecosystem.
+
         </p>
 
         <p>
-          <strong>Disclaimer:</strong> The video content embedded on this page is sourced from 7
-          News and is publicly available on YouTube. The views, opinions, and statements expressed
-          in the video are those of the original news organisation and do not necessarily reflect
-          the views or opinions of this website or its owners. The inclusion of this video is for
-          informational purposes only, providing relevant news coverage. We encourage viewers to
-          visit the original source for full context and further information. Any trademarks,
-          service marks, or trade names mentioned in the video are the property of their respective
-          owners. This website is not responsible for the content or accuracy of external links.
+          <strong>Disclaimer:</strong> The video content embedded on this page is sourced from 7 News and is publicly available on YouTube. The views, opinions, and statements expressed in the video are those of the original news organisation and do not necessarily reflect the views or opinions of this website or its owners. This video is provided for informational purposes only, offering relevant news coverage. Viewers are encouraged to visit the original source for full context and additional details.
+
         </p>
 
         <p>
-          The manufacturer car advertisements embedded on this page are publicly available on
-          YouTube. These advertisements provide approved dealerships with the opportunity to
-          showcase their vehicles to our automotive community. This does not constitute an
-          endorsement of any vehicles or brands. All trademarks, service marks, and trade names
-          mentioned in the advertisements are the property of their respective owners. This website
-          is not responsible for the content or accuracy of external links.
+        Car advertisements displayed on this page are publicly available on YouTube and allow approved dealerships to showcase their vehicles to our automotive community. These advertisements do not constitute an endorsement of any vehicle or brand.
+
         </p>
 
         <p>
-          The Virtual Tours featured on this website are created exclusively for our community. All
-          rights, titles, and ownership of these videos are retained by us and are intended solely
-          for providing insights related to customer vehicle enquiries. These videos do not reflect
-          the views or opinions of this website or its owners.
+        The Virtual Tours featured on this site are exclusively created for our community. All rights and ownership of these videos are retained by us and are intended solely to provide insights for customer vehicle enquiries. These videos do not represent the views or opinions of this website or its owners.
+
         </p>
 
         <p>
-          The inclusion of these videos is for informational purposes only, providing relevant
-          commentary and/or expert advice. Any trademarks, service marks, or trade names mentioned
-          in these videos are the property of their respective owners.
+        All trademarks, service marks, and trade names mentioned are the property of their respective owners. This website is not responsible for the content or accuracy of external links.
         </p>
 
         <p>
@@ -171,16 +153,32 @@ const FooterSection: React.FC = () => {
 </div>
 <div className="w-full mt-12 ">
   <div className="flex justify-center sm:justify-start gap-6 min-w-[280px]">
-    <a href="#">
+  <a
+    href="https://www.facebook.com/profile.php?id=61561172871981"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
       <img src={facebook} alt="Facebook" className="h-10 w-10 object-contain" />
     </a>
-    <a href="#">
+    <a
+    href="https://www.instagram.com/wheelzau"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
       <img src={instagram} alt="Instagram" className="h-10 w-10 object-contain" />
     </a>
-    <a href="#">
+    <a
+    href="https://x.com/Wheelzau"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
       <img src={xIcon} alt="X" className="h-10 w-10 object-contain" />
     </a>
-    <a href="#">
+    <a
+    href="https://www.tiktok.com/@wheelzau"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
       <img src={tiktok} alt="TikTok" className="h-10 w-10 object-contain" />
     </a>
     <a
