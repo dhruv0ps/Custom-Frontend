@@ -54,6 +54,7 @@ const ContactUs: React.FC = () => {
 
           <h4 className="font-bold text-lg mb-1">LOCATIONS</h4>
           <p><span className="text-sky-500 font-semibold">Headquarters:</span> 470 St Kilda Road, Melbourne VIC 3004</p>
+          <span className="text-sky-500 font-semibold ">Major Cities:</span>
           <ul className="list-disc ml-6 mt-2 text-gray-700">
             <li>Melbourne</li>
             <li>Sydney</li>
@@ -71,10 +72,12 @@ const ContactUs: React.FC = () => {
           <h4 className="font-bold text-lg mb-1">SOCIAL MEDIA</h4>
           <p className="mb-2">Connect with us on social media for updates, promotions, and support:</p>
           <ul className="list-disc ml-6 text-sky-500">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">X</a></li>
-            <li><a href="#">TikTok</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61561172871981" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+  <li><a href="https://www.instagram.com/wheelzau" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+  <li><a href="https://x.com/Wheelzau" target="_blank" rel="noopener noreferrer">X</a></li>
+  <li><a href="https://www.tiktok.com/@wheelzau" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+  <li><a href="https://youtube.com/@wheelzau?si=rAKYdOxVAyP-GMLB" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          
           </ul>
         </div>
 

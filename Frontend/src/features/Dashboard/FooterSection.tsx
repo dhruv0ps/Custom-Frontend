@@ -202,7 +202,7 @@ const FooterSection: React.FC = () => {
       <img src={tiktok} alt="TikTok" className="h-9 w-9 object-contain" />
     </a>
     <a
-      href="https://youtube.com"
+      href="https://youtube.com/@wheelzau?si=rAKYdOxVAyP-GMLB"
       target="_blank"
       rel="noopener noreferrer"
       className="text-red-600"

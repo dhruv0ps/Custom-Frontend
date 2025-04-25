@@ -9,7 +9,7 @@ import img6 from "@/assets/Membership/Milly.webp";
 import img7 from "@/assets/Membership/Meet-Tiffany.webp";
 import img8 from "@/assets/Membership/Meet-Nick.webp";
 import adImage from "@/assets/Membership/For-Rent.webp";
-
+import HoverArrowButton from "@/util/HoverButton";
 const VipSavingsPage: React.FC = () => {
   const navigate = useNavigate();
 
@@ -59,9 +59,10 @@ const VipSavingsPage: React.FC = () => {
                 <img src={card.img} alt={card.region} className="w-20 h-20 rounded-xl object-cover" />
                 <div className="flex flex-col items-end">
                   <h3 className="text-white font-bold uppercase text-[30px] text-right">VIP</h3>
-                  <span className="bg-white text-[#1cbeff] font-bold text-[30px] text-end rounded-l-full overflow-hidden border border-white py-2 pr-24 pl-12 inline-block w-auto">
+                  <span className="bg-white text-[#1cbeff] font-bold text-[24px] text-right rounded-l-full overflow-hidden border border-white ml-20 sm:ml-28 px-6 py-2 w-full">
                     {card.region}
                   </span>
+
                 </div>
               </div>
 
@@ -83,11 +84,16 @@ const VipSavingsPage: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className={`text-sm font-semibold ${card.dark ? "text-white" : "text-black"}`}>{card.name}</p>
-                  <h4 className="text-white font-bold uppercase text-[24px]">{card.saved}</h4>
+                  <h4 className="text-white font-bold uppercase text-[24px] sm:text-nowrap">{card.saved}</h4>
                 </div>
-                <button onClick={() => navigate("/signup")} className="bg-white text-[#1cbeff] font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition">
-                  Sign Me Up
-                </button>
+                <HoverArrowButton
+                  label="Sign Me Up"
+                  onClick={() => navigate("/signup")}
+                  className="bg-white hover:bg-gray-100 px-6 py-2 rounded-full"
+                  textClass="text-[#1cbeff] font-semibold"
+                  hoverTextClass="text-[#1cbeff] font-semibold"
+                />
+
               </div>
             </div>
           ))}
@@ -98,19 +104,23 @@ const VipSavingsPage: React.FC = () => {
               MADE YOU LOOK
             </h3>
             <span className="text-[#1cbeff] font-semibold uppercase text-[14px] leading-[1.5em] text-right block  cursor-pointer mb-2">
-  ADVERTISE YOUR BUSINESS HERE
-</span>
-<p className="text-white text-[14px] leading-[1.5em] text-right pr-[10px] mt-[10px] break-words mb-4">
+              ADVERTISE YOUR BUSINESS HERE
+            </span>
+            <p className="text-white text-[14px] leading-[1.5em] text-right pr-[10px] mt-[10px] break-words mb-4">
               Boost your visibility and reach more customers, rent this prime space on our website today!
             </p>
             <div className="flex justify-end mb-4">
-              <button className="bg-white text-primary font-semibold px-6 py-2 rounded-full shadow hover:shadow-md transition">
-                Enquire Now
-              </button>
+              <HoverArrowButton
+                label="Enquire Now"
+                onClick={() => navigate("/contact-us")}
+                className="bg-white hover:bg-gray-100 px-6 py-2 rounded-full shadow hover:shadow-md"
+                textClass="text-[#1cbeff] font-semibold"
+                hoverTextClass="text-[#1cbeff] font-semibold"
+              />
             </div>
             <div className="bg-white rounded-[10px] overflow-hidden shadow-[0px_2px_10px_rgba(0,0,0,0.3)]">
-  <img src={adImage} alt="For Rent Sign" className="w-full h-auto object-contain" />
-</div>
+              <img src={adImage} alt="For Rent Sign" className="w-full h-auto object-contain" />
+            </div>
           </div>
         </div>
       </div>

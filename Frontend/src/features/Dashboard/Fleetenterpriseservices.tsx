@@ -104,14 +104,14 @@ const FleetEnterpriseServices: React.FC = () => {
 
           {/* Description List */}
           <ul className="text-gray-700 space-y-2 mb-4">
-            <li>• We&apos;re turning the spotlight on you</li>
-            <li>• Your car will undergo a stunning transformation</li>
+            <li>• Your Vision Takes Center Stage</li>
+            <li>• Refined.Reimagined.Remarkable.</li>
           </ul>
 
           {/* How To Enter */}
           <h4 className="text-primary font-bold text-xl md:text-2xl mb-2">How To Enter</h4>
           <ul className="text-gray-700 space-y-2">
-            <li>• Get in to win</li>
+            <li>• Register your interest</li>
             <li>• Share your unique automotive story</li>
             <li>• Turn your dream build into a reality</li>
           </ul>

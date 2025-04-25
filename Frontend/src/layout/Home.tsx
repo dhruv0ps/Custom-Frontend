@@ -9,7 +9,7 @@ type LoadingContextType = {
 }
 
 const Home = observer(() => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
 
   useEffect(() => {

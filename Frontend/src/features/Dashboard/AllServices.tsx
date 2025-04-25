@@ -65,14 +65,14 @@ const AutomotiveSavings = () => {
       </Card>
 
       <div className="flex flex-col justify-start text-left max-w-[70%]">
-        <h5 className="font-semibold text-sm text-gray-900 mb-1 leading-tight tracking-normal">
+        <h5 className="font-semibold text-base text-gray-900 mb-1 leading-tight tracking-normal">
           {service.title}
         </h5>
-        <p className="text-xs text-gray-600 leading-relaxed">
+        <p className="text-sm text-gray-600 leading-relaxed">
           {service.description}
         </p>
         {service.badge && (
-          <p className="text-primary mt-1 text-xs font-medium">{service.badge}</p>
+          <p className="text-primary mt-1 text-sm font-medium">{service.badge}</p>
         )}
       </div>
     </motion.div>

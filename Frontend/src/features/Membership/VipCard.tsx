@@ -1,11 +1,16 @@
-import type React from "react"
-import { useNavigate } from "react-router-dom"
-import vip from "@/assets/Membership/vip-icon.webp"
-const VipCard: React.FC = () => {
-  const navigate = useNavigate()
+import type React from "react";
+import { useNavigate } from "react-router-dom";
+import vip from "@/assets/Membership/vip-icon.webp";
+import {ChevronRight} from "lucide-react"
+interface VipCardProps {
+  className?: string;
+}
+
+const VipCard: React.FC<VipCardProps> = ({ className }) => {
+  const navigate = useNavigate();
 
   return (
-    <div className="bg-[#25c2ff] rounded-3xl overflow-hidden shadow-lg max-w-md mx-auto">
+    <div className={`bg-[#25c2ff] rounded-3xl overflow-hidden shadow-lg w-full mx-auto ${className}`}>
       {/* Header with VIP icon and price */}
       <div className="flex items-center justify-between p-4">
         <div className="bg-white rounded-xl  w-20 h-20 flex items-center justify-center">
@@ -69,18 +74,32 @@ const VipCard: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <div className="px-4 pb-6 ">
-        <div className="text-black text-xl font-semibold mb-4">
-          Your Loyalty Means,
-          <span className="text-white font-bold"> MORE SAVINGS!</span>
-        </div>
-        <button
-          onClick={() => navigate("/signup")}
-          className="bg-white hover:bg-gray-100 text-[#25c2ff] font-bold px-8 py-3 rounded-full transition float-right"
-        >
-          Sign Me Up
-        </button>
+     <div className="sm:px-4 pb-6">
+    <div className="flex flex-row md:flex-row md:items-center md:justify-between gap-4">
+      <div className="text-black rounded-r-full pr-6   text-lg sm:text-xl font-semibold bg-white sm:bg-transparent ">
+      <span className="block sm:inline whitespace-nowrap ">
+        Your Loyalty Means,
+        </span>
+        <span className="sm:text-white font-bold text-primary"> MORE SAVINGS!</span>
       </div>
+      <button
+    onClick={() => navigate("/signup")}
+    className="group relative bg-white hover:bg-gray-100 text-[#25c2ff] px-8 sm:py-3 mr-2 sm:mr-6 whitespace-nowrap font-semibold text-sm sm:text-base md:text-base rounded-full shadow-md overflow-hidden md:min-w-[150px] text-center"
+  >
+    
+    <span className="block w-full transition-opacity duration-200 group-hover:opacity-0 text-center">
+      Sign Me Up
+    </span>
+
+    
+    <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
+      Sign Me Up
+      <ChevronRight className="ml-2 h-5 w-5" />
+    </span>
+  </button>
+  </div>
+</div>
+
     </div>
   )
 }

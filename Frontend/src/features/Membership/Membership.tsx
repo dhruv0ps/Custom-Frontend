@@ -6,6 +6,7 @@ import MembershipPricing from './MonthlyMembership';
 import VipSavingsPage from './VipSaving';
 import WhyChooseUs from './WhyChooseUs';
 import AllFooterSection from '@/util/AllFooterSection';
+import { ChevronRight } from 'lucide-react';
 const Membership:React.FC = () => {
 
     const navigate = useNavigate();
@@ -42,11 +43,20 @@ const Membership:React.FC = () => {
                 Home
               </button>
               <button
-                onClick={() => navigate("/view-all")}
-                className="bg-white hover:bg-gray-100 text-[#1cbeff] font-medium px-8 py-2 rounded-full"
-              >
-                Sign Me Up
-              </button>
+  onClick={() => navigate("/view-all")}
+  className="group relative bg-white text-[#1cbeff] font-medium px-8 py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden min-w-[150px] text-center hover:bg-gray-100 shadow-sm hover:shadow-md"
+>
+  {/* Default Text */}
+  <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">
+    Sign Me Up
+  </span>
+
+  {/* Hover Text + Arrow */}
+  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
+    Sign Me Up
+    <ChevronRight className="ml-2 h-5 w-5" />
+  </span>
+</button>
             </div>
           </div>
         </div>

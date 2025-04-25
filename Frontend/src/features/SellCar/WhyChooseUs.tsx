@@ -1,7 +1,9 @@
 import checkbox from "@/assets/SellCar/Check-Box.png"
-import rightImage from "@/assets/SellCar/Sell-Your-Car-by-Wheelz.webp"
-import { Link } from "react-router-dom"
+import rightImage from "@/assets/SellCar/iStock-1441960045(2).jpg"
+import HoverArrowButton from "@/util/HoverButton"
+import { useNavigate } from "react-router-dom"
 export default function WhyChooseUs() {
+  const naviagte = useNavigate();
   const features = [
     {
       title: "Zero Cost, Maximum Returns",
@@ -27,7 +29,7 @@ export default function WhyChooseUs() {
 
   return (
     <section className="bg-white py-16 px-4">
-      <div className="max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div className=" max-w-full sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Features */}
         <div>
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center md:text-left">
@@ -64,18 +66,13 @@ export default function WhyChooseUs() {
       </div>
       <div className="mt-12 w-full">
                   <div className="flex justify-center gap-4 flex-wrap px-4">
-                  <Link
-                      to="/"
-                      className="bg-gray-300 text-black font-semibold px-8 py-3 rounded-full shadow-md hover:bg-gray-200 transition-all min-w-[140px] text-center"
-                    >
-                      Home
-                    </Link>
-                    <Link
-                      to="/sell-your-car/form"
-                      className="bg-white text-primary font-semibold px-8 py-3 rounded-full shadow-md  transition-all min-w-[140px] text-center"
-                    >
-                      Access Form
-                    </Link>
+                  <HoverArrowButton label="Home" onClick={() => naviagte("/")} className="bg-gray-300 hover:bg-gray-200 rounded-full shadow-md px-8 py-3"
+                   textClass="text-black font-semibold"
+                   hoverTextClass="text-black font-semibold"/>
+                                    
+                                     <HoverArrowButton   label="Acess Form" onClick={() => naviagte("/")}  className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
+                   textClass="text-[#1cbeff] font-semibold"
+                   hoverTextClass="text-[#1cbeff] font-semibold"/>
                   </div>
                 </div>
     </section>

@@ -1,7 +1,9 @@
 
 import React from 'react';
-
+import { ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 const MembershipBenefits: React.FC = () => {
+    const navigate = useNavigate()
     const benefits = [
         {
             number: "1",
@@ -36,7 +38,8 @@ const MembershipBenefits: React.FC = () => {
     ];
 
     return (
-        <div className="bg-[#8ddeff] py-8 px-4 md:py-12">
+        <div className="bg-[#8ddeff] py-8 md:px-4 md:py-12">
+            
             <h2 className="text-2xl md:text-4xl font-bold text-center text-black mb-6 md:mb-8">Your Membership, Your Savings</h2>
             
             {/* Mobile view: display as single column list */}
@@ -81,15 +84,32 @@ const MembershipBenefits: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <div className="sm:max-w-[80%]  mx-auto mt-6 flex flex-col sm:flex-row items-center justify-between">
-                <div className="bg-white rounded-r-full py-2 pl-6 pr-10 mb-4 sm:mb-0">
-                    <h2 className="text-2xl md:text-3xl font-bold text-black ">
-                        Sell Free, Buy Smart,<span className="text-[#1cbeff]">  WIN & SAVE BIG!</span>
-                    </h2>
-                </div>
-                <button className="bg-[#1cbeff] hover:bg-[#00b2e3] transition-all px-8 py-3 text-white font-semibold text-base rounded-full shadow-md">
-                Sign Me Up
-                </button>
+            <div className="max-w-full sm:max-w-[80%] mx-auto mt-6 flex flex-row sm:flex-row items-center justify-between">
+  <div className="bg-white rounded-r-full py-2 pl-2 sm:ml-6 sm:pl-6 pr-8 mb-4 sm:mb-0">
+    <h2 className="text-base md:text-3xl font-bold text-black">
+      <span className="block sm:inline whitespace-nowrap">
+        Sell Free, Buy Smart, Win
+      </span>
+      <span className="block sm:inline text-4xl sm:text-[#1cbeff] sm:text-3xl text-[#1cbeff] sm:ml-2">
+        SAVE BIG!
+      </span>
+    </h2>
+  </div>
+                <button
+  onClick={() => navigate("/signup")}
+  className="group relative bg-[#1cbeff] hover:bg-[#00b2e3] transition-all px-8 py-3 mr-2 sm:mr-6  text-white font-semibold text-sm sm:text-base md:text-base rounded-full shadow-md overflow-hidden md:min-w-[150px] text-center"
+>
+  {/* Default Text */}
+  <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">
+    Sign Me Up
+  </span>
+
+  {/* Hover Text with Arrow */}
+  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
+    Sign Me Up
+    <ChevronRight className="ml-2 h-5 w-5" />
+  </span>
+</button>
             </div>
         </div>
     );

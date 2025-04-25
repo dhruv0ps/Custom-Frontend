@@ -38,7 +38,7 @@ const services = [
   },
   {
     title: "Demo & Pre-Owned Cars",
-    description: "Best of Both Worlds, Quality And Savings In One Location",
+    description: "Best Of Both Worlds, Quality And Savings In One Location",
     image: gif3,
     buttonText: "Shop Now",
     bg: "#0156a7",
@@ -54,7 +54,7 @@ const services = [
   },
   {
     title: "Membership",
-    description: "Cut Automotive Costs & Keep Money In Your Pocket",
+    description: "Cut Automotive Costs & Keep More Money In Your Pocket",
     image: gif5,
     buttonText: "Join Now",
     bg: "#3c9cd6", 
