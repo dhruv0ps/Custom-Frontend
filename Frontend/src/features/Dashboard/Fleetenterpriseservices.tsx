@@ -72,14 +72,14 @@ const FleetEnterpriseServices: React.FC = () => {
         </div>
       </div>
       <div className="bg-[#e5f6ff]">
-      <div className="max-w-[97%] sm:max-w-[80%] mx-auto flex flex-col md:flex-row items-center justify-between gap-10 py-6 px-4 md:px-8 sm:py-16">
-        {/* Left Side */}
-        <div className="flex-1">
+      <div className="max-w-full sm:max-w-[80%] mx-auto flex flex-col md:flex-row items-center justify-between gap-10 py-6 px-4 md:px-8 sm:py-16">
+        {/* Left Side - Fixed to take full width on mobile */}
+        <div className="w-full md:flex-1">
           <div className="flex flex-row-reverse gap-x-8 sm:gap-x-16 sm:flex-col sm:items-start justify-between gap-4 mb-6">
-            <div className="max-w-[180px] sm:max-w-none">
+            <div className="sm:max-w-none">
               <h2 className="text-2xl sm:text-4xl md:text-4xl font-bold text-primary text-right sm:text-left">
                 <span className="block sm:hidden">
-                  <span className="block text-3xl">Overhauled</span>
+                  <span className="block text-3xl ml-2">Overhauled</span>
                   <span className="block text-3xl">Competition</span>
                 </span>
                 <span className="hidden sm:inline text-nowrap">Overhauled Competition</span>
@@ -118,7 +118,7 @@ const FleetEnterpriseServices: React.FC = () => {
         </div>
 
         {/* Right Side - Image */}
-        <div className="basis-full md:basis-[60%] relative">
+        <div className="w-full md:basis-[60%] relative">
           <div className="w-full max-w-full sm:mt-24 mx-auto">
             <img
               src={imgIcon || "/placeholder.svg"}

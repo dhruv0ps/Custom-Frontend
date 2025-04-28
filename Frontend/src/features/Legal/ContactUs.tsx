@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "@/assets/Legal/Contact-Us-by-Wheelz-scaled.webp";
+import banner from "@/assets/Legal/iStock-1452525980-(1).jpg";
 import AllFooterSection from "@/util/AllFooterSection";
 
 const ContactUs: React.FC = () => {

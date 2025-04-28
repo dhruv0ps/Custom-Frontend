@@ -6,7 +6,7 @@ import gif1 from "@/assets/Stars.webp";
 import Video1 from "@/assets/Pre-Owned-Wheelz-Australia.mp4";
 import gif2 from "@/assets/Wheelz-Australia-Coming-Soon-icon.webp"
 import gif3 from "@/assets/Stars-icon.webp"
-
+import img2 from "@/assets/Demo & Pre-Owned/Certified.jpg"
 import img11 from "@/assets/Mazda-Car.webp"
 import img12 from "@/assets/Mazda-Car-DJ-Series.png"
 import img13 from "@/assets/Ford-Car.webp"
@@ -239,10 +239,29 @@ export default function DemoPreCar() {
 })}
 
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center rounded-lg md:p-6 mt-4">
+
+  <div className="text-white space-y-4 order-1 md:order-2">
+    <h2 className="text-base md:text-xl font-semibold md:font-bold whitespace-nowrap">Certified Confidence, Dealer-Backed Assurance</h2>
+    <p>Every Demo and Pre-Owned vehicle on our platform is offered exclusively by licensed dealerships, so you can drive away with complete peace of mind.</p>
+    <p>Each car has been carefully inspected, professionally tested, and meets the quality standards you’d expect from trusted, regulated sellers.</p>
+    <p>Whether you’re after near new performance or dependable value, you’re not just getting a great deal, you’re making a smart, safe, and secure choice.</p>
+    <p>Explore with confidence, knowing every listing is backed by credibility and care.</p>
+  </div>
+
+  {/* Image Second */}
+  <img 
+    src={img2} 
+    alt="Certified Confidence" 
+    className="rounded-lg w-full h-auto object-cover order-2 md:order-1" 
+  />
+</div>
+
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 mt-6">
+      <div className="flex flex-wrap justify-center gap-6 mt-6 mb-6">
   {/* Home Button */}
   <button
     onClick={() => navigate("/")}

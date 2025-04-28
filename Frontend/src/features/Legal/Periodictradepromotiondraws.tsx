@@ -1,4 +1,4 @@
-import faqBanner from '@/assets/Legal/Trade-Promotion-Draws-by-Wheelz-scaled.webp';
+import faqBanner from '@/assets/Legal/iStock-1336169315-(2).jpg';
 import AllFooterSection from '@/util/AllFooterSection';
 const Periodictradepromotiondraws = () => {
   const faqs = [

@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "@/assets/Legal/Competition-Terms-by-Wheelz-scaled.webp"
+import banner from "@/assets/Legal/iStock-1304912360-(2).jpg"
 const CompetitionTerms:React.FC = () => {
   const states = [
     { 

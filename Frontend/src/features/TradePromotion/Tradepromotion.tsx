@@ -1,9 +1,9 @@
 import React from 'react'
 import video1 from "@/assets/Loyalty-Program.mp4"
 import { useNavigate } from 'react-router-dom';
-import img1 from "@/assets/Trade-Promotion-at-Wheelz.webp";
-import img2 from "@/assets/Join-Wheelz.webp";
-import img3 from "@/assets/Haapy-Customer-at-Wheelz-Australia.webp";
+import img1 from "@/assets/Trade Promotion/iStock1270040021-(1).jpg";
+import img2 from "@/assets/Trade Promotion/iStock-1442562842-(1).jpg";
+import img3 from "@/assets/Trade Promotion/iStock-1453045051-(1).jpg";
 import TradePromotionGrid from './TradePromotionGrid';
 import WhyChooseUs from './WhyChooseUs';
 import AllFooterSection from '@/util/AllFooterSection';

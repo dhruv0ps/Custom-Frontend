@@ -2,9 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Videp1 from "@/assets/Test-Drives.mp4";
 import VirtualToursCard1 from './VirtualToursCard1';
-import img5 from "@/assets/Virtual Tour/Guidance.webp";
-import img6 from "@/assets/Virtual Tour/Desired.webp";
-import img7 from "@/assets/Virtual Tour/Buying.webp";
+import img5 from "@/assets/Virtual Tour/iStock-1308881074-(2).jpg";
+import img6 from "@/assets/Virtual Tour/iStock-1402530734-(2).jpg";
+import img7 from "@/assets/Virtual Tour/iStock-1414874178-(3).jpg";
 import img1 from "@/assets/Virtual Tour/Wheelz-icon-13.webp"
 import img2 from "@/assets/Virtual Tour/Wheelz-icon-14.webp"
 import img3 from "@/assets/Virtual Tour/Wheelz-icon-15.webp"

@@ -1,5 +1,5 @@
 import checkbox from "@/assets/SellCar/Check-Box.png"
-import rightImage from "@/assets/Fleet/Fleet-Strategy-by-Wheelz.webp"
+import rightImage from "@/assets/Fleet/iStock-1473399404-(2).jpg"
 import { Link } from "react-router-dom";
 
 export default function WhyChooseUs() {

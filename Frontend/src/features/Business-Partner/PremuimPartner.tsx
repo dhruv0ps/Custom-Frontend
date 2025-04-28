@@ -1,9 +1,9 @@
-import benefitImg1 from "@/assets/Parnter/Exclusive.webp";
-import benefitImg2 from "@/assets/Parnter/Customers.webp";
-import benefitImg3 from "@/assets/Parnter/Edges.webp";
-import benefitImg4 from "@/assets/Parnter/Success.webp";
-import benefitImg5 from "@/assets/Parnter/Coverage.webp";
-import benefitImg6 from "@/assets/Parnter/Structure.webp";
+import benefitImg1 from "@/assets/Parnter/iStock-1532379739-(1).jpg";
+import benefitImg2 from "@/assets/Parnter/iStock-1171703097-1).jpg";
+import benefitImg3 from "@/assets/Parnter/iStock-1528870176-(1).jpg";
+import benefitImg4 from "@/assets/Parnter/iStock-939485918 -2).jpg";
+import benefitImg5 from "@/assets/Parnter/iStock-939837316(1).jpg";
+import benefitImg6 from "@/assets/Parnter/iStock-950639314-(1).jpg";
 
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 

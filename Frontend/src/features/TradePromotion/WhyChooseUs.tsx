@@ -1,5 +1,5 @@
 import checkbox from "@/assets/SellCar/Check-Box.png"
-import rightImage from "@/assets/Trade-Promotion-by-Wheelz-Australia.webp"
+import rightImage from "@/assets/Trade Promotion/iStock-1856863035-(2).jpg"
 import { Link } from "react-router-dom"
 export default function WhyChooseUs() {
   const features = [

@@ -1,5 +1,5 @@
 
-import banner from "@/assets/Legal/Privacy-Policy-by-Wheelz-scaled.webp";
+import banner from "@/assets/Legal/iStock-1473086766-(1).jpg";
 import AllFooterSection from "@/util/AllFooterSection";
 
 const terms = [

@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import img1 from "@/assets/Wheelz-Australia-White-and-Blue-Color-300x66.webp";
-import img2 from "@/assets/Discount-Offers-at-Wheelz-Australia-for-Mobile-Version.webp"
-import img3 from "@/assets/Daily.webp"
-import img4 from "@/assets/The-City.webp"
-import img5 from "@/assets/Monthly.webp"
-import img6 from "@/assets/Desires.webp"
-import img7 from "@/assets/Bill-Busters.webp"
+import img2 from "@/assets/Trade Promotion/iStock1257605497.jpg"
+import img3 from "@/assets/Trade Promotion/Bucks-Bonanza.jpg"
+import img4 from "@/assets/Trade Promotion/Your-TankOur-Treat.jpg"
+import img5 from "@/assets/Trade Promotion/Glow-Goals.jpg"
+import img6 from "@/assets/Trade Promotion/Drive, Relax-Or-Spend.jpg"
+import img7 from "@/assets/MateRate/BillBusters.jpg"
 
 const TradePromotionGrid = () => {
   const navigate = useNavigate();

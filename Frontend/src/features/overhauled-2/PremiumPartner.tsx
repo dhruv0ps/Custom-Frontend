@@ -1,7 +1,7 @@
 
-import img1 from "@/assets/Overhauled/To-Win.webp";
-import img2 from "@/assets/Overhauled/Tale.webp"
-import img3 from "@/assets/Overhauled/Awaits.webp"
+import img1 from "@/assets/Overhauled/iStock-1870018492-(1).jpg";
+import img2 from "@/assets/Overhauled/iStock-1870772344-(1).jpg"
+import img3 from "@/assets/Overhauled/iStock-1991131874-(1).jpg"
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 
 const PremiumPartner = () => {

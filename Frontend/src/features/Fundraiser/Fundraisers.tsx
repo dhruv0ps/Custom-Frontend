@@ -5,7 +5,7 @@ import icon1 from "@/assets/FundRaisers/Wheelz-icon-37.webp"
 import icon2 from "@/assets/FundRaisers/Wheelz-icon-38.webp"
 import icon3 from "@/assets/FundRaisers/Wheelz-icon-39.webp"
 import icon4 from "@/assets/FundRaisers/Wheelz-icon-40.webp"
-import img from "@/assets/FundRaisers/Fundraiser-Service-by-Wheelz-Australia.webp"
+import img from "@/assets/FundRaisers/iStock-870883676-(2).jpg"
 import PremiumPartner from './PremuimPartner'
 // import { ChevronRightIcon } from '@radix-ui/react-icons'
 import AllFooterSection from '@/util/AllFooterSection'

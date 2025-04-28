@@ -1,5 +1,5 @@
 import checkbox from "@/assets/SellCar/Check-Box.png"
-import rightImage from "@/assets/MateRate/Cash.webp"
+import rightImage from "@/assets/MateRate/BillBusters.jpg"
 import { Link } from "react-router-dom"
 export default function WhyChooseUs() {
   const features = [

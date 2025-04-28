@@ -1,4 +1,4 @@
-import faqBanner from '@/assets/Legal/General-FAQs-by-Wheelz-scaled.webp';
+import faqBanner from '@/assets/Legal/iStock-1364257421-(2).jpg';
 import AllFooterSection from '@/util/AllFooterSection';
 
 const faqs = [

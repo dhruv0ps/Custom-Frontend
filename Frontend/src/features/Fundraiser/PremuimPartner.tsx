@@ -1,9 +1,9 @@
-import img1 from "@/assets/FundRaisers/Good-Friday-Appeal-Hospital.webp";
-import img2 from "@/assets/FundRaisers/Rectangle-36-3.webp";
-import img3 from "@/assets/FundRaisers/Rectangle-41-4.webp";
-import img4 from "@/assets/FundRaisers/Rectangle-308.webp";
-import img5 from "@/assets/FundRaisers/Rectangle-309.webp";
-import img6 from "@/assets/FundRaisers/RSPCA.webp";
+import img1 from "@/assets/FundRaisers/Good-.png";
+import img2 from "@/assets/FundRaisers/Rectangle-363-w1rJv7Re.png";
+import img3 from "@/assets/FundRaisers/Rectangle41-4-C_nQ22DT.png";
+import img4 from "@/assets/FundRaisers/Rectangle-308-C2wnmwP.png";
+import img5 from "@/assets/FundRaisers/Rectangle-309-BI0AwoR.png";
+import img6 from "@/assets/FundRaisers/RSPCA-D0_1xrD.png";
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 
 const PremiumPartner = () => {

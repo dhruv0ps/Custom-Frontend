@@ -1,7 +1,7 @@
 
-import img1 from "@/assets/Fleet/Vehicle.webp";
-import img2 from "@/assets/Fleet/Share.webp"
-import img3 from "@/assets/Fleet/Experts.webp"
+import img1 from "@/assets/Fleet/Fleet-Enquiries.jpg";
+import img2 from "@/assets/Fleet/iStock-540532872-(2).jpg"
+import img3 from "@/assets/Fleet/iStock-540532122-(1).jpg"
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 
 const PremiumPartner = () => {

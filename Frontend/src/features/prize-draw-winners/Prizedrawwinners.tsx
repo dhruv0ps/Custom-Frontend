@@ -3,7 +3,7 @@ import vide from "@/assets/prize-draw-winners/Winners.mp4"
 import { useNavigate } from 'react-router-dom'
 import PrizeCard from './PrizeCard'
 import WhyChooseUs from '@/util/WhyChooseUs'
-import happyUsersImg from "@/assets/prize-draw-winners/Prize-Draw-Winners-by-Wheelz-Australia (1).webp";
+import happyUsersImg from "@/assets/prize-draw-winners/iStock-504374602-(2).jpg";
 import AllFooterSection from '@/util/AllFooterSection'
 
 const Prizedrawwinners:React.FC = () => {

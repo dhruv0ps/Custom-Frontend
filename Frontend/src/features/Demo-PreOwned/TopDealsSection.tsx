@@ -1,5 +1,6 @@
 import { useState } from "react";
 import img1 from "@/assets/Wheelz-Australia-White-and-Blue-Color-300x66.webp"
+import img2 from "@/assets/Demo & Pre-Owned/Certified.jpg"
 export default function TopDealsSection() {
   const [_loading, setLoading] = useState(false);
   
@@ -79,6 +80,19 @@ export default function TopDealsSection() {
           </div>
         ))}
       </div>
+
+      <div className="">
+
+      </div><div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center bg-white rounded-lg p-6 mb-12">
+          <img src={img2} alt="Certified Confidence" className="rounded-lg w-full h-auto object-cover" />
+          <div className="text-[#0e2a5f] space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold">Certified Confidence, Dealer-Backed Assurance</h2>
+            <p>Every Demo and Pre-Owned vehicle on our platform is offered exclusively by licensed dealerships, so you can drive away with complete peace of mind.</p>
+            <p>Each car has been carefully inspected, professionally tested, and meets the quality standards you’d expect from trusted, regulated sellers.</p>
+            <p>Whether you’re after near new performance or dependable value, you’re not just getting a great deal, you’re making a smart, safe, and secure choice.</p>
+            <p>Explore with confidence, knowing every listing is backed by credibility and care.</p>
+          </div>
+        </div>
       </div>
 
     </div>
