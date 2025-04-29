@@ -90,11 +90,11 @@ const FleetEnterpriseServices: React.FC = () => {
             </div>
 
             {/* Icon */}
-            <div className="bg-white rounded-xl shadow-md w-28 h-28 sm:w-32 sm:h-32 p-3 flex items-center justify-center">
+            <div className="bg-white rounded-xl shadow-lg w-29 h-28 md:w-32 md:h-32 flex items-center justify-center p-3 mt-0 md:mt-4">
               <img
                 src={carImage || "/placeholder.svg"}
                 alt="Competition Icon"
-                className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
+                className="w-26 h-24 sm:w-32 sm:h-28 "
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ const FleetEnterpriseServices: React.FC = () => {
           {/* Description List */}
           <ul className="text-gray-700 space-y-2 mb-4">
             <li>• Your Vision Takes Center Stage</li>
-            <li>• Refined.Reimagined.Remarkable.</li>
+            <li>• Refined. Reimagined. Remarkable.</li>
           </ul>
 
           {/* How To Enter */}

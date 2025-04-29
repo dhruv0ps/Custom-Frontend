@@ -1156,6 +1156,10 @@ input[type="range"]::-ms-fill-lower{
   bottom: 4rem;
 }
 
+.bottom-3{
+  bottom: 0.75rem;
+}
+
 .bottom-4{
   bottom: 1rem;
 }
@@ -1238,6 +1242,10 @@ input[type="range"]::-ms-fill-lower{
 
 .right-2{
   right: 0.5rem;
+}
+
+.right-3{
+  right: 0.75rem;
 }
 
 .right-4{
@@ -1922,6 +1930,18 @@ input[type="range"]::-ms-fill-lower{
   height: 100vh;
 }
 
+.h-\[60vh\]{
+  height: 60vh;
+}
+
+.h-\[52vh\]{
+  height: 52vh;
+}
+
+.h-\[5vh\]{
+  height: 5vh;
+}
+
 .max-h-60{
   max-height: 15rem;
 }
@@ -2256,6 +2276,10 @@ input[type="range"]::-ms-fill-lower{
   min-width: 280px;
 }
 
+.min-w-\[80px\]{
+  min-width: 80px;
+}
+
 .min-w-\[8rem\]{
   min-width: 8rem;
 }
@@ -2290,10 +2314,6 @@ input[type="range"]::-ms-fill-lower{
 
 .max-w-\[100vw\]{
   max-width: 100vw;
-}
-
-.max-w-\[180px\]{
-  max-width: 180px;
 }
 
 .max-w-\[220px\]{
@@ -2377,22 +2397,6 @@ input[type="range"]::-ms-fill-lower{
   max-width: 20rem;
 }
 
-.max-w-\[99\%\]{
-  max-width: 99%;
-}
-
-.max-w-\[0px\]{
-  max-width: 0px;
-}
-
-.max-w-\[210px\]{
-  max-width: 210px;
-}
-
-.max-w-\[95\%\]{
-  max-width: 95%;
-}
-
 .flex-1{
   flex: 1 1 0%;
 }
@@ -2469,11 +2473,6 @@ input[type="range"]::-ms-fill-lower{
 
 .-translate-y-full{
   --tw-translate-y: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-1{
-  --tw-translate-x: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -4621,6 +4620,10 @@ input[type="range"]::-ms-fill-lower{
   font-size: 100px;
 }
 
+.text-\[10px\]{
+  font-size: 10px;
+}
+
 .text-\[13px\]{
   font-size: 13px;
 }
@@ -6461,11 +6464,6 @@ input[type="range"]::-ms-fill-lower{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:translate-x-2{
-  --tw-translate-x: 0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group:hover .group-hover\:scale-125{
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
@@ -8179,12 +8177,8 @@ input[type="range"]::-ms-fill-lower{
     height: 2.5rem;
   }
 
-  .sm\:h-24{
-    height: 6rem;
-  }
-
-  .sm\:h-32{
-    height: 8rem;
+  .sm\:h-28{
+    height: 7rem;
   }
 
   .sm\:h-5{
@@ -8197,6 +8191,10 @@ input[type="range"]::-ms-fill-lower{
 
   .sm\:h-7{
     height: 1.75rem;
+  }
+
+  .sm\:h-9{
+    height: 2.25rem;
   }
 
   .sm\:h-\[107px\]{
@@ -8239,10 +8237,6 @@ input[type="range"]::-ms-fill-lower{
     width: 2.5rem;
   }
 
-  .sm\:w-24{
-    width: 6rem;
-  }
-
   .sm\:w-32{
     width: 8rem;
   }
@@ -8253,6 +8247,10 @@ input[type="range"]::-ms-fill-lower{
 
   .sm\:w-6{
     width: 1.5rem;
+  }
+
+  .sm\:w-9{
+    width: 2.25rem;
   }
 
   .sm\:w-\[107px\]{
@@ -8430,6 +8428,15 @@ input[type="range"]::-ms-fill-lower{
 
   .sm\:bg-transparent{
     background-color: transparent;
+  }
+
+  .sm\:bg-white{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .sm\:p-4{
+    padding: 1rem;
   }
 
   .sm\:p-5{
@@ -8796,24 +8803,16 @@ input[type="range"]::-ms-fill-lower{
     max-width: 36rem;
   }
 
-  .md\:flex-\[0_0_calc\(33\.333\%-12px\)\]{
-    flex: 0 0 calc(33.333% - 12px);
-  }
-
   .md\:flex-1{
     flex: 1 1 0%;
   }
 
+  .md\:flex-\[0_0_calc\(33\.333\%-12px\)\]{
+    flex: 0 0 calc(33.333% - 12px);
+  }
+
   .md\:basis-\[60\%\]{
     flex-basis: 60%;
-  }
-
-  .md\:basis-\[45\%\]{
-    flex-basis: 45%;
-  }
-
-  .md\:basis-\[55\%\]{
-    flex-basis: 55%;
   }
 
   .md\:translate-x-0{
@@ -8991,6 +8990,11 @@ input[type="range"]::-ms-fill-lower{
     line-height: 1.75rem;
   }
 
+  .md\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
   .md\:font-bold{
     font-weight: 700;
   }
@@ -9116,14 +9120,6 @@ input[type="range"]::-ms-fill-lower{
 @media (min-width: 1280px){
   .xl\:w-\[100px\]{
     width: 100px;
-  }
-
-  .xl\:max-w-\[85\%\]{
-    max-width: 85%;
-  }
-
-  .xl\:max-w-\[80\%\]{
-    max-width: 80%;
   }
 
   .xl\:grid-cols-3{

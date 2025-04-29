@@ -12,7 +12,7 @@ const Membership:React.FC = () => {
     const navigate = useNavigate();
   return (
     <>
-    <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
+    <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
         <video
           className="absolute inset-0 w-full h-full object-cover z-0"
           src={Videp1}
@@ -28,7 +28,7 @@ const Membership:React.FC = () => {
         <div className="relative z-20 flex flex-col justify-end h-full">
           {/* White strip with heading */}
           <div className="bg-white text-center py-2 sm:py-4 px-4">
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-black">
+            <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-black whitespace-nowrap">
             Tiffany slashed her expenses by $11,000
             </h1>
           </div>

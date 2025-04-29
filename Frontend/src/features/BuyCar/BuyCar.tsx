@@ -10,13 +10,15 @@ import img7 from "@/assets/Buy Car/2-BuyCar.jpg"
 import NewsSection from "./NewsBuySection"
 import WhyChooseBuy from "./WhyChooseBuy"
 import { ChevronRight } from "lucide-react"
-
+import HoverArrowButton from "@/util/HoverButton"
+import { useNavigate } from "react-router-dom"
 import AllFooterSection from "@/util/AllFooterSection"
 export default function BuyCar() {
+    const navigate = useNavigate()
     return (
         <>
 
-           <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
+            <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
 
                 <video
                     className="absolute inset-0 w-full h-full object-cover z-0"
@@ -27,47 +29,42 @@ export default function BuyCar() {
                     playsInline
                 />
 
-
                 <div className="absolute inset-0 bg-black/10 z-10" />
 
-                {/* Foreground content */}
                 <div className="relative z-20 flex flex-col justify-end h-full">
-                    {/* White strip with heading */}
-                    <div className="bg-white text-center py-2 sm:py-4 px-4">
-                        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-black">
+                    <div className="bg-white text-center py-4 px-4">
+                        <h1 className="text-base md:text-2xl  font-bold text-black">
+
                             We’ll ensure you buy your car for less
                         </h1>
                     </div>
 
-                   
+
                     <div className="bg-primary py-4 px-2 sm:py-8 w-full">
-                        <div className="flex justify-center gap-4 flex-wrap px-4">
-                            <Link
-                                to="/"
-                                className="bg-gray-300 text-black font-semibold px-8 py-3 rounded-full shadow-md  transition-all min-w-[140px] text-center"
-                            >
-                                <span>Home</span>
-                                <span className="opacity-0 group-hover:opacity-100 translate-x-1 group-hover:translate-x-2 transition-all duration-300">
-                                    &gt;
-                                </span>
-                            </Link>
-                            <Link
-                                to="/sell-your-car/form"
-                                className="group bg-white text-[#1cbeff] hover:bg-opacity-90 transition-all font-semibold px-6 py-3 rounded-full shadow-md inline-flex items-center gap-1"
-                            >
-                                <span>Access Form</span>
-                                <span className="opacity-0 group-hover:opacity-100 translate-x-1 group-hover:translate-x-2 transition-all duration-300">
-                                    &gt;
-                                </span>
-                            </Link>
-                        </div>
-                    </div>
+            <div className="flex justify-center gap-4 flex-wrap px-4">
+              <HoverArrowButton
+                label="Home"
+                onClick={() => navigate("/")}
+                className="bg-gray-300 text-black font-semibold px-8 py-3 rounded-full shadow-md transition-all"
+                textClass="text-black"
+                hoverTextClass="text-black"
+              />
+
+              <HoverArrowButton
+                label="Access Form"
+                onClick={() => navigate("/")}
+                className="bg-white text-[#1cbeff] hover:bg-opacity-90 font-semibold px-6 py-3 rounded-full shadow-md"
+                textClass="text-[#1cbeff]"
+                hoverTextClass="text-[#1cbeff]"
+              />
+            </div>
+          </div>
                 </div>
 
 
             </div>
             <div className="bg-[#b7eaff] py-12">
-                <div className="max-w-[80%]  mx-auto text-center">
+                <div className=" max-w-full sm:max-w-[80%]  mx-auto text-center">
                     <h2 className="text-2xl md:text-3xl font-bold mb-12">Putting You First</h2>
 
 
@@ -114,36 +111,31 @@ export default function BuyCar() {
                     </div>
 
                     <div className="w-full py-8">
-                        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
-                            <div className="bg-white rounded-r-full py-2 pl-6 pr-32 mb-4 sm:mb-0">
-                                <h2 className="text-xl md:text-3xl font-bold">
-                                    Effortless,Cost-Free <span className="text-primary">TRUSTED NETWORK!</span>
-                                </h2>
-                            </div>
-                            <Link
-                                to="/buy-car/form"
-                                className="group relative px-6 py-3 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
-                            >
+  <div className="sm:max-w-7xl mx-auto sm:px-4 flex flex-row sm:flex-row items-center justify-between">
+    
+    <div className="bg-white rounded-r-full pr-12 sm:py-2 sm:pl-6 sm:pr-32 mb-4 sm:mb-0 p-3">
+      <h2 className="text-lg md:text-3xl font-bold text-center sm:text-left">
+        <span className="inline sm:inline">Effortless, Cost-Free</span>
+        <br className="block sm:hidden" />
+        <span className="text-primary"> TRUSTED NETWORK!</span>
+      </h2>
+    </div>
 
-                                <span className="block group-hover:opacity-0 transition-opacity duration-200">
-                                    Buy Now
-                                </span>
+    <HoverArrowButton
+      label="Buy Now"
+      onClick={() => navigate("/buy-car/form")}
+      className="px-3 py-3 font-semibold text-base rounded-full transition bg-primary text-white sm:bg-white sm:text-primary border border-primary shadow hover:scale-105 overflow-hidden mr-3"
+      textClass=" text-white sm:text-primary"
+      hoverTextClass="text-primary"
+    />
+  </div>
+</div>
 
-
-                                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                    Buy Now <ChevronRight className="ml-1 h-4 w-4" />
-                                </span>
-                            </Link>
-
-
-
-                        </div>
-                    </div>
                 </div>
             </div>
 
             <div className="bg-[#1cbeff] py-16 px-4">
-                <div className="max-w-[80%] mx-auto text-center text-white">
+                <div className="max-w-full sm:max-w-[80%] mx-auto text-center text-white">
                     <h2 className="text-4xl md:text-3xl font-bold mb-12 uppercase">3 Simple Steps</h2>
 
 
@@ -160,7 +152,7 @@ export default function BuyCar() {
                             </div>
                         </div>
 
-                        
+
                         <div className="flex items-start text-left gap-4 px-2">
                             <div className="text-[100px] md:text-[120px] font-extrabold leading-none text-white">2</div>
                             <div>
@@ -251,12 +243,12 @@ export default function BuyCar() {
             />
             <WhyChooseBuy />
             <AllFooterSection
-  content={[
-    `Important: The platform retains the right to adjust terms and conditions, including features and policies in the buying process. While our technology connects customers with optimal dealerships to enhance purchase discounts, it’s important to note that the decision to buy rests solely with the customer. Final sale amounts are mutually agreed upon with the dealership, and we play no role in the buyer’s decision making. Any modifications will be promptly communicated, ensuring transparency and a smooth experience for our valued buyers.`,
+                content={[
+                    `Important: The platform retains the right to adjust terms and conditions, including features and policies in the buying process. While our technology connects customers with optimal dealerships to enhance purchase discounts, it’s important to note that the decision to buy rests solely with the customer. Final sale amounts are mutually agreed upon with the dealership, and we play no role in the buyer’s decision making. Any modifications will be promptly communicated, ensuring transparency and a smooth experience for our valued buyers.`,
 
-    `<strong>Disclaimer:</strong> The video content embedded on this page is sourced from Channel 9, A Current Affair, and is publicly available on YouTube. The views, opinions, and statements expressed in the video are those of the original news organisation and do not necessarily reflect the views or opinions of this website or its owners. The inclusion of this video is solely for informational purposes and to provide relevant news coverage to our audience. We advise viewers to visit the original source for full context and further information. Any trademarks, service marks, or trade names mentioned in the video are the property of their respective owners.`
-  ]}
-/>
+                    `<strong>Disclaimer:</strong> The video content embedded on this page is sourced from Channel 9, A Current Affair, and is publicly available on YouTube. The views, opinions, and statements expressed in the video are those of the original news organisation and do not necessarily reflect the views or opinions of this website or its owners. The inclusion of this video is solely for informational purposes and to provide relevant news coverage to our audience. We advise viewers to visit the original source for full context and further information. Any trademarks, service marks, or trade names mentioned in the video are the property of their respective owners.`
+                ]}
+            />
         </>
     )
 }

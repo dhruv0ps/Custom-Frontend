@@ -1,11 +1,11 @@
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
-import img1 from "@/assets/Become-Member/VIP.png";
-import img2 from "@/assets/Become-Member/RegistrationRequest.png";
+import img1 from "@/assets/Home/Membership-rate.jpg";
+import img2 from "@/assets/Home/PremiumPartners.jpg";
 import img3 from "@/assets/Sell-Your-car.jpg";
 import img4 from "@/assets/Home/BuyANewCar.jpg";
-import img5 from "@/assets/Dealer Demo/dealerDemo.jpg";
+import img5 from "@/assets/Home/Demo&Pre-Owned.jpg";
 import img6 from "@/assets/Home/MatesRates.jpg";
 import img7 from "@/assets/Home/TradePromotionDraws.jpg";
 import img8 from "@/assets/Home/Virtual-Tours.jpg";
@@ -13,11 +13,12 @@ import img9 from "@/assets/Home/Finance-page.jpg";
 import img10 from "@/assets/Home/Insurance-image.jpg";
 import img11 from "@/assets/Home/OverhauledCompetition.jpg";
 import img12 from "@/assets/Home/Charities-img.jpg";
-import img13 from "@/assets/Savings/Saving.jpg";
+import img13 from "@/assets/Home/Car-Track-Pro.jpg";
 import img14 from "@/assets/Home/TotalActivityTracker.jpg";
 import img15 from "@/assets/Home/FleetEnquiries.jpg";
 import Typed from "react-typed"
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import { ChevronRight } from "lucide-react"; 
 interface HomeSliderProps {
   scrollToAllServices: () => void;
 }
@@ -199,14 +200,37 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
                     className="object-cover h-64 w-full rounded-t-3xl border-none outline-none transition-all duration-700 ease-out group-hover:scale-125 "
                   />
  
-                </div>
+ 
+    </div>
                 <div className="absolute bottom-7 left-0 right-0 p-2 bg-white/90 rounded-r-3xl md:w-[90%] w-[80%]">
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 text-nowrap">
                     {texts[index].heading}
                   </h3>
                 </div>
+                <div className="absolute bottom-3 right-3">
+                <button
+  onClick={(e) => {
+    e.stopPropagation();  
+    scrollToAllServices();
+  }}
+  className="group relative text-white bg-primary border border-primary font-semibold px-4 py-1.5 rounded-full text-[10px] md:text-xs shadow-md hover:bg-primary hover:text-white transition-all overflow-hidden min-w-[80px] text-center"
+>
+  {/* Normal Text */}
+  <span className="block transition-opacity duration-200 group-hover:opacity-0">
+    Quick Link
+  </span>
+
+  {/* Hover Text with Arrow */}
+  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+    Quick Link
+    <ChevronRight className="ml-1 h-3 w-3" /> {/* Smaller Arrow */}
+  </span>
+</button>
+      </div>
               </div>
+              
             ))}
+             
           </div>
 
           {/* Dots */}

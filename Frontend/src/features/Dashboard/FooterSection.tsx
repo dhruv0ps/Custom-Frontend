@@ -14,7 +14,7 @@ const FooterSection: React.FC = () => {
   const navigate = useNavigate()
   return (
     <>
-    <footer className="bg-white text-[#666] px-6 md:px-12 py-16 space-y-12">
+    <footer className="bg-white text-[#666] px-3 sm:px-6 md:px-12 py-16 space-y-12">
       
       <div className=" max-w-[97%] sm:max-w-[85%] mx-auto space-y-6 text-sm leading-relaxed">
       <div className="flex justify-start">
@@ -58,7 +58,7 @@ const FooterSection: React.FC = () => {
 
       <div className=" mb-12"></div>
 
-      <div className=" max-w-full sm:max-w-[85%] mx-auto  md:px-2 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-20 items-start">
+      <div className=" max-w-full sm:max-w-[85%] mx-auto px-2 md:px-2 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-20 items-start">
   {/* Contact */}
   <div>
     <h4 className="text-lg font-semibold text-primary mb-4">Contact Us</h4>
@@ -178,28 +178,28 @@ const FooterSection: React.FC = () => {
     target="_blank"
     rel="noopener noreferrer"
   >
-      <img src={facebook} alt="Facebook" className="h-9 w- object-contain" />
+      <img src={facebook} alt="Facebook" className="w-12 sm:h-9 sm:w-9 object-contain" />
     </a>
     <a
     href="https://www.instagram.com/wheelzau"
     target="_blank"
     rel="noopener noreferrer"
   >
-      <img src={instagram} alt="Instagram" className="h-9 w-9 object-contain" />
+      <img src={instagram} alt="Instagram" className="w-12 sm:h-9 sm:w-9 object-contain" />
     </a>
     <a
     href="https://x.com/Wheelzau"
     target="_blank"
     rel="noopener noreferrer"
   >
-      <img src={xIcon} alt="X" className="h98 w-9 object-contain" />
+      <img src={xIcon} alt="X" className="w-12 sm:h-9 sm:w-9 object-contain" />
     </a>
     <a
     href="https://www.tiktok.com/@wheelzau"
     target="_blank"
     rel="noopener noreferrer"
   >
-      <img src={tiktok} alt="TikTok" className="h-9 w-9 object-contain" />
+      <img src={tiktok} alt="TikTok" className="w-12 sm:h-9 sm:w-9object-contain" />
     </a>
     <a
       href="https://youtube.com/@wheelzau?si=rAKYdOxVAyP-GMLB"
@@ -207,7 +207,7 @@ const FooterSection: React.FC = () => {
       rel="noopener noreferrer"
       className="text-red-600"
     >
-      <FaYoutube className="h-9 w-9" />
+      <FaYoutube className="w-12 h-12 sm:h-9 sm:w-9" />
     </a>
   </div>
 </div>

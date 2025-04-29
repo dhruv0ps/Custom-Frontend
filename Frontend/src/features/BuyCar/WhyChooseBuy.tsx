@@ -1,7 +1,9 @@
 import checkbox from "@/assets/SellCar/Check-Box.png"
 import rightImage from "@/assets/SellCar/Buy-New-Car-Benefits.webp"
-import { Link } from "react-router-dom"
+import HoverArrowButton from "@/util/HoverButton"
+import { useNavigate } from "react-router-dom"
 export default function WhyChooseBuy() {
+  const navigate = useNavigate();
   const features = [
     {
       title: "Manufacturer Approved Partnerships",
@@ -65,18 +67,21 @@ export default function WhyChooseBuy() {
       </div>
       <div className="mt-12 w-full">
                   <div className="flex justify-center gap-4 flex-wrap px-4">
-                    <Link
-                      to="/"
-                      className="bg-gray-300 text-black font-semibold px-8 py-3 rounded-full shadow-md hover:bg-gray-200 transition-all min-w-[140px] text-center"
-                    >
-                      Home
-                    </Link>
-                    <Link
-                      to="/sell-your-car/form"
-                      className="bg-white text-primary font-semibold px-8 py-3 rounded-full shadow-md  transition-all min-w-[140px] text-center"
-                    >
-                      Access Form
-                    </Link>
+                   
+                    <HoverArrowButton
+                     label="Home"
+                     onClick={() => navigate("/")}
+                     className="bg-gray-300 text-black font-semibold px-8 py-3 rounded-full shadow-md transition-all"
+                     textClass="text-black"
+                     hoverTextClass="text-black bg-gray-200"                 
+                    />
+                   <HoverArrowButton
+            label="Access Form"
+            onClick={() => navigate("/sell-your-car/form")}
+            className="bg-white text-primary font-semibold px-8 py-3 rounded-full shadow-md transition-all min-w-[140px]"
+            textClass="text-primary"
+            hoverTextClass="text-primary bg-gray-100"
+          />
                   </div>
                 </div>
     </section>
