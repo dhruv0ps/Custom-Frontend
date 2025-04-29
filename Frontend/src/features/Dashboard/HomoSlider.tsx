@@ -255,12 +255,12 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
   >
     {/* Default state */}
     <span className="transition-opacity duration-200 group-hover:opacity-0 whitespace-nowrap">
-      See All Services
+      How It Works
     </span>
 
     {/* Hover state */}
     <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
-      See All Services
+      How It Works
       <ChevronDown className="mt-1 h-12 w-7" />
     </span>
   </button>

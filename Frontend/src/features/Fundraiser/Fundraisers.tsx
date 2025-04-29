@@ -7,7 +7,7 @@ import icon3 from "@/assets/FundRaisers/Wheelz-icon-39.webp"
 import icon4 from "@/assets/FundRaisers/Wheelz-icon-40.webp"
 import img from "@/assets/FundRaisers/iStock-870883676-(2).jpg"
 import PremiumPartner from './PremuimPartner'
-// import { ChevronRightIcon } from '@radix-ui/react-icons'
+import VideoBanner from '@/util/VideoBanner'
 import AllFooterSection from '@/util/AllFooterSection'
 const animationStyles = `
   @keyframes fadeTop {
@@ -91,45 +91,16 @@ const Fundraisers:React.FC = () => {
   return (
     <>
       <style>{animationStyles}</style>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
-        <video
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          src={vide}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-
-        {/* Overlay for slight dimming */}
-        <div className="absolute inset-0 bg-black/10 z-10" />
-
-        <div className="relative z-20 flex flex-col justify-end h-full">
-          <div className="bg-white text-center py-4 px-4">
-            <h1 className="text-base md:text-2xl  font-bold text-black">
-            We donate to charities on behalf of all users buying and selling cars
-            </h1>
-          </div>
-
-          {/* Buttons Section */}
-          <div className="bg-[#ffcdf4] py-4 px-2 sm:py-8 w-full">
-            <div className="flex justify-center gap-4 flex-wrap">
-              <button
-                onClick={() => navigate("/")}
-                className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-8 py-2 rounded-full"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => navigate("/view-all")}
-                className="bg-[#e6022a] hover:bg-[#e6022a] text-white font-medium px-8 py-2 rounded-full"
-              >
-                Donate Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> 
+      <VideoBanner
+  videoSrc={vide}
+  heading="We donate to charities on behalf of all users buying and selling cars"
+  primaryButtonLabel="Home"
+  primaryButtonLink="/"
+  secondaryButtonLabel="Donate Now"
+  secondaryButtonLink="/view-all"
+  secondaryButtonBg="bg-[#e6022a]" 
+  secondaryButtonText="text-white"
+/>
 
          <div className="bg-[#feedf4] py-12 px-4">
             <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center">

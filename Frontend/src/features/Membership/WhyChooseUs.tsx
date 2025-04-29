@@ -30,13 +30,14 @@ export default function WhyChooseUs() {
       
 
   return (
-    <section className="bg-white py-16 px-4">
-      <div className="max-w-full sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <section className="bg-white py-16 sm:px-4 ">
+      <div className="max-w-[95%] sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Features */}
         <div>
-          <h2 className="text-xl md:text-3xl font-bold mb-8 text-center md:text-left text-nowrap">
-          Maximise Your Membership Benefits!
-          </h2>
+        <h2 className="text-xl md:text-3xl font-bold mb-8 text-center md:text-left">
+  Maximise Your Membership Benefits!
+</h2>
+
           <ul className="space-y-6">
             {features.map((feature, idx) => (
               <li key={idx} className="flex items-start gap-4">
@@ -46,7 +47,7 @@ export default function WhyChooseUs() {
                   className="sm:w-[50px] sm:h-[50px] w-[56px] h-[56px]  object-contain shrink-0"
                 />
                 <div>
-                  <h3 className="font-semibold sm:text-lg mb-1 text-sm">{feature.title}</h3>
+                  <h3 className="font-semibold sm:text-lg mb-1 text-sm sm:text-nowrap">{feature.title}</h3>
                   <p className="text-gray-700 text-sm">{feature.desc}</p>
                 </div>
               </li>

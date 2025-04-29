@@ -9,7 +9,7 @@ import img6 from "@/assets/SellCar/iStock-1598042841(3).jpg"
 import img7 from "@/assets/SellCar/iStock1490441147.jpg"
 import NewsSection from "./NewsSection"
 import WhyChooseUs from "./WhyChooseUs"
-
+import { ChevronRight } from "lucide-react"
 import HoverArrowButton from "@/util/HoverButton"
 import { useNavigate } from "react-router-dom"
 import AllFooterSection from "@/util/AllFooterSection"
@@ -18,7 +18,7 @@ export default function SellCar() {
   return (
     <>
 
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
+      <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[65vh] lg:h-[89vh]  overflow-hidden bg-white">
 
         <video
           className="absolute inset-0 w-full h-full object-cover z-0"
@@ -34,35 +34,42 @@ export default function SellCar() {
 
         {/* Foreground content */}
         <div className="relative z-20 flex flex-col justify-end h-full">
-          {/* White strip with heading */}
-          <div className="relative z-20 flex flex-col justify-end h-full">
+         
             <div className="bg-white text-center py-4 px-4">
               <h1 className="text-base md:text-2xl  font-bold text-black">
                 Sell smarter, earn more, it’s that simple!
               </h1>
             </div>
-          </div>
+        
 
-          <div className="bg-primary py-4 px-2 sm:py-8 w-full">
-            <div className="flex justify-center gap-4 flex-wrap px-4">
-              <HoverArrowButton
-                label="Home"
+           {/* Buttons Section */}
+           <div className="bg-primary py-4 px-2 sm:py-4 w-full">
+            <div className="flex justify-center gap-4 space-x-8 sm:space-x-32 flex-wrap">
+              <button
                 onClick={() => navigate("/")}
-                className="bg-gray-300 text-black font-semibold px-8 py-3 rounded-full shadow-md transition-all"
-                textClass="text-black"
-                hoverTextClass="text-black"
-              />
+                className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-8 py-2 rounded-full"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => navigate("/view-all")}
+                className="group relative bg-white text-[#1cbeff] font-medium  px-4 sm:px-4 sm:py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden  text-center hover:bg-gray-100 shadow-sm hover:shadow-md"
+              >
+                {/* Default Text */}
+                <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">
+                  Access Form
+                </span>
 
-              <HoverArrowButton
-                label="Access Form"
-                onClick={() => navigate("/")}
-                className="bg-white text-[#1cbeff] hover:bg-opacity-90 font-semibold px-6 py-3 rounded-full shadow-md"
-                textClass="text-[#1cbeff]"
-                hoverTextClass="text-[#1cbeff]"
-              />
+                {/* Hover Text + Arrow */}
+                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
+                Access Form
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </span>
+              </button>
             </div>
           </div>
         </div>
+
 
 
       </div>
@@ -122,7 +129,7 @@ export default function SellCar() {
                 label="Sell Now"
 
                 onClick={() => navigate("/")}
-             className="px-6 py-3 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
+                className="px-6 py-3 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
                 textClass="text-primary"
                 hoverTextClass="text-primary"
               />
@@ -135,40 +142,112 @@ export default function SellCar() {
       </div>
 
       <div className="bg-[#1cbeff] py-16 sm:px-4">
-        <div className=" max-w-[97%] sm:max-w-[80%] mx-auto text-center text-white">
+        <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center text-white">
           <h2 className="text-4xl md:text-3xl font-bold mb-12 uppercase">3 Simple Steps</h2>
 
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+          {/* Mobile: Steps as vertical layout */}
+          <div className="block md:hidden mb-12 mx-4">
             {/* Step 1 */}
-            <div className="flex items-start text-left gap-4 px-2">
-              <div className="text-[100px] md:text-[120px] font-extrabold leading-none text-white pl-2 sm:pl-0">1</div>
-              <div>
-                <h4 className="text-base md:text-lg font-bold mb-2 text-black uppercase pl-2 sm:pl-0">Tell us about your car</h4>
-                <p className="text-sm leading-relaxed text-white pl-2 sm:pl-0">
-                  Enter your vehicle's details to access our user-friendly interface, which will guide you through a simple
+            <div className="flex items-start text-left gap-4 px-2 mb-8">
+              <div className="text-[100px] font-extrabold leading-none text-white pl-2">1</div>
+              <div className="text-right">
+                <h4 className="text-base font-bold mb-2 text-black uppercase pl-2">Tell us about your car</h4>
+                <p className="text-sm leading-relaxed text-white pl-2">
+                  Enter your vehicle's details to access our user friendly interface, which will guide you through a simple
                   step-by-step process.
                 </p>
               </div>
             </div>
+            <div className="mb-8">
+              <div className="rounded-xl overflow-hidden shadow-lg ">
+                <img
+                  src={img5}
+                  alt="Person taking photos of their car"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
 
             {/* Step 2 */}
-            <div className="flex items-start text-left gap-4 px-2">
-              <div className="text-[100px] md:text-[120px] font-extrabold leading-none text-white">2</div>
-              <div>
-                <h4 className="text-base md:text-lg font-bold mb-2 text-black uppercase">Get paired with your perfect match</h4>
+            <div className="flex items-start text-left gap-4 px-2 mb-8">
+              <div className="text-[100px] font-extrabold leading-none text-white">2</div>
+              <div className="text-right">
+                <h4 className="text-base font-bold mb-2 text-black uppercase">Get paired with your perfect match</h4>
                 <p className="text-sm leading-relaxed text-white">
                   Our platform swiftly analyses your car details, connecting you with the right dealer from our extensive
                   network of buyers.
                 </p>
               </div>
             </div>
+            <div className="mb-8">
+              <div className="rounded-xl overflow-hidden shadow-lg ">
+                <img
+                  src={img6}
+                  alt="Wooden figure with star rating"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
 
             {/* Step 3 */}
-            <div className="flex items-start text-left gap-4 px-2">
-              <div className="text-[100px] md:text-[120px] font-extrabold leading-none text-white">3</div>
-              <div>
-                <h4 className="text-base md:text-lg font-bold mb-2 text-black uppercase">You receive fast payment</h4>
+            <div className="flex items-start text-left gap-4 px-2 mb-8">
+              <div className="text-[100px] font-extrabold leading-none text-white">3</div>
+              <div className="text-right" >
+                <h4 className="text-base font-bold mb-2 text-black uppercase">You receive fast payment</h4>
+                <p className="text-sm leading-relaxed text-white">
+                  Quick, hassle-free transaction! Agree to an offer, and the dealer will promptly pay you and arrange for your
+                  car's collection at your convenience.
+                </p>
+              </div>
+            </div>
+            <div className="mb-8">
+              <div className="rounded-xl overflow-hidden shadow-lg ">
+                <img
+                  src={img7}
+                  alt="Person smiling while using smartphone"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Steps layout */}
+          <div className="hidden md:grid md:grid-cols-3 gap-10 mb-12">
+            {/* Step 1 */}
+            <div className="flex items-start text-left gap-4">
+              <div className="text-[120px] font-extrabold leading-none text-white">1</div>
+              <div className="text-right">
+                <h4 className="text-lg font-bold mb-2 text-black uppercase">Tell us about your car</h4>
+                <p className="text-sm leading-relaxed text-white">
+                  Enter your vehicle's details to access our user friendly interface, which will guide you through a simple
+                  step-by-step process.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex items-start text-left gap-4">
+              <div className="text-[120px] font-extrabold leading-none text-white">2</div>
+              <div className="text-right">
+                <h4 className="text-lg font-bold mb-2 text-black uppercase">Get paired with your perfect match</h4>
+                <p className="text-sm leading-relaxed text-white">
+                  Our platform swiftly analyses your car details, connecting you with the right dealer from our extensive
+                  network of&nbsp;buyers.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex items-start text-left gap-4">
+              <div className="text-[120px] font-extrabold leading-none text-white">3</div>
+              <div className="text-right">
+                <h4 className="text-lg font-bold mb-2 text-black uppercase">You receive fast payment</h4>
                 <p className="text-sm leading-relaxed text-white">
                   Quick, hassle-free transaction! Agree to an offer, and the dealer will promptly pay you and arrange for your
                   car's collection at your convenience.
@@ -177,10 +256,8 @@ export default function SellCar() {
             </div>
           </div>
 
-
-
-          {/* Step Images */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {/* Desktop: Step Images */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6 mb-12">
             <div className="rounded-xl overflow-hidden shadow-lg">
               <img
                 src={img5}
@@ -209,29 +286,7 @@ export default function SellCar() {
               />
             </div>
           </div>
-
-        
         </div>
-        <div className="w-full py-8">
-            <div className=" max-w-full sm:max-w-7xl sm:px-12 mx-auto  flex flex-row sm:flex-row items-center justify-between">
-              
-              <div className="bg-white rounded-r-full py-2 pl-2 pr-10 sm:pl-6 sm:pr-32 mb-4 sm:mb-0">
-                <h2 className="text-base md:text-3xl font-bold whitespace-nowrap">
-                Free Service, Fast Match,
-                  <br className="block sm:hidden" />
-                  <span className="text-primary sm:ml-2 text-3xl">INSTANT PAY</span>
-                </h2>
-              </div>
-              <HoverArrowButton
-  label="Sell Now"
-  onClick={() => navigate("/")}
-  className="sm:px-6 py-3 font-semibold text-base rounded-full sha bg-white text-primary border border-primary mr-2 sm:mr-0"
-  textClass="text-primary"
-  hoverTextClass="text-primary"
-/>
-
-            </div>
-          </div>
       </div>
       <NewsSection
         videoId="TMAlw9_LvYQ"

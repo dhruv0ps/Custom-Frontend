@@ -71,7 +71,7 @@ export const VirtualToursCard1: React.FC = () => {
 
                 {/* Bottom Title */}
                 <div className=" text-center">
-                    <h3 className="text-3xl font-bold text-white">
+                    <h3 className="text-xl sm:text-3xl font-bold text-white">
                         This Months Top Virtual Tours
                     </h3>
                 </div>
@@ -89,10 +89,15 @@ export const VirtualToursCard1: React.FC = () => {
                                 <iframe
                                     src={video.url}
                                     title={video.title}
+                                    frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowFullScreen
                                     loading="lazy"
-                                    className="w-full h-52"
+                                    className="w-full h-auto aspect-video"
+                                    style={{
+                                        border: "none",
+                                        backgroundColor: "#000"
+                                    }}
                                 />
                             </div>
 

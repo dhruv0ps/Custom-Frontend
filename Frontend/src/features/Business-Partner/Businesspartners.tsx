@@ -9,6 +9,7 @@ import img4 from "@/assets/Parnter/Wheelz-icon-44.webp"
 import PremiumPartner from './PremuimPartner'
 import img66 from "@/assets/Parnter/Business-Partner-Service-by-Wheelz-Australia.webp"
 import AllFooterSection from '@/util/AllFooterSection'
+import VideoBanner from '@/util/VideoBanner'
 const Businesspartners:React.FC = () => {
     const navigate = useNavigate();
       const iconRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -60,47 +61,14 @@ const Businesspartners:React.FC = () => {
       
   return (
     <>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
-        <video
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          src={vide}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-
-        {/* Overlay for slight dimming */}
-        <div className="absolute inset-0 bg-black/10 z-10" />
-
-        <div className="relative z-20 flex flex-col justify-end h-full">
-          <div className="bg-white text-center py-4 px-4">
-          <h1 className="text-base md:text-2xl  font-bold text-black">
-          Drive your business forward with the force of our strategic alliance
-            </h1>
-          </div>
-
-          {/* Buttons Section */}
-          <div className="bg-primary py-4 px-2 sm:py-8 w-full">
-            <div className="flex justify-center gap-4 flex-wrap">
-              <button
-                onClick={() => navigate("/")}
-                className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-8 py-2 rounded-full"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => navigate("/view-all")}
-                className="bg-white hover:bg-gray-100 text-[#1cbeff] font-medium px-8 py-2 rounded-full"
-              >
-                Acess Form
-              </button>
-            </div>
-
-            
-          </div>
-        </div>
-      </div>
+    <VideoBanner
+  videoSrc={vide}
+  heading="Drive your business forward with the force of our strategic alliance"
+  primaryButtonLabel="Home"
+  primaryButtonLink="/"
+  secondaryButtonLabel="Access Form"
+  secondaryButtonLink="/view-all"
+/>
 
       <div className="bg-[#b7eaff] py-12 px-4">
       <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center">

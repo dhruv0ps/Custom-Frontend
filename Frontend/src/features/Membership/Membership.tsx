@@ -7,12 +7,12 @@ import VipSavingsPage from './VipSaving';
 import WhyChooseUs from './WhyChooseUs';
 import AllFooterSection from '@/util/AllFooterSection';
 import { ChevronRight } from 'lucide-react';
-const Membership:React.FC = () => {
+const Membership: React.FC = () => {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <>
-    <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
+     <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[65vh] lg:h-[89vh]  overflow-hidden bg-white">
         <video
           className="absolute inset-0 w-full h-full object-cover z-0"
           src={Videp1}
@@ -27,15 +27,15 @@ const Membership:React.FC = () => {
         {/* Foreground content */}
         <div className="relative z-20 flex flex-col justify-end h-full">
           {/* White strip with heading */}
-          <div className="bg-white text-center py-2 sm:py-4 px-4">
-            <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-black whitespace-nowrap">
-            Tiffany slashed her expenses by $11,000
+          <div className="bg-white text-center py-2 sm:py-2 px-4">
+            <h1 className="text-base md:text-2xl  font-bold text-black whitespace-nowrap">
+              Tiffany slashed her expenses by $11,000
             </h1>
           </div>
 
           {/* Buttons Section */}
-          <div className="bg-primary py-4 px-2 sm:py-8 w-full">
-            <div className="flex justify-center gap-4 flex-wrap">
+          <div className="bg-primary py-4 px-2 sm:py-4 w-full">
+            <div className="flex justify-center gap-4 space-x-8 sm:space-x-32 flex-wrap">
               <button
                 onClick={() => navigate("/")}
                 className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-8 py-2 rounded-full"
@@ -43,35 +43,35 @@ const Membership:React.FC = () => {
                 Home
               </button>
               <button
-  onClick={() => navigate("/view-all")}
-  className="group relative bg-white text-[#1cbeff] font-medium px-8 py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden min-w-[150px] text-center hover:bg-gray-100 shadow-sm hover:shadow-md"
->
-  {/* Default Text */}
-  <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">
-    Sign Me Up
-  </span>
+                onClick={() => navigate("/view-all")}
+                className="group relative bg-white text-[#1cbeff] font-medium  px-4 sm:px-4 sm:py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden  text-center hover:bg-gray-100 shadow-sm hover:shadow-md"
+              >
+                {/* Default Text */}
+                <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">
+                  Sign Me Up
+                </span>
 
-  {/* Hover Text + Arrow */}
-  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
-    Sign Me Up
-    <ChevronRight className="ml-2 h-5 w-5" />
-  </span>
-</button>
+                {/* Hover Text + Arrow */}
+                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
+                  Sign Me Up
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </span>
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <MembershipBenefits/>
-      <MembershipPricing/>
-      <VipSavingsPage/>
-      <WhyChooseUs/>
+      <MembershipBenefits />
+      <MembershipPricing />
+      <VipSavingsPage />
+      <WhyChooseUs />
       <AllFooterSection content={
         [
-            `Important Notice: *Due to the Privacy Act of 1988, the names, addresses, and savings of members presented here are for illustrative purposes only and reflect hypothetical spending habits.`,
-            `Actual savings may vary significantly based on individual circumstances, spending patterns, and membership usage. Savings are contingent upon personalised financial behaviors and member choices.`
+          `Important Notice: *Due to the Privacy Act of 1988, the names, addresses, and savings of members presented here are for illustrative purposes only and reflect hypothetical spending habits.`,
+          `Actual savings may vary significantly based on individual circumstances, spending patterns, and membership usage. Savings are contingent upon personalised financial behaviors and member choices.`
         ]
-      }/>
+      } />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import vide from "@/assets/Fleet/Fleet.mp4"
-import { useNavigate } from 'react-router-dom'
+import VideoBanner from '@/util/VideoBanner'
 import icon1 from "@/assets/Fleet/Wheelz-icon-29.webp"
 import icon2 from "@/assets/Fleet/Wheelz-icon-31.webp"
 import icon3 from "@/assets/Fleet/Wheelz-icon-30.webp"
@@ -33,7 +33,7 @@ const animationStyles = `
 `;
 
 const Fleet: React.FC = () => {
-    const navigate = useNavigate();
+  
     const iconRefs = useRef<(HTMLDivElement | null)[]>([]);
     
     useEffect(() => {
@@ -97,45 +97,14 @@ const Fleet: React.FC = () => {
   return (
     <>
       <style>{animationStyles}</style>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
-        <video
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          src={vide}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-
-        {/* Overlay for slight dimming */}
-        <div className="absolute inset-0 bg-black/10 z-10" />
-
-        <div className="relative z-20 flex flex-col justify-end h-full">
-          <div className="bg-white text-center py-4 px-4">
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-black">
-            Streamline fleet management with our comprehensive service suite
-            </h1>
-          </div>
-
-          {/* Buttons Section */}
-          <div className="bg-primary py-4 px-2 sm:py-8 w-full">
-            <div className="flex justify-center gap-4 flex-wrap">
-              <button
-                onClick={() => navigate("/")}
-                className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-8 py-2 rounded-full"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => navigate("/view-all")}
-                className="bg-white hover:bg-gray-100 text-[#1cbeff] font-medium px-8 py-2 rounded-full"
-              >
-                Access Form
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> 
+      <VideoBanner
+  videoSrc={vide}
+  heading="Streamline fleet management with our comprehensive service suite"
+  primaryButtonLabel="Home"
+  primaryButtonLink="/"
+  secondaryButtonLabel="Access Form"
+  secondaryButtonLink="/view-all"
+/>
       <div className="bg-[#b1e3ff] py-12 px-4">
       <div className="max-w-[80%] mx-auto text-center">
         <div className="hidden sm:grid sm:grid-cols-2 gap-10 mb-6">

@@ -14,8 +14,7 @@ const VipSavingsPage: React.FC = () => {
   const navigate = useNavigate();
 
   const highlightText = (text: string) => {
-    const pattern = /(\$\d+(,\d+)?|\+\$?\d+(,\d+)?|saving.*?\b|free\b|thousands\b|Sold car in 24Hrs?)/gi;
-    const highlightClass = "text-[#00ccff] font-semibold";
+    const pattern = /(\$\d{1,3}(?:,\d{3})*(?:\.\d+)?|\+\$?\d{1,3}(?:,\d{3})*(?:\.\d+)?|saving.*?\b|free\b|thousands\b|Sold car in 24Hrs?)/gi;  const highlightClass = "text-[#00ccff] font-semibold";  
     return text.split(pattern).map((part, index) =>
       pattern.test(part) ? (
         <span key={index} className={highlightClass}>
@@ -28,14 +27,14 @@ const VipSavingsPage: React.FC = () => {
   };
 
   const cards = [
-    { img: img1, region: "NT", benefits: ["Saved +$150 on a mechanical service", "Sold old car without spending a dollar", "Won $100 in our ‘bucks bonanza’ draw", "Bought new tyres saving him +$350", "Saved +$300 switching insurance provider"], name: "Meet Cyril, He Saved Over", saved: "$800 WITH US!", bg: "#ceedff" },
-    { img: img2, region: "ACT", benefits: ["Bought a new car and saved +$1,800", "Sold old car without spending a dollar", "Won $150 in ‘your tank, our treat’ draw", "Saved +$50 on a dent repair", "Tinted car windows saving him +$100"], name: "Meet Eric, He Saved Over", saved: "$2,000 WITH US!", bg: "#b1e3ff" },
-    { img: img3, region: "SA", benefits: ["Bought a new car and saved +$2,000", "Sold old car without spending a dollar", "Won $50 in ‘your tank, our treat’ draw", "Saved +$250 on ‘mates rates’ services", "Saved +$300 switching insurance provider"], name: "Meet Barry, He Saved Over", saved: "$2,500 WITH US!", bg: "#86d1fc" },
-    { img: img4, region: "TAS", benefits: ["Secured new car at a great price", "Sold her old car in under an hour for free", "Won $250 in our ‘glow goals’ draw", "Saved $1,250 through mates rates services", "Saved +$250 switching insurance provider"], name: "Meet Sally, She Saved Over", saved: "$3,500 WITH US!", bg: "#c6e8ff" },
-    { img: img5, region: "WA", benefits: ["Saved over $3,500 on his new car purchase", "Saved over $1,500 on ‘mates rates’ services", "Won $100 in our ‘bucks bonanza’ draw", "Saved $400 switching insurance provider", "Saved thousands via his new finance deal"], name: "Meet Paul, He Saved Over", saved: "$5,000 WITH US!", bg: "#b7eaff" },
-    { img: img6, region: "QLD", benefits: ["Saved +$1,750 on ‘mates rates’ services", "Sold car in 24Hrs, cash received same day", "Won $5,000 in our ‘drive, relax, spend’ draw", "Bought a new car saving +$4,500", "Saved +$3,000 refinancing her car loan"], name: "Meet Milly, She Saved Over", saved: "$9,000 WITH US!", bg: "#5ccbf5" },
-    { img: img7, region: "VIC", benefits: ["Saved over $3,500 on her new car purchase", "Won $500 in our ‘glow goals’ draw", "Saved over $2,500 on mates rates services", "Saved $500 switching insurance provider", "Saved thousands via her new finance offer"], name: "Meet Tiffany, She Saved Over", saved: "$11,000 WITH US!", bg: "#1cbeff" },
-    { img: img8, region: "NSW", benefits: ["Saved +$5,750 on mates rates services", "Sold car in 24hrs, cash received same day", "Won $100 in our ‘bucks bonanza’ draw", "Bought a new car saving +$4,500", "Saved +$3,000 refinancing his car loan"], name: "Meet Nick, He Saved Over", saved: "$13,000 WITH US!", bg: "#002b63", dark: true },
+    { img: img1, region: "NT", benefits: ["Saved +$150 on a mechanical service", "Sold old car without spending a dollar", "Won $100 in our ‘bucks bonanza’ draw", "Bought new tyres saving him +$350", "Saved +$300 switching insurance provider"], name: "Meet Cyril, He Saved Over", saved: "$800 WITH US", bg: "#ceedff" },
+    { img: img2, region: "ACT", benefits: ["Bought a new car and saved +$1,800", "Sold old car without spending a dollar", "Won $150 in ‘your tank, our treat’ draw", "Saved +$50 on a dent repair", "Tinted car windows saving him +$100"], name: "Meet Eric, He Saved Over", saved: "$2,000 WITH US", bg: "#b1e3ff" },
+    { img: img3, region: "SA", benefits: ["Bought a new car and saved +$2,000", "Sold old car without spending a dollar", "Won $50 in ‘your tank, our treat’ draw", "Saved +$250 on ‘mates rates’ services", "Saved +$300 switching insurance provider"], name: "Meet Barry, He Saved Over", saved: "$2,500 WITH US", bg: "#86d1fc" },
+    { img: img4, region: "TAS", benefits: ["Secured new car at a great price", "Sold her old car in under an hour for free", "Won $250 in our ‘glow goals’ draw", "Saved $1,250 through mates rates services", "Saved +$250 switching insurance provider"], name: "Meet Sally, She Saved Over", saved: "$3,500 WITH US", bg: "#c6e8ff" },
+    { img: img5, region: "WA", benefits: ["Saved over $3,500 on his new car purchase", "Saved over $1,500 on ‘mates rates’ services", "Won $100 in our ‘bucks bonanza’ draw", "Saved $400 switching insurance provider", "Saved thousands via his new finance deal"], name: "Meet Paul, He Saved Over", saved: "$5,000 WITH US", bg: "#b7eaff" },
+    { img: img6, region: "QLD", benefits: ["Saved +$1,750 on ‘mates rates’ services", "Sold car in 24Hrs, cash received same day", "Won $5,000 in our ‘drive, relax, spend’ draw", "Bought a new car saving +$4,500", "Saved +$3,000 refinancing her car loan"], name: "Meet Milly, She Saved Over", saved: "$9,000 WITH US", bg: "#5ccbf5" },
+    { img: img7, region: "VIC", benefits: ["Saved over $3,500 on her new car purchase", "Won $500 in our ‘glow goals’ draw", "Saved over $2,500 on mates rates services", "Saved $500 switching insurance provider", "Saved thousands via her new finance offer"], name: "Meet Tiffany, She Saved Over", saved: "$11,000 WITH US", bg: "#1cbeff" },
+    { img: img8, region: "NSW", benefits: ["Saved +$5,750 on mates rates services", "Sold car in 24hrs, cash received same day", "Won $100 in our ‘bucks bonanza’ draw", "Bought a new car saving +$4,500", "Saved +$3,000 refinancing his car loan"], name: "Meet Nick, He Saved Over", saved: "$13,000 WITH US", bg: "#002b63", dark: true },
   ];
 
   return (
@@ -56,10 +55,10 @@ const VipSavingsPage: React.FC = () => {
               style={{ backgroundColor: card.bg }}
             >
               <div className="flex items-center justify-between mb-4">
-                <img src={card.img} alt={card.region} className="w-20 h-20 rounded-xl object-cover" />
+                <img src={card.img} alt={card.region} className="w-24 h-24 mt-1 sm:mt-0 md:w-28 md:h-24  rounded-xl object-cover" />
                 <div className="flex flex-col items-end">
                   <h3 className="text-white font-bold uppercase text-[30px] text-right">VIP</h3>
-                  <span className="bg-white text-[#1cbeff] font-bold text-[24px] text-right rounded-l-full overflow-hidden border border-white ml-20 sm:ml-28 px-6 py-2 w-full">
+                  <span className="bg-white text-[#1cbeff] font-bold text-[24px] text-right rounded-l-full overflow-hidden border border-white ml-0 px-6 py-2 w-full">
                     {card.region}
                   </span>
 
@@ -75,7 +74,7 @@ const VipSavingsPage: React.FC = () => {
                           <polyline points="20 6 9 17 4 12" />
                         </svg>
                       </div>
-                      <span className="text-black text-[13px]">{highlightText(b)}</span>
+                      <span className="text-black text-[11px] whitespace-nowrap mt-2 ">{highlightText(b)}</span>
                     </li>
                   ))}
                 </ul>
@@ -83,8 +82,8 @@ const VipSavingsPage: React.FC = () => {
 
               <div className="flex items-center justify-between">
                 <div>
-                  <p className={`text-sm font-semibold ${card.dark ? "text-white" : "text-black"}`}>{card.name}</p>
-                  <h4 className="text-white font-bold uppercase text-[24px] sm:text-nowrap">{card.saved}</h4>
+                  <p className={`text-xs font-semibold ${card.dark ? "text-white" : "text-black"}`}>{card.name}</p>
+                  <h4 className="text-white font-bold uppercase  text-[20px] sm:text-[24px] sm:text-nowrap">{card.saved}</h4>
                 </div>
                 <HoverArrowButton
                   label="Sign Me Up"

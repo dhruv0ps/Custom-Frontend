@@ -86,7 +86,7 @@ const FooterSection: React.FC = () => {
   {/* HQ Address */}
   <li className="flex items-start space-x-3">
     <BsBuildingFill className="h-5 w-5 text-primary mt-1 shrink-0" />
-    <span className=" whitespace-nowrap sm:whitespace-normal ">HQ: 470 St Kilda Road, Melbourne VIC 3004</span>
+    <span className="  sm:whitespace-normal ">HQ: 470 St Kilda Road, Melbourne VIC 3004</span>
   </li>
 </ul>
 

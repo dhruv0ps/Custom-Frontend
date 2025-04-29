@@ -13,56 +13,19 @@ import { ChevronRight } from "lucide-react"
 import HoverArrowButton from "@/util/HoverButton"
 import { useNavigate } from "react-router-dom"
 import AllFooterSection from "@/util/AllFooterSection"
+import VideoBanner from "@/util/VideoBanner"
 export default function BuyCar() {
     const navigate = useNavigate()
     return (
         <>
 
-            <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
-
-                <video
-                    className="absolute inset-0 w-full h-full object-cover z-0"
-                    src={Videp1}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                />
-
-                <div className="absolute inset-0 bg-black/10 z-10" />
-
-                <div className="relative z-20 flex flex-col justify-end h-full">
-                    <div className="bg-white text-center py-4 px-4">
-                        <h1 className="text-base md:text-2xl  font-bold text-black">
-
-                            We’ll ensure you buy your car for less
-                        </h1>
-                    </div>
-
-
-                    <div className="bg-primary py-4 px-2 sm:py-8 w-full">
-            <div className="flex justify-center gap-4 flex-wrap px-4">
-              <HoverArrowButton
-                label="Home"
-                onClick={() => navigate("/")}
-                className="bg-gray-300 text-black font-semibold px-8 py-3 rounded-full shadow-md transition-all"
-                textClass="text-black"
-                hoverTextClass="text-black"
-              />
-
-              <HoverArrowButton
-                label="Access Form"
-                onClick={() => navigate("/")}
-                className="bg-white text-[#1cbeff] hover:bg-opacity-90 font-semibold px-6 py-3 rounded-full shadow-md"
-                textClass="text-[#1cbeff]"
-                hoverTextClass="text-[#1cbeff]"
-              />
-            </div>
-          </div>
-                </div>
-
-
-            </div>
+           
+            <VideoBanner videoSrc={Videp1}
+            heading="We’ll ensure you buy your car for less"
+            primaryButtonLabel="Home"
+            primaryButtonLink="/"
+            secondaryButtonLabel="Access Form"
+            secondaryButtonLink="/"/>
             <div className="bg-[#b7eaff] py-12">
                 <div className=" max-w-full sm:max-w-[80%]  mx-auto text-center">
                     <h2 className="text-2xl md:text-3xl font-bold mb-12">Putting You First</h2>

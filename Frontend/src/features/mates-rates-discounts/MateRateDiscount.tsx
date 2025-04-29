@@ -36,7 +36,7 @@ import img32 from "@/assets/MateRate/Buy-Car-Icon.png"
 import img33 from "@/assets/MateRate/Test-Drive-Icon.png"
 import img34 from "@/assets/MateRate/Demo-Used-Car.webp"
 import img35 from "@/assets/MateRate/soon.webp"
-
+import VideoBanner from '@/util/VideoBanner';
 import img40 from "@/assets/Discount-Offers-at-Wheelz-Australia-for-Mobile-Version.webp"
 import PremuimPartner from './PremuimPartner';
 import WhyChooseUs from './WhyChooseus';
@@ -52,45 +52,14 @@ const MateRateDiscount: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
-        <video
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          src={video1}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-
-        {/* Overlay for slight dimming */}
-        <div className="absolute inset-0 bg-black/10 z-10" />
-
-        <div className="relative z-20 flex flex-col justify-end h-full">
-          <div className="bg-white text-center py-4 px-4">
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-black">
-              Mates rates discounts await members
-            </h1>
-          </div>
-
-          {/* Buttons Section */}
-          <div className="bg-primary py-4 px-2 sm:py-8 w-full">
-            <div className="flex justify-center gap-4 flex-wrap">
-              <button
-                onClick={() => navigate("/")}
-                className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-8 py-2 rounded-full"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => navigate("/view-all")}
-                className="bg-white hover:bg-gray-100 text-[#1cbeff] font-medium px-8 py-2 rounded-full"
-              >
-                Access Form
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> 
+      <VideoBanner
+  videoSrc={video1}
+  heading="Mates rates discounts await members"
+  primaryButtonLabel="Home"
+  primaryButtonLink="/"
+  secondaryButtonLabel="Access Form"
+  secondaryButtonLink="/view-all"
+/>
 
       <div className='bg-white'>
         <div className=' max-w-full sm:max-w-[80%] mx-auto'>
