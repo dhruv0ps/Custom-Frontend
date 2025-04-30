@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import HoverArrowButton from "./HoverButton";
+import { useNavigate } from "react-router-dom";
 import checkbox from "@/assets/SellCar/Check-Box.png"
 interface Feature {
   title: string;
@@ -13,28 +14,29 @@ interface WhyChooseUsProps {
 }
 
 const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ title, features, image }) => {
+  const navigate = useNavigate()
   return (
     <section className="bg-white py-16 px-4">
-    <div className="max-w-full sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
-      {/* Left: Features */}
-      <div>
-        <h2 className="text-2xl md:text-2xl font-bold mb-8 text-center md:text-left">
-          {title}
-        </h2>
-        <ul className="space-y-6">
-          {features.map((feature, idx) => (
-            <li key={idx} className="flex items-start gap-4">
+      <div className="max-w-full sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
+        {/* Left: Features */}
+        <div>
+          <h2 className="text-xl md:text-2xl font-bold mb-8 text-center md:text-left">
+            {title}
+          </h2>
+          <ul className="space-y-6">
+            {features.map((feature, idx) => (
+              <li key={idx} className="flex items-start gap-4">
 
                 <img
                   src={checkbox}
                   alt="checkmark"
                   className="sm:w-[50px] sm:h-[50px] w-[56px] h-[56px] object-contain shrink-0"
                 />
-                  <div>
-                  <h3 className="font-bold text-lg text-black">
+                <div>
+                  <h3 className="font-semibold sm:text-base mb-1 text-sm sm:text-nowrap">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 mt-1">{feature.desc}</p>
+                  <p className="text-[#666]  text-[0.8rem]">{feature.desc}</p>
                 </div>
               </li>
             ))}
@@ -42,30 +44,28 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ title, features, image }) => 
         </div>
 
         {/* Right: Image */}
-        <div className="rounded-lg overflow-hidden shadow-lg">
-          <img
-            src={image}
-            alt="Promotion"
-            className="w-full h-auto object-cover"
-          />
+        <div className="h-full flex">
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+            <img
+              src={image}
+              alt="Promotion"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
 
       {/* Bottom Buttons */}
-      <div className="mt-12 w-full">
-        <div className="flex justify-center gap-4 flex-wrap px-4">
-          <Link
-            to="/"
-           className="text-black bg-[#d9d9d9] border border-[#d9d9d9] text-[16px] font-semibold rounded-full transition-all duration-300 shadow-[0px_10px_10px_-6px_rgba(0,0,0,0.3)] px-6 py-2"
-          >
-            Home
-          </Link>
-          <Link
-            to="/sell-your-car/form"
-            className="text-[#1cbeff] bg-white border border-white text-[18px] font-semibold rounded-full transition-all duration-300 shadow-[0px_10px_10px_-6px_rgba(0,0,0,0.3)] px-6 py-2"
-          >
-            Sign Me Up
-          </Link>
+      < div className="mt-12 w-full">
+        <div className="flex justify-center gap-16 sm:flex-wrap sm:px-4">
+
+          <HoverArrowButton label="Home" onClick={() => navigate("/")} className="bg-gray-300 hover:bg-gray-200 rounded-full shadow-md px-8 py-3"
+            textClass="text-black font-semibold"
+            hoverTextClass="text-black font-semibold" />
+
+          <HoverArrowButton label="Sign Me Up" onClick={() => navigate("/")} className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
+            textClass="text-[#1cbeff] font-semibold"
+            hoverTextClass="text-[#1cbeff] font-semibold" />
         </div>
       </div>
     </section>

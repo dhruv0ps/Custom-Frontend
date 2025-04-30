@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import img1 from "@/assets/Membership/Cyril.webp";
-import img2 from "@/assets/Membership/Eric.webp";
-import img3 from "@/assets/Membership/Barry.webp";
-import img4 from "@/assets/Membership/Meet-Sally.webp";
-import img5 from "@/assets/Membership/Meet-Paul.webp";
-import img6 from "@/assets/Membership/Milly.webp";
-import img7 from "@/assets/Membership/Meet-Tiffany.webp";
-import img8 from "@/assets/Membership/Meet-Nick.webp";
+import img1 from "@/assets/Membership/1312.jpg";
+import img2 from "@/assets/Membership/1221.jpg";
+import img3 from "@/assets/Membership/1291.jpg";
+import img4 from "@/assets/Membership/1271.jpg";
+import img5 from "@/assets/Membership/1241.jpg";
+import img6 from "@/assets/Membership/1261.jpg";
+import img7 from "@/assets/Membership/1213.png";
+import img8 from "@/assets/Membership/1311.jpg";
 import adImage from "@/assets/Membership/For-Rent.webp";
 import HoverArrowButton from "@/util/HoverButton";
 const VipSavingsPage: React.FC = () => {
@@ -55,7 +55,12 @@ const VipSavingsPage: React.FC = () => {
               style={{ backgroundColor: card.bg }}
             >
               <div className="flex items-center justify-between mb-4">
-                <img src={card.img} alt={card.region} className="w-24 h-24 mt-1 sm:mt-0 md:w-28 md:h-24  rounded-xl object-cover" />
+              
+<img 
+  src={card.img} 
+  alt={card.region} 
+  className="w-24 h-24 mt-1 sm:mt-0 md:w-28 md:h-28 rounded-xl object-cover object-center" 
+/>
                 <div className="flex flex-col items-end">
                   <h3 className="text-white font-bold uppercase text-[30px] text-right">VIP</h3>
                   <span className="bg-white text-[#1cbeff] font-bold text-[24px] text-right rounded-l-full overflow-hidden border border-white ml-0 px-6 py-2 w-full">
@@ -82,7 +87,7 @@ const VipSavingsPage: React.FC = () => {
 
               <div className="flex items-center justify-between">
                 <div>
-                  <p className={`text-xs font-semibold ${card.dark ? "text-white" : "text-black"}`}>{card.name}</p>
+                  <p className={`text-sm font-semibold ${card.dark ? "text-white" : "text-black"}`}>{card.name}</p>
                   <h4 className="text-white font-bold uppercase  text-[20px] sm:text-[24px] sm:text-nowrap">{card.saved}</h4>
                 </div>
                 <HoverArrowButton

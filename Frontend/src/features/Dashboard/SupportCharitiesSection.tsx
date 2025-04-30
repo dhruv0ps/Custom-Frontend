@@ -70,9 +70,9 @@ const SupportCharitiesSection: React.FC = () => {
     <div className="bg-[#feedf4]">
       {/* Mobile View - Matching the image */}
       <div className="md:hidden flex  flex-col p-2 sm:p-4 max-w-[97%] mx-auto">
-        <h2 className="text-4xl font-bold text-[#ff0000] text-end mb-1">
-          We Support Charities
-        </h2>
+      <h2 className="text-3xl font-bold text-[#ff0000] text-end mb-1 mt-6">
+  We Support<br />Charities
+</h2>
         <h3 className="text-base font-bold text-primary text-end  mb-2">
           We're Building Hope, One Donation At A Time
         </h3>

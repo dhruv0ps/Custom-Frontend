@@ -34,7 +34,7 @@ export default function WhyChooseUs() {
       <div className="max-w-[95%] sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Features */}
         <div>
-        <h2 className="text-xl md:text-3xl font-bold mb-8 text-center md:text-left">
+        <h2 className="text-xl md:text-2xl font-bold mb-8 text-center md:text-left">
   Maximise Your Membership Benefits!
 </h2>
 
@@ -47,8 +47,8 @@ export default function WhyChooseUs() {
                   className="sm:w-[50px] sm:h-[50px] w-[56px] h-[56px]  object-contain shrink-0"
                 />
                 <div>
-                  <h3 className="font-semibold sm:text-lg mb-1 text-sm sm:text-nowrap">{feature.title}</h3>
-                  <p className="text-gray-700 text-sm">{feature.desc}</p>
+                  <h3 className="font-semibold sm:text-base mb-1 text-sm sm:text-nowrap">{feature.title}</h3>
+                  <p className="text-[#666] text-[0.8rem]">{feature.desc}</p>
                 </div>
               </li>
             ))}
@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
                 
       </div>
       <div className="mt-12 w-full">
-                  <div className="flex justify-center gap-4 flex-wrap px-4">
+      <div className="flex justify-center gap-16 sm:flex-wrap sm:px-4">
                   
                     <HoverArrowButton label="Home" onClick={() => naviagte("/")} className="bg-gray-300 hover:bg-gray-200 rounded-full shadow-md px-8 py-3"
   textClass="text-black font-semibold"

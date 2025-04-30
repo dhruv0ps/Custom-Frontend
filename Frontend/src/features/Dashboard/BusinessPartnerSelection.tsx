@@ -11,7 +11,7 @@ export default function BusinessPartnerSection() {
     <section className="bg-[#eef9ff]">
       <div className="container max-w-full sm:max-w-[80%] mx-auto py-6">
 
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-primary pt-6 px-4 sm:px-0 flex justify-end text-right">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-primary pt-6 px-4 sm:px-0 sm:mt-6  flex justify-end text-right">
           Business Partner Opportunities
         </h2>
 
@@ -29,8 +29,8 @@ export default function BusinessPartnerSection() {
           </div>
 
           <div className="w-1/2 relative">
-            <div className="absolute top-0 right-0 w-28 h-28 sm:mt-20">
-              <div className="relative w-full h-full overflow-hidden rounded-xl">
+            <div className="absolute top-0 right-0 w-28 h-28 sm:mt-[7rem] ">
+              <div className="relative w-full h-full overflow-hidden rounded-xl ">
                 <img src={rocket} alt="Rocket icon" className="w-full h-full object-contain " />
                 <div
                   className="absolute inset-0 pointer-events-none z-10"
@@ -39,11 +39,11 @@ export default function BusinessPartnerSection() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-left mb-4 text-gray-800 mt-36">
+            <h3 className="text-2xl font-semibold text-left mb-4 text-gray-800 mt-[12.5rem]">
               Calling All Automotive Businesses
             </h3>
 
-            <p className="text-gray-700 mb-2 leading-relaxed mt-12">
+            <p className="text-gray-700 mb-2 leading-relaxed ">
               Boost your sales results! Unlock exclusive partnerships tailored to meet your needs and expand your reach.
               Collaborate with us to connect with more customers and secure your position in our automotive community today,
               bypassing our waiting list placement.

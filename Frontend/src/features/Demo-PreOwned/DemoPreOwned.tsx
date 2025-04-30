@@ -1,11 +1,10 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CarCardMobile from "./CarCardMobile";
 import img1 from "@/assets/Wheelz-Australia-White-and-Blue-Color-300x66.webp";
-import gif1 from "@/assets/Stars.webp";
+import { useState } from "react";
 import Video1 from "@/assets/Pre-Owned-Wheelz-Australia.mp4";
 import gif2 from "@/assets/Wheelz-Australia-Coming-Soon-icon.webp"
-import gif3 from "@/assets/Stars-icon.webp"
+
 import img2 from "@/assets/Demo & Pre-Owned/Certified.jpg"
 import img11 from "@/assets/Mazda-Car.webp"
 import img12 from "@/assets/Mazda-Car-DJ-Series.png"
@@ -13,20 +12,18 @@ import img13 from "@/assets/Ford-Car.webp"
 import img14 from "@/assets/Land-Rover-Car.webp"
 import img15 from "@/assets/KIA-Car.webp"
 import img16 from "@/assets/BMW-Car.webp"
-
+import VideoBanner from "@/util/VideoBanner";
 import logo1 from "@/assets/Mazda-Car-Logo.webp"
 import logo2 from "@/assets/Ford-Car-Logo.webp"
 import logo3 from "@/assets/Land-Rover-Car-Logo.webp"
 import logo4 from "@/assets/KIA-Car-Logo.webp"
 import logo5 from "@/assets/BMW-Car-Logo.webp"
 import AllFooterSection from "@/util/AllFooterSection";
+import HoverArrowButton from "@/util/HoverButton";
+import { ChevronRight } from "lucide-react";
 export default function DemoPreCar() {
   const navigate = useNavigate();
-  const [state, setState] = useState("");
-
-  const handleStateChange = (e: any) => {
-    setState(e.target.value);
-  };
+ 
   const cars = [
     {
       image: img11,
@@ -113,65 +110,54 @@ export default function DemoPreCar() {
       ],
     }
   ];
+  const HoverButton = () => {
+    const [hovered, setHovered] = useState(false);
+  
+    return (
+      <div className="flex justify-end w-full">
+        <button
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          className="relative bg-primary text-white px-3 py-1 mb-2 mx-2 rounded-full  hover:px-4 shadow-md hover:shadow-lg transition-all overflow-hidden"
+        >
+          {/* Static Text */}
+          <span
+            className={`transition-opacity duration-200 ${hovered ? "opacity-0" : "opacity-100"} relative z-10`}
+          >
+            Enquire Now
+          </span>
+  
+          {/* Hover Text + Icon */}
+          <span
+            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-200  ${
+              hovered ? "opacity-100" : "opacity-0"
+            } z-10`}
+          >
+            Enquire Now <ChevronRight className=" w-4 h-4" />
+          </span>
+        </button>
+      </div>
+    );
+  };
   
   
   return (
     <>
       {/* Video Banner Section */}
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden bg-white">
-        <video
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          src={Video1}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-        <div className="absolute inset-0 bg-black/10 z-10" />
-        <div className="absolute bottom-0 left-0 right-0 bg-white py-4 z-20">
-          <h1 className="text-center text-2xl font-bold">
-            Tested, trusted and can be yours today!
-          </h1>
-        </div>
-      </div>
 
-      {/* State Dropdown + Nav */}
-      <div className="bg-[#1cbeff] py-8 px-4 flex flex-col items-center relative z-20">
-        <div className="mb-6 w-full max-w-xs">
-          <select
-            className="w-full py-3 px-4 bg-white rounded-md text-black appearance-none cursor-pointer shadow"
-            value={state}
-            onChange={handleStateChange}
-          >
-            <option value="" disabled>
-              State
-            </option>
-            <option value="nsw">New South Wales</option>
-            <option value="vic">Victoria</option>
-            <option value="qld">Queensland</option>
-            <option value="wa">Western Australia</option>
-            <option value="sa">South Australia</option>
-            <option value="tas">Tasmania</option>
-            <option value="act">Australian Capital Territory</option>
-            <option value="nt">Northern Territory</option>
-          </select>
-        </div>
+  <VideoBanner
+  videoSrc={Video1}
+  heading="Tested, trusted and can be yours today!"
+  primaryButtonLabel="Home"
+  primaryButtonLink="/"
+  secondaryButtonLabel="View All"
+  secondaryButtonLink="/view-all"
+  mode="demo" 
+/>
 
-        <div className="flex gap-4">
-          <button
-            onClick={() => navigate("/")}
-            className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-8 py-2 rounded-full"
-          >
-            Home
-          </button>
-          <button
-            onClick={() => navigate("/view-all")}
-            className="bg-white hover:bg-gray-100 text-[#1cbeff] font-medium px-8 py-2 rounded-full"
-          >
-            View All
-          </button>
-        </div>
-      </div>
+      
+      
+
 
       {/* Top Deals Section */}
       <div className="bg-[#0e2a5f] w-full">
@@ -185,23 +171,11 @@ export default function DemoPreCar() {
 
           {/* Heading with Stars */}
           <div className="flex items-center justify-center gap-4 mb-10">
-          <img 
-  src={gif1} 
-  alt="stars" 
-  title="Stars" 
-  className="w-[40px] sm:w-[48px] md:w-[64px] lg:w-[80px] xl:w-[100px] transition duration-300" 
-  loading="lazy" 
-/>
-            <h2 className="text-[#18c3ff] text-2xl font-semibold text-center">
-              This Month's Top Deals
+     
+            <h2 className="text-[#18c3ff] text-2xl sm:text-3xl font-semibold text-center">
+              This Month's Top Deals 
             </h2>
-            <img 
-  src={gif3} 
-  alt="stars" 
-  title="Stars" 
-  className="w-[40px] sm:w-[48px] md:w-[64px] lg:w-[80px] xl:w-[100px] transition duration-300" 
-  loading="lazy" 
-/>
+            
           </div>
 
           {/* Cards */}
@@ -228,9 +202,8 @@ export default function DemoPreCar() {
 
                
                 {/* CTA Button */}
-                <button className="bg-primary text-white px-3 py-1 mb-2 mx-2 rounded-full shadow-md hover:shadow-lg transition ml-auto">
-                  Enquire Now
-                </button>
+              
+                <HoverButton/>
          
         </div>
       </div>
@@ -240,10 +213,10 @@ export default function DemoPreCar() {
 
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center rounded-lg md:p-6 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center rounded-lg md:py-12 mt-4">
 
   <div className="text-white space-y-4 order-1 md:order-2">
-    <h2 className="text-base md:text-xl font-semibold md:font-bold whitespace-nowrap">Certified Confidence, Dealer-Backed Assurance</h2>
+    <h2 className="text-base md:text-[1.4rem] font-semibold md:font-bold whitespace-nowrap">Certified Confidence, Dealer-Backed Assurance</h2>
     <p>Every Demo and Pre-Owned vehicle on our platform is offered exclusively by licensed dealerships, so you can drive away with complete peace of mind.</p>
     <p>Each car has been carefully inspected, professionally tested, and meets the quality standards you’d expect from trusted, regulated sellers.</p>
     <p>Whether you’re after near new performance or dependable value, you’re not just getting a great deal, you’re making a smart, safe, and secure choice.</p>
@@ -261,23 +234,27 @@ export default function DemoPreCar() {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 mt-6 mb-6">
-  {/* Home Button */}
-  <button
+      <div className="mt-12 w-full">
+      <div className="flex justify-center gap-16 sm:flex-wrap sm:px-4">
+  <HoverArrowButton
+    label="Home"
     onClick={() => navigate("/")}
-    className="text-black border border-[#d9d9d9] bg-[#d9d9d9] px-6 py-2 rounded-full text-[18px] font-medium transition hover:opacity-90"
-  >
-    Home
-  </button>
+    className="border border-[#d9d9d9] bg-[#d9d9d9] px-6 py-2 rounded-full transition hover:opacity-90"
+    textClass="text-black text-[18px] font-medium"
+    hoverTextClass="text-black text-[18px] font-medium"
+  />
 
   {/* View All Button */}
-  <button
+  <HoverArrowButton
+    label="View All"
     onClick={() => navigate("/view-all")}
-    className="text-white border border-[#1cbeff] bg-[#1cbeff] px-6 py-2 rounded-full text-[18px] font-medium transition hover:opacity-90"
-  >
-    View All
-  </button>
+    className="border border-[#1cbeff] bg-[#1cbeff] px-6 py-2 rounded-full transition hover:opacity-90"
+    textClass="text-white text-[18px] font-medium"
+    hoverTextClass="text-white text-[18px] font-medium"
+  />
+  </div>
 </div>
+
 <AllFooterSection content={[
   `Important: All information regarding demonstrator and pre-owned vehicles is provided directly by the dealership. We do not take responsibility for the accuracy, completeness, or reliability of this information. Deals for demonstrator and pre-owned vehicles are solely between the Buyer and the Seller, with no involvement from us in the negotiation, execution, or outcome of these deals.`
 ]}/>

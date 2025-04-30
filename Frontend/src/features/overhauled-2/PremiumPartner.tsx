@@ -104,12 +104,12 @@ const PremiumPartner = () => {
     </div>
 
     <div className="w-full flex flex-col sm:flex-row items-center justify-between">
-    <div className="bg-white rounded-r-full py-2  pr-48 mb-4 sm:mb-0">
+    <div className="bg-white rounded-r-full py-2  pr-16 mb-4 sm:mb-0 sm:ml-4">
       <h2 className="text-2xl md:text-3xl font-bold text-black whitespace-nowrap">
       Join, Share, Win, <span className="text-[#1cbeff]"> OVERHAULED AWAITS</span>
       </h2>
     </div>
-    <div className="w-full flex justify-end mt-2 ml-4">
+    <div className="w-full flex justify-end mt-2 ml-4 mr-2">
     <button
   className="bg-white text-[#1cbeff] font-semibold py-2 px-4 border border-[#1cbeff] rounded-full group hover:bg-gray-50 transition-all duration-300 text-nowrap shadow-[0px_2px_10px_0px_rgba(0,0,0,0.3)] mr-2"
 >

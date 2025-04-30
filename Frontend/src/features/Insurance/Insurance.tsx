@@ -77,13 +77,13 @@ const Insurance:React.FC = () => {
           <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             {features.map((item, index) => (
               <div key={index} className="flex flex-col items-center text-center">
-                <div className="bg-white p-4 rounded-xl shadow-md mb-4">
+                 <div className="bg-white  rounded-xl shadow-md mb-4 flex items-center justify-center">
                   <img
                     src={item.icon}
                     alt={item.title}
-                    className="w-[75px] h-[75px] object-contain"
+                    className="w-32 h-32 object-contain"
                   />
-                </div>
+                  </div>
                 <div>
                   <h3 className="font-bold text-base mb-2 text-black">{item.title}</h3>
                   <p className="text-sm text-gray-800 leading-relaxed">{item.desc}</p>

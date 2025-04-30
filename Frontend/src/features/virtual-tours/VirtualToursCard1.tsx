@@ -66,7 +66,7 @@ const videos = [
 export const VirtualToursCard1: React.FC = () => {
     return (
         <div className="w-full bg-[#0c3366] py-16 font-sans">
-            <div className="max-w-full sm:max-w-[80%] mx-auto px-4">
+            <div className="max-w-full sm:max-w-[80%] mx-auto ">
                 {/* Top Title */}
 
                 {/* Bottom Title */}
@@ -116,8 +116,8 @@ export const VirtualToursCard1: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between mt-12">
-                    <div className="bg-white rounded-r-full py-2 pl-6 pr-72 mb-4 sm:mb-0">
-                        <h2 className="text-xl md:text-2xl font-bold whitespace-nowrap">
+                    <div className="bg-white rounded-r-full py-2 pl-6 pr-24 mb-4 sm:mb-0">
+                        <h2 className="text-xl md:text-3xl font-bold whitespace-nowrap">
                             <span className="text-black">Virtual Tours </span>
                             <span className="text-primary"> ALL FROM HOME</span>
                         </h2>

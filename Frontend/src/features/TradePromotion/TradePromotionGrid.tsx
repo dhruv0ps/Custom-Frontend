@@ -131,8 +131,8 @@ const TradePromotionGrid = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between">
-        <div className="bg-white rounded-r-full py-2 pl-6 pr-72 mb-4 sm:mb-0">
-            <h2 className="text-xl md:text-2xl font-bold whitespace-nowrap">
+        <div className="bg-white rounded-r-full py-2 pl-6 pr-12 mb-4 sm:mb-0">
+        <h2 className="text-base md:text-3xl font-bold text-black "> 
               <span className="text-black">Join Today </span>
               <span className="text-primary">FOR JUST $10!</span>
             </h2>

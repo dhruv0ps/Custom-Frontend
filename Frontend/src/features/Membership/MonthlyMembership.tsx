@@ -1,8 +1,8 @@
 import React from "react";
 import { ChevronRight } from "lucide-react"
-import img1 from "@/assets/Membership/iStock-1442731784(2).jpg";
+import img1 from "@/assets/Membership/130.jpg"
 import img2 from "@/assets/Membership/Carboy.jpg";
-import img3 from "@/assets/Membership/iStock504374602(2).jpg"
+import img3 from "@/assets/Membership/125.jpg"
 import discountsImg from "@/assets/Membership/Discount-125760549.jpg";
 import logo from "@/assets/Wheelz-Australia-White-and-Blue-Color-scaled.webp"
 

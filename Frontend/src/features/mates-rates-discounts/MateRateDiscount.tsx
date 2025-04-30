@@ -41,6 +41,7 @@ import img40 from "@/assets/Discount-Offers-at-Wheelz-Australia-for-Mobile-Versi
 import PremuimPartner from './PremuimPartner';
 import WhyChooseUs from './WhyChooseus';
 import AllFooterSection from '@/util/AllFooterSection';
+import {motion} from "framer-motion"
 const MateRateDiscount: React.FC = () => {
   const navigate = useNavigate();
   const [animateIcons, setAnimateIcons] = useState(false);
@@ -62,7 +63,7 @@ const MateRateDiscount: React.FC = () => {
 />
 
       <div className='bg-white'>
-        <div className=' max-w-full sm:max-w-[80%] mx-auto'>
+        <div className='max-w-[97%] sm:max-w-[80%] mx-auto'>
         <div className="text-center py-10">
   <h2 className="text-2xl sm:text-3xl font-bold text-primary">
     Your Loyalty Deserves More
@@ -110,36 +111,54 @@ const MateRateDiscount: React.FC = () => {
   { name: "Coming Soon", img: img35 },
 ]
 .map((item, index) => (
-    <div key={index} className="flex flex-col items-center gap-3">
-      <div className="w-[110px] h-[110px] bg-white  shadow-md flex items-center justify-center rounded-[20px] overflow-hidden p-[5px]"
-       style={{ boxShadow: "inset 0px 0px 18px 0px rgba(0,0,0,0.3)" }}>
-       <img
-  src={item.img}
-  alt={item.name}
-  className={`w-[243px] object-contain ${animateIcons ? 'animate-fadeTop' : ''}`}
-/>
+  <motion.div
+  key={index}
+  className="flex flex-col items-center gap-3 cursor-pointer"
+  whileHover={{ scale: 1.1 }}
+  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+>
+  <motion.div
+    className="w-[110px] h-[110px] flex items-center justify-center rounded-[20px] overflow-hidden p-[5px]"
+    style={{
+      backgroundColor: "#ffffff",
+      boxShadow: "inset 0px 0px 18px 0px rgba(0,0,0,0.3)",
+    }}
+    whileHover={{
+      backgroundColor: "#00b2ff",
+      boxShadow: "0 6px 20px rgba(0, 0, 0, 0.15)",
+    }}
+    transition={{ duration: 0.3 }}
+  >
+    <img
+      src={item.img}
+      alt={item.name}
+      className={`w-[243px] object-contain ${
+        animateIcons ? "animate-fadeTop" : ""
+      }`}
+    />
+  </motion.div>
 
-      </div>
-      <p className="text-sm mt-4 font-semibold text-black text-center">{item.name}</p>
-    </div>
+  <p className="text-sm mt-4 font-semibold text-black text-center">{item.name}</p>
+</motion.div>
+
   ))}
 </div>
 
             
         </div>
         
-      <div className="max-w-full sm:max-w-[80%] mx-auto  px-4 flex flex-row   sm:flex-row items-center justify-between">
-      <div className="bg-gray-300 rounded-r-full rounded-l-none py-2 pl-6 pr-6 sm:pr-72 mb-4 sm:mb-0 w-full sm:w-auto">
+      <div className="max-w-[97%] sm:max-w-[80%] mx-auto   flex flex-row   sm:flex-row items-center justify-between mb-4 sm:mb-16 ">
+      <div className="bg-primary rounded-r-full rounded-l-none py-2 pl-6 pr-6 sm:pr-18 sm:ml-8 w-full sm:w-auto">
 
           <h2 className="text-xl md:text-3xl font-bold text-center sm:text-left">
             <div className='flex flex-col  sm:flex-row '>
-              <span className="text-black">Service Not Listed?</span>
+              <span className="text-white">Service Not Listed?</span>
             </div>
           </h2>
         </div>
         <button
           onClick={() => navigate("/signup")}
-          className="bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition w-full sm:w-auto"
+          className="bg-primary text-white font-semibold px-6 py-3 mr-8 rounded-full shadow-lg hover:shadow-xl transition w-full sm:w-auto"
         >
           Let us Know
         </button>

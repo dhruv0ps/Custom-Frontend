@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
       <div className=" max-w-[97%] sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Features */}
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center md:text-left">
+          <h2 className="text-xl md:text-2xl font-bold mb-8 text-center md:text-left">
             Why Selling With Us Is Your Smart Choice
           </h2>
           <ul className="space-y-6">
@@ -44,8 +44,8 @@ export default function WhyChooseUs() {
                   className="w-[50px] h-[50px] object-contain shrink-0"
                 />
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">{feature.title}</h3>
-                  <p className="text-gray-700 text-sm">{feature.desc}</p>
+                  <h3 className="font-semibold text-base mb-1">{feature.title}</h3>
+                  <p className="text-[#666] text-[0.8rem]">{feature.desc}</p>
                 </div>
               </li>
             ))}
@@ -53,11 +53,11 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Right: Image */}
-        <div className="rounded-2xl overflow-hidden shadow-lg">
+        <div className="rounded-2xl overflow-hidden shadow-lg sm:h-[27.5rem]">
           <img
             src={rightImage}
             alt="Sell Your Car by Wheelz"
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
 
@@ -65,16 +65,24 @@ export default function WhyChooseUs() {
                 
       </div>
       <div className="mt-12 w-full">
-                  <div className="flex justify-center gap-4 sm:flex-wrap sm:px-4">
-                  <HoverArrowButton label="Home" onClick={() => naviagte("/")} className="bg-gray-300 hover:bg-gray-200 rounded-full shadow-md   sm:px-8 sm:py-3"
-                   textClass="text-black font-semibold"
-                   hoverTextClass="text-black font-semibold"/>
-                                    
-                                     <HoverArrowButton   label="Acess Form" onClick={() => naviagte("/")}  className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
-                   textClass="text-[#1cbeff] font-semibold"
-                   hoverTextClass="text-[#1cbeff] font-semibold"/>
-                  </div>
-                </div>
+  <div className="flex justify-center gap-16 sm:flex-wrap sm:px-4">
+    <HoverArrowButton
+      label="Home"
+      onClick={() => naviagte("/")}
+      className="bg-gray-300 hover:bg-gray-200 rounded-full shadow-md sm:px-8 sm:py-3"
+      textClass="text-black font-semibold"
+      hoverTextClass="text-black font-semibold"
+    />
+
+    <HoverArrowButton
+      label="Acess Form"
+      onClick={() => naviagte("/")}
+      className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
+      textClass="text-[#1cbeff] font-semibold"
+      hoverTextClass="text-[#1cbeff] font-semibold"
+    />
+  </div>
+</div>
     </section>
   )
 }

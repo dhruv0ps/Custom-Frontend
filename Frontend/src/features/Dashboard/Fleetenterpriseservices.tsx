@@ -7,7 +7,7 @@ import { ChevronRight } from "lucide-react";
 const FleetEnterpriseServices: React.FC = () => {
   return (
     <>
-      <div className="bg-white  px-4  md:px-12 md:py-16">
+      <div className="bg-white  px-4  md:px-4 md:py-16">
         <div className=" max-w-full sm:max-w-[80%] mx-auto">
 
           <div className="flex flex-row-reverse gap-x-6 items-center justify-between md:block mt-2 ">
@@ -72,7 +72,7 @@ const FleetEnterpriseServices: React.FC = () => {
         </div>
       </div>
       <div className="bg-[#e5f6ff]">
-      <div className="max-w-full sm:max-w-[80%] mx-auto flex flex-col md:flex-row items-center justify-between gap-10 py-6 px-4 md:px-8 sm:py-16">
+      <div className="max-w-full sm:max-w-[80%] mx-auto flex flex-col md:flex-row items-center justify-between gap-10 py-6 px-4 md:px-4 sm:py-16">
         {/* Left Side - Fixed to take full width on mobile */}
         <div className="w-full md:flex-1">
           <div className="flex flex-row-reverse gap-x-8 sm:gap-x-16 sm:flex-col sm:items-start justify-between gap-4 mb-6">

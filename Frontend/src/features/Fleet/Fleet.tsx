@@ -187,15 +187,14 @@ const Fleet: React.FC = () => {
             >
               <div
                 ref={(el) => (iconRefs.current[index] = el)}
-                className="bg-white p-4 rounded-xl shadow-md mb-4 icon-animation"
-              >
-                <img
-                  src={item.icon || "/placeholder.svg"}
-                  alt={item.title}
-                  className="w-[75px] h-[75px] object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
+                className="bg-white p-4 rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
+                >
+                  
+                    <img
+                      src={item.icon}
+                      alt={item.title}
+                      className="w-32 h-32 object-contain"
+                    />
               </div>
               <h4 className="font-bold text-sm mb-2 text-black">{item.title}</h4>
               <p className={`text-sm text-gray-800 leading-relaxed ${item.light ? "text-black" : "text-white"}`}>

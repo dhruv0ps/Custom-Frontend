@@ -21,18 +21,38 @@ const Dashboard = () => {
 
   const scrollToAllServices = () => {
     if (!allServicesRef.current) return;
-    const offsetTop = allServicesRef.current.offsetTop;
-    window.scrollTo({
-      top: offsetTop - 60,
-      behavior: "smooth",
-    });
+  
+    const targetPosition = allServicesRef.current.offsetTop - 60;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    const duration = 1200; // in ms (increase for slower scroll)
+    let startTime: number | null = null;
+  
+    const animation = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+  
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    };
+  
+    const easeInOutQuad = (t: number, b: number, c: number, d: number) => {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    };
+  
+    requestAnimationFrame(animation);
   };
+  
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowVideo(false);
       setIsLoading(false);
-    }, 3000); // duration of video
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, [setIsLoading]);

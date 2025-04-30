@@ -9,70 +9,24 @@ import img6 from "@/assets/SellCar/iStock-1598042841(3).jpg"
 import img7 from "@/assets/SellCar/iStock1490441147.jpg"
 import NewsSection from "./NewsSection"
 import WhyChooseUs from "./WhyChooseUs"
-import { ChevronRight } from "lucide-react"
+
 import HoverArrowButton from "@/util/HoverButton"
 import { useNavigate } from "react-router-dom"
 import AllFooterSection from "@/util/AllFooterSection"
+import VideoBanner from "@/util/VideoBanner"
 export default function SellCar() {
   const navigate = useNavigate()
   return (
     <>
 
-      <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[65vh] lg:h-[89vh]  overflow-hidden bg-white">
-
-        <video
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          src={Videp1}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-
-        {/* Overlay for slight dimming */}
-        <div className="absolute inset-0 bg-black/10 z-10" />
-
-        {/* Foreground content */}
-        <div className="relative z-20 flex flex-col justify-end h-full">
-         
-            <div className="bg-white text-center py-4 px-4">
-              <h1 className="text-base md:text-2xl  font-bold text-black">
-                Sell smarter, earn more, it’s that simple!
-              </h1>
-            </div>
-        
-
-           {/* Buttons Section */}
-           <div className="bg-primary py-4 px-2 sm:py-4 w-full">
-            <div className="flex justify-center gap-4 space-x-8 sm:space-x-32 flex-wrap">
-              <button
-                onClick={() => navigate("/")}
-                className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-8 py-2 rounded-full"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => navigate("/view-all")}
-                className="group relative bg-white text-[#1cbeff] font-medium  px-4 sm:px-4 sm:py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden  text-center hover:bg-gray-100 shadow-sm hover:shadow-md"
-              >
-                {/* Default Text */}
-                <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">
-                  Access Form
-                </span>
-
-                {/* Hover Text + Arrow */}
-                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
-                Access Form
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
+   
+      <VideoBanner videoSrc={Videp1}
+            heading="Sell smarter, earn more, it’s that simple!
+"
+            primaryButtonLabel="Home"
+            primaryButtonLink="/"
+            secondaryButtonLabel="Access Form"
+            secondaryButtonLink="/"/>
       <div className="bg-[#b7eaff] py-12">
         <div className="max-w-full sm:max-w-[80%]  mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-12">We Work For You</h2>

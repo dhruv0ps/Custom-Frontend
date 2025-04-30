@@ -154,7 +154,7 @@ export const VirtualToursCard: React.FC = () => {
                             </div>
 
 
-                            <h2 className="text-2xl font-bold text-[#00b2ff] text-right">Virtual Tours Await</h2>
+                            <h2 className="text-3xl font-bold text-[#00b2ff] text-right">Virtual Tours <br/>Await</h2>
                         </div>
 
 

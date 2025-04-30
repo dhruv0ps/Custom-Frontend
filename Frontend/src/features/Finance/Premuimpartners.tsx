@@ -99,13 +99,13 @@ const PremiumPartner = () => {
       </div>
 
       <div className="w-full flex flex-row sm:flex-row items-center justify-between">
-      <div className="bg-white rounded-r-full py-2  sm:pr-48 mb-4 sm:mb-0">
-  <h2 className="text-xl md:text-3xl font-bold text-black pr-12">
-    <span className="block sm:inline">Triple Check,</span>
+      <div className="bg-white rounded-r-full py-2 sm:ml-6 sm:pr-8 mb-4 sm:mb-0">
+  <h2 className="text-xl md:text-3xl font-bold text-black pr-12 sm:ml-2">
+    <span className="block sm:inline">Triple Check, </span>
     <span className="block sm:inline text-[#1cbeff]">TRIPLE SAVE!</span>
   </h2>
 </div>
-      <button className="bg-white mr-2  transition-all px-2 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md">
+      <button className="bg-white mr-6 transition-all px-2 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md">
         Access Form
       </button>
     </div>

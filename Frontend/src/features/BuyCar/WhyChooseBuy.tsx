@@ -1,5 +1,5 @@
 import checkbox from "@/assets/SellCar/Check-Box.png"
-import rightImage from "@/assets/SellCar/Buy-New-Car-Benefits.webp"
+import rightImage from "@/assets/Buy Car/4-Buy-car.jpg"
 import HoverArrowButton from "@/util/HoverButton"
 import { useNavigate } from "react-router-dom"
 export default function WhyChooseBuy() {
@@ -33,7 +33,7 @@ export default function WhyChooseBuy() {
       <div className="max-w-[97%] sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Features */}
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center md:text-left">
+          <h2 className="text-2xl md:text-2xl font-bold mb-8 text-center md:text-left">
           Benefits Of Buying A Car With Us
           </h2>
           <ul className="space-y-6">
@@ -45,8 +45,8 @@ export default function WhyChooseBuy() {
                   className="w-[50px] h-[50px] object-contain shrink-0"
                 />
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">{feature.title}</h3>
-                  <p className="text-gray-700 text-sm">{feature.desc}</p>
+                  <h3 className="font-semibold text-base mb-1">{feature.title}</h3>
+                  <p className="text-[#666] text-[0.8rem]">{feature.desc}</p>
                 </div>
               </li>
             ))}
@@ -54,11 +54,11 @@ export default function WhyChooseBuy() {
         </div>
 
         {/* Right: Image */}
-        <div className="rounded-2xl overflow-hidden shadow-lg">
+        <div className="rounded-2xl overflow-hidden shadow-lg h-[28rem]">
           <img
             src={rightImage}
             alt="Sell Your Car by Wheelz"
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
 
@@ -66,7 +66,7 @@ export default function WhyChooseBuy() {
                 
       </div>
       <div className="mt-12 w-full">
-                  <div className="flex justify-center gap-4 flex-wrap px-4">
+                  <div className="flex justify-center gap-8 flex-wrap px-4">
                    
                     <HoverArrowButton
                      label="Home"

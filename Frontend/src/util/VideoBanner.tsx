@@ -11,6 +11,8 @@ interface VideoBannerProps {
     secondaryButtonLink: string;
     secondaryButtonBg?: string;     // <-- added
     secondaryButtonText?: string;   // <-- added
+    mode?: "demo" | "live";
+    backgroundColorClass?: string;
   }
 
 const VideoBanner: React.FC<VideoBannerProps> = ({
@@ -21,7 +23,9 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
   secondaryButtonLabel,
   secondaryButtonLink,
   secondaryButtonBg,
-  secondaryButtonText
+  secondaryButtonText,
+  mode = "live", 
+  backgroundColorClass = "bg-primary",
 
 }) => {
   const navigate = useNavigate();
@@ -51,7 +55,7 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
         </div>
 
         {/* Buttons */}
-        <div className="bg-primary py-4 px-2 sm:py-4 w-full">
+        <div className={`${backgroundColorClass} py-4 px-2 sm:py-4 w-full`}>
           <div className="flex justify-center gap-4 space-x-8 sm:space-x-32 flex-wrap">
             {/* Primary Button */}
             <button
@@ -60,6 +64,24 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
             >
               {primaryButtonLabel}
             </button>
+            {mode === "demo" && (
+    <select
+      className="py-2 px-4 bg-white rounded-full text-black appearance-none cursor-pointer shadow"
+      defaultValue=""
+    >
+      <option value="" disabled>
+        State
+      </option>
+      <option value="nsw">New South Wales</option>
+      <option value="vic">Victoria</option>
+      <option value="qld">Queensland</option>
+      <option value="wa">Western Australia</option>
+      <option value="sa">South Australia</option>
+      <option value="tas">Tasmania</option>
+      <option value="act">Australian Capital Territory</option>
+      <option value="nt">Northern Territory</option>
+    </select>
+  )}
 
             {/* Secondary Button with Hover Arrow */}
             <button

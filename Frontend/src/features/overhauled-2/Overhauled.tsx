@@ -113,16 +113,15 @@ const Overhauled: React.FC = () => {
             >
               <div 
                 ref={el => iconRefs.current[index] = el}
-                className="bg-white p-4 rounded-xl shadow-md mb-4 icon-animation"
+                className="bg-white p-4 rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
               >
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                className="w-[96px] h-[96px] sm:w-[75px] sm:h-[75px] object-contain"
-                 loading='lazy'
-                  decoding="async"
-                  sizes="(max-width: 450px) 100vw, 450px"
-                />
+                
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-32 h-32 object-contain"
+                  />
+                
               </div>
               <h4 className="font-bold  text-sm text-nowrap mb-2 text-black">{item.title}</h4>
               <p className={`text-sm  leading-relaxed  text-gray-600

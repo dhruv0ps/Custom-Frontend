@@ -14,9 +14,9 @@ const FooterSection: React.FC = () => {
   const navigate = useNavigate()
   return (
     <>
-    <footer className="bg-white text-[#666] px-3 sm:px-6 md:px-12 py-16 space-y-12">
+    <footer className="bg-white text-[#666] px-3  py-16 space-y-12">
       
-      <div className=" max-w-[97%] sm:max-w-[85%] mx-auto space-y-6 text-sm leading-relaxed">
+      <div className=" max-w-[97%] sm:max-w-[85%] mx-auto space-y-6 text-sm leading-relaxed sm:px-6 md:px-12">
       <div className="flex justify-start">
     <img
       src={logo}
@@ -58,7 +58,7 @@ const FooterSection: React.FC = () => {
 
       <div className=" mb-12"></div>
 
-      <div className=" max-w-full sm:max-w-[85%] mx-auto px-2 md:px-2 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-20 items-start">
+      <div className=" max-w-full sm:max-w-[85%] mx-auto px-2  md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-20 items-start">
   {/* Contact */}
   <div>
     <h4 className="text-lg font-semibold text-primary mb-4">Contact Us</h4>
@@ -199,7 +199,7 @@ const FooterSection: React.FC = () => {
     target="_blank"
     rel="noopener noreferrer"
   >
-      <img src={tiktok} alt="TikTok" className="w-12 sm:h-9 sm:w-9object-contain" />
+      <img src={tiktok} alt="TikTok" className="w-12 sm:h-9 sm:w-9 object-contain" />
     </a>
     <a
       href="https://youtube.com/@wheelzau?si=rAKYdOxVAyP-GMLB"

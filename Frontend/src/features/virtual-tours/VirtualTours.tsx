@@ -9,10 +9,11 @@ import img1 from "@/assets/Virtual Tour/Wheelz-icon-13.webp"
 import img2 from "@/assets/Virtual Tour/Wheelz-icon-14.webp"
 import img3 from "@/assets/Virtual Tour/Wheelz-icon-15.webp"
 import img4 from "@/assets/Virtual Tour/Wheelz-icon-16.webp"
+import img10 from "@/assets/Virtual Tour/virtualTour.jpg"
 import { ChevronRight } from 'lucide-react';
 import AllFooterSection from '@/util/AllFooterSection';
 import VideoBanner from '@/util/VideoBanner';
-
+import HoverArrowButton from '@/util/HoverButton';
 const VirtualTours: React.FC = () => {
   const navigate = useNavigate();
 
@@ -30,8 +31,8 @@ const VirtualTours: React.FC = () => {
       <VirtualToursCard1 />
 
       {/* How It Works Section - Restructured to match the image layout */}
-      <div className="bg-[#1cbeff] py-16 px-4 text-white">
-        <div className="max-w-7xl mx-auto text-center">
+      <div className="bg-[#1cbeff] py-16  text-white">
+        <div className=" max-w-[97%] sm:max-w-[80%] mx-auto text-center">
           <h2 className="text-4xl font-bold mb-12 uppercase">How It Works</h2>
 
           <div className="flex flex-col md:flex-row justify-center gap-10 mb-8">
@@ -39,7 +40,7 @@ const VirtualTours: React.FC = () => {
             <div className="flex flex-col items-center w-full md:w-1/3">
               <div className="flex items-start text-left gap-6 px-2 mb-3">
                 <span className="text-[150px] font-extrabold leading-none text-white">1</span>
-                <div>
+                <div className='sm:text-right'>
                   <h4 className="text-sm font-bold mb-2 uppercase text-black">Expert Guidance from Home</h4>
                   <p className="text-sm leading-relaxed text-white">
                     Explore your desired vehicle from our dealer reviews, where knowledgeable sales experts will guide you through key insights, all from the comfort of your home.
@@ -59,8 +60,8 @@ const VirtualTours: React.FC = () => {
             <div className="flex flex-col items-center w-full md:w-1/3">
               <div className="flex items-start text-left gap-6 px-2 mb-3">
                 <span className="text-[150px] font-extrabold leading-none text-white">2</span>
-                <div>
-                  <h4 className="text-sm font-bold mb-2 uppercase text-black">Can't Find Your Desired Vehicle?</h4>
+                <div className='sm:text-right'>
+                  <h4 className="text-sm font-bold mb-2 uppercase text-black sm:text-nowrap">Can't Find Your Desired Vehicle?</h4>
                   <p className="text-sm leading-relaxed text-white">
                     Simply request a virtual tour today, and one of our affiliated dealerships will be happy to assist you with your request.
                   </p>
@@ -79,8 +80,8 @@ const VirtualTours: React.FC = () => {
             <div className="flex flex-col items-center w-full md:w-1/3">
               <div className="flex items-start text-left gap-6 px-2 mb-3">
                 <span className="text-[150px] font-extrabold leading-none text-white">3</span>
-                <div>
-                  <h4 className="text-sm font-bold mb-2 uppercase text-black">We're Revolutionising Car Buying</h4>
+                <div className='sm:text-right'>
+                  <h4 className="text-sm font-bold mb-2 uppercase text-black sm:text-nowrap">We're Revolutionising Car Buying</h4>
                   <p className="text-sm leading-relaxed text-white">
                     As industry disruptors, we're reshaping the landscape, turning your dream car into a reality, all from the comfort of your home and at an exclusive price!
                   </p>
@@ -97,12 +98,14 @@ const VirtualTours: React.FC = () => {
           </div>
 
           {/* Additional Section (if needed) */}
-          <div className="w-full py-8">
-            <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
-              <div className="bg-white rounded-r-full py-2 pl-6 pr-32 mb-4 sm:mb-0">
+       
+        </div>
+        <div className="w-full py-8">
+            <div className="max-w-[80%] mx-auto  flex flex-row sm:flex-row items-center justify-between">
+              <div className="bg-white rounded-r-full py-2 pl-6 pr-16 mb-4 sm:mb-0">
                 <h2 className="text-3xl font-bold">
                   <span className="text-black">Desired Car Missing?</span>
-                  <span className="text-primary">REQUEST A TOUR!</span>
+                  <span className="text-primary sm:ml-1">REQUEST A TOUR!</span>
                 </h2>
               </div>
               <button className="group relative px-6 py-3 font-semibold text-base rounded-full bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden transition">
@@ -113,13 +116,12 @@ const VirtualTours: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
       </div>
       <div className="bg-[#0e3f80] py-12">
-        <div className="max-w-[80%]  mx-auto text-center">
-          <h2 className="text-2xl text-[#1cbeff] md:text-3xl font-bold ">Virtual Tours
+        <div className="max-w-[97%] sm:max-w-[80%]  mx-auto text-center">
+          <h2 className="text-2xl text-[rgb(28,190,255)] md:text-4xl font-bold sm:mb-2 ">Virtual Tours
           </h2>
-          <h4 className='mb-12 text-white font-semibold'>Explore The Future Of Car Shopping Today</h4>
+          <h4 className='mb-12 text-white sm:text-lg font-semibold'>Explore The Future Of Car Shopping Today</h4>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {/* Feature Card 1 */}
@@ -164,12 +166,13 @@ const VirtualTours: React.FC = () => {
           </div>
 
           {/* Additional Section (if needed) */}
-          <div className="w-full py-8">
-            <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
-              <div className="bg-white rounded-r-full py-2 pl-6 pr-32 mb-4 sm:mb-0">
-                <h2 className="text-3xl font-bold">
+         
+          </div>
+          <div className="max-w-full sm:max-w-[80%] mx-auto mt-6 flex flex-row sm:flex-row items-center justify-between">
+  <div className="bg-white rounded-r-full py-2 pl-2  sm:pl-6 pr-8 mb-4 sm:mb-0">
+    <h2 className="text-base md:text-3xl font-bold text-black ">
                   <span className="text-black">Immersive, Experts,</span>
-                  <span className="text-primary">CONVENIENCE</span>
+                  <span className="text-primary sm:ml-1">CONVENIENCE</span>
                 </h2>
               </div>
               <button className="group relative px-6 py-3 font-semibold text-base rounded-full bg-primary text-white border border-primary shadow hover:scale-105 overflow-hidden transition">
@@ -179,25 +182,29 @@ const VirtualTours: React.FC = () => {
                 </span>
               </button>
             </div>
-          </div>
         </div>
-      </div>
-      <div className="flex flex-wrap justify-center gap-6 mt-6">
-        {/* Home Button */}
-        <button
-          onClick={() => navigate("/")}
-          className="text-black border border-[#d9d9d9] bg-[#d9d9d9] px-6 py-2 rounded-full text-[18px] font-medium transition hover:opacity-90"
-        >
-          Home
-        </button>
+      
 
-        {/* View All Button */}
-        <button
-          onClick={() => navigate("/view-all")}
-          className="text-primary border bg-white px-6 py-2 rounded-full shadow-2xl text-[18px] font-medium transition hover:opacity-90"
-        >
-          View All
-        </button>
+      <div className=" block md:hidden h-full ">
+            <div className="w-full overflow-hidden  shadow-md">
+              <img
+                src={img10}
+                alt="Worker with phone"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+      <div className="mt-12 w-full">
+        <div className="flex justify-center gap-16 sm:flex-wrap sm:px-4">
+
+          <HoverArrowButton label="Home" onClick={() => navigate("/")} className="bg-gray-300 hover:bg-gray-200 rounded-full shadow-md px-8 py-3"
+            textClass="text-black font-semibold"
+            hoverTextClass="text-black font-semibold" />
+
+          <HoverArrowButton label="View All" onClick={() => navigate("/")} className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
+            textClass="text-[#1cbeff] font-semibold"
+            hoverTextClass="text-[#1cbeff] font-semibold" />
+        </div>
       </div>
       <AllFooterSection
         content={[
