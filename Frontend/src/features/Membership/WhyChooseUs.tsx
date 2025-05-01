@@ -56,13 +56,15 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Right: Image */}
-        <div className="rounded-2xl overflow-hidden shadow-lg">
-          <img
-            src={rightImage}
-            alt="Sell Your Car by Wheelz"
-            className="w-full h-auto object-cover"
-          />
-        </div>
+        <div className="h-full flex">
+            <div className="w-full overflow-hidden rounded-xl shadow-md">
+              <img
+                src={rightImage}
+                alt="Worker with phone"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
 
         {/* Blue background with buttons */}
                 

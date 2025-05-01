@@ -28,72 +28,73 @@ export default function SellCar() {
             secondaryButtonLabel="Access Form"
             secondaryButtonLink="/"/>
       <div className="bg-[#b7eaff] py-12">
-        <div className="max-w-full sm:max-w-[80%]  mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-12">We Work For You</h2>
+  <div className="max-w-full sm:max-w-[80%] mx-auto text-center">
+    <h2 className="text-2xl md:text-3xl font-bold mb-12">We Work For You</h2>
 
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {/* Feature Card 1 */}
-            <div className="flex flex-col items-center text-center">
-              <img src={img1} alt="Easy Icon" className="rounded-xl shadow-md mb-4 w-[130px] sm:w-[107px] sm:h-[107px] object-contain" />
-              <h3 className="font-bold text-sm mb-2">Innovative Selling Solution</h3>
-              <p className="text-sm text-gray-700">
-                Unlock the future of hassle-free sales with our cutting edge technology.
-              </p>
-            </div>
-
-
-            <div className="flex flex-col items-center text-center">
-              <img src={img2} alt="Free Icon" className="rounded-xl shadow-md mb-4 w-[130px] sm:w-[107px] sm:h-[107px] object-contain" />
-              <h3 className="font-bold text-sm mb-2">Cost-Free Listing Efficiency</h3>
-              <p className="text-sm text-gray-700 px-2">
-                List your car without spending a dollar and maximise your selling potential effortlessly.
-              </p>
-            </div>
-
-
-            <div className="flex flex-col items-center text-center">
-              <img src={img3} alt="Connection Icon" className="rounded-xl shadow-md mb-4 w-[130px] sm:w-[107px] sm:h-[107px] object-contain" />
-              <h3 className="font-bold text-sm mb-2">Effortless Connection</h3>
-              <p className="text-sm text-gray-700 px-2">
-                We seamlessly connect you with the right dealerships from our national network, making selling as simple as a few clicks.
-              </p>
-            </div>
-
-
-            <div className="flex flex-col items-center text-center">
-              <img src={img4} alt="Network Icon" className="rounded-xl shadow-md mb-4 w-[130px] sm:w-[107px] sm:h-[107px] object-contain" />
-              <h3 className="font-bold text-sm mb-2">Trustworthy Dealership Network</h3>
-              <p className="text-sm text-gray-700 px-2">
-                Rely on our manufacturer-approved dealers for transparency and customer satisfaction.
-              </p>
-            </div>
-          </div>
-
-          <div className="w-full py-8">
-            <div className="max-w-full sm:max-w-7xl mx-auto sm:px-4 flex flex-row sm:flex-row items-center justify-between">
-              <div className="bg-white rounded-r-full py-2 pl-2 pr-10 sm:pl-6 sm:pr-32 mb-4 sm:mb-0">
-                <h2 className="text-2xl md:text-3xl font-bold">
-                  Simplify Sales,
-                  <br className="block sm:hidden" />
-                  <span className="text-primary sm:ml-2">MAXIMISE GAINS</span>
-                </h2>
-              </div>
-              <HoverArrowButton
-                label="Sell Now"
-
-                onClick={() => navigate("/")}
-                className="px-6 py-3 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
-                textClass="text-primary"
-                hoverTextClass="text-primary"
-              />
-
-
-
-            </div>
-          </div>
-        </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+  {[
+    {
+      icon: img1,
+      title: "Innovative Selling Solution",
+      desc: "Unlock the future of hassle-free sales with our cutting edge technology.",
+    },
+    {
+      icon: img2,
+      title: "Cost-Free Listing Efficiency",
+      desc: "List your car without spending a dollar and maximise your selling potential easily.",
+    },
+    {
+      icon: img3,
+      title: "Effortless Connection",
+      desc: "We seamlessly connect you with the right dealerships from our national network, making selling as simple as a few clicks.",
+    },
+    {
+      icon: img4,
+      title: "Trustworthy Dealership Network",
+      desc: "Rely on our manufacturer approved dealers for transparency and customer satisfaction.",
+    },
+  ].map((item, index) => (
+    <div key={index} className="flex flex-col items-center text-center">
+      <div className="bg-white rounded-xl shadow-md mb-4  flex items-center justify-center overflow-hidden">
+        <img
+          src={item.icon}
+          alt={item.title}
+          className="w-32 h-32 object-contain"
+        />
       </div>
+      <h3 className="font-bold text-base mb-2 text-black">{item.title}</h3>
+      <p className="text-sm text-gray-800 leading-relaxed">{item.desc}</p>
+    </div>
+  ))}
+</div>
+
+
+
+
+
+
+    {/* CTA Section (unchanged) */}
+    <div className="w-full py-8">
+      <div className="max-w-full sm:max-w-7xl mx-auto sm:px-4 flex flex-row sm:flex-row items-center justify-between">
+        <div className="bg-white rounded-r-full py-2 pl-2 pr-10 sm:pl-6 sm:pr-18 mb-4 sm:mb-0">
+          <h2 className="text-2xl md:text-3xl font-bold">
+            Simplify Sales,
+            <br className="block sm:hidden" />
+            <span className="text-primary sm:ml-2">MAXIMISE GAINS</span>
+          </h2>
+        </div>
+        <HoverArrowButton
+          label="Sell Now"
+          onClick={() => navigate("/")}
+          className="px-6 py-3 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
+          textClass="text-primary"
+          hoverTextClass="text-primary"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <div className="bg-[#1cbeff] py-16 sm:px-4">
         <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center text-white">
@@ -241,7 +242,36 @@ export default function SellCar() {
             </div>
           </div>
         </div>
+
+        <div className="w-full py-4 sm:py-8">
+  <div className="max-w-full sm:max-w-[80%] mx-auto flex flex-row items-center justify-between  sm:px-0">
+    
+    {/* Text Block */}
+    <div className="bg-white rounded-r-full py-1 sm:py-2 pl-2 pr-4 sm:pl-6 sm:pr-18 flex-shrink">
+      <h2 className="text-base sm:text-base md:text-3xl font-bold whitespace-nowrap">
+        Free Service, Fast Match,
+        <span className="block sm:inline text-primary text-xl sm:text-3xl sm:ml-2">
+          INSTANT PAY
+        </span>
+      </h2>
+    </div>
+
+    {/* Button */}
+    <div className="w-full sm:w-auto px-4 sm:px-0">
+      <HoverArrowButton
+        label="Sell Now"
+        onClick={() => navigate("/")}
+        className="w-full sm:w-auto px-6 py-3 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden text-center"
+        textClass="text-primary"
+        hoverTextClass="text-primary"
+      />
+    </div>
+    
+  </div>
+</div>
+
       </div>
+      
       <NewsSection
         videoId="TMAlw9_LvYQ"
         title="Student scammed out of almost $30,000 after online marketplace car scam"

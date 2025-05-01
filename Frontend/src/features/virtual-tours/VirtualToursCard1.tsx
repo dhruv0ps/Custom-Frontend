@@ -1,6 +1,7 @@
 import React from "react";
-
+import HoverArrowButton from "@/util/HoverButton";
 import { ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const videos = [
     {
@@ -64,6 +65,7 @@ const videos = [
 ];
 
 export const VirtualToursCard1: React.FC = () => {
+    const navigate = useNavigate()
     return (
         <div className="w-full bg-[#0c3366] py-16 font-sans">
             <div className="max-w-full sm:max-w-[80%] mx-auto ">
@@ -116,16 +118,20 @@ export const VirtualToursCard1: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between mt-12">
-                    <div className="bg-white rounded-r-full py-2 pl-6 pr-24 mb-4 sm:mb-0">
+                    <div className="bg-white rounded-r-full py-2 pl-6 pr-20 mb-4 sm:mb-0">
                         <h2 className="text-xl md:text-3xl font-bold whitespace-nowrap">
                             <span className="text-black">Virtual Tours </span>
                             <span className="text-primary"> ALL FROM HOME</span>
                         </h2>
                     </div>
 
-                    <button className="bg-[#21c1ff] text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition-all">
-                        View All
-                    </button>
+                    <HoverArrowButton
+  label="View All"
+  onClick={() => navigate("/view-all")}
+  className="bg-[#21c1ff] text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all"
+  textClass="text-white"
+  hoverTextClass="text-white"
+/>
                 </div>
 
             </div>

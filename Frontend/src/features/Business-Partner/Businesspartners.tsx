@@ -7,9 +7,10 @@ import img2 from "@/assets/Parnter/Wheelz-icon-42.webp"
 import img3 from "@/assets/Parnter/Wheelz-icon-43.webp"
 import img4 from "@/assets/Parnter/Wheelz-icon-44.webp"
 import PremiumPartner from './PremuimPartner'
-import img66 from "@/assets/Parnter/Business-Partner-Service-by-Wheelz-Australia.webp"
+import img66 from "@/assets/Parnter/Car.jpg"
 import AllFooterSection from '@/util/AllFooterSection'
 import VideoBanner from '@/util/VideoBanner'
+import HoverArrowButton from '@/util/HoverButton'
 const Businesspartners:React.FC = () => {
     const navigate = useNavigate();
       const iconRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -90,7 +91,7 @@ const Businesspartners:React.FC = () => {
             >
               <div 
                 ref={el => iconRefs.current[index] = el}
-                className="bg-white p-4 rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
+                className="bg-white  rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
                 >
                   
                     <img
@@ -129,31 +130,35 @@ const Businesspartners:React.FC = () => {
 
       {/* RIGHT: Image */}
       <div className="w-full h-full flex justify-center">
-        <img
-          src={img66}
-          alt="Automotive parts in vehicle shape"
-          className="object-contain w-full max-w-[600px] h-auto"
-          loading="lazy"
-        />
-      </div>
+  <img
+    src={img66}
+    alt="Automotive parts in vehicle shape"
+    className="object-contain w-full h-[115%]"
+    loading="lazy"
+  />
+</div>
+
     </div>
 
     {/* Buttons */}
-    <div className="flex flex-row sm:flex-row items-center justify-center gap-6 mt-10">
-      <button
-        onClick={() => navigate("/")}
-        className="text-black bg-[#d9d9d9] hover:bg-gray-300 border border-[#d9d9d9] text-[18px] font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md"
-      >
-        Home
-      </button>
+    <div className="flex flex-row sm:flex-row items-center justify-center gap-16 mt-10">
+  <HoverArrowButton
+    label="Home"
+    onClick={() => navigate("/")}
+    className="text-black bg-[#d9d9d9] hover:bg-gray-300 border border-[#d9d9d9] text-[18px] font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-md"
+    textClass="text-black"
+    hoverTextClass="text-black"
+  />
 
-      <button
-        onClick={() => navigate("/view-all")}
-        className="text-white bg-[#1cbeff] hover:bg-[#00b2e3] border border-[#1cbeff] text-[18px] font-semibold py-2 px-8 rounded-full transition-all duration-300 shadow-md"
-      >
-        Access Form
-      </button>
-    </div>
+  <HoverArrowButton
+    label="Access Form"
+    onClick={() => navigate("/view-all")}
+    className="text-white bg-[#1cbeff] hover:bg-[#00b2e3] border border-[#1cbeff] text-[18px] font-semibold py-2 px-8 rounded-full transition-all duration-300 shadow-md"
+    textClass="text-white"
+    hoverTextClass="text-white"
+  />
+</div>
+
   </div>
 </div>
 <AllFooterSection content={[

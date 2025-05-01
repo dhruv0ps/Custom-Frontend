@@ -18,15 +18,17 @@ export default function BusinessPartnerSection() {
         {/* ✅ Desktop Layout */}
         <div className="hidden md:flex px-4  flex-row items-center justify-between gap-16">
           <div className="w-1/2 relative">
-            <img
-              src={manImg}
-              alt="Business partners by Wheelz"
-              title="Business partners by Wheelz"
-              loading="lazy"
-              decoding="async"
-              className="rounded-3xl shadow-xl w-full h-auto object-cover"
-            />
+          <div className="h-full flex">
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+  <img
+    src={manImg}
+    alt="Worker with phone"
+    className="w-full h-[24.6rem] object-cover"
+  />
+</div>
           </div>
+          </div>
+         
 
           <div className="w-1/2 relative">
             <div className="absolute top-0 right-0 w-28 h-28 sm:mt-[7rem] ">

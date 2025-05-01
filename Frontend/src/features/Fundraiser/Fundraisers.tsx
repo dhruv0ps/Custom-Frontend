@@ -8,6 +8,7 @@ import icon4 from "@/assets/FundRaisers/Wheelz-icon-40.webp"
 import img from "@/assets/FundRaisers/iStock-870883676-(2).jpg"
 import PremiumPartner from './PremuimPartner'
 import VideoBanner from '@/util/VideoBanner'
+import HoverArrowButton from '@/util/HoverButton'
 import AllFooterSection from '@/util/AllFooterSection'
 const animationStyles = `
   @keyframes fadeTop {
@@ -123,7 +124,7 @@ const Fundraisers:React.FC = () => {
                   >
                     <div 
                       ref={el => iconRefs.current[index] = el}
-                      className="bg-white p-4 rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
+                      className="bg-white  rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
                       >
                         
                           <img
@@ -139,23 +140,28 @@ const Fundraisers:React.FC = () => {
                 ))}
               </div>
       
-              {/* CTA Section */}
-              <div className="w-full flex flex-col sm:flex-row items-center justify-between">
-                <div className="bg-white rounded-r-full py-2 pl-6 pr-10 mb-4 sm:mb-0">
-                  <h2 className="text-2xl md:text-3xl font-bold text-black">
-                  Shape The Future <span className="text-[#1cbeff]"> SUPPORT, EMPOWER, GIVE!</span>
-                  </h2>
-                </div>
-                <button className="bg-[#e6022a] hover:bg-[#e6022a] text-white transition-all px-8 py-3  font-semibold text-base rounded-full shadow-md">
-                  Donate Now
-                </button>
-              </div>
+           
     
             </div>
+               {/* CTA Section */}
+               <div className="max-w-[97%] sm:max-w-[90%] mx-auto flex flex-col sm:flex-row items-center justify-between sm:pb-8">
+                <div className="bg-white rounded-r-full py-2 pl-6 pr-10 mb-4 sm:mb-0">
+                  <h2 className="text-2xl md:text-3xl font-bold text-black">
+                  Shape The Future - <span className="text-[#1cbeff]"> SUPPORT, EMPOWER, GIVE!</span>
+                  </h2>
+                </div>
+                <HoverArrowButton
+  label="Donate Now"
+  onClick={() => navigate("/donate")}
+  className="bg-[#e6022a] hover:bg-[#e6022a] text-white transition-all px-8 py-3 font-semibold text-base rounded-full shadow-md"
+  textClass="text-white"
+  hoverTextClass="text-white"
+/>
+              </div>
             <PremiumPartner/>
           </div>
 
-          <div className="w-full bg-white py-12 px-4 md:px-6">
+          <div className="w-full bg-white py-12 px-4">
       <div className="max-w-full sm:max-w-[80%] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Text Content */}
@@ -190,25 +196,26 @@ const Fundraisers:React.FC = () => {
         </div>
 
        {/* Button Row */}
-       <div className="flex flex-row items-center justify-center gap-12 mt-4 sm:mt-12">
-            <button
-              onClick={() => navigate('/')}
-             className="text-black bg-[#d9d9d9] hover:bg-gray-300 border border-[#d9d9d9] text-[18px] font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-[0px_10px_10px_-6px_rgba(0,0,0,0.3)]"
-            >
-              Home
-            </button>
-            <button
-  onClick={() => navigate('/view-all')}
-  className="relative inline-block text-white bg-[#e6022a] border border-[#e6022a] text-[18px] font-semibold py-2 px-[30px] rounded-full shadow-[0px_10px_10px_-6px_rgba(0,0,0,0.3)] transition-all duration-300 group overflow-hidden"
->
+       <div className="flex flex-row items-center justify-center gap-16 mt-4 sm:mt-12">
+  {/* Home Button */}
+  <HoverArrowButton
+    label="Home"
+    onClick={() => navigate('/')}
+    className="bg-[#d9d9d9] hover:bg-gray-300 border border-[#d9d9d9] py-2 px-6 rounded-full transition-all duration-300 shadow-[0px_10px_10px_-6px_rgba(0,0,0,0.3)]"
+    textClass="text-black text-[18px] font-semibold"
+    hoverTextClass="text-black text-[18px] font-semibold"
+  />
 
-  
-    Donate Now
+  {/* Donate Now Button */}
+  <HoverArrowButton
+    label="Donate Now"
+    onClick={() => navigate('/view-all')}
+    className="bg-[#e6022a] border border-[#e6022a] py-2 px-[30px] rounded-full transition-all duration-300 shadow-[0px_10px_10px_-6px_rgba(0,0,0,0.3)]"
+    textClass="text-white text-[18px] font-semibold"
+    hoverTextClass="text-white text-[18px] font-semibold"
+  />
+</div>
 
-  
- 
-</button>
-          </div>
     </div>
     </div>
     <AllFooterSection content={[

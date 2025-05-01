@@ -8,6 +8,7 @@ import TradePromotionGrid from './TradePromotionGrid';
 import WhyChooseUs from './WhyChooseUs';
 import AllFooterSection from '@/util/AllFooterSection';
 import VideoBanner from '@/util/VideoBanner';
+import HoverArrowButton from '@/util/HoverButton';
 const Tradepromotion: React.FC = () => {
   const navigate = useNavigate();
 
@@ -45,7 +46,7 @@ const Tradepromotion: React.FC = () => {
 
           {/* Center Description Box */}
           <div className="bg-white rounded-xl p-8 text-center shadow-md flex flex-col justify-center">
-            <h3 className="text-lg font-semibold text-[#1cbeff] mb-4">
+            <h3 className="text-lg font-bold text-[#1cbeff] mb-4">
               Your Membership Just Got Better
             </h3>
             <p className="text-gray-700 text-sm mb-4">
@@ -92,12 +93,13 @@ const Tradepromotion: React.FC = () => {
             <span className="text-primary ml-1">WIN!</span></div>
           </h2>
         </div>
-        <button
-          onClick={() => navigate("/signup")}
-          className="bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition w-full sm:w-auto"
-        >
-          Sign Me Up
-        </button>
+        <HoverArrowButton
+  label="Sign Me Up"
+  onClick={() => navigate("/signup")}
+  className="bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition w-full sm:w-auto"
+  textClass="text-white"
+  hoverTextClass="text-white"
+/>
       </div>
     </div>
 

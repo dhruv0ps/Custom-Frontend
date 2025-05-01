@@ -42,6 +42,7 @@ import PremuimPartner from './PremuimPartner';
 import WhyChooseUs from './WhyChooseus';
 import AllFooterSection from '@/util/AllFooterSection';
 import {motion} from "framer-motion"
+import HoverArrowButton from '@/util/HoverButton';
 const MateRateDiscount: React.FC = () => {
   const navigate = useNavigate();
   const [animateIcons, setAnimateIcons] = useState(false);
@@ -156,12 +157,13 @@ const MateRateDiscount: React.FC = () => {
             </div>
           </h2>
         </div>
-        <button
-          onClick={() => navigate("/signup")}
-          className="bg-primary text-white font-semibold px-6 py-3 mr-8 rounded-full shadow-lg hover:shadow-xl transition w-full sm:w-auto"
-        >
-          Let us Know
-        </button>
+        <HoverArrowButton
+  label="Let us Know"
+  onClick={() => navigate("/signup")}
+  className="bg-primary text-white font-semibold px-6 py-3 mr-8 rounded-full shadow-lg hover:shadow-xl transition w-full sm:w-auto"
+  textClass="text-white"
+  hoverTextClass="text-white"
+/>
       </div>
   
       </div>

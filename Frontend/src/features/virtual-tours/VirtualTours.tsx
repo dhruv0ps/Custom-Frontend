@@ -121,13 +121,13 @@ const VirtualTours: React.FC = () => {
         <div className="max-w-[97%] sm:max-w-[80%]  mx-auto text-center">
           <h2 className="text-2xl text-[rgb(28,190,255)] md:text-4xl font-bold sm:mb-2 ">Virtual Tours
           </h2>
-          <h4 className='mb-12 text-white sm:text-lg font-semibold'>Explore The Future Of Car Shopping Today</h4>
+          <h4 className='mb-12 text-white sm:text-xl font-semibold'>Explore The Future Of Car Shopping Today</h4>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {/* Feature Card 1 */}
             <div className="flex flex-col items-center text-center">
-              <img src={img1} alt="Easy Icon" className="rounded-xl shadow-md mb-4 w-[107px] h-[107px] object-contain bg-white" />
-              <h3 className="font-bold text-sm mb-2 text-[#1cbeff]">Immersive Experience</h3>
+              <img src={img1} alt="Easy Icon" className="rounded-xl shadow-md mb-4 w-32 h-32 object-contain bg-white" />
+              <h3 className="font-bold text-base mb-2 text-[#1cbeff]">Immersive Experience</h3>
               <p className="text-sm text-white font-semibold px-2">
 
                 Dive into a virtual environment that replicates the sensation of being behind the wheel
@@ -139,8 +139,8 @@ const VirtualTours: React.FC = () => {
 
 
             <div className="flex flex-col items-center text-center">
-              <img src={img2} alt="Free Icon" className="rounded-xl shadow-md mb-4 w-[107px] h-[107px] object-contain bg-white" />
-              <h3 className="font-bold text-sm mb-2 text-[#1cbeff]">Convenient Access</h3>
+              <img src={img2} alt="Free Icon" className="rounded-xl shadow-md mb-4 w-32 h-32 object-contain bg-white" />
+              <h3 className="font-bold text-base mb-2 text-[#1cbeff]">Convenient Access</h3>
               <p className="text-sm text-white font-semibold px-2">
                 Access virtual tours from the comfort of your home, eliminating the need for physical visits to dealerships
               </p>
@@ -148,8 +148,8 @@ const VirtualTours: React.FC = () => {
 
 
             <div className="flex flex-col items-center text-center">
-              <img src={img3} alt="Connection Icon" className="rounded-xl shadow-md mb-4 w-[107px] h-[107px] object-contain bg-white" />
-              <h3 className="font-bold text-sm mb-2 text-[#1cbeff]">Comprehensive Selection</h3>
+              <img src={img3} alt="Connection Icon" className="rounded-xl shadow-md mb-4 w-32 h-32 object-contain bg-white" />
+              <h3 className="font-bold text-base mb-2 text-[#1cbeff]">Comprehensive Selection</h3>
               <p className="text-sm text-white px-2">
                 Explore a wide range of vehicles virtually, allowing you to compare and contrast different models effortlessly
               </p>
@@ -157,8 +157,8 @@ const VirtualTours: React.FC = () => {
 
 
             <div className="flex flex-col items-center text-center">
-              <img src={img4} alt="Network Icon" className="rounded-xl shadow-md mb-4 w-[107px] h-[107px] object-contain bg-white" />
-              <h3 className="font-bold text-sm mb-2 text-[#1cbeff]">Expert Guidance</h3>
+              <img src={img4} alt="Network Icon" className="rounded-xl shadow-md mb-4 w-32 h-32 object-contain bg-white" />
+              <h3 className="font-bold text-base mb-2 text-[#1cbeff]">Expert Guidance</h3>
               <p className="text-sm text-white px-2">
                 Receive expert guidance and insights during virtual tours to make informed decisions about your next purchase
               </p>
@@ -194,8 +194,8 @@ const VirtualTours: React.FC = () => {
               />
             </div>
           </div>
-      <div className="mt-12 w-full">
-        <div className="flex justify-center gap-16 sm:flex-wrap sm:px-4">
+          <div className="mt-12 w-full">
+          <div className="flex justify-center gap-16 sm:flex-wrap sm:px-4">
 
           <HoverArrowButton label="Home" onClick={() => navigate("/")} className="bg-gray-300 hover:bg-gray-200 rounded-full shadow-md px-8 py-3"
             textClass="text-black font-semibold"

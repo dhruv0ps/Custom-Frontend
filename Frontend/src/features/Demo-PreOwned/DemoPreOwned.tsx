@@ -166,7 +166,7 @@ export default function DemoPreCar() {
           {/* Header */}
           <div className="flex flex-col items-center justify-center mb-6">
             <img src={img1} alt="Wheelz Logo" className="w-[220px] mb-2" />
-            <h2 className="text-white text-xl font-bold">Demonstrator & Pre-Owned</h2>
+            <h2 className="text-white  text-xl sm:text-4xl sm:mt-2 font-bold">Demonstrator & Pre-Owned</h2>
           </div>
 
           {/* Heading with Stars */}
@@ -216,7 +216,7 @@ export default function DemoPreCar() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center rounded-lg md:py-12 mt-4">
 
   <div className="text-white space-y-4 order-1 md:order-2">
-    <h2 className="text-base md:text-[1.4rem] font-semibold md:font-bold whitespace-nowrap">Certified Confidence, Dealer-Backed Assurance</h2>
+    <h2 className="text-base md:text-[1.4em] font-semibold md:font-bold whitespace-nowrap">Certified Confidence, Dealer-Backed Assurance</h2>
     <p>Every Demo and Pre-Owned vehicle on our platform is offered exclusively by licensed dealerships, so you can drive away with complete peace of mind.</p>
     <p>Each car has been carefully inspected, professionally tested, and meets the quality standards you’d expect from trusted, regulated sellers.</p>
     <p>Whether you’re after near new performance or dependable value, you’re not just getting a great deal, you’re making a smart, safe, and secure choice.</p>

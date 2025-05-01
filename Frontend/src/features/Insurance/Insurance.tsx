@@ -1,6 +1,7 @@
 import React from 'react'
 import Videp1 from"@/assets/Insurance/Insurance.mp4";
-
+import { useNavigate } from 'react-router-dom';
+import HoverArrowButton from '@/util/HoverButton';
 import img1 from "@/assets/Insurance/Wheelz-icon-25.webp"
 import img2 from "@/assets/Insurance/Wheelz-icon-26.webp"
 import img3 from "@/assets/Insurance/Wheelz-icon-27.webp"
@@ -11,7 +12,7 @@ import PremiumPartner from '../Finance/Premuimpartners';
 import WhyChooseUs from './WhyChooseUs';
 
 const Insurance:React.FC = () => {
-
+const navigate = useNavigate()
     
     const features = [
       {
@@ -92,16 +93,20 @@ const Insurance:React.FC = () => {
             ))}
           </div>
 
-          <div className="w-full flex flex-row sm:flex-row items-center justify-between ">
+          <div className="w-full flex flex-row sm:flex-row items-center justify-between sm:pb-4 ">
   <div className="bg-white rounded-r-full  pr-4 sm:py-2 sm:pl-6 sm:pr-10 mb-4 sm:mb-0">
     <h2 className="text-xl md:text-3xl font-bold text-black">
       <span className="block sm:inline">Tailored Coverage,</span>
       <span className="block sm:inline text-[#1cbeff]"> EASY PROCESS</span>
     </h2>
   </div>
-  <button className="bg-[#1cbeff] hover:bg-[#00b2e3] transition-all px-8 py-3 text-white font-semibold text-base rounded-full shadow-md">
-    Access Form
-  </button>
+  <HoverArrowButton
+  label="Access Form"
+  onClick={() => navigate("/access-form")}
+  className="bg-[#1cbeff] hover:bg-[#00b2e3] transition-all px-8 py-3 text-white font-semibold text-base rounded-full shadow-md"
+  textClass="text-white"
+  hoverTextClass="text-white"
+/>
 </div>
 
         </div>

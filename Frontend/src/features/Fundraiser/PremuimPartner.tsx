@@ -118,7 +118,7 @@ const PremiumPartner = () => {
                                     {index + 1}
                                 </div>
                                 <div className="flex flex-col text-right">
-                                    <h3 className="text-[14px] font-bold text-black mb-2">
+                                    <h3 className="text-[18px] font-bold text-black mb-2">
                                         {charity.title}
                                     </h3>
                                     <p className="text-sm text-[#e6022a]">

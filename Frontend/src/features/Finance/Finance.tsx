@@ -8,7 +8,10 @@ import PremiumPartner from './Premuimpartners';
 import WhyChooseUs from './WhyChooseUs';
 import AllFooterSection from '@/util/AllFooterSection';
 import VideoBanner from '@/util/VideoBanner';
+import HoverArrowButton from '@/util/HoverButton';
+import { useNavigate } from 'react-router-dom';
 const Finance:React.FC = () => {
+  const navigate = useNavigate()
    
   return (
     <>
@@ -69,9 +72,13 @@ const Finance:React.FC = () => {
           Tailored Finance,<span className="text-[#1cbeff]"> TRUSTED GUIDANCE</span>
         </h2>
       </div>
-      <button className="bg-[#1cbeff] hover:bg-[#00b2e3] transition-all px-8 py-3 text-white font-semibold text-base rounded-full shadow-md">
-        Access Form
-      </button>
+      <HoverArrowButton
+  label="Access Form"
+  onClick={() => navigate("/access-form")}
+  className="bg-[#1cbeff] hover:bg-[#00b2e3] transition-all px-8 py-3 text-white font-semibold text-base rounded-full shadow-md"
+  textClass="text-white"
+  hoverTextClass="text-white"
+/>
     </div>
   </div>
   <PremiumPartner/>

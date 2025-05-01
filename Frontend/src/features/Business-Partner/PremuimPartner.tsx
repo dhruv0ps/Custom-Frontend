@@ -25,16 +25,16 @@ const PremiumPartner = () => {
         },
         {
           number: 3,
-          title: "Gain a Competitive Edge",
+          title: "Gain A Competitive Edge",
           description:
-            "Tap into the purchasing habits of Australia’s younger demographic to gain a competitive edge in the market.",
+            "Tap into the purchasing habits of Australia's younger demographic to gain a competitive edge in the market.",
           img: benefitImg3,
         },
         {
           number: 4,
           title: "Boost Automotive Success",
           description:
-            "Join Australia’s top automotive ecosystem to boost your business with exclusive leads and skyrocket your success.",
+            "Join Australia's top automotive ecosystem to boost your business with exclusive leads and skyrocket your success.",
           img: benefitImg4,
         },
         {
@@ -60,7 +60,7 @@ const PremiumPartner = () => {
   Let's Drive Success Together
 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                    {benefits.map((charity, index) => (
+                    {benefits.map((benefit, index) => (
                         <div key={index} className="flex flex-col items-center">
                             {/* Number and Title */}
                             <div className="flex items-start w-full mb-2">
@@ -69,47 +69,45 @@ const PremiumPartner = () => {
                                 </div>
                                 <div className="flex flex-col text-right">
                                     <h3 className="text-[14px] font-bold text-black mb-2">
-                                        {charity.title}
+                                        {benefit.title}
                                     </h3>
                                     <p className="text-sm text-[#FFFF]">
-                                        {charity.description}
+                                        {benefit.description}
                                     </p>
                                 </div>
                             </div>
 
-                            {/* Charity Logo */}
-                            <div className="rounded-xl overflow-hidden shadow-lg w-full mb-4">
+                            {/* Fixed image container with consistent height */}
+                            <div className="rounded-xl overflow-hidden shadow-lg w-full mb-4 bg-white ">
+                              <div className=" w-full flex items-center justify-center h-64">
                                 <img
-                                    src={charity.img}
-                                    alt={`${charity.title} logo`}
-                                    className="w-full h-auto object-contain mx-auto"
+                                  src={benefit.img}
+                                  alt={`${benefit.title}`}
+                                  className="w-full h-full object-cover"
                                 />
+                              </div>
                             </div>
 
-                     
                             <div className="w-full flex justify-end">
-  <button className="bg-[white]  text-primary font-semibold py-2 px-4 rounded-full shadow-lg relative group transition-all duration-300 overflow-hidden h-11 w-[144px]">
-    
-    {/* Default Text */}
-    <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-100 group-hover:opacity-0">
-    Access Form
-    </span>
+                              <button className="bg-[white] text-primary font-semibold py-2 px-4 rounded-full shadow-lg relative group transition-all duration-300 overflow-hidden h-11 w-[144px]">
+                                
+                                {/* Default Text */}
+                                <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-100 group-hover:opacity-0">
+                                Access Form
+                                </span>
 
-    {/* Text + Chevron on Hover */}
-    <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-100 opacity-0 group-hover:opacity-100">
-      Access Form
-      <ChevronRightIcon className="w-4 h-4  transform transition-transform duration-300 group-hover:translate-x-1" />
-    </span>
+                                {/* Text + Chevron on Hover */}
+                                <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-100 opacity-0 group-hover:opacity-100">
+                                  Access Form
+                                  <ChevronRightIcon className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
+                                </span>
 
-  </button>
-</div>
-
+                              </button>
+                            </div>
                         </div>
                     ))}
                 </div>
             </div>
-
-
         </div>
     );
 };

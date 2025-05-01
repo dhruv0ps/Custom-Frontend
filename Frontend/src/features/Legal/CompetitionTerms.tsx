@@ -1,5 +1,6 @@
 import React from "react";
 import banner from "@/assets/Legal/iStock-1304912360-(2).jpg"
+import AllFooterSection from "@/util/AllFooterSection";
 const CompetitionTerms:React.FC = () => {
   const states = [
     { 
@@ -160,7 +161,7 @@ const CompetitionTerms:React.FC = () => {
 
   return (
     <>
-    <div className="relative w-full h-[200px] sm:h-[400px] md:h-[500px]">
+    <div className="relative w-full h-[200px] sm:h-[400px] md:h-[520px] ">
         <img src={banner} alt="Contact Banner" className="w-full h-full object-cover" />
        </div>    <div className=" max-w-full sm:max-w-[80%] mx-auto py-12 px-4">
 
@@ -185,6 +186,9 @@ const CompetitionTerms:React.FC = () => {
         </p>
       </div>
     </div>
+    <AllFooterSection content={[
+      ``
+    ]}/>
     </>
 
   );

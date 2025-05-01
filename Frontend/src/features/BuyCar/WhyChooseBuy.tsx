@@ -66,7 +66,7 @@ export default function WhyChooseBuy() {
                 
       </div>
       <div className="mt-12 w-full">
-                  <div className="flex justify-center gap-8 flex-wrap px-4">
+                  <div className="flex justify-center gap-16 flex-wrap px-4">
                    
                     <HoverArrowButton
                      label="Home"

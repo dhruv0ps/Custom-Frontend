@@ -6,7 +6,7 @@ import img4 from "@/assets/Trade Promotion/Your-TankOur-Treat.jpg"
 import img5 from "@/assets/Trade Promotion/Glow-Goals.jpg"
 import img6 from "@/assets/Trade Promotion/Drive, Relax-Or-Spend.jpg"
 import img7 from "@/assets/MateRate/BillBusters.jpg"
-
+import HoverArrowButton from "@/util/HoverButton";
 const TradePromotionGrid = () => {
   const navigate = useNavigate();
 
@@ -139,12 +139,13 @@ const TradePromotionGrid = () => {
           </div>
 
           {/* Button */}
-          <button
-            onClick={() => navigate("/signup")}
-            className="bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition"
-          >
-            Sign Me Up
-          </button>
+          <HoverArrowButton
+  label="Sign Me Up"
+  onClick={() => navigate("/signup")}
+  className="bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition"
+  textClass="text-white"
+  hoverTextClass="text-white"
+/>
         </div>
       </div>
     </div>

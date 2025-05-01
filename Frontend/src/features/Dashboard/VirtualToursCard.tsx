@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import personImage from "@/assets/Home/Virtual-Tours.jpg";
 import speedometerIcon from "@/assets/Homepage/Car-Speedometer.gif";
 import { ChevronRight } from "lucide-react";
-
+import HoverArrowButton from "@/util/HoverButton";
+import { useNavigate } from "react-router-dom";
 const videos = [
     {
         title: "Porsche 911 GT3",
@@ -65,7 +66,7 @@ const videos = [
 ];
 
 export const VirtualToursCard: React.FC = () => {
-
+const navigate = useNavigate()
     const HoverButton = () => {
         const [hovered, setHovered] = useState(false);
 
@@ -225,9 +226,13 @@ export const VirtualToursCard: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white sm:mr-4 sm:mb-0 text-nowrap">More Reviews</h3>
 
                     <div className="flex justify-end w-full sm:w-auto">
-                        <button className="bg-primary text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition-all">
-                            View All
-                        </button>
+                    <HoverArrowButton
+  label="View All"
+  onClick={() => navigate("/view-all")}
+  className="bg-primary text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition-all"
+  textClass="text-white"
+  hoverTextClass="text-white"
+/>
                     </div>
                 </div>
 

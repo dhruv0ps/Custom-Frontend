@@ -1,6 +1,8 @@
 import img1 from "@/assets/MateRate/soon.webp";
-
+import HoverArrowButton from "@/util/HoverButton";
+import { useNavigate } from "react-router-dom";
 const PremiumPartner = () => {
+  const navigate = useNavigate()
   const partners = [
     {
       title: "COMING SOON",
@@ -105,9 +107,13 @@ const PremiumPartner = () => {
     <span className="block sm:inline text-[#1cbeff]">TRIPLE SAVE!</span>
   </h2>
 </div>
-      <button className="bg-white mr-6 transition-all px-2 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md">
-        Access Form
-      </button>
+<HoverArrowButton
+  label="Access Form"
+  onClick={() => navigate("/access-form")}
+  className="bg-white mr-6 transition-all px-2 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md"
+  textClass="text-primary"
+  hoverTextClass="text-primary"
+/>
     </div>
     </div>
   );

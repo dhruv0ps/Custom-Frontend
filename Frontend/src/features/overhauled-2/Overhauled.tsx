@@ -9,6 +9,7 @@ import VideoBanner from '@/util/VideoBanner'
 import AllFooterSection from '@/util/AllFooterSection'
 import WhyChooseUs from './WhyChooseUs'
 
+
 // Add CSS for animations
 const animationStyles = `
   @keyframes fadeTop {
@@ -113,7 +114,7 @@ const Overhauled: React.FC = () => {
             >
               <div 
                 ref={el => iconRefs.current[index] = el}
-                className="bg-white p-4 rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
+                className="bg-white  rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
               >
                 
                   <img
@@ -131,16 +132,7 @@ const Overhauled: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="w-full flex flex-col sm:flex-row items-center justify-between">
-          <div className="bg-white rounded-r-full py-2 pl-6 pr-10 mb-4 sm:mb-0">
-            <h2 className="text-2xl md:text-3xl font-bold text-black">
-              Simplified, Tailored,<span className="text-[#1cbeff]"> HASSLE-FREE!</span>
-            </h2>
-          </div>
-          <button className="bg-[#1cbeff] hover:bg-[#00b2e3] transition-all px-8 py-3 text-white font-semibold text-base rounded-full shadow-md">
-            Access Form
-          </button>
-        </div>
+      
 
       </div>
       <PremiumPartner/>

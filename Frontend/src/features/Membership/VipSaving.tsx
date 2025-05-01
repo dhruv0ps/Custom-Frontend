@@ -87,7 +87,7 @@ const VipSavingsPage: React.FC = () => {
 
               <div className="flex items-center justify-between">
                 <div>
-                  <p className={`text-sm font-semibold ${card.dark ? "text-white" : "text-black"}`}>{card.name}</p>
+                  <p className={`text-sm font-semibold sm:text-nowrap ${card.dark ? "text-white" : "text-black"}`}>{card.name}</p>
                   <h4 className="text-white font-bold uppercase  text-[20px] sm:text-[24px] sm:text-nowrap">{card.saved}</h4>
                 </div>
                 <HoverArrowButton

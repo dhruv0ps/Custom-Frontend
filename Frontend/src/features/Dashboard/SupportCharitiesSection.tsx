@@ -67,7 +67,7 @@ const SupportCharitiesSection: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#feedf4]">
+    <div className="bg-[#feedf4] ">
       {/* Mobile View - Matching the image */}
       <div className="md:hidden flex  flex-col p-2 sm:p-4 max-w-[97%] mx-auto">
       <h2 className="text-3xl font-bold text-[#ff0000] text-end mb-1 mt-6">
@@ -107,7 +107,8 @@ const SupportCharitiesSection: React.FC = () => {
       </div>
 
       {/* Desktop View - Kept unchanged */}
-      <div className="max-w-full sm:max-w-[80%] mx-auto hidden md:flex flex-col md:flex-row items-center justify-between gap-12 py-10 ">
+      <div className="max-w-full sm:max-w-[80%] mx-auto  hidden md:flex flex-col md:flex-row items-center justify-between gap-8 pr-6 py-10">
+
         {/* Left - Teddy Image */}
         <div className="flex-1 flex justify-center sm:mt-6">
   <div className="relative sm:w-[620px] sm:h-[420px] sm:aspect-[628/419] w-[200px] aspect-[628/419]">
@@ -122,7 +123,7 @@ const SupportCharitiesSection: React.FC = () => {
 
         {/* Right - Content */}
         <div className="flex-1 md:text-left">
-          <div className="flex justify-end items-end mb-4">
+        <div className="w-full flex justify-end items-end mb-4">
             <h2 className="text-4xl font-bold text-[#ff0000] mb-4">We Support Charities</h2>
           </div>
 
@@ -154,7 +155,7 @@ const SupportCharitiesSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex justify-end">
+          <div className="w-full flex justify-end">
             <h3 className="text-2xl whitespace-nowrap font-bold text-primary mb-4">
               We're Building Hope, One Donation At A Time
             </h3>
@@ -168,7 +169,7 @@ const SupportCharitiesSection: React.FC = () => {
               Discover more on our charity page today.
             </p>
 
-            <div className="flex justify-end">
+            <div className="w-full flex justify-end">
               <DonateNowButton />
             </div>
           </div>

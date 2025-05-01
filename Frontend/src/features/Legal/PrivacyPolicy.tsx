@@ -86,7 +86,7 @@ export default function PrivacyPolicy() {
     return (
         <>
       <div className="max-w-full mx-auto">
-        <div className="relative w-full h-[400px] sm:h-[400px] md:h-[500px]">
+        <div className="relative w-full h-[400px] sm:h-[400px] md:h-[570px]">
           <img src={banner} alt="Privacy Policy Banner" className="w-full h-full object-cover" />
         </div>
   

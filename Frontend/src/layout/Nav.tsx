@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ChevronDown, Home, Menu } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import img1 from "@/assets/Wheelz-Australia-Black-and-Blue-Color-scaled.webp"
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -47,7 +48,7 @@ export default function Navbar() {
           <div className="flex items-center  px-2  justify-between transition-all duration-300 ease-in-out">
             <Link to="/">
               <img
-                src="https://wheelz.au/wp-content/uploads/2024/09/Wheelz-Australia-Black-and-Blue-Color-scaled.webp"
+                src={img1}
                 alt="Wheelz Logo"
                 className={`w-auto transition-all duration-300 ease-in-out ${scrolled ? "h-8" : "h-10"}`}
               />
