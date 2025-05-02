@@ -46,11 +46,11 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ title, features, image }) => 
         {/* Right: Image */}
         <div className="h-full flex">
           <div className="w-full overflow-hidden rounded-xl shadow-md">
-            <img
-              src={image}
-              alt="Promotion"
-              className="w-full h-full object-cover"
-            />
+          <img
+  src={image}
+  alt="Promotion"
+  className="w-full h-full object-cover transform scale-x-[-1]"
+/>
           </div>
         </div>
       </div>

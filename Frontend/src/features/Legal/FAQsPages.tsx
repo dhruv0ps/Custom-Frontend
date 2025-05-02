@@ -137,10 +137,15 @@ const faqs = [
 export default function FAQsPage() {
   return (
     <>
-    <div className="max-w-full mx-auto">
-      <div className="relative w-full h-[400px]">
-        <img src={faqBanner} alt="FAQs Banner" className="w-full h-full object-cover" />
-      </div>
+    <div className="bg-white text-black w-full overflow-hidden">
+ 
+ <div className="relative w-full max-h-[32rem] overflow-hidden">
+   <img
+     src={faqBanner}
+     alt="About Us Banner"
+     className="w-full h-full object-cover object-top"
+   />
+ </div>
 
       <div className="sm:max-w-[80%] max-w-full mx-auto py-10 px-4">
         <h1 className="text-3xl font-bold text-center mb-4">General FAQs</h1>

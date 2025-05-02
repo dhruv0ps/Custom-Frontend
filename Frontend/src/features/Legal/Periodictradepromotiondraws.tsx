@@ -1,4 +1,4 @@
-import faqBanner from '@/assets/Legal/iStock-1336169315-(2).jpg';
+import faqBanner from '@/assets/Legal/iStock-1420813313-(2).jpg';
 import AllFooterSection from '@/util/AllFooterSection';
 const Periodictradepromotiondraws = () => {
   const faqs = [
@@ -89,10 +89,15 @@ const Periodictradepromotiondraws = () => {
   ];
 
   return (
-    <>   <div className="max-w-full mx-auto">
-      <div className="relative w-full h-[400px]">
-        <img src={faqBanner} alt="FAQs Banner" className="w-full h-full object-cover" />
-      </div>
+    <>   <div className="bg-white text-black w-full overflow-hidden">
+ 
+    <div className="relative w-full max-h-[32rem] overflow-hidden">
+      <img
+        src={faqBanner}
+        alt="About Us Banner"
+        className="w-full h-full object-cover object-top"
+      />
+    </div>
     <div className="max-w-[80%] mx-auto py-10 px-4">
       <h1 className="text-3xl font-bold text-center mb-8 ">Understanding Our Periodic Trade Promotion Draws</h1>
       <div className="space-y-6">

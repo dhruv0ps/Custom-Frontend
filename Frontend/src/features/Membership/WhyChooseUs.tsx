@@ -11,7 +11,7 @@ export default function WhyChooseUs() {
           desc: "Don’t miss out on the opportunity to sell your car with zero fees and zero hassle. Our experts handle everything, from listing to closing the deal, so you can relax and enjoy the ride.",
         },
         {
-          title: "Secure The Best Deals On New, Demo & Pre-Owned Cars",
+          title: "Secure The Best Deals On Any Car",
           desc: "Join now to access exclusive discounts on all cars through our network. Why pay more when you can leverage our buying power to save big on your next vehicle?",
         },
         {

@@ -35,23 +35,23 @@ export default function BuyCar() {
   {[
     {
       icon: img1,
-      title: "Innovative Selling Solution",
-      desc: "Unlock the future of hassle-free sales with our cutting edge technology.",
+      title: "Effortless Buying Experience",
+      desc: "Unlock the future of hassle-free sales with our cutting edge technology.Discover a simpler way to buy cars with us, hassle free, no haggling, just great deals!",
     },
     {
       icon: img2,
-      title: "Cost-Free Listing Efficiency",
-      desc: "List your car without spending a dollar and maximise your selling potential easily.",
+      title: "Cost-Efficient Purchases",
+      desc: "Enjoy the seamless, time efficient process of buying your vehicle without incurring any costs, all while maximising your savings.",
     },
     {
       icon: img3,
-      title: "Effortless Connection",
-      desc: "We seamlessly connect you with the right dealerships from our national network, making selling as simple as a few clicks.",
+      title: "Trusted Dealership Network",
+      desc: "Take advantage of our network, enjoy the ease of buying directly from trusted dealers with complete transparency and no hidden costs.",
     },
     {
       icon: img4,
-      title: "Trustworthy Dealership Network",
-      desc: "Rely on our manufacturer approved dealers for transparency and customer satisfaction.",
+      title: "Facilitated Deals",
+      desc: "Language barriers and sales negotiations are not an issue, we can facilitate deals for you.",
     },
   ].map((item, index) => (
     <div key={index} className="flex flex-col items-center text-center">
@@ -104,10 +104,9 @@ export default function BuyCar() {
             <div className="flex items-start text-left gap-4 px-2 mb-8">
               <div className="text-[100px] font-extrabold leading-none text-white pl-2">1</div>
               <div className="text-right">
-                <h4 className="text-base font-bold mb-2 text-black uppercase pl-2">Tell us about your car</h4>
+                <h4 className="text-base font-bold mb-2 text-black uppercase pl-2">Share your preference</h4>
                 <p className="text-sm leading-relaxed text-white pl-2">
-                  Enter your vehicle's details to access our user friendly interface, which will guide you through a simple
-                  step-by-step process.
+                Pick the car and we’ll take care of everything, making sure your experience is easy and customised just for you
                 </p>
               </div>
             </div>
@@ -127,10 +126,9 @@ export default function BuyCar() {
             <div className="flex items-start text-left gap-4 px-2 mb-8">
               <div className="text-[100px] font-extrabold leading-none text-white">2</div>
               <div className="text-right">
-                <h4 className="text-base font-bold mb-2 text-black uppercase">Get paired with your perfect match</h4>
+                <h4 className="text-base font-bold mb-2 text-black uppercase">We Find Your Ideal Dealer Match</h4>
                 <p className="text-sm leading-relaxed text-white">
-                  Our platform swiftly analyses your car details, connecting you with the right dealer from our extensive
-                  network of buyers.
+                From our vast network of trusted dealerships, we have every car manufacturer covered across Australia
                 </p>
               </div>
             </div>
@@ -150,10 +148,9 @@ export default function BuyCar() {
             <div className="flex items-start text-left gap-4 px-2 mb-8">
               <div className="text-[100px] font-extrabold leading-none text-white">3</div>
               <div className="text-right" >
-                <h4 className="text-base font-bold mb-2 text-black uppercase">You receive fast payment</h4>
+                <h4 className="text-base font-bold mb-2 text-black uppercase">You Get A GREAT DEAL</h4>
                 <p className="text-sm leading-relaxed text-white">
-                  Quick, hassle-free transaction! Agree to an offer, and the dealer will promptly pay you and arrange for your
-                  car's collection at your convenience.
+                We’re transforming car buying and turning your dream car into a reality, all at an exclusive price!
                 </p>
               </div>
             </div>

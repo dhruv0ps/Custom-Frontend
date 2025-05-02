@@ -85,10 +85,15 @@ const terms = [
 export default function PrivacyPolicy() {
     return (
         <>
-      <div className="max-w-full mx-auto">
-        <div className="relative w-full h-[400px] sm:h-[400px] md:h-[570px]">
-          <img src={banner} alt="Privacy Policy Banner" className="w-full h-full object-cover" />
-        </div>
+     <div className="bg-white text-black w-full overflow-hidden">
+ 
+ <div className="relative w-full max-h-[33rem] overflow-hidden">
+   <img
+     src={banner}
+     alt="About Us Banner"
+     className="w-full h-full object-cover object-top"
+   />
+ </div>
   
         <div className="sm:max-w-[80%] max-w-full mx-auto py-10 px-4">
           <h1 className="text-3xl font-bold text-center mb-6">Privacy Policy</h1>

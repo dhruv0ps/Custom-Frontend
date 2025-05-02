@@ -104,7 +104,7 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
   <h2 className="text-[22px] font-bold leading-tight text-black">
     We empower you to,
   </h2>
-  <p className="text-[17px] font-semibold text-white mt-1">
+  <p className="text-[22px] font-semibold text-white mt-1">
     <Typed
       strings={[
         "make informed decisions",
@@ -142,7 +142,7 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
   </h2>
 
   <p
-    className={`text-[19px] font-semibold text-white  transition-all duration-300 ease-in-out ${
+    className={`text-[25px] font-semibold text-white  transition-all duration-300 ease-in-out ${
       isTransitioning ? "opacity-0 -translate-y-2" : "opacity-100 translate-y-0"
     }`}
   >

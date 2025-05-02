@@ -128,6 +128,32 @@ const VipSavingsPage: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="w-full py-4 sm:py-8 block md:hidden">
+    <div className="max-w-full  mx-auto flex flex-row items-center justify-between  sm:px-0">
+      
+      {/* Text Block */}
+      <div className="bg-white rounded-r-full py-1 sm:py-2 pl-2 pr-4 sm:pl-6 sm:pr-18 flex-shrink">
+        <h2 className="text-base sm:text-base  font-bold whitespace-nowrap">
+        Monthly Membership
+          <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">
+          {""} Simply pays for itself
+          </span>
+        </h2>
+      </div>
+  
+      {/* Button */}
+      <div className=" sm:w-auto mr-2">
+      <HoverArrowButton
+  label="Sign Me Up"
+  onClick={() => navigate("/access-form")}
+  className="bg-primary  transition-all  py-3 font-semibold text-base rounded-full shadow-md"
+  textClass="text-white"
+  hoverTextClass="text-white"
+/>
+      </div>
+      
+    </div>
+  </div>
     </div>
   );
 };

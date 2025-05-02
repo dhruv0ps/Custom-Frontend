@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
       {/* Left: Features */}
       <div>
       <h2 className="text-xl md:text-2xl font-bold mb-8 text-center md:text-left">
-      Why Selling With Us Is Your Smart Choice 
+      Why Our Membership <span className="text-primary">IS A NO BRAINER</span>  
 </h2>
 
         <ul className="space-y-6">

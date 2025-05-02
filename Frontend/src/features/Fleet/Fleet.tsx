@@ -187,7 +187,7 @@ const Fleet: React.FC = () => {
             >
               <div
                 ref={(el) => (iconRefs.current[index] = el)}
-                className="bg-white p-4 rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
+                className="bg-white p-1 rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
                 >
                   
                     <img

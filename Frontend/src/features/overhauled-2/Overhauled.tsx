@@ -8,8 +8,8 @@ import PremiumPartner from '../overhauled-2/PremiumPartner'
 import VideoBanner from '@/util/VideoBanner'
 import AllFooterSection from '@/util/AllFooterSection'
 import WhyChooseUs from './WhyChooseUs'
-
-
+import HoverArrowButton from '@/util/HoverButton'
+import { useNavigate } from 'react-router-dom'
 // Add CSS for animations
 const animationStyles = `
   @keyframes fadeTop {
@@ -34,7 +34,7 @@ const animationStyles = `
 `;
 
 const Overhauled: React.FC = () => {
-    
+    const navigate = useNavigate()
     const iconRefs = useRef<(HTMLDivElement | null)[]>([]);
     
     useEffect(() => {
@@ -94,8 +94,8 @@ const Overhauled: React.FC = () => {
   secondaryButtonLabel="Access Form"
   secondaryButtonLink="/view-all"
 />
-      <div className="bg-[#b7eaff] py-12 px-4">
-      <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center">
+      <div className="bg-[#b7eaff] py-12 ">
+      <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center px-4">
         {/* Section Headers */}
        
         <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-black">
@@ -133,7 +133,31 @@ const Overhauled: React.FC = () => {
 
         {/* CTA Section */}
       
-
+       
+      </div>
+      <div className="w-full block md:hidden py-8">
+        <div className="max-w-full sm:max-w-7xl mx-auto sm:px-4 flex flex-row items-center justify-between">
+          <div
+            className="bg-white rounded-r-full py-2 pl-6 pr-6 sm:pl-6 sm:pr-18 mb-4 sm:mb-0"
+            style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+          >
+            <h2 className="text-xl  font-bold ">
+            <span className=""> Own The Next</span> 
+              <br className="block sm:hidden" />
+              <span className="block sm:inline text-primary text-2xl sm:ml-2 uppercase">Masterpiece</span>
+            </h2>
+          </div>
+      
+          <div className="flex items-center justify-center mb-3 mr-4 sm ml-2">
+            <HoverArrowButton
+              label="Access Form"
+              onClick={() => navigate("/")}
+              className="px-6 py-3  font-semibold text-base rounded-full transition bg-primary text-white border border-primary shadow-lg hover:scale-105 overflow-hidden"
+              textClass="text-white"
+              hoverTextClass="text-white"
+            />
+          </div>
+        </div>
       </div>
       <PremiumPartner/>
     </div>

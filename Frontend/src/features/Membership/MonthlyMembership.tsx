@@ -19,10 +19,10 @@ const MembershipPricing: React.FC = () => {
       </div>
       <div className="text-center mb-10">
 
-        <h2 className="text-xl font-semibold">MONTHLY MEMBERSHIP</h2>
+        <h2 className="text-2xl sm:text-xl font-semibold">MONTHLY MEMBERSHIP</h2>
         <p className="text-gray-300 mt-1">Cancel Your Membership Anytime</p>
       </div>
-
+ 
       {/* Main Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start px-4 sm:px-0">
         {/* Left Column */}
@@ -47,7 +47,7 @@ const MembershipPricing: React.FC = () => {
       <h2 className="text-2xl md:text-3xl font-bold flex flex-row items-center">
               <div className='flex flex-col  sm:flex-row ml-4 sm:ml-0 '>
                 <span className="text-black whitespace-nowrap text-xl md:text-3xl">That’s less than  </span>
-                <span className="text-primary sm:ml-2 text-[26px] md:text-3xl whitespace-nowrap"> $2.31 a week</span></div>
+                <span className="text-primary sm:ml-2 text-[26px] md:text-3xl whitespace-nowrap uppercase"> $2.31 A WEEK</span></div>
             </h2>
           </div>
           <div className="flex w-full sm:w-auto items-center  justify-end   sm:justify-end sm:mr-2  ">

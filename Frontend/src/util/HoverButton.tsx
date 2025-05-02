@@ -18,7 +18,7 @@ const HoverArrowButton = ({
   return (
     <button
       onClick={onClick}
-      className={`group relative transition-all duration-300 overflow-hidden min-w-[140px] text-center ${className}`}
+      className={`group relative transition-all duration-300 overflow-hidden min-w-[120px] sm:min-w-[140px] text-center ${className}`}
     >
       {/* Default Text */}
       <span className={`block transition-opacity duration-200 group-hover:opacity-0 ${textClass}`}>

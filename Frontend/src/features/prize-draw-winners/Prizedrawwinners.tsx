@@ -3,7 +3,7 @@ import vide from "@/assets/prize-draw-winners/Winners.mp4"
 
 import PrizeCard from './PrizeCard'
 import WhyChooseUs from '@/util/WhyChooseUs'
-import happyUsersImg from "@/assets/prize-draw-winners/iStock-504374602-(2).jpg";
+import happyUsersImg from "@/assets/prize-draw-winners/iStock1481243237.jpg";
 import AllFooterSection from '@/util/AllFooterSection'
 import VideoBanner from '@/util/VideoBanner'
 const Prizedrawwinners:React.FC = () => {

@@ -161,9 +161,15 @@ const CompetitionTerms:React.FC = () => {
 
   return (
     <>
-    <div className="relative w-full h-[200px] sm:h-[400px] md:h-[520px] ">
-        <img src={banner} alt="Contact Banner" className="w-full h-full object-cover" />
-       </div>    <div className=" max-w-full sm:max-w-[80%] mx-auto py-12 px-4">
+    <div className="bg-white text-black w-full overflow-hidden">
+ 
+ <div className="relative w-full max-h-[32rem] overflow-hidden">
+   <img
+     src={banner}
+     alt="About Us Banner"
+     className="w-full h-full object-cover object-top"
+   />
+ </div>  <div className=" max-w-full sm:max-w-[80%] mx-auto py-12 px-4">
 
 
       <h1 className="text-3xl font-bold text-center mb-4">Competition Terms:<br />Wheelz Trade Promotion</h1>
@@ -189,6 +195,7 @@ const CompetitionTerms:React.FC = () => {
     <AllFooterSection content={[
       ``
     ]}/>
+    </div>
     </>
 
   );

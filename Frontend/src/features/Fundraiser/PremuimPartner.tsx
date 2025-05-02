@@ -19,7 +19,7 @@ const PremiumPartner = () => {
         {
             number: 1,
             title: "Good Friday Appeal",
-            description: "The Good Friday Appeal raises funds for the Royal Children's Hospital in Melbourne, supporting life-saving medical care and research for children.",
+            description: "The Good Friday Appeal raises funds for the Royal Children's Hospital in Melbourne, supporting life saving medical care and research for children.",
             img: img1,
         },
         {
@@ -121,7 +121,7 @@ const PremiumPartner = () => {
                                     <h3 className="text-[18px] font-bold text-black mb-2">
                                         {charity.title}
                                     </h3>
-                                    <p className="text-sm text-[#e6022a]">
+                                    <p className="text-sm text-[#e6022a] leading-relaxed ">
                                         {charity.description}
                                     </p>
                                 </div>

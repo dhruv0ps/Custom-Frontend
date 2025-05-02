@@ -6,14 +6,14 @@ const AboutUs: React.FC = () => {
   return (
     <>
       <div className="bg-white text-black w-full overflow-hidden">
-        {/* Banner */}
-        <div className="relative w-full h-[200px] sm:h-[400px] md:h-[500px]">
-          <img
-            src={banner}
-            alt="About Us Banner"
-            className="w-full h-full object-cover"
-          />
-        </div>
+ 
+  <div className="relative w-full max-h-[32rem] overflow-hidden">
+    <img
+      src={banner}
+      alt="About Us Banner"
+      className="w-full h-full object-cover object-top"
+    />
+  </div>
 
         <div className="max-w-[90%] md:max-w-[80%] mx-auto mt-12 mb-24 space-y-8">
           <h1 className="text-3xl md:text-4xl font-bold text-center text-black">
