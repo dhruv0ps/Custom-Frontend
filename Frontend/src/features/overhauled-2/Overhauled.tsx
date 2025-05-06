@@ -173,7 +173,7 @@ const Overhauled: React.FC = () => {
    
     <WhyChooseUs/>
     <AllFooterSection content={[
-        `Important: “Overhauled,” our exclusive competition, is reserved for members only. The platform retains the right to modify terms, conditions, features, or cancel any competition if the required interest or entries are not met. In case of cancellation, a full refund will be provided. Any changes or cancellations will be promptly communicated to ensure transparency and a smooth experience for our valued members. Additionally, please note that video content is simulated and not real. We prioritise safety and would never endorse reckless behavior on any Australian local road.`
+        `<strong>Important</strong>: “Overhauled,” our exclusive competition, is reserved for members only. The platform retains the right to modify terms, conditions, features, or cancel any competition if the required interest or entries are not met. In case of cancellation, a full refund will be provided. Any changes or cancellations will be promptly communicated to ensure transparency and a smooth experience for our valued members. Additionally, please note that video content is simulated and not real. We prioritise safety and would never endorse reckless behavior on any Australian local road.`
     ]}/>
     </>
   )

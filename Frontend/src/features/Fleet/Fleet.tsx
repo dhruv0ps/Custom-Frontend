@@ -242,7 +242,7 @@ const Fleet: React.FC = () => {
    
     <WhyChooseUs/>
     <AllFooterSection content={[
-        `Important: By participating in fleet transactions on our platform, you agree to the terms outlined in our disclaimer. Please note that benefit examples are illustrative and do not guarantee a sale or purchase of fleet vehicles. Results may vary depending on factors such as fleet vehicle quality, specific requirements, and our partnership network capabilities at the time of enquiry.`
+        `<strong>Important</strong>: By participating in fleet transactions on our platform, you agree to the terms outlined in our disclaimer. Please note that benefit examples are illustrative and do not guarantee a sale or purchase of fleet vehicles. Results may vary depending on factors such as fleet vehicle quality, specific requirements, and our partnership network capabilities at the time of enquiry.`
     ]}/>
     </>
   )

@@ -107,7 +107,7 @@ const Prizedrawwinners:React.FC = () => {
   image={happyUsersImg}
 />
     <AllFooterSection content={[
-        `Important: Our decision on trade promotion draws is final, and no disputes will be entertained. We reserve the right to modify program terms and conditions, including rewards, redemption criteria, and associated policies, to enhance the flexibility and adaptability of our trade promotion. Please note that we reserve the right to change the winner without dispute due to technicalities, or any other legitimate reasons. Rest assured, any changes will be communicated to our valued members in advance, ensuring transparency and providing an opportunity for informed participation in our evolving program.`
+        `<strong>Important</strong>: Our decision on trade promotion draws is final, and no disputes will be entertained. We reserve the right to modify program terms and conditions, including rewards, redemption criteria, and associated policies, to enhance the flexibility and adaptability of our trade promotion. Please note that we reserve the right to change the winner without dispute due to technicalities, or any other legitimate reasons. Rest assured, any changes will be communicated to our valued members in advance, ensuring transparency and providing an opportunity for informed participation in our evolving program.`
     ]}/>
     </>
   )

@@ -200,7 +200,7 @@ const MateRateDiscount: React.FC = () => {
       <PremuimPartner/>
       <WhyChooseUs/>
       <AllFooterSection content={[
-`Important: In our commitment to providing reliable, discounted, and quality services, please note that the platform reserves the right to modify terms, including any third-party services and associated policies. We may introduce or alter services and will promptly communicate any changes to our members. Whilst we facilitate a transparent customer rating system on services, please be aware that we are not responsible for any third-party service or offer undertaken through our platform.`
+`<strong>Important</strong>: In our commitment to providing reliable, discounted, and quality services, please note that the platform reserves the right to modify terms, including any third-party services and associated policies. We may introduce or alter services and will promptly communicate any changes to our members. Whilst we facilitate a transparent customer rating system on services, please be aware that we are not responsible for any third-party service or offer undertaken through our platform.`
       ]}/>
     </>
   );

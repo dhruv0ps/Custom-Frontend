@@ -237,7 +237,7 @@ const Fundraisers: React.FC = () => {
         </div>
       </div>
       <AllFooterSection content={[
-        `Important: In our commitment to supporting fundraisers and charities, please be aware that the platform reserves the right to modify terms and conditions, including donation mechanisms, associated policies, and the option to change supported charities. It’s important to highlight that 100% of donations raised through our platform go directly to the designated charity. Any updates will be communicated promptly, ensuring transparency and empowering our community to actively participate in our evolving mission.`
+        `<strong>Important</strong>: In our commitment to supporting fundraisers and charities, please be aware that the platform reserves the right to modify terms and conditions, including donation mechanisms, associated policies, and the option to change supported charities. It’s important to highlight that 100% of donations raised through our platform go directly to the designated charity. Any updates will be communicated promptly, ensuring transparency and empowering our community to actively participate in our evolving mission.`
       ]} />
     </>
   )

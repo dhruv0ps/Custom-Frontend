@@ -1,6 +1,6 @@
 import faqBanner from '@/assets/Legal/iStock-141.jpg';
 import AllFooterSection from '@/util/AllFooterSection';
-
+import { useNavigate } from 'react-router-dom';
 const faqs = [
   {
     question: 'Where is Wheelz.au based?',
@@ -116,7 +116,7 @@ const faqs = [
   {
     question: 'Can I finance a vehicle purchase through Wheelz.au?',
     answer:
-      ' Yes, we work with a network of trusted financial partners who can assist you with financing options for your vehicle purchase. Simply let us know during the purchasing process, and we’ll connect you with the right partners for your needs.'
+      ' Yes, we work with a network of trusted financial partners who can assist you with <a href="/finance" class="text-primary">financing options</a> for your vehicle purchase. Simply let us know during the purchasing process, and we’ll connect you with the right partners for your needs.'
   },
   {
     question: 'Can I purchase insurance for my vehicle through Wheelz.au?',
@@ -126,7 +126,7 @@ const faqs = [
   {
     question: 'Can I purchase a car after a virtual tour?',
     answer:
-      'Yes, absolutely! Our dealership base offers the convenience of completing the entire car-buying process remotely. From negotiating the price to arranging delivery, we’re here to assist you every step of the way. So, after experiencing a virtual tour from the comfort of your home, you can confidently make your purchase decision with ease.'
+      'Yes, absolutely! Our dealership base offers the convenience of completing the entire car-buying process remotely. From negotiating the price to arranging delivery, we’re here to assist you every step of the way. So, after experiencing a <a href="/virtual-tours" class="text-primary">virtual tour</a> from the comfort of your home, you can confidently make your purchase decision with ease.'
   },
   {
     question: 'Can I cancel my membership anytime?',
@@ -141,6 +141,7 @@ const faqs = [
 ];
 
 export default function FAQsPage() {
+  const navigate = useNavigate()
   return (
     <>
     <div className="bg-white text-black w-full overflow-hidden">
@@ -156,7 +157,15 @@ export default function FAQsPage() {
       <div className="sm:max-w-[80%] max-w-full mx-auto py-10 px-4">
         <h1 className="text-3xl font-bold text-center mb-4">General FAQs</h1>
         <h2 className="font-semibold text-lg text-[#666] mb-2">
-          Have a question?</h2> <p className="text-[#666] text-sm leading-relaxed"> Find answers to commonly asked questions below. If your query persists, feel free to contact us.</p>
+          Have a question?</h2> <p className="text-[#666] text-sm leading-relaxed">
+        Find answers to commonly asked questions below. If your query persists,&nbsp;
+        <span
+          onClick={() => navigate("/contact-us")}
+          className="text-primary font-medium hover:underline cursor-pointer"
+        >
+          contact us
+        </span>.
+      </p>
         
         <div className="space-y-8 sm:mt-8">
           {faqs.map((faq, idx) => (

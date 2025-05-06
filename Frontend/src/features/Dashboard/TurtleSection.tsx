@@ -8,7 +8,7 @@ const TurtleSection: React.FC = () => {
       <div className=" overflow-visible mb-12 min-h-[125px] py-8  mt-36 md:py-12 lg:mt-32 max-w-full sm:max-w-[80%] mx-auto ">
       
         <div className="absolute -top-32 lg:-top-24 left-1/2 md:left-12 lg:left-24 transform -translate-x-1/2 md:translate-x-0 z-20 lg:mt-0 ">
-          <div className="bg-white rounded-3xl md:gap-y-6 lg:ml-16  p-4 shadow-lg    mt-6 w-[400px] sm:w-[320px] md:w-[380px] lg:w-[400px]">
+          <div className="bg-white border border-white rounded-3xl md:gap-y-6 lg:ml-16  p-4 shadow-lg    mt-6 w-[400px] sm:w-[320px] md:w-[380px] lg:w-[400px]">
           <h3 className="hidden md:block text-primary text-xl md:text-2xl font-bold text-end mb-2">
               Yep, that's me!
             </h3>

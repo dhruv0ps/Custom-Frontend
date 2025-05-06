@@ -1,14 +1,16 @@
 import faqBanner from '@/assets/Legal/iStock-155.jpg';
 import AllFooterSection from '@/util/AllFooterSection';
+
 const Periodictradepromotiondraws = () => {
+
   const faqs = [
     {
       question: "How do the Wheelz.au draw prizes operate?",
-      answer: "Our Trade Promotion features periodic draws, with some offering substantial prizes. All winners will receive notifications within 24 hours. These draws are exclusively for our loyal members. If you haven’t joined yet, you can register here."
+      answer: `Our Trade Promotion features periodic draws, with some offering substantial prizes. All winners will receive notifications within 24 hours. These draws are exclusively for our loyal members. If you haven’t joined yet, you can <a href="/finance" class="text-primary">register here </a><a href="/finance" class="text-primary">register here </a> .`
     },
     {
       question: "Do I need to be a Wheelz.au Member to participate in the Periodic Trade Promotion?",
-      answer: "Yes, it’s compulsory to become a member for you to participate in these draws. Our platform is exclusively dedicated to Wheelz.au Members to show our appreciation through our ‘Trade Promotion’. To take part in these exciting draws, we encourage you to register as a member without delay. By joining, you not only gain eligibility for these special draws but also unlock a range of exclusive benefits tailored for our valued members. Don’t miss out – sign up to enhance your automotive experience today!"
+      answer: `Yes, it’s compulsory to become a member for you to participate in these draws. Our platform is exclusively dedicated to Wheelz.au Members to show our appreciation through our ‘Trade Promotion’. To take part in these exciting draws, we encourage you to register as a member without delay. By joining, you not only gain eligibility for these special draws but also unlock a range of exclusive benefits tailored for our valued members. Don’t miss out –  <a href="/finance" class="text-primary">sign up</a> to enhance your automotive experience today!`
     },
     {
       question: "Do I automatically qualify for all the draws?",
@@ -76,7 +78,7 @@ const Periodictradepromotiondraws = () => {
     },
     {
       question: "Is there a way to track the results of past draws?",
-      answer: "Results of previous draws are often available on our website and can be viewed directly on the Platforms dedicated winners page anytime."
+      answer: `Results of previous draws are often available on our website and can be viewed directly on the Platforms dedicated  <a href="/finance" class="text-primary">winners page </a> anytime.`
     },
     {
       question: "Can I transfer my prize to someone else if I am unable to accept it?",
@@ -104,7 +106,11 @@ const Periodictradepromotiondraws = () => {
         {faqs.map((item, index) => (
           <div key={index}>
            <h3 className="text-[18px] font-bold text-[#666] mb-2 leading-snug">Q: {item.question}</h3>
-            <p className="text-sm text-gray-600 mt-1">A: {item.answer}</p>
+           <p className="text-sm text-gray-600 mt-1">
+  A:{' '}
+  <span dangerouslySetInnerHTML={{ __html: item.answer }} />
+</p>
+
           </div>
         ))}
       </div>

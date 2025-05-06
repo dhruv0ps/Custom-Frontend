@@ -199,7 +199,7 @@ const Businesspartners:React.FC = () => {
   </div>
 </div>
 <AllFooterSection content={[
-  `Important: In our collaboration with dealerships, service providers and automotive industry, the platform reserves the right to modify terms and conditions, including features, policies, exclusive lead opportunities, and associated costs related to our partnership. Any changes will be promptly communicated, ensuring transparency and a continued positive experience for both our valued partners and customers.`
+  `<strong>Important</strong>: In our collaboration with dealerships, service providers and automotive industry, the platform reserves the right to modify terms and conditions, including features, policies, exclusive lead opportunities, and associated costs related to our partnership. Any changes will be promptly communicated, ensuring transparency and a continued positive experience for both our valued partners and customers.`
 ]}
 />
     </>

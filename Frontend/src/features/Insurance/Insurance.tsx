@@ -124,7 +124,7 @@ const navigate = useNavigate()
       </div>
       <WhyChooseUs />
       <AllFooterSection content={[
-        `Important: By participating in insurance transactions on our platform, you agree to the terms outlined in our disclaimer. Please note that benefit examples are illustrative and do not guarantee coverage. Results may vary depending on factors such as individual circumstances, specific requirements, and our partnership network capabilities at the time of enquiry.`
+        `<strong>Important</strong>:: By participating in insurance transactions on our platform, you agree to the terms outlined in our disclaimer. Please note that benefit examples are illustrative and do not guarantee coverage. Results may vary depending on factors such as individual circumstances, specific requirements, and our partnership network capabilities at the time of enquiry.`
       ]}/>
     </>
   )
