@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "@/assets/Legal/iStock-503418490-(2).jpg";
+import banner from "@/assets/Legal/iStock-111.jpg";
 import AllFooterSection from "@/util/AllFooterSection";
 
 const AboutUs: React.FC = () => {
@@ -107,8 +107,8 @@ const AboutUs: React.FC = () => {
             <div>
               <h3 className="font-semibold">Community Impact</h3>
               <p>We believe in giving back. Through our fundraisers, we contribute to supported charities on behalf of all our customers utilising our services for buying and selling cars, creating a ripple effect of positive change.</p>
-              <p>Join us today and become part of Australia’s #1 automotive ecosystem.</p>
-              <p>Embrace a smarter, more efficient way to manage your car needs, and discover the power of collective savings with our trusted partners.</p>
+              <p className="mt-2 font-bold">Join us today and become part of Australia’s #1 automotive ecosystem.</p>
+              <p className="mt-2">Embrace a smarter, more efficient way to manage your car needs, and discover the power of collective savings with our trusted partners.</p>
               <p>Welcome to the future of automotive excellence.</p>
             </div>
           </div>

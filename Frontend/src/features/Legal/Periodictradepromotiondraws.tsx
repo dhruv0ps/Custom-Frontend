@@ -1,4 +1,4 @@
-import faqBanner from '@/assets/Legal/iStock-1420813313-(2).jpg';
+import faqBanner from '@/assets/Legal/iStock-155.jpg';
 import AllFooterSection from '@/util/AllFooterSection';
 const Periodictradepromotiondraws = () => {
   const faqs = [

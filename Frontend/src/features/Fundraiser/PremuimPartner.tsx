@@ -83,11 +83,11 @@ const PremiumPartner = () => {
         const getSpecialStyles = (idx: number) => {
           // These are the indices for Peter Mac, National Breast Cancer, and Beyond Blue
           if (idx === 6 || idx === 7) {
-            return "w-full h-full "
+            return "sm:w-full sm:h-full "
           } else if (idx === 8) {
-            return "w-full h-full"
+            return "sm:w-full sm:h-full"
           }
-          return "w-full h-full"
+          return "sm:w-full h-full"
         }
         
         return (

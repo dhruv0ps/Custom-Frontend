@@ -72,7 +72,7 @@ const Businesspartners:React.FC = () => {
 />
 
       <div className="bg-[#b7eaff] py-12">
-      <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center px-4">
+      <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center px-4">
         {/* Section Headers */}
        
         <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-black">
@@ -111,30 +111,37 @@ const Businesspartners:React.FC = () => {
       
 
       </div>
-      <div className="w-full block md:hidden py-8">
-        <div className="max-w-full sm:max-w-7xl mx-auto sm:px-4 flex flex-row items-center justify-between">
-          <div
-            className="bg-white rounded-r-full py-2 pl-6 pr-6 sm:pl-6 sm:pr-18 mb-4 sm:mb-0"
-            style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
-          >
-            <h2 className="text-xl  font-bold ">
-            <span className=""> Partner,Connect,</span> 
-              <br className="block sm:hidden" />
-              <span className="block sm:inline text-primary text-3xl sm:ml-2 uppercase">Succeed!</span>
-            </h2>
-          </div>
-      
-          <div className="flex items-center justify-center mb-3 mr-4 sm:mb-3 sm:mr-4">
-            <HoverArrowButton
-              label="Sell Now"
-              onClick={() => navigate("/")}
-              className="px-6 py-3  font-semibold text-base rounded-full transition bg-primary text-white border border-primary shadow-lg hover:scale-105 overflow-hidden"
-              textClass="text-white"
-              hoverTextClass="text-white"
-            />
-          </div>
-        </div>
-      </div>
+     
+      <div className="w-full py-4 sm:py-8 block md:hidden">
+  <div className="w-full flex items-center justify-between ">
+    
+    {/* Text Block */}
+    <div
+      className="bg-white rounded-r-full py-1 pr-12 px-4 flex-shrink"
+      style={{ boxShadow: "inset -6px 0 10px rgba(0, 0, 0, 0.1)" }}
+    >
+      <h2 className="text-sm font-bold whitespace-nowrap">
+      Partner,Connect,
+        <span className="block text-primary text-base uppercase">
+        Succeed!
+        </span>
+      </h2>
+    </div>
+
+    {/* Button */}
+    <div className="flex-shrink-0 ml-2 mr-4">
+      <HoverArrowButton
+     label="Sell Now"
+     onClick={() => navigate("/")}
+     className="px-6 py-3  font-semibold text-base rounded-full transition bg-primary text-white border border-primary shadow-lg hover:scale-105 overflow-hidden"
+     textClass="text-white"
+     hoverTextClass="text-white"
+      />
+    </div>
+
+  </div>
+</div>
+
       <PremiumPartner/>
     </div>
     <div className="w-full bg-white py-14 px-4 md:px-6">

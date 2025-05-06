@@ -1,16 +1,23 @@
 import React from "react";
-import banner from "@/assets/Legal/iStock-1452525980-(1).jpg";
+import banner from "@/assets/Legal/iStock-16.jpg";
 import AllFooterSection from "@/util/AllFooterSection";
 
 const ContactUs: React.FC = () => {
   return (
     <>
     <div className="bg-white text-black w-full overflow-hidden">
-      {/* Banner Section */}
-      <div className="relative w-full h-[200px] sm:h-[400px] md:h-[500px]">
-        <img src={banner} alt="Contact Banner" className="w-full h-full object-cover" />
-       </div>
-       <h2 className="mt-4 w-full text-center text-xl sm:text-2xl md:text-3xl font-bold text-black">
+       
+        <div className="relative w-full h-64 md:h-80 lg:h-[32rem]">
+         <img 
+            src={banner} 
+            alt="Contact Banner" 
+            className="w-full h-full object-cover object-top" 
+            style={{ objectPosition: "center 60%" }} 
+          />
+      
+        </div>
+
+       <h2 className="sm:mt-4 w-full text-center text-xl sm:text-2xl md:text-3xl font-bold text-black">
           Contact Us
         </h2>
       
@@ -53,8 +60,10 @@ const ContactUs: React.FC = () => {
           <p className="mb-4">Monday to Friday, 9am to 5pm AEST</p>
 
           <h4 className="font-bold text-lg mb-1">LOCATIONS</h4>
-          <p><span className="text-sky-500 font-semibold">Headquarters:</span> 470 St Kilda Road, Melbourne VIC 3004</p>
-          <span className="text-sky-500 font-semibold ">Major Cities:</span>
+          <p><span className="text-sky-500 font-semibold">Headquarters:</span> </p>
+          <ul className="list-disc ml-6 mt-2 text-gray-700">
+          <li className="mb-2">470 St Kilda Road, Melbourne VIC 3004</li></ul>
+          <span className="text-sky-500 font-semibold ">All Major Cities:</span>
           <ul className="list-disc ml-6 mt-2 text-gray-700">
             <li>Melbourne</li>
             <li>Sydney</li>

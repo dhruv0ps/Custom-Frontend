@@ -48,8 +48,8 @@ const navigate = useNavigate()
   secondaryButtonLink="/view-all"
 />
 
-      <div className="bg-[#b1e3ff] py-12 px-4">
-        <div className="max-w-full sm:max-w-[80%] mx-auto text-center">
+      <div className="bg-[#b1e3ff] py-12 ">
+        <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl font-bold text-black mb-10">Maximise Protection, Minimise Costs</h1>
 
           {/* Mobile View - Row layout with icons on left */}
@@ -93,23 +93,33 @@ const navigate = useNavigate()
             ))}
           </div>
 
-          <div className="w-full flex flex-row sm:flex-row items-center justify-between sm:pb-4 ">
-  <div className="bg-white rounded-r-full  pr-4 sm:py-2 sm:pl-6 sm:pr-10 mb-4 sm:mb-0">
-    <h2 className="text-xl md:text-3xl font-bold text-black">
-      <span className="block sm:inline">Tailored Coverage,</span>
-      <span className="block sm:inline text-[#1cbeff]"> EASY PROCESS</span>
-    </h2>
-  </div>
-  <HoverArrowButton
-  label="Access Form"
-  onClick={() => navigate("/access-form")}
-  className="bg-[#1cbeff] hover:bg-[#00b2e3] transition-all px-8 py-3 text-white font-semibold text-base rounded-full shadow-md"
-  textClass="text-white"
-  hoverTextClass="text-white"
-/>
-</div>
+       
 
         </div>
+        <div className="w-full py-4 sm:py-8">
+  <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between  sm:px-0">
+    
+    {/* Text Block */}
+    <div
+      className="bg-white rounded-r-full py-1 sm:py-2 px-4 sm:px-6 flex-shrink"
+      style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+    >
+    <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
+     Tailored Coverage,
+     <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> EASY PROCESS</span>
+    </h2>
+  </div>
+  <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
+      <HoverArrowButton
+        label="Access Form"
+        onClick={() => navigate("/access-form")}
+        className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+        textClass="text-white"
+        hoverTextClass="text-white"
+      />
+    </div>
+</div>
+</div>
         <PremiumPartner />
       </div>
       <WhyChooseUs />

@@ -68,7 +68,7 @@ export const VirtualToursCard1: React.FC = () => {
     const navigate = useNavigate()
     return (
         <div className="w-full bg-[#0c3366] py-16 font-sans">
-            <div className="max-w-full sm:max-w-[80%] mx-auto ">
+            <div className="max-w-[95%] sm:max-w-[80%] mx-auto ">
                 {/* Top Title */}
 
                 {/* Bottom Title */}
@@ -117,24 +117,33 @@ export const VirtualToursCard1: React.FC = () => {
                     ))}
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-between mt-12">
-                    <div className="bg-white rounded-r-full py-2 pl-6 pr-20 mb-4 sm:mb-0">
-                        <h2 className="text-xl md:text-3xl font-bold whitespace-nowrap">
-                            <span className="text-black">Virtual Tours </span>
-                            <span className="text-primary"> ALL FROM HOME</span>
-                        </h2>
-                    </div>
-
-                    <HoverArrowButton
-  label="View All"
-  onClick={() => navigate("/view-all")}
-  className="bg-[#21c1ff] text-white font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all"
-  textClass="text-white"
-  hoverTextClass="text-white"
-/>
-                </div>
-
+          
+        
             </div>
+            <div className="w-full py-4 sm:py-8 sm:mt-4">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between  sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 px-4 sm:px-6 flex-shrink"
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
+        Virtual Tours
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> ALL FROM HOME</span>
+        </h2>
+      </div>
+      <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
+          <HoverArrowButton
+            label="View All"
+            onClick={() => navigate("/access-form")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+        </div>
+    </div>
+    </div>
             <div className=" justify-end text-end mt-12 max-w-[90%] sm:max-w-[80%] mx-auto ">
                 <h3 className="text-xl sm:text-3xl font-bold text-[#21c1ff] mb-4">
                     Expert Guided Car Exploration

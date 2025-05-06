@@ -64,7 +64,7 @@ const PremiumPartner = () => {
   ];
 
   return (
-    <div className="bg-[#1cbeff] max-w-full sm:max-w-[80%] mx-auto rounded-lg py-10 mt-6">
+    <div className="bg-[#1cbeff] max-w-[95%] sm:max-w-[80%] mx-auto rounded-lg py-10 mt-6 ">
       <div className="text-center text-white px-4">
         <h2 className="text-4xl md:text-3xl font-bold mb-12 uppercase text-white">3 Simple Steps</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
@@ -97,24 +97,36 @@ const PremiumPartner = () => {
           ))}
         </div>
       </div>
-    <div className="max-w-full  flex flex-row sm:flex-row items-center justify-between">
-      <div className="bg-white rounded-r-full py-2 sm:ml-5 sm:pr-8 mb-4 sm:mb-0">
-  <h2 className="text-xl md:text-3xl font-bold text-black pr-12 sm:ml-2 whitespace-nowrap">
-    <span className="block sm:inline">  Share Details, </span>
-    <span className="block sm:inline text-[#1cbeff]">GET EXPERT HELP</span>
-  </h2>
-</div>
+      <div className="w-full py-4 sm:py-8">
+  <div className="w-full flex items-center justify-between  ">
     
-    <div className="w-full flex justify-end mt-2 ml-4">
-    <HoverArrowButton
-      label="Access Form"
-      onClick={() => navigate("/access-form")}
-      className="bg-white mr-6 transition-all px-2 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md"
-      textClass="text-primary"
-      hoverTextClass="text-primary"
-    />
-              </div>
+    {/* Text Block */}
+    <div
+      className="bg-white rounded-r-full py-1 sm:py-2 px-4 sm:px-6 flex-shrink"
+      style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+    >
+      <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
+        Share Details,
+        <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">
+          GET EXPERT HELP
+        </span>
+      </h2>
+    </div>
+
+    {/* Button Block */}
+    <div className="flex justify-end flex-shrink-0  mr-4">
+      <HoverArrowButton
+        label="Access Form"
+        onClick={() => navigate("/access-form")}
+        className="bg-white transition-all px-4 sm:px-8 py-3 text-primary font-semibold text-sm sm:text-base rounded-full shadow-md"
+        textClass="text-primary"
+        hoverTextClass="text-primary"
+      />
+    </div>
+
   </div>
+</div>
+
   </div>
   );
 };

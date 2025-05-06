@@ -22,9 +22,8 @@ const Tradepromotion: React.FC = () => {
   secondaryButtonLabel="View All"
   secondaryButtonLink="/view-all"
 />
-      <div className="bg-[#d9d9d9] px-4 py-12">
-
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-black">
+      <div className="bg-[#d9d9d9] sm:px-4 py-12">
+<div className='max-w-[95%] mx-auto sm:max-w-[80%]'>       <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-black">
           Trade Promotion Draws At No Cost
         </h2>
 
@@ -81,26 +80,36 @@ const Tradepromotion: React.FC = () => {
             </div>
           </div>
         </div>
-
-
-
-
-        <div className="max-w-full sm:max-w-[80%] mx-auto mt-6 flex flex-row sm:flex-row items-center justify-between">
-  <div className="bg-white rounded-r-full py-2 pl-2  sm:pl-6 pr-8 mb-4 sm:mb-0">
-    <h2 className="text-base md:text-3xl font-bold text-black ">  
-            <div className='flex flex-col  sm:flex-row '>
-              <span className="text-black">Join, Save &</span>
-            <span className="text-primary ml-1">WIN!</span></div>
-          </h2>
         </div>
-        <HoverArrowButton
-  label="Sign Me Up"
-  onClick={() => navigate("/signup")}
-  className="bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition w-full sm:w-auto"
-  textClass="text-white"
-  hoverTextClass="text-white"
-/>
+ 
+
+
+        <div className="w-full py-4 sm:py-8">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between   sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 pr-24 sm:px-6 flex-shrink "
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4">
+        Join, Save &
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> WIN!</span>
+        </h2>
       </div>
+      <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
+          <HoverArrowButton
+            label="Sign Me Up"
+            onClick={() => navigate("/access-form")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+        </div>
+    </div>
+    </div>
+      
+      
     </div>
 
       

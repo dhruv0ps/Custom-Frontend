@@ -13,7 +13,7 @@ const MembershipBenefits: React.FC = () => {
         },
         {
             number: "2",
-            title: "Buy a New Car",
+            title: "Buy A  Car",
             subtitle: "Pay Less Via Our Network",
             description: "Access exclusive deals and discounts on new cars through our extensive network, ensuring you pay less than the market price for your next vehicle.",
         },
@@ -43,7 +43,7 @@ const MembershipBenefits: React.FC = () => {
             <h2 className="text-xl md:text-4xl font-bold text-center text-black mb-6 md:mb-8">Your Membership, Your Savings</h2>
             
             {/* Mobile view: display as single column list */}
-            <div className="md:hidden space-y-4 max-w-[97%] mx-auto">
+            <div className="md:hidden space-y-4 max-w-[95%] mx-auto">
                 {benefits.map((item, index) => (
                     <div 
                         key={index}
@@ -53,10 +53,10 @@ const MembershipBenefits: React.FC = () => {
   {item.number}
 </div>
                         <div className="flex-1">
-                            <h3 className="text-xs font-bold text-black">
+                            <h3 className="text-sm font-bold text-black">
                                 {item.title} <span className="text-black">- {item.subtitle}</span>
                             </h3>
-                            <p className="text-xs text-gray-600 mt-1">
+                            <p className="text-xs text-black mt-1">
                                 {item.description}
                             </p>
                         </div>
@@ -85,7 +85,8 @@ const MembershipBenefits: React.FC = () => {
                 ))}
             </div>
             <div className="max-w-full sm:max-w-[80%] mx-auto mt-6 flex flex-row sm:flex-row items-center justify-between">
-  <div className="bg-white rounded-r-full py-2 pl-2 sm:ml-6 sm:pl-6 pr-8 mb-4 sm:mb-0">
+  <div className="bg-white rounded-r-full py-2 pl-2 sm:ml-6 sm:pl-6 pr-8 mb-4 sm:mb-0"
+   style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}>
     <h2 className="text-base md:text-3xl font-bold text-black ">
       <span className="block sm:inline whitespace-nowrap">
         Sell Free, Buy Smart, Win

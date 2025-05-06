@@ -60,14 +60,25 @@ const FleetEnterpriseServices: React.FC = () => {
 
           {/* Learn More Button */}
           <div className="flex justify-end mt-12 mb-6">
-            <button className="group relative px-6 py-3 font-semibold text-base rounded-full transition bg-primary text-white shadow hover:scale-105 overflow-hidden">
-              <span className="block group-hover:opacity-0 transition-opacity duration-200">
-                Learn More
-              </span>
-              <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                Learn More <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
-              </span>
-            </button>
+          <button
+  className="group relative 
+             px-4 py-2 text-base font-medium rounded-full text-white 
+             bg-[#18b6ff] hover:bg-[#0ca3eb] 
+             sm:px-6 sm:py-3 sm:font-semibold sm:bg-primary sm:shadow 
+             sm:hover:scale-105 sm:transition 
+             overflow-hidden transition-colors"
+>
+  <span className="block group-hover:opacity-0 transition-opacity duration-200">
+    Learn More
+  </span>
+  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+    Learn More 
+    <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </span>
+</button>
+
           </div>
         </div>
       </div>

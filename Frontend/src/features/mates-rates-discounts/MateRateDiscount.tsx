@@ -64,7 +64,7 @@ const MateRateDiscount: React.FC = () => {
 />
 
       <div className='bg-white'>
-        <div className='max-w-[97%] sm:max-w-[80%] mx-auto'>
+        <div className='max-w-[95%] sm:max-w-[80%] mx-auto'>
         <div className="text-center py-10">
   <h2 className="text-2xl sm:text-3xl font-bold text-primary">
     Your Loyalty Deserves More
@@ -116,6 +116,7 @@ const MateRateDiscount: React.FC = () => {
   key={index}
   className="flex flex-col items-center gap-3 cursor-pointer"
   whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 1.1 }}
   transition={{ type: "spring", stiffness: 300, damping: 15 }}
 >
   <motion.div
@@ -125,6 +126,10 @@ const MateRateDiscount: React.FC = () => {
       boxShadow: "inset 0px 0px 18px 0px rgba(0,0,0,0.3)",
     }}
     whileHover={{
+      backgroundColor: "#00b2ff",
+      boxShadow: "0 6px 20px rgba(0, 0, 0, 0.15)",
+    }}
+    whileTap={{
       backgroundColor: "#00b2ff",
       boxShadow: "0 6px 20px rgba(0, 0, 0, 0.15)",
     }}

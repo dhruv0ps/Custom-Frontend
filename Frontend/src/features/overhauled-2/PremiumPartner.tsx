@@ -66,7 +66,7 @@ const PremiumPartner = () => {
 
   return (
     
-    <div className="bg-[#1cbeff] max-w-full sm:max-w-[80%] mx-auto  rounded-lg py-10  mt-6">
+    <div className="bg-[#1cbeff] max-w-[95%] sm:max-w-[80%] mx-auto  rounded-lg py-10  mt-6">
     <div className="  text-center text-white px-4 ">
       
       <h2 className="text-4xl md:text-3xl font-bold mb-12 uppercase text-black">3 Simple Steps</h2>
@@ -106,25 +106,28 @@ const PremiumPartner = () => {
     </div>
 
   
-   <div className="w-full py-4 sm:py-8">
-    <div className="max-w-full  mx-auto flex flex-row items-center justify-between  sm:px-0">
-      
-      {/* Text Block */}
-      <div className="bg-white rounded-r-full py-1 sm:py-2 pl-2 pr-4 sm:pl-6 sm:pr-18 flex-shrink">
-        <h2 className="text-base sm:text-base md:text-3xl font-bold whitespace-nowrap">
+    <div className="w-full py-4 sm:py-8">
+  <div className="w-full flex items-center justify-between  sm:px-0">
+    
+    {/* Text Block */}
+    <div
+      className="bg-white rounded-r-full py-1 sm:py-2 px-4 sm:px-6 flex-shrink"
+      style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+    >
+          <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
         Join, Share, Win,
-          <span className="block sm:inline text-primary text-xl sm:text-3xl sm:ml-2">
+        <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">
           {""} OVERHAULED AWAITS
           </span>
         </h2>
       </div>
   
       {/* Button */}
-      <div className="w-full sm:w-auto px-4 sm:px-0">
+      <div className="flex justify-end flex-shrink-0 ml-2 mr-4">
       <HoverArrowButton
   label="Access Form"
   onClick={() => navigate("/access-form")}
-  className="bg-white mr-6 transition-all px-2 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md"
+  className="bg-white transition-all px-4 sm:px-8 py-3 text-primary font-semibold text-sm sm:text-base rounded-full shadow-md"
   textClass="text-primary"
   hoverTextClass="text-primary"
 />

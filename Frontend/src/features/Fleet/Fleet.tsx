@@ -8,7 +8,8 @@ import icon4 from "@/assets/Fleet/Wheelz-icon-32.webp"
 import PremiumPartner from './PremuimPartner'
 import WhyChooseUs from './WhyChooseUs'
 import AllFooterSection from '@/util/AllFooterSection'
-
+import HoverArrowButton from '@/util/HoverButton'
+import { useNavigate } from 'react-router-dom'
 // Add CSS for animations
 const animationStyles = `
   @keyframes fadeTop {
@@ -33,7 +34,7 @@ const animationStyles = `
 `;
 
 const Fleet: React.FC = () => {
-  
+  const navigate = useNavigate()
     const iconRefs = useRef<(HTMLDivElement | null)[]>([]);
     
     useEffect(() => {
@@ -105,8 +106,8 @@ const Fleet: React.FC = () => {
   secondaryButtonLabel="Access Form"
   secondaryButtonLink="/view-all"
 />
-      <div className="bg-[#b1e3ff] py-12 px-4">
-      <div className="max-w-[80%] mx-auto text-center">
+      <div className="bg-[#b1e3ff] py-12 sm:px-4">
+      <div className=" max-w-[95%] sm:max-w-[80%] mx-auto text-center">
         <div className="hidden sm:grid sm:grid-cols-2 gap-10 mb-6">
           <h1 className="text-4xl font-bold text-black">Optimise Your Fleet Operations</h1>
           <h1 className="text-4xl font-bold text-[#1cbeff]">Efficient Fleet Disposal</h1>
@@ -206,18 +207,36 @@ const Fleet: React.FC = () => {
 
 
         {/* CTA Section */}
-        <div className="w-full flex flex-col sm:flex-row items-center justify-between">
-          <div className="bg-white rounded-r-full py-2 pl-6 pr-10 mb-4 sm:mb-0">
-            <h2 className="text-2xl md:text-3xl font-bold text-black ">
-              Simplified, Tailored,<span className="text-[#1cbeff]"> HASSLE-FREE!</span>
-            </h2>
-          </div>
-          <button className="bg-[#1cbeff] hover:bg-[#00b2e3] transition-all px-8 py-3 text-white font-semibold text-base rounded-full shadow-md">
-            Access Form
-          </button>
-        </div>
+       
 
       </div>
+      <div className="w-full py-4 sm:py-8 block md:hidden">
+    <div className="max-w-full  mx-auto flex flex-row items-center justify-between  sm:px-0">
+      
+      {/* Text Block */}
+      <div className="bg-white rounded-r-full py-1 sm:py-2 pl-2 pr-12 sm:pl-6 sm:pr-18 flex-shrink"
+       style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}>
+        <h2 className="text-base sm:text-base  font-bold whitespace-nowrap">
+        Simplified,Tailored
+          <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">
+          {""} Hassle-Free
+          </span>
+        </h2>
+      </div>
+  
+      {/* Button */}
+      <div className=" sm:w-auto mr-2">
+      <HoverArrowButton
+  label="Access Form"
+  onClick={() => navigate("/access-form")}
+  className="bg-primary  transition-all  py-3 font-semibold text-base rounded-full shadow-md"
+  textClass="text-white"
+  hoverTextClass="text-white"
+/>
+      </div>
+      
+    </div>
+  </div>
       <PremiumPartner/>
     </div>
    

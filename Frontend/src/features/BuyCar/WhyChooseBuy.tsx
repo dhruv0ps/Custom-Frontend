@@ -29,7 +29,7 @@ export default function WhyChooseBuy() {
   ]
 
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-white py-16 ">
       <div className="max-w-[97%] sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Features */}
         <div>

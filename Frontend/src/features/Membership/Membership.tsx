@@ -68,7 +68,7 @@ const Membership: React.FC = () => {
       <WhyChooseUs />
       <AllFooterSection content={
         [
-          `Important: *Due to the Privacy Act of 1988, the names, addresses, and savings of members presented here are for illustrative purposes only and reflect hypothetical spending habits.`,
+          `<strong>Important</strong>: *Due to the Privacy Act of 1988, the names, addresses, and savings of members presented here are for illustrative purposes only and reflect hypothetical spending habits.`,
           `Actual savings may vary significantly based on individual circumstances, spending patterns, and membership usage. Savings are contingent upon personalised financial behaviors and member choices.`
         ]
       } />

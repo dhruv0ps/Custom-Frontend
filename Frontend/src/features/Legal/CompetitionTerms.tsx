@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "@/assets/Legal/iStock-1304912360-(2).jpg"
+import banner from "@/assets/Legal/iStock-121.jpg"
 import AllFooterSection from "@/util/AllFooterSection";
 const CompetitionTerms:React.FC = () => {
   const states = [

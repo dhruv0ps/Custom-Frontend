@@ -100,21 +100,31 @@ const PremiumPartner = () => {
     
       </div>
 
-      <div className="w-full flex flex-row sm:flex-row items-center justify-between">
-      <div className="bg-white rounded-r-full py-2 sm:ml-6 sm:pr-8 mb-4 sm:mb-0">
-  <h2 className="text-xl md:text-3xl font-bold text-black pr-12 sm:ml-2">
-    <span className="block sm:inline">Triple Check, </span>
-    <span className="block sm:inline text-[#1cbeff]">TRIPLE SAVE!</span>
-  </h2>
-</div>
-<HoverArrowButton
-  label="Access Form"
-  onClick={() => navigate("/access-form")}
-  className="bg-white mr-6 transition-all px-2 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md"
-  textClass="text-primary"
+     
+    <div className="w-full py-4 sm:py-8">
+  <div className="max-w-full mx-auto  flex items-center justify-between  sm:px-0">
+    
+    {/* Text Block */}
+    <div
+      className="bg-white rounded-r-full py-1 sm:py-2 px-4 sm:px-6 flex-shrink "
+      style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+    >
+    <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap pr-12">
+    Triple Check, 
+     <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> TRIPLE SAVE!</span>
+    </h2>
+  </div>
+  <div className="flex justify-end flex-shrink-0 ml-2 mr-6 ">
+      <HoverArrowButton
+        label="Access Form"
+        onClick={() => navigate("/access-form")}
+       className="bg-white  transition-all px-3 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md"
+       textClass="text-primary"
   hoverTextClass="text-primary"
-/>
+      />
     </div>
+</div>
+</div>
     </div>
   );
 };

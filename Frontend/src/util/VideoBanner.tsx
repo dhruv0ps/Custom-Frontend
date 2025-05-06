@@ -49,14 +49,15 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
       <div className="relative z-20 flex flex-col justify-end h-full">
         {/* Heading */}
         <div className="bg-white text-center py-2 sm:py-2 px-4">
-          <h1 className="text-base md:text-2xl font-bold text-black whitespace-nowrap">
+          <h1 className="text-base md:text-2xl font-bold text-black sm:whitespace-nowrap">
             {heading}
           </h1>
         </div>
 
         {/* Buttons */}
         <div className={`${backgroundColorClass} py-4 px-2 sm:py-4 w-full`}>
-          <div className="flex justify-center gap-4 space-x-8 sm:space-x-32 flex-wrap">
+        <div className="flex justify-center items-center gap-2 sm:gap-6 flex-row  flex-nowrap sm:flex-nowrap px-2 overflow-x-auto">
+
             {/* Primary Button */}
             <button
               onClick={() => navigate(primaryButtonLink)}
@@ -65,22 +66,21 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
               {primaryButtonLabel}
             </button>
             {mode === "demo" && (
-    <select
-      className="py-2 px-4 bg-white rounded-full text-black appearance-none cursor-pointer shadow"
-      defaultValue=""
-    >
-      <option value="" disabled>
-        State
-      </option>
-      <option value="nsw">New South Wales</option>
-      <option value="vic">Victoria</option>
-      <option value="qld">Queensland</option>
-      <option value="wa">Western Australia</option>
-      <option value="sa">South Australia</option>
-      <option value="tas">Tasmania</option>
-      <option value="act">Australian Capital Territory</option>
-      <option value="nt">Northern Territory</option>
-    </select>
+ <select
+ className="w-[125.5px] sm:w-auto py-2.5 px-3 bg-white rounded-full text-black appearance-none cursor-pointer shadow text-sm"
+ defaultValue=""
+>
+ <option value="" disabled>State</option>
+ <option value="nsw">New South Wales</option>
+ <option value="vic">Victoria</option>
+ <option value="qld">Queensland</option>
+ <option value="wa">Western Australia</option>
+ <option value="sa">South Australia</option>
+ <option value="tas">Tasmania</option>
+ <option value="act">Australian Capital Territory</option>
+ <option value="nt">Northern Territory</option>
+</select>
+
   )}
 
             {/* Secondary Button with Hover Arrow */}

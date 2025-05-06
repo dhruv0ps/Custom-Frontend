@@ -66,21 +66,33 @@ const Finance:React.FC = () => {
       ))}
     </div>
 
-    <div className="w-full flex flex-col sm:flex-row items-center justify-between">
-      <div className="bg-white rounded-r-full py-2 pl-6 pr-10 mb-4 sm:mb-0">
-        <h2 className="text-2xl md:text-3xl font-bold text-black whitespace-nowrap">
-          Tailored Finance,<span className="text-[#1cbeff]"> TRUSTED GUIDANCE</span>
+ 
+  
+  </div>
+  <div className="w-full py-4 sm:py-8">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between  sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 px-4 sm:px-6 flex-shrink"
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
+        Tailored Finance,
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> TRUSTED GUIDANCE</span>
         </h2>
       </div>
-      <HoverArrowButton
-  label="Access Form"
-  onClick={() => navigate("/access-form")}
-  className="bg-[#1cbeff] hover:bg-[#00b2e3] transition-all px-8 py-3 text-white font-semibold text-base rounded-full shadow-md"
-  textClass="text-white"
-  hoverTextClass="text-white"
-/>
+      <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
+          <HoverArrowButton
+            label="Access Form"
+            onClick={() => navigate("/access-form")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+        </div>
     </div>
-  </div>
+    </div>
   <PremiumPartner/>
 </div>
 <WhyChooseUs/>

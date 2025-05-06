@@ -39,7 +39,8 @@ const VipSavingsPage: React.FC = () => {
 
   return (
     <div className="bg-[#e5e5e5]">
-      <div className="sm:max-w-[80%] mx-auto px-4 py-10">
+     <div className="w-full sm:px-4 px-0 max-w-[95%] sm:max-w-[80%] mx-auto py-10">
+
         <h2 className="text-2xl text-center font-bold text-[#1cbeff] mb-2">
           UNLOCK GENUINE SAVINGS!
         </h2>
@@ -51,7 +52,7 @@ const VipSavingsPage: React.FC = () => {
           {cards.map((card, i) => (
             <div
               key={i}
-              className="rounded-3xl shadow-lg p-4 w-full max-w-sm flex flex-col justify-between"
+              className="rounded-3xl shadow-lg p-4 w-full sm:max-w-sm flex flex-col justify-between"
               style={{ backgroundColor: card.bg }}
             >
               <div className="flex items-center justify-between mb-4">
@@ -79,7 +80,7 @@ const VipSavingsPage: React.FC = () => {
                           <polyline points="20 6 9 17 4 12" />
                         </svg>
                       </div>
-                      <span className="text-black text-[11px] whitespace-nowrap mt-2 ">{highlightText(b)}</span>
+                      <span className="text-black text-[13px] sm:text-[11px] whitespace-nowrap sm:mt-2 mt-1 ">{highlightText(b)}</span>
                     </li>
                   ))}
                 </ul>
@@ -103,7 +104,7 @@ const VipSavingsPage: React.FC = () => {
           ))}
 
           {/* Last Card: AdBox */}
-          <div className="bg-[#8c8d91] rounded-3xl shadow-lg p-6 max-w-sm w-full mx-auto">
+          <div className="bg-[#8c8d91] rounded-3xl shadow-lg p-6 sm:max-w-sm w-full mx-auto">
             <h3 className="text-black font-bold uppercase text-right text-lg mb-1">
               MADE YOU LOOK
             </h3>
@@ -132,7 +133,8 @@ const VipSavingsPage: React.FC = () => {
     <div className="max-w-full  mx-auto flex flex-row items-center justify-between  sm:px-0">
       
       {/* Text Block */}
-      <div className="bg-white rounded-r-full py-1 sm:py-2 pl-2 pr-4 sm:pl-6 sm:pr-18 flex-shrink">
+      <div className="bg-white rounded-r-full py-1 sm:py-2 pl-2 pr-4 sm:pl-6 sm:pr-18 flex-shrink"
+       style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}>
         <h2 className="text-base sm:text-base  font-bold whitespace-nowrap">
         Monthly Membership
           <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">

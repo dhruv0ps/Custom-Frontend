@@ -135,9 +135,7 @@ export default function BusinessPartnerSection() {
           <div className="flex justify-end mr-2 ">
             {/* Simplified button that matches the image */}
             <button
-              className="px-6  py-3 mt-2 font-semibold text-lg rounded-full
-        bg-[#00b2ff] text-white shadow-lg
-        transition-all duration-300"
+            className="bg-[#18b6ff] text-white px-4 py-2 rounded-full font-medium text-base hover:bg-[#0ca3eb] transition-colors"
               onClick={handleClick}
             >
               Partner Up

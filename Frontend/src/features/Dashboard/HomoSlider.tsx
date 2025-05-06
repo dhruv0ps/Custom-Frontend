@@ -16,6 +16,7 @@ import img12 from "@/assets/Home/Charities-img.jpg";
 import img13 from "@/assets/Home/Car-Track-Pro.jpg";
 import img14 from "@/assets/Home/TotalActivityTracker.jpg";
 import img15 from "@/assets/Home/FleetEnquiries.jpg";
+import img16 from "@/assets/prize-draw-winners/iStock1481243237.jpg"
 import Typed from "react-typed"
 import { useNavigate } from "react-router-dom";
 import { ChevronRight } from "lucide-react"; 
@@ -39,6 +40,7 @@ const images = [
   img15,
   img13,
   img14,
+  img16
 ];
 const texts = [
   { heading: "Membership", route: "/membership" },
@@ -56,6 +58,7 @@ const texts = [
   { heading: "Fleet Enquiries", route: "/fleet" },
   { heading: "Registered Vehicle Tracker", route: "/" },
   { heading: "Total Activity Report", route: "/" },
+  { heading: "Prize Draw Winners", route: "/prize-draw-winners" },
 ];
 
 export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
@@ -104,28 +107,28 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
   <h2 className="text-[22px] font-bold leading-tight text-black">
     We empower you to,
   </h2>
-  <p className="text-[22px] font-semibold text-white mt-1">
+  <p className="text-[22px] font-bold text-white mt-1">
     <Typed
-      strings={[
+       strings={[
         "make informed decisions",
-        "sell your car fast, free and easy",
-        "buy a new car hassle-free",
+        "sell fast, free and easy",
+        "buy  hassle-free",
         "get the best offer",
         "unlock loyalty benefits",
         "simplify car affordability",
         "join for perks",
-        "benefit from our national network",
+        "benefit nationwide",
         "relish in discounts",
         "save on services",
-        "unlock exclusive new vehicle deals",
-        "earn rewards",
+        "unlock exclusive  deals",
+        "win cash prizes",
         "sell smarter, earn more!",
-        "cut your automotive expenses",
-        "win big with member only deals",
-        "unlock exclusive VIP discounts",
-        "unleash the power of savings",
-        "explore the future of car shopping",
-        "bring your dream build to life",
+        "slash car costs",
+        "get more, spend less",
+        "access VIP savings",
+        "save more",
+        "rethink car buying",
+        "dream it, build it",
         "aid worthy causes",
       ]}
       typeSpeed={100}
@@ -142,31 +145,31 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
   </h2>
 
   <p
-    className={`text-[25px] font-semibold text-white  transition-all duration-300 ease-in-out ${
+    className={`text-[25px] font-bold text-white  transition-all duration-300 ease-in-out ${
       isTransitioning ? "opacity-0 -translate-y-2" : "opacity-100 translate-y-0"
     }`}
   >
     <Typed
       strings={[
         "make informed decisions",
-        "sell your car fast, free and easy",
-        "buy a new car hassle-free",
+        "sell fast, free and easy",
+        "buy  hassle-free",
         "get the best offer",
         "unlock loyalty benefits",
         "simplify car affordability",
         "join for perks",
-        "benefit from our national network",
+        "benefit nationwide",
         "relish in discounts",
         "save on services",
-        "unlock exclusive new vehicle deals",
-        "earn rewards",
+        "unlock exclusive  deals",
+        "win cash prizes",
         "sell smarter, earn more!",
-        "cut your automotive expenses",
-        "win big with member only deals",
-        "unlock exclusive VIP discounts",
-        "unleash the power of savings",
-        "explore the future of car shopping",
-        "bring your dream build to life",
+        "slash car costs",
+        "get more, spend less",
+        "access VIP savings",
+        "save more",
+        "rethink car buying",
+        "dream it, build it",
         "aid worthy causes",
       ]}
       typeSpeed={100}

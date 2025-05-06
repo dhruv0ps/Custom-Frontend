@@ -14,6 +14,7 @@ const MembershipPricing: React.FC = () => {
 
   return (
     <div className="bg-[#002b63] text-white py-10 sm:px-4">
+      <div className="max-w-[95%] mx-auto">
       <div className="flex justify-center mb-4 px-4">
         <img src={logo} alt="Wheelz Logo" className="w-68 h-16 " />
       </div>
@@ -24,7 +25,7 @@ const MembershipPricing: React.FC = () => {
       </div>
  
       {/* Main Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start px-4 sm:px-0">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start  sm:px-0">
         {/* Left Column */}
         <div className="flex flex-col gap-6">
           <img src={img1} alt="Using phone" className="rounded-xl" />
@@ -39,21 +40,22 @@ const MembershipPricing: React.FC = () => {
           <img src={img3} alt="Excited Users" className="rounded-xl" />
         </div>
       </div>
+      </div>
       <div className="mx-auto py-8 mt-2">
-  <div className="max-w-7xl mx-auto flex flex-row items-center justify-center sm:justify-between gap-4 sm:space-x-6">
+      <div className="max-w-full sm:max-w-7xl  mx-auto flex flex-row items-center justify-between  sm:px-0">
 
     {/* Text Section */}
-    <div className="bg-white rounded-r-full py-2 sm:pl-4 pr-4 sm:pr-50 w-auto text-center sm:text-left">
-      <h2 className="text-2xl md:text-3xl font-bold flex flex-row items-center">
-              <div className='flex flex-col  sm:flex-row ml-4 sm:ml-0 '>
-                <span className="text-black whitespace-nowrap text-xl md:text-3xl">That’s less than  </span>
-                <span className="text-primary sm:ml-2 text-[26px] md:text-3xl whitespace-nowrap uppercase"> $2.31 A WEEK</span></div>
+    <div className="bg-white rounded-r-full py-1 sm:py-2 pl-2 pr-16 sm:pl-6 sm:pr-18 flex-shrink"
+       style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}>
+       <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
+                That’s less than  
+                <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> $2.31 A WEEK</span>
             </h2>
           </div>
-          <div className="flex w-full sm:w-auto items-center  justify-end   sm:justify-end sm:mr-2  ">
+        <div className="flex w-full justify-end sm:w-auto sm:mr-2 px-4 sm:px-0">
   <button
     onClick={() => navigate("/signup")}
-    className="group relative bg-primary font-semibold text-white px-6 mr-4 sm:mr-0 sm:px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition  sm:w-auto overflow-hidden"
+    className="group relative bg-primary font-semibold text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition overflow-hidden"
   >
     {/* Normal State */}
     <span className="transition-opacity duration-200 group-hover:opacity-0">
@@ -63,7 +65,7 @@ const MembershipPricing: React.FC = () => {
     {/* Hover State */}
     <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
       Sign Me Up
-      <ChevronRight className="h-5 w-5" />
+      <ChevronRight className="h-5 w-5 ml-1" />
     </span>
   </button>
 </div>

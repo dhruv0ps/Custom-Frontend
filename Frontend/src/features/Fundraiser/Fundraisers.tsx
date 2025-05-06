@@ -104,7 +104,7 @@ const Fundraisers:React.FC = () => {
    backgroundColorClass="bg-[#ffcdf4]"
 />
 
-         <div className="bg-[#feedf4] py-12 px-4">
+         <div className="bg-[#feedf4] sm:py-12 sm:px-4">
             <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center">
               {/* Section Headers */}
              
@@ -143,21 +143,37 @@ const Fundraisers:React.FC = () => {
            
     
             </div>
-               {/* CTA Section */}
-               <div className="max-w-[97%] sm:max-w-[90%] mx-auto flex flex-col sm:flex-row items-center justify-between sm:pb-8">
-                <div className="bg-white rounded-r-full py-2 pl-6 pr-10 mb-4 sm:mb-0">
-                  <h2 className="text-2xl md:text-3xl font-bold text-black">
-                  Shape The Future - <span className="text-[#1cbeff]"> SUPPORT, EMPOWER, GIVE!</span>
-                  </h2>
-                </div>
-                <HoverArrowButton
+            <div className="w-full py-4 sm:py-8">
+  <div className="max-w-full sm:max-w-[80%] mx-auto flex items-center justify-between  sm:px-0">
+    
+    {/* Text Block */}
+    <div
+      className="bg-white rounded-r-full py-1 sm:py-2 px-4 sm:px-6 flex-shrink"
+      style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+    >
+      <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
+      Shape The Future -
+        <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">
+        SUPPORT, EMPOWER, GIVE!
+        </span>
+      </h2>
+    </div>
+
+    {/* Button Block */}
+    <div className="flex justify-end flex-shrink-0 ml-2 sm:mr-0 mr-2">
+    <HoverArrowButton
   label="Donate Now"
   onClick={() => navigate("/donate")}
-  className="bg-[#e6022a] hover:bg-[#e6022a] text-white transition-all px-8 py-3 font-semibold text-base rounded-full shadow-md"
+  className="bg-[#e6022a] hover:bg-[#e6022a]  text-white transition-all px-4 py-3  sm:px-8 sm:py-3 font-semibold   text-sm sm:text-base rounded-full shadow-md"
   textClass="text-white"
-  hoverTextClass="text-white"
-/>
-              </div>
+  hoverTextClass="text-white"/>
+    </div>
+
+  </div>
+</div>
+
+               {/* CTA Section */}
+         
             <PremiumPartner/>
           </div>
 

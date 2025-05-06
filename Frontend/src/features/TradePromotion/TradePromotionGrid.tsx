@@ -11,8 +11,8 @@ const TradePromotionGrid = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-[#002b63] py-16 px-2 text-white">
-      <div className=" max-w-full sm:max-w-[80%] mx-auto text-center">
+    <div className="bg-[#002b63] py-16  text-white">
+      <div className=" max-w-full sm:max-w-[80%] mx-auto text-center px-4 sm:px-2">
         <img
           src={img1}
           alt="Wheelz Logo"
@@ -130,24 +130,33 @@ const TradePromotionGrid = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between">
-        <div className="bg-white rounded-r-full py-2 pl-6 pr-12 mb-4 sm:mb-0">
-        <h2 className="text-base md:text-3xl font-bold text-black "> 
-              <span className="text-black">Join Today </span>
-              <span className="text-primary">FOR JUST $10!</span>
-            </h2>
-          </div>
-
-          {/* Button */}
-          <HoverArrowButton
-  label="Sign Me Up"
-  onClick={() => navigate("/signup")}
-  className="bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition"
-  textClass="text-white"
-  hoverTextClass="text-white"
-/>
-        </div>
+     
       </div>
+      <div className="w-full py-4 sm:py-8">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between   sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 pr-24 sm:px-6 flex-shrink "
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4">
+        Join Today 
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> FOR JUST $10!</span>
+        </h2>
+      </div>
+      <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
+          <HoverArrowButton
+            label="Sign Me Up"
+            onClick={() => navigate("/access-form")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+        </div>
+    </div>
+    </div>
+    
     </div>
   );
 };

@@ -10,7 +10,7 @@ import img2 from "@/assets/Virtual Tour/Wheelz-icon-14.webp"
 import img3 from "@/assets/Virtual Tour/Wheelz-icon-15.webp"
 import img4 from "@/assets/Virtual Tour/Wheelz-icon-16.webp"
 import img10 from "@/assets/Virtual Tour/virtualTour.jpg"
-import { ChevronRight } from 'lucide-react';
+
 import AllFooterSection from '@/util/AllFooterSection';
 import VideoBanner from '@/util/VideoBanner';
 import HoverArrowButton from '@/util/HoverButton';
@@ -100,23 +100,34 @@ const VirtualTours: React.FC = () => {
           {/* Additional Section (if needed) */}
        
         </div>
-        <div className="w-full py-8">
-            <div className="max-w-[80%] mx-auto  flex flex-row sm:flex-row items-center justify-between">
-              <div className="bg-white rounded-r-full py-2 pl-6 pr-16 mb-4 sm:mb-0">
-                <h2 className="text-3xl font-bold">
-                  <span className="text-black">Desired Car Missing?</span>
-                  <span className="text-primary sm:ml-1">REQUEST A TOUR!</span>
-                </h2>
-              </div>
-              <button className="group relative px-6 py-3 font-semibold text-base rounded-full bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden transition">
-                <span className="block group-hover:opacity-0 transition-opacity duration-200">Access Form</span>
-                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  Access Form <span className="ml-1"><ChevronRight /></span>
-                </span>
-              </button>
-            </div>
-          </div>
+      
+          <div className="w-full py-4 sm:py-8">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between  sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 px-4 sm:px-6 flex-shrink"
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
+        Desired Car Missing?
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">REQUEST A TOUR!</span>
+        </h2>
       </div>
+      <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
+          <HoverArrowButton
+            label="Acess Form"
+            onClick={() => navigate("/access-form")}
+            className="bg-white transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-primary"
+            hoverTextClass="text-primary"
+          />
+        </div>
+    </div>
+    </div>
+          
+      </div>
+      
       <div className="bg-[#0e3f80] py-12">
         <div className="max-w-[97%] sm:max-w-[80%]  mx-auto text-center">
           <h2 className="text-2xl text-[rgb(28,190,255)] md:text-4xl font-bold sm:mb-2 ">Virtual Tours
@@ -168,20 +179,32 @@ const VirtualTours: React.FC = () => {
           {/* Additional Section (if needed) */}
          
           </div>
-          <div className="max-w-full sm:max-w-[80%] mx-auto mt-6 flex flex-row sm:flex-row items-center justify-between">
-  <div className="bg-white rounded-r-full py-2 pl-2  sm:pl-6 pr-8 mb-4 sm:mb-0">
-    <h2 className="text-base md:text-3xl font-bold text-black ">
-                  <span className="text-black">Immersive, Experts,</span>
-                  <span className="text-primary sm:ml-1">CONVENIENCE</span>
-                </h2>
-              </div>
-              <button className="group relative px-6 py-3 font-semibold text-base rounded-full bg-primary text-white border border-primary shadow hover:scale-105 overflow-hidden transition">
-                <span className="block group-hover:opacity-0 transition-opacity duration-200">View All</span>
-                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  View All <span className="ml-1"><ChevronRight /></span>
-                </span>
-              </button>
-            </div>
+     
+            <div className="w-full py-4 sm:py-8">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between  sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 px-4 sm:px-6 flex-shrink"
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
+        Immersive, Experts,
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> CONVENIENCE</span>
+        </h2>
+      </div>
+      <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
+          <HoverArrowButton
+            label="View All"
+            onClick={() => navigate("/access-form")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+        </div>
+    </div>
+    </div>
+    
         </div>
       
 

@@ -54,7 +54,7 @@ const PremiumPartner = () => {
       ];
 
     return (
-        <div className="bg-[#1cbeff] max-w-full sm:max-w-[90%] mx-auto rounded-lg py-10 mt-6">
+        <div className="bg-[#1cbeff] max-w-[95%] sm:max-w-[90%] mx-auto rounded-lg py-10 mt-6">
             <div className="text-center px-4">
             <h2 className="hidden sm:block text-3xl sm:text-4xl font-bold mb-12 uppercase text-white text-nowrap">
   Let's Drive Success Together

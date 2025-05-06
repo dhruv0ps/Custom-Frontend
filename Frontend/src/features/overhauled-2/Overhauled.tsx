@@ -135,30 +135,37 @@ const Overhauled: React.FC = () => {
       
        
       </div>
-      <div className="w-full block md:hidden py-8">
-        <div className="max-w-full sm:max-w-7xl mx-auto sm:px-4 flex flex-row items-center justify-between">
-          <div
-            className="bg-white rounded-r-full py-2 pl-6 pr-6 sm:pl-6 sm:pr-18 mb-4 sm:mb-0"
-            style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
-          >
-            <h2 className="text-xl  font-bold ">
-            <span className=""> Own The Next</span> 
-              <br className="block sm:hidden" />
-              <span className="block sm:inline text-primary text-2xl sm:ml-2 uppercase">Masterpiece</span>
-            </h2>
-          </div>
       
-          <div className="flex items-center justify-center mb-3 mr-4 sm ml-2">
-            <HoverArrowButton
-              label="Access Form"
-              onClick={() => navigate("/")}
-              className="px-6 py-3  font-semibold text-base rounded-full transition bg-primary text-white border border-primary shadow-lg hover:scale-105 overflow-hidden"
-              textClass="text-white"
-              hoverTextClass="text-white"
-            />
-          </div>
-        </div>
-      </div>
+      <div className="w-full py-4 sm:py-8 block md:hidden">
+  <div className="w-full flex items-center justify-between sm:px-4">
+    
+    {/* Text Block */}
+    <div
+      className="bg-white rounded-r-full py-1 px-4 pr-16 flex-shrink"
+      style={{ boxShadow: "inset -6px 0 10px rgba(0, 0, 0, 0.1)" }}
+    >
+      <h2 className="text-sm font-bold whitespace-nowrap">
+      Own The Next
+        <span className="block text-primary text-base uppercase">
+        Masterpiece
+        </span>
+      </h2>
+    </div>
+
+    {/* Button */}
+    <div className="flex-shrink-0 ml-2 mr-4">
+      <HoverArrowButton
+        label="Access Form"
+        onClick={() => navigate("/access-form")}
+        className="bg-primary transition-all py-2 px-4 font-semibold text-sm rounded-full shadow-md"
+        textClass="text-white"
+        hoverTextClass="text-white"
+      />
+    </div>
+
+  </div>
+</div>
+
       <PremiumPartner/>
     </div>
    

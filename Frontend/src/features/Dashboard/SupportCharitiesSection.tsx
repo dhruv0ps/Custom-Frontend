@@ -14,7 +14,7 @@ const SupportCharitiesSection: React.FC = () => {
       onMouseLeave={() => setHovered(false)}
       className={`
         relative mt-[25px] sm:mt-1
-        py-2 sm:py-3 
+        py-2.5 sm:py-3 
         px-4 sm:px-6 
         font-semibold 
         text-sm sm:text-lg
