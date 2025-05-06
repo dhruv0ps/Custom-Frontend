@@ -10,7 +10,7 @@ import { ChevronRight } from 'lucide-react';
 const Membership: React.FC = () => {
 
   const navigate = useNavigate();
-  return (
+  return (  
     <>
      <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[65vh] lg:h-[89vh]  overflow-hidden bg-white">
         <video

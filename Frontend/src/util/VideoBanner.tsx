@@ -56,7 +56,12 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
 
         {/* Buttons */}
         <div className={`${backgroundColorClass} py-4 px-2 sm:py-4 w-full`}>
-        <div className="flex justify-center items-center gap-2 sm:gap-6 flex-row  flex-nowrap sm:flex-nowrap px-2 overflow-x-auto">
+        <div
+  className={`flex justify-center items-center sm:gap-6 flex-row flex-nowrap sm:flex-nowrap px-2 overflow-x-auto ${
+    mode === "live" ? "gap-4 space-x-8 sm:space-x-32" : "gap-2"
+  }`}
+>
+
 
             {/* Primary Button */}
             <button
