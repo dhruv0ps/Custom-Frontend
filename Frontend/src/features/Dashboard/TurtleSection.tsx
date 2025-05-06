@@ -4,7 +4,7 @@ import turtleVideo from "@/assets/Homepage/iStock-464391536.mp4";
 import { ChevronRight } from "lucide-react";
 const TurtleSection: React.FC = () => {
   return (
-    <div className="relative bg-black      ">
+    <div className="relative bg-black w-screen      ">
       <div className=" overflow-visible mb-12 min-h-[125px] py-8  mt-36 md:py-12 lg:mt-32 max-w-full sm:max-w-[80%] mx-auto ">
       
         <div className="absolute -top-32 lg:-top-24 left-1/2 md:left-12 lg:left-24 transform -translate-x-1/2 md:translate-x-0 z-20 lg:mt-0 ">
