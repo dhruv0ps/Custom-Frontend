@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 
 interface VideoBannerProps {
     videoSrc: string;
-    heading: string;
+    heading: string | React.ReactNode;
     primaryButtonLabel: string;
     primaryButtonLink: string;
     secondaryButtonLabel: string;

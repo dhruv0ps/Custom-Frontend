@@ -17,7 +17,13 @@ const Finance:React.FC = () => {
     <>
        <VideoBanner
   videoSrc={Videp1}
-  heading="Every client's finance win… sparks an in-house celebration"
+  heading={
+    <>
+      Every client's finance win… 
+      <br className="block sm:hidden" />
+      <span className="inline sm:inline-block">sparks an in-house celebration</span>
+    </>
+  }
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Access Form"

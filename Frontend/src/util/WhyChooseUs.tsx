@@ -3,12 +3,12 @@ import HoverArrowButton from "./HoverButton";
 import { useNavigate } from "react-router-dom";
 import checkbox from "@/assets/SellCar/Check-Box.png"
 interface Feature {
-  title: string;
+  title: string ;
   desc: string;
 }
 
 interface WhyChooseUsProps {
-  title: string;
+  title: string | React.ReactNode;
   features: Feature[];
   image: string;
 }

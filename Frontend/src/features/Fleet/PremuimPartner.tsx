@@ -102,7 +102,7 @@ const PremiumPartner = () => {
     
     {/* Text Block */}
     <div
-      className="bg-white rounded-r-full py-1 sm:py-2 px-4 sm:px-6 flex-shrink"
+      className="bg-white rounded-r-full py-1 pr-12 sm:py-2 px-4 sm:px-6 flex-shrink"
       style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
     >
       <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">

@@ -35,7 +35,13 @@ const Prizedrawwinners:React.FC = () => {
     <>
    <VideoBanner
   videoSrc={vide}
-  heading="Meet our latest trade promotion prize draw champions"
+  heading={
+    <>
+      Meet our latest trade promotion
+      <br className="block sm:hidden" />
+      <span className="inline sm:inline-block"> prize draw champions</span>
+    </>
+  }
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Sign Me Up"
@@ -90,10 +96,16 @@ const Prizedrawwinners:React.FC = () => {
     </div> 
      
     <WhyChooseUs
-      title="Unlock The Magic Of Our Trade Promotion!"
-      features={featureList}
-      image={happyUsersImg}
-    />
+  title={
+    <>
+      Unlock The Magic Of Our
+      <br className="block sm:hidden" />
+      <span className="inline sm:inline-block"> Trade Promotion Draws!</span>
+    </>
+  }
+  features={featureList}
+  image={happyUsersImg}
+/>
     <AllFooterSection content={[
         `Important: Our decision on trade promotion draws is final, and no disputes will be entertained. We reserve the right to modify program terms and conditions, including rewards, redemption criteria, and associated policies, to enhance the flexibility and adaptability of our trade promotion. Please note that we reserve the right to change the winner without dispute due to technicalities, or any other legitimate reasons. Rest assured, any changes will be communicated to our valued members in advance, ensuring transparency and providing an opportunity for informed participation in our evolving program.`
     ]}/>

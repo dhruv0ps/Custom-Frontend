@@ -153,7 +153,7 @@ const Fundraisers: React.FC = () => {
               style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
             >
               <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
-                Shape The Future -
+                Shape The Future 
                 <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">
                   SUPPORT, EMPOWER, GIVE!
                 </span>
@@ -183,9 +183,9 @@ const Fundraisers: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Text Content */}
             <div className="order-2 md:order-2">
-              <h2 className="text-3xl sm:text-3xl font-bold text-black sm:text-primary mb-6 text-center sm:text-left">
+              <h2 className="text-3xl sm:text-3xl font-bold text-primary mb-6 text-center sm:text-left">
                 THANKS FOR <br className="block sm:hidden" />
-                <span className="inline sm:inline-block">CHOOSING US</span>
+                <span className="inline sm:inline-block ">CHOOSING US</span>
               </h2>
               <p className="text-[#666] leading-relaxed">
                 You&apos;re entrusting us with the power to make a difference on your behalf. The decision to choose our

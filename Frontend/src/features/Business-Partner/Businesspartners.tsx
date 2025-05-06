@@ -64,7 +64,13 @@ const Businesspartners:React.FC = () => {
     <>
     <VideoBanner
   videoSrc={vide}
-  heading="Drive your business forward with the force of our strategic alliance"
+  heading={
+    <>
+      Drive your business forward
+      <br className="block sm:hidden" />
+      <span className="inline sm:inline-block"> with the force of our strategic alliance</span>
+    </>
+  }
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Access Form"
