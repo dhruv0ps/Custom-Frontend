@@ -60,6 +60,7 @@ const Membership: React.FC = () => {
             </div>
           </div>
         </div>
+        
       </div>
 
       <MembershipBenefits />

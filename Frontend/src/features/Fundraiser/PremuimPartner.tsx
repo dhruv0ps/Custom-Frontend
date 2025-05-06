@@ -87,17 +87,20 @@ const PremiumPartner = () => {
           } else if (idx === 8) {
             return "sm:w-full sm:h-full"
           }
-          return "sm:w-full h-full"
+          else if(idx===3){
+            return "sm:w-full sm:h-full "
+          }
+          return "sm:w-full h-full "
         }
         
         return (
             <div className="rounded-xl overflow-hidden shadow-lg w-full mb-4 bg-white">
-                <div className="h-64  flex items-center justify-center ">
+                <div className="h-52 sm:h-64  flex items-center justify-center ">
                     <img
                         ref={imgRef}
                         src={src}
                         alt={alt}
-                        className={` object-cover ${getSpecialStyles(index)}`}
+                        className={`object-contain sm:object-cover ${getSpecialStyles(index)}`}
                     />
                 </div>
             </div>
@@ -105,7 +108,7 @@ const PremiumPartner = () => {
     };
 
     return (
-        <div className="bg-[#ffcdf4] max-w-full sm:max-w-[90%] mx-auto rounded-lg py-10 mt-6">
+        <div className="bg-[#ffcdf4] max-w-[95%] sm:max-w-[90%] mx-auto rounded-lg py-10 mt-6">
             <div className="text-center px-4">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-12 uppercase text-[#e6022a] text-nowrap">Charities We Support</h2>
 

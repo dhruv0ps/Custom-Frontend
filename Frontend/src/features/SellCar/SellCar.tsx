@@ -28,7 +28,7 @@ export default function SellCar() {
             secondaryButtonLabel="Access Form"
             secondaryButtonLink="/"/>
       <div className="bg-[#b7eaff] py-12  sm:px-0">
-  <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center px-10">
+  <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center px-4 sm:px-0 ">
     <h2 className="text-3xl md:text-3xl font-bold mb-12">We Work For You</h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
@@ -73,43 +73,23 @@ export default function SellCar() {
 
 
 
-    {/* CTA Section (unchanged) */}
-   
-    {/* <div className="max-w-full sm:max-w-[80%] mx-auto mt-6 flex flex-row sm:flex-row items-center justify-between">
-  <div className="bg-white rounded-r-full py-2 pl-2 sm:ml-6 sm:pl-6 pr-8 mb-4 sm:mb-0">
-    <h2 className="text-base md:text-3xl font-bold text-black ">
-      <span className="block sm:inline whitespace-nowrap">
-      Simplify Sales,
-         
-      </span>
-      <span className="block sm:inline text-2xl py-2 sm:text-[#1cbeff] sm:text-3xl text-[#1cbeff] sm:ml-2">
-      MAXIMISE GAINS
-      </span>
-    </h2>
-  </div><HoverArrowButton
-          label="Sell Now"
-          onClick={() => navigate("/")}
-          className="px-6 py-3 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
-          textClass="text-primary"
-          hoverTextClass="text-primary"
-        />
-   
-            </div> */}
+    
   </div>
-  <div className="w-full py-8">
-  <div className="max-w-full sm:max-w-7xl mx-auto sm:px-4 flex flex-row items-center justify-between">
-    <div
-      className="bg-white rounded-r-full py-2 pl-6 pr-6 sm:pl-6 sm:pr-18 mb-4 sm:mb-0"
-      style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
-    >
-      <h2 className="text-2xl md:text-3xl font-bold ml-2">
-      <span className=""> Simplify Sales,</span> 
-        <br className="block sm:hidden" />
-        <span className="block sm:inline text-primary text-xl    sm:text-3xl sm:ml-2">MAXIMISE GAINS</span>
-      </h2>
-    </div>
-
-    <div className="flex items-center justify-center mb-3 mr-4 sm:mb-3 sm:mr-4">
+ 
+<div className="w-full py-4 sm:py-8">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between   sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 pr-12 sm:px-6 flex-shrink "
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4 sm:ml-0">
+        Simplify Sales,
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">  MAXIMISE GAINS</span>
+        </h2>
+      </div>
+      <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
       <HoverArrowButton
         label="Sell Now"
         onClick={() => navigate("/")}
@@ -117,22 +97,22 @@ export default function SellCar() {
         textClass="text-white"
         hoverTextClass="text-white"
       />
+        </div>
     </div>
-  </div>
-</div>
+    </div>
 
 </div>
 
 
       <div className="bg-[#1cbeff] py-16 sm:px-4">
-        <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center text-white">
-          <h2 className="text-4xl md:text-3xl font-bold mb-12 uppercase">3 Simple Steps</h2>
+        <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center text-white">
+        <h1 className="text-3xl sm:text-4xl font-bold text-black mb-10">3 Simple Steps</h1>
 
           {/* Mobile: Steps as vertical layout */}
-          <div className="block md:hidden mb-12 mx-4">
+          <div className="block md:hidden mb-12 ">
             {/* Step 1 */}
-            <div className="flex items-start text-left gap-4 px-2 mb-8">
-              <div className="text-[100px] font-extrabold leading-none text-white pl-2">1</div>
+            <div className="flex items-start text-left gap-4  mb-8">
+              <div className="text-[100px] font-extrabold leading-none text-white ">1</div>
               <div className="text-right">
                 <h4 className="text-base font-bold mb-2 text-black uppercase pl-2">Tell us about your car</h4>
                 <p className="text-sm leading-relaxed text-white pl-2">
@@ -154,7 +134,7 @@ export default function SellCar() {
             </div>
 
             {/* Step 2 */}
-            <div className="flex items-start text-left gap-4 px-2 mb-8">
+            <div className="flex items-start text-left gap-4  mb-8">
               <div className="text-[100px] font-extrabold leading-none text-white">2</div>
               <div className="text-right">
                 <h4 className="text-base font-bold mb-2 text-black uppercase">Get paired with your perfect match</h4>
@@ -177,7 +157,7 @@ export default function SellCar() {
             </div>
 
             {/* Step 3 */}
-            <div className="flex items-start text-left gap-4 px-2 mb-8">
+            <div className="flex items-start text-left gap-4  mb-8">
               <div className="text-[100px] font-extrabold leading-none text-white">3</div>
               <div className="text-right" >
                 <h4 className="text-base font-bold mb-2 text-black uppercase">You receive fast payment</h4>
@@ -272,20 +252,19 @@ export default function SellCar() {
         </div>
 
         <div className="w-full py-4 sm:py-8">
-  <div className="max-w-full sm:max-w-[80%] mx-auto flex flex-row items-center justify-between  sm:px-0">
-    
-    {/* Text Block */}
-    <div className="bg-white rounded-r-full py-1 sm:py-2 pl-6 pr-4 sm:pl-6 sm:pr-18 flex-shrink">
-      <h2 className="text-base sm:text-base md:text-3xl font-bold whitespace-nowrap">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between   sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 pr-6 sm:pr-12 sm:px-6 flex-shrink "
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4 sm:ml-0">
         Free Service, Fast Match,
-        <span className="block sm:inline text-primary text-3xl sm:text-3xl sm:ml-2">
-          INSTANT PAY
-        </span>
-      </h2>
-    </div>
-
-    {/* Button */}
-    <div className="flex items-center justify-center mr-4  ">
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">  INSTANT PAY</span>
+        </h2>
+      </div>
+      <div className="flex justify-end flex-shrink-0  sm:ml-2 mr-3 sm:mr-0">
       <HoverArrowButton
         label="Sell Now"
         onClick={() => navigate("/")}
@@ -293,10 +272,10 @@ export default function SellCar() {
         textClass="text-primary"
         hoverTextClass="text-primary"
       />
+        </div>
     </div>
-    
-  </div>
-</div>
+    </div>
+
 
       </div>
       

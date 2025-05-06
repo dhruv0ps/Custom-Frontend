@@ -34,7 +34,7 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
     <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[65vh] lg:h-[89vh] overflow-hidden bg-white">
       {/* Video background */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0 filter brightness-125"
         src={videoSrc}
         autoPlay
         loop

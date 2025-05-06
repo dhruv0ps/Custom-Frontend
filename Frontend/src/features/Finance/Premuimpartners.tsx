@@ -61,13 +61,13 @@ const PremiumPartner = () => {
   ];
 
   return (
-    <div className="bg-[#1cbeff] max-w-full sm:max-w-[80%] mx-auto  rounded-lg py-10  mt-6">
+    <div className="bg-[#1cbeff] max-w-[95%] sm:max-w-[80%] mx-auto  rounded-lg py-10  mt-6">
       <div className="  text-center text-white px-4 ">
         
         <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase text-black text-nowrap">premium partners</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
         {partners.slice(0, 3).map((partner, index) => (
-            <div key={index} className="flex flex-col items-start gap-4 text-left px-2">
+            <div key={index} className="flex flex-col items-start gap-4 text-left sm:px-2">
               {/* Number + Content */}
               <div className="flex items-start gap-4">
                 <div className="text-[100px] md:text-[120px] font-extrabold leading-none text-white min-w-[100px] md:min-w-[100px] text-left">
@@ -84,13 +84,13 @@ const PremiumPartner = () => {
               </div>
 
    
-              <div className="rounded-xl overflow-hidden shadow-lg bg-white p-3 w-full mt-2">
-                <img
-                  src={partner.img}
-                  alt={`Partner ${index + 1}`}
-                  className="w-full h-auto object-contain max-h-[160px] mx-auto"
-                />
-              </div>
+              <div className="rounded-xl overflow-hidden shadow-lg bg-white p-3 w-full h-64  mt-2 flex items-center justify-center">
+  <img
+    src={partner.img}
+    alt={`Partner ${index + 1}`}
+    className="max-h-[160px] w-auto object-contain"
+  />
+</div>
               
               
             </div>

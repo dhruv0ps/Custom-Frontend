@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+
+import { useNavigate } from 'react-router-dom'
+import HoverArrowButton from '@/util/HoverButton';
 const MembershipBenefits: React.FC = () => {
     const navigate = useNavigate()
     const benefits = [
@@ -39,9 +40,12 @@ const MembershipBenefits: React.FC = () => {
 
     return (
         <div className="bg-[#8ddeff] py-8 md:px-4 md:py-12">
-            
-            <h2 className="text-xl md:text-4xl font-bold text-center text-black mb-6 md:mb-8">Your Membership, Your Savings</h2>
-            
+            <h1 className="text-3xl sm:text-4xl text-center font-bold text-black mb-10">
+  Your Membership,
+  <br className="block sm:hidden" />
+  <span className="inline sm:inline-block"> Your Savings</span>
+</h1>
+
             {/* Mobile view: display as single column list */}
             <div className="md:hidden space-y-4 max-w-[95%] mx-auto">
                 {benefits.map((item, index) => (
@@ -84,34 +88,31 @@ const MembershipBenefits: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <div className="max-w-full sm:max-w-[80%] mx-auto mt-6 flex flex-row sm:flex-row items-center justify-between">
-  <div className="bg-white rounded-r-full py-2 pl-2 sm:ml-6 sm:pl-6 pr-8 mb-4 sm:mb-0"
-   style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}>
-    <h2 className="text-base md:text-3xl font-bold text-black ">
-      <span className="block sm:inline whitespace-nowrap">
+         
+            <div className="w-full py-4 sm:py-8">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between   sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 pr-10 sm:pr-24 sm:px-6 flex-shrink "
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4">
         Sell Free, Buy Smart, Win
-      </span>
-      <span className="block sm:inline text-[42px] py-2 sm:text-[#1cbeff] sm:text-3xl text-[#1cbeff] sm:ml-2">
-        SAVE BIG!
-      </span>
-    </h2>
-  </div>
-                <button
-  onClick={() => navigate("/signup")}
-  className="group relative bg-[#1cbeff] mb-4 sm:mb-0 hover:bg-[#00b2e3] transition-all px-4 py-3 sm:px-8 sm:py-3 mr-2 sm:mr-6  text-white font-semibold text-sm sm:text-base md:text-base rounded-full shadow-md overflow-hidden md:min-w-[150px] text-center"
->
-  {/* Default Text */}
-  <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">
-    Sign Me Up
-  </span>
-
-  {/* Hover Text with Arrow */}
-  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
-    Sign Me Up
-    <ChevronRight className="ml-2 h-5 w-5" />
-  </span>
-</button>
-            </div>
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">SAVE BIG!</span>
+        </h2>
+      </div>
+      <div className="flex justify-end flex-shrink-0 sm:ml-2 mr-4 sm:mr-0">
+          <HoverArrowButton
+            label="Sign Me Up"
+            onClick={() => navigate("/access-form")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+        </div>
+    </div>
+    </div>
         </div>
     );
 };

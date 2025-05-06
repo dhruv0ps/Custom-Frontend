@@ -16,9 +16,9 @@ export default function NewsSection({
 
   return (
     <div className={`bg-gray-200 ${className || ""}`}>
-    <div className="max-w-[92%] sm:max-w-4xl mx-auto pb-8 sm:py-8">
+    <div className="max-w-[92%] sm:max-w-4xl mx-auto pb-8">
       <div className="flex items-end justify-end">
-        <h2 className="text-[14px] font-bold uppercase text-primary text-right pb-[10px] leading-[1em] ">
+        <h2 className="text-[14px] font-bold uppercase text-primary text-right pb-[10px] leading-[1em] mt-4">
         car buying scams cost aussies millions - aca
         </h2>
       </div>

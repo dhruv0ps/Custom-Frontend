@@ -24,9 +24,9 @@ const Finance:React.FC = () => {
   secondaryButtonLink="/view-all"
 />
 
-      <div className="bg-[#b1e3ff] py-12 px-4">
-  <div className="max-w-[80%] mx-auto text-center">
-    <h1 className="text-4xl font-bold text-black mb-10">Car Affordability Simplified</h1>
+      <div className="bg-[#b1e3ff] py-12 sm:px-4">
+  <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center px-4 sm:px-0">
+    <h1 className=" text-3xl sm:text-4xl font-bold text-black mb-10">Car Affordability Simplified</h1>
 
     {/* Features Grid */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">

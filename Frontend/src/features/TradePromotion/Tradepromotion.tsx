@@ -23,7 +23,7 @@ const Tradepromotion: React.FC = () => {
   secondaryButtonLink="/view-all"
 />
       <div className="bg-[#d9d9d9] sm:px-4 py-12">
-<div className='max-w-[95%] mx-auto sm:max-w-[80%]'>       <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-black">
+<div className='max-w-[95%] mx-auto sm:max-w-[80%]'>       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-black">
           Trade Promotion Draws At No Cost
         </h2>
 

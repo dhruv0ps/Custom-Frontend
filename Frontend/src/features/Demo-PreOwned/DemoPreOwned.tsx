@@ -161,7 +161,7 @@ export default function DemoPreCar() {
 
       {/* Top Deals Section */}
       <div className="bg-[#0e2a5f] w-full">
-      <div className="py-12 px-4 w-full md:max-w-[80%] mx-auto">
+      <div className="py-12 sm:px-4 max-w-[95%] w-full md:max-w-[80%] mx-auto">
 
           {/* Header */}
           <div className="flex flex-col items-center justify-center mb-6">
@@ -172,7 +172,7 @@ export default function DemoPreCar() {
           {/* Heading with Stars */}
           <div className="flex items-center justify-center gap-4 mb-10">
      
-            <h2 className="text-[#18c3ff] text-2xl sm:text-3xl font-semibold text-center">
+            <h2 className="text-[#18c3ff] text-3xl sm:text-4xl font-bold text-center">
               This Month's Top Deals 
             </h2>
             
@@ -216,7 +216,12 @@ export default function DemoPreCar() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center rounded-lg md:py-12 mt-4">
 
   <div className="text-white space-y-4 order-1 md:order-2">
-    <h2 className="text-base md:text-[1.4em] font-semibold md:font-bold whitespace-nowrap">Certified Confidence, Dealer-Backed Assurance</h2>
+  <h2 className="text-2xl md:text-[1.4em] font-semibold md:font-bold ">
+  Certified Confidence,
+  <br className="block md:hidden" />
+  <span className="inline md:inline-block"> Dealer-Backed Assurance</span>
+</h2>
+
     <p>Every Demo and Pre-Owned vehicle on our platform is offered exclusively by licensed dealerships, so you can drive away with complete peace of mind.</p>
     <p>Each car has been carefully inspected, professionally tested, and meets the quality standards you’d expect from trusted, regulated sellers.</p>
     <p>Whether you’re after near new performance or dependable value, you’re not just getting a great deal, you’re making a smart, safe, and secure choice.</p>

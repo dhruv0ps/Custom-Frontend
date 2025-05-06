@@ -144,7 +144,7 @@ const VipSavingsPage: React.FC = () => {
       </div>
   
       {/* Button */}
-      <div className=" sm:w-auto mr-2">
+      <div className=" sm:w-auto mr-4 sm:mr-2">
       <HoverArrowButton
   label="Sign Me Up"
   onClick={() => navigate("/access-form")}

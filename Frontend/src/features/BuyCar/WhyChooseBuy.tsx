@@ -30,11 +30,11 @@ export default function WhyChooseBuy() {
 
   return (
     <section className="bg-white py-16 ">
-      <div className="max-w-[97%] sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-[95%] sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Features */}
         <div>
           <h2 className="text-2xl md:text-2xl font-bold mb-8 text-center md:text-left">
-          Benefits Of Buying A Car With Us
+          Benefits Of Buying  With Us
           </h2>
           <ul className="space-y-6">
             {features.map((feature, idx) => (

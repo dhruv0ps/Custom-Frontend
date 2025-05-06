@@ -73,8 +73,10 @@ export const VirtualToursCard1: React.FC = () => {
 
                 {/* Bottom Title */}
                 <div className=" text-center">
-                    <h3 className="text-xl sm:text-3xl font-bold text-white">
-                        This Months Top Virtual Tours
+                    <h3 className="text-3xl sm:text-3xl font-bold text-white">
+                    This Months Top
+                    <br className="block sm:hidden" />
+                    <span className="inline sm:inline-block"> Virtual Tours</span>
                     </h3>
                 </div>
 
@@ -120,7 +122,7 @@ export const VirtualToursCard1: React.FC = () => {
           
         
             </div>
-            <div className="w-full py-4 sm:py-8 sm:mt-4">
+            <div className="w-full py-4 sm:py-8 sm:mt-4 mt-12">
       <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between  sm:px-0">
         
         {/* Text Block */}
@@ -133,7 +135,7 @@ export const VirtualToursCard1: React.FC = () => {
          <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> ALL FROM HOME</span>
         </h2>
       </div>
-      <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
+      <div className="flex justify-end flex-shrink-0 ml-1 mr-3 sm:mr-0">
           <HoverArrowButton
             label="View All"
             onClick={() => navigate("/access-form")}
@@ -144,7 +146,7 @@ export const VirtualToursCard1: React.FC = () => {
         </div>
     </div>
     </div>
-            <div className=" justify-end text-end mt-12 max-w-[90%] sm:max-w-[80%] mx-auto ">
+            <div className=" justify-end text-end mt-12 max-w-[95%] sm:max-w-[80%] mx-auto ">
                 <h3 className="text-xl sm:text-3xl font-bold text-[#21c1ff] mb-4">
                     Expert Guided Car Exploration
                 </h3>

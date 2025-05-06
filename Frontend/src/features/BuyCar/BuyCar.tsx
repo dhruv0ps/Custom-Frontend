@@ -27,8 +27,8 @@ export default function BuyCar() {
             secondaryButtonLabel="Access Form"
             secondaryButtonLink="/"/>
             <div className="bg-[#b7eaff] py-12">
-                <div className=" max-w-full sm:max-w-[80%]  mx-auto text-center">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-12">Putting You First</h2>
+                <div className=" max-w-[95%] sm:max-w-[80%]  mx-auto text-center px-4 sm:px-0">
+                <h1 className="text-3xl sm:text-4xl font-bold text-black mb-10">Putting You First</h1>
 
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
@@ -68,38 +68,45 @@ export default function BuyCar() {
   ))}
 </div>
 
-                    <div className="w-full py-8">
-  <div className="sm:max-w-7xl mx-auto sm:px-4 flex flex-row sm:flex-row items-center justify-between">
-    
-    <div className="bg-white rounded-r-full pr-12 sm:py-2 sm:pl-6 sm:pr-18 mb-4 sm:mb-0 p-3">
-      <h2 className="text-lg md:text-3xl font-bold text-center sm:text-left">
-        <span className="inline sm:inline">Effortless, Cost-Free</span>
-        <br className="block sm:hidden" />
-        <span className="text-primary"> TRUSTED NETWORK!</span>
-      </h2>
-    </div>
-
-    <HoverArrowButton
-      label="Buy Now"
-      onClick={() => navigate("/buy-car/form")}
-      className="px-3 py-3 font-semibold text-base rounded-full transition bg-primary text-white sm:bg-white sm:text-primary border border-primary shadow hover:scale-105 overflow-hidden mr-3"
-      textClass=" text-white sm:text-primary"
-      hoverTextClass="text-primary"
-    />
-  </div>
-</div>
+             
 
                 </div>
+                <div className="w-full py-4 sm:py-8">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between   sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 pr-12 sm:px-6 flex-shrink "
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4 sm:ml-0">
+        Effortless, Cost-Free
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">
+         TRUSTED NETWORK!
+         </span>
+        </h2>
+      </div>
+      <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
+      <HoverArrowButton
+        label="Buy Now"
+        onClick={() => navigate("/")}
+        className="px-6 py-3  font-semibold text-base rounded-full transition bg-primary text-white border border-primary shadow-lg hover:scale-105 overflow-hidden"
+        textClass="text-white"
+        hoverTextClass="text-white"
+      />
+        </div>
+    </div>
+    </div>
             </div>
 
            
 
             <div className="bg-[#1cbeff] py-16 sm:px-4">
-        <div className="max-w-[97%] sm:max-w-[80%] mx-auto text-center text-white">
+        <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center text-white">
           <h2 className="text-4xl md:text-3xl font-bold mb-12 uppercase">3 Simple Steps</h2>
 
           {/* Mobile: Steps as vertical layout */}
-          <div className="block md:hidden mb-12 mx-4">
+          <div className="block md:hidden mb-12 ">
             {/* Step 1 */}
             <div className="flex items-start text-left gap-4 px-2 mb-8">
               <div className="text-[100px] font-extrabold leading-none text-white pl-2">1</div>
@@ -237,26 +244,31 @@ export default function BuyCar() {
             </div>
           </div>
         </div>
-        <div className="w-full py-8">
-  <div className="sm:max-w-[80%] mx-auto  flex flex-row sm:flex-row items-center justify-between">
-    
-    <div className="bg-white rounded-r-full pr-12 sm:py-2 sm:pl-6 sm:pr-18 mb-4 sm:mb-0 p-3">
-      <h2 className="text-lg md:text-3xl font-bold text-center sm:text-left">
-        <span className="inline sm:inline">Choose Your Car,</span>
-        <br className="block sm:hidden" />
-        <span className="text-primary"> WE SECURE THE DEAL</span>
-      </h2>
-    </div>
-
-    <HoverArrowButton
+      
+<div className="w-full py-4 sm:py-8">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between   sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 pr-12 sm:px-6 flex-shrink "
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4 sm:ml-0">
+        Choose Your Car,
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">  WE SECURE THE DEAL</span>
+        </h2>
+      </div>
+      <div className="flex justify-end flex-shrink-0 ml-2  sm:mr-0">
+      <HoverArrowButton
       label="Buy Now"
       onClick={() => navigate("/buy-car/form")}
       className="px-3 py-3  font-semibold text-base rounded-full transition bg-primary text-white sm:bg-white sm:text-primary border border-primary shadow hover:scale-105 overflow-hidden mr-3 sm:mr-0"
       textClass=" text-white sm:text-primary"
       hoverTextClass="text-primary"
     />
-  </div>
-</div>
+        </div>
+    </div>
+    </div>
       </div>
       
             <NewsSection

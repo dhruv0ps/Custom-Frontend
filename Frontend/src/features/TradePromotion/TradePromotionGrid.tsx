@@ -12,16 +12,18 @@ const TradePromotionGrid = () => {
 
   return (
     <div className="bg-[#002b63] py-16  text-white">
-      <div className=" max-w-full sm:max-w-[80%] mx-auto text-center px-4 sm:px-2">
+      <div className=" max-w-[95%] sm:max-w-[80%] mx-auto text-center  sm:px-2">
         <img
           src={img1}
           alt="Wheelz Logo"
           className="mx-auto mb-4"
         />
         <h2 className="text-xl sm:text-2xl font-bold mb-2 uppercase">Periodic</h2>
-        <h1 className="text-2xl sm:text-3xl font-bold uppercase mb-10">
-          Trade Promotion Draws
-        </h1>
+        <h1 className="text-3xl sm:text-3xl font-bold uppercase mb-10 text-center">
+  Trade Promotion
+  <br className="block sm:hidden" />
+  <span className="inline sm:inline-block"> Prize Draws</span>
+</h1>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">

@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
   textClass="text-black font-semibold"
   hoverTextClass="text-black font-semibold"/>
                    
-                    <HoverArrowButton   label="Acess Form" onClick={() => navigate("/")}  className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
+                    <HoverArrowButton   label="Book Service" onClick={() => navigate("/")}  className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
   textClass="text-[#1cbeff] font-semibold"
   hoverTextClass="text-[#1cbeff] font-semibold"/>
                   </div>

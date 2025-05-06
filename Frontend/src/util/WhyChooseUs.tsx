@@ -16,8 +16,8 @@ interface WhyChooseUsProps {
 const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ title, features, image }) => {
   const navigate = useNavigate()
   return (
-    <section className="bg-white py-16 px-4">
-      <div className="max-w-full sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <section className="bg-white py-16 sm:px-4">
+      <div className="max-w-[95%] sm:max-w-[80%] mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Features */}
         <div>
           <h2 className="text-xl md:text-2xl font-bold mb-8 text-center md:text-left">

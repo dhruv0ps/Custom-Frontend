@@ -59,7 +59,7 @@ const MateRateDiscount: React.FC = () => {
   heading="Mates rates discounts await members"
   primaryButtonLabel="Home"
   primaryButtonLink="/"
-  secondaryButtonLabel="Access Form"
+  secondaryButtonLabel="Book Service"
   secondaryButtonLink="/view-all"
 />
 
@@ -153,28 +153,36 @@ const MateRateDiscount: React.FC = () => {
             
         </div>
         
-      <div className="max-w-[97%] sm:max-w-[80%] mx-auto   flex flex-row   sm:flex-row items-center justify-between mb-4 sm:mb-16 ">
-      <div className="bg-primary rounded-r-full rounded-l-none py-2 pl-6 pr-6 sm:pr-18 sm:ml-8 w-full sm:w-auto">
-
-          <h2 className="text-xl md:text-3xl font-bold text-center sm:text-left">
-            <div className='flex flex-col  sm:flex-row '>
-              <span className="text-white">Service Not Listed?</span>
-            </div>
-          </h2>
-        </div>
-        <HoverArrowButton
-  label="Let us Know"
-  onClick={() => navigate("/signup")}
-  className="bg-primary text-white font-semibold px-6 py-3 mr-8 rounded-full shadow-lg hover:shadow-xl transition w-full sm:w-auto"
-  textClass="text-white"
-  hoverTextClass="text-white"
-/>
+      
+      <div className="w-full py-4 sm:py-8">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between   sm:px-0">
+        
+        {/* Text Block */}
+        <div
+          className="bg-white rounded-r-full py-1 sm:py-2 pr-10 sm:pr-24 sm:px-6 flex-shrink "
+          style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
+        >
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4">
+        Service Not Listed?
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">Let us know!</span>
+        </h2>
       </div>
+      <div className="flex justify-end flex-shrink-0 sm:ml-2 mr-4 sm:mr-0">
+          <HoverArrowButton
+            label="Submit"
+            onClick={() => navigate("/access-form")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+        </div>
+    </div>
+    </div>
   
       </div>
-      <div className="block sm:hidden px-4 pb-6 bg-[#0E3F7B] ">
-       
-        <h2 className="text-white text-center text-3xl font-extrabold uppercase mb-3 mt-4 py-6">Unlock Your Saving</h2>
+      <div className="block sm:hidden  pb-10 bg-[#0E3F7B] ">
+       <div className='max-w-[95%] mx-auto'>
+        <h2 className="text-white text-center text-3xl font-extrabold uppercase mb-3 mt-4 py-6 pt-8">Unlock Your Saving</h2>
   <div className="bg-[#ff3d00] text-white p-4 rounded-xl shadow">
     <h3 className="font-bold text-lg uppercase text-end mb-2">MATES RATES</h3>
     <p className="text-sm mb-4 text-end">
@@ -187,7 +195,7 @@ const MateRateDiscount: React.FC = () => {
       className="w-full object-contain rounded"
     />
   </div>
-
+  </div>
 </div>
       <PremuimPartner/>
       <WhyChooseUs/>

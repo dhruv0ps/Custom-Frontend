@@ -31,16 +31,16 @@ const VirtualTours: React.FC = () => {
       <VirtualToursCard1 />
 
       {/* How It Works Section - Restructured to match the image layout */}
-      <div className="bg-[#1cbeff] py-16  text-white">
-        <div className=" max-w-[97%] sm:max-w-[80%] mx-auto text-center">
+      <div className="bg-[#1cbeff] py-8 sm:py-16  text-white">
+        <div className=" max-w-[95%] sm:max-w-[80%] mx-auto text-center">
           <h2 className="text-4xl font-bold mb-12 uppercase">How It Works</h2>
 
           <div className="flex flex-col md:flex-row justify-center gap-10 mb-8">
             {/* Step 1 */}
             <div className="flex flex-col items-center w-full md:w-1/3">
-              <div className="flex items-start text-left gap-6 px-2 mb-3">
+              <div className="flex items-start text-left gap-6 sm:px-2 mb-3">
                 <span className="text-[150px] font-extrabold leading-none text-white">1</span>
-                <div className='sm:text-right'>
+                <div className='text-right'>
                   <h4 className="text-sm font-bold mb-2 uppercase text-black">Expert Guidance from Home</h4>
                   <p className="text-sm leading-relaxed text-white">
                     Explore your desired vehicle from our dealer reviews, where knowledgeable sales experts will guide you through key insights, all from the comfort of your home.
@@ -58,9 +58,9 @@ const VirtualTours: React.FC = () => {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center w-full md:w-1/3">
-              <div className="flex items-start text-left gap-6 px-2 mb-3">
+              <div className="flex items-start text-left gap-6 sm:px-2 mb-3">
                 <span className="text-[150px] font-extrabold leading-none text-white">2</span>
-                <div className='sm:text-right'>
+                <div className='text-right'>
                   <h4 className="text-sm font-bold mb-2 uppercase text-black sm:text-nowrap">Can't Find Your Desired Vehicle?</h4>
                   <p className="text-sm leading-relaxed text-white">
                     Simply request a virtual tour today, and one of our affiliated dealerships will be happy to assist you with your request.
@@ -78,9 +78,9 @@ const VirtualTours: React.FC = () => {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center w-full md:w-1/3">
-              <div className="flex items-start text-left gap-6 px-2 mb-3">
+              <div className="flex items-start text-left gap-6 sm:px-2 mb-3">
                 <span className="text-[150px] font-extrabold leading-none text-white">3</span>
-                <div className='sm:text-right'>
+                <div className='text-right'>
                   <h4 className="text-sm font-bold mb-2 uppercase text-black sm:text-nowrap">We're Revolutionising Car Buying</h4>
                   <p className="text-sm leading-relaxed text-white">
                     As industry disruptors, we're reshaping the landscape, turning your dream car into a reality, all from the comfort of your home and at an exclusive price!
@@ -114,7 +114,7 @@ const VirtualTours: React.FC = () => {
          <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">REQUEST A TOUR!</span>
         </h2>
       </div>
-      <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
+      <div className="flex justify-end flex-shrink-0 ml-2 mr-3 sm:mr-0">
           <HoverArrowButton
             label="Acess Form"
             onClick={() => navigate("/access-form")}
@@ -129,8 +129,8 @@ const VirtualTours: React.FC = () => {
       </div>
       
       <div className="bg-[#0e3f80] py-12">
-        <div className="max-w-[97%] sm:max-w-[80%]  mx-auto text-center">
-          <h2 className="text-2xl text-[rgb(28,190,255)] md:text-4xl font-bold sm:mb-2 ">Virtual Tours
+        <div className="max-w-[95%] sm:max-w-[80%]  mx-auto text-center">
+          <h2 className="text-3xl text-[rgb(28,190,255)] md:text-4xl font-bold sm:mb-2 ">Virtual Tours
           </h2>
           <h4 className='mb-12 text-white sm:text-xl font-semibold'>Explore The Future Of Car Shopping Today</h4>
 
@@ -161,7 +161,7 @@ const VirtualTours: React.FC = () => {
             <div className="flex flex-col items-center text-center">
               <img src={img3} alt="Connection Icon" className="rounded-xl shadow-md mb-4 w-32 h-32 object-contain bg-white" />
               <h3 className="font-bold text-base mb-2 text-[#1cbeff]">Comprehensive Selection</h3>
-              <p className="text-sm text-white px-2">
+              <p className="text-sm text-white font-semibold px-2">
                 Explore a wide range of vehicles virtually, allowing you to compare and contrast different models effortlessly
               </p>
             </div>
@@ -170,7 +170,7 @@ const VirtualTours: React.FC = () => {
             <div className="flex flex-col items-center text-center">
               <img src={img4} alt="Network Icon" className="rounded-xl shadow-md mb-4 w-32 h-32 object-contain bg-white" />
               <h3 className="font-bold text-base mb-2 text-[#1cbeff]">Expert Guidance</h3>
-              <p className="text-sm text-white px-2">
+              <p className="text-sm text-white font-semibold px-2">
                 Receive expert guidance and insights during virtual tours to make informed decisions about your next purchase
               </p>
             </div>

@@ -61,20 +61,20 @@ const PremiumPartner = () => {
   ];
 
   return (
-    <div className="bg-[#1cbeff] py-16 px-4 sm:mt-6">
-      <div className=" max-w-full sm:max-w-[80%] mx-auto text-center text-white">
+    <div className="bg-[#1cbeff] py-4 sm:py-16 sm:px-4 sm:mt-6 ">
+      <div className=" max-w-[95%] sm:max-w-[80%] mx-auto text-center text-white">
         <div className="flex justify-center items-center mb-6">
           <img
             src={logo}
             alt="Wheelz Australia Logo"
             loading="lazy"
-            className="w-full max-w-[300px] sm:max-w-[400px] h-auto object-contain"
+            className="w-full max-w-[300px] sm:max-w-[400px] sm:h-auto h-32 object-contain"
           />
         </div>
         <h2 className="text-4xl md:text-3xl font-bold mb-12 uppercase text-black">premium partners</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           {partners.map((partner, index) => (
-            <div key={index} className="flex flex-col items-start gap-4 text-left px-2">
+            <div key={index} className="flex flex-col items-start gap-4 text-left sm:px-2">
               {/* Number + Content */}
               <div className="flex items-start gap-4">
                 <div className="text-[100px] md:text-[120px] font-extrabold leading-none text-white min-w-[100px] md:min-w-[100px] text-left">
@@ -91,20 +91,20 @@ const PremiumPartner = () => {
               </div>
 
    
-              <div className="rounded-xl overflow-hidden shadow-lg bg-white p-3 w-full mt-2">
-                <img
-                  src={partner.img}
-                  alt={`Partner ${index + 1}`}
-                  className="w-full h-auto object-contain max-h-[160px] mx-auto"
-                />
-              </div>
+              <div className="rounded-xl overflow-hidden shadow-lg bg-white p-3 w-full h-64  mt-2 flex items-center justify-center">
+  <img
+    src={partner.img}
+    alt={`Partner ${index + 1}`}
+    className="max-h-[160px] w-auto object-contain"
+  />
+</div>
               
               <div className="w-full flex justify-end mt-2">
                 <button
                   className="bg-white text-[#1cbeff] font-semibold py-2 px-4 border border-[#1cbeff] rounded-full group hover:bg-gray-50 transition-all duration-300 text-nowrap"
                 >
                   <span className="flex items-center justify-center w-32 relative transition-all duration-300 group-hover:justify-start">
-                    <span className="transition-all duration-300">Access Form</span>
+                    <span className="transition-all duration-300">Book Service</span>
                     <ChevronRightIcon className="absolute right-0 w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300" />
                   </span>
                 </button>
