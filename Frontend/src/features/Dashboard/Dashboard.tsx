@@ -94,9 +94,9 @@ const Dashboard = () => {
       {!isLoading && (
         <div>
           <HomeSlider scrollToAllServices={scrollToAllServices} />
-          <div className="bg-white shadow-[0_0_0_1px_white]">
-  <TurtleSection />
-</div>
+          <div className="bg-black w-full">
+      <TurtleSection />
+    </div>
           <AllServices />
           <div ref={allServicesRef}>
             <ServiceCards />
