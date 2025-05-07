@@ -58,9 +58,9 @@ const Dashboard = () => {
   }, [setIsLoading]);
 
   return (
-    <div className=" bg-white border border-white">
+    <>
       {/* VIDEO LOADER ANIMATION */}
-      <AnimatePresence>
+      <div className=" bg-white border border-white">      <AnimatePresence>
         {showVideo && (
           <motion.div
             className="fixed inset-0 z-50 bg-white flex items-center justify-center"
@@ -88,14 +88,15 @@ const Dashboard = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
 
       {/* MAIN DASHBOARD */}
       {!isLoading && (
         <div>
           <HomeSlider scrollToAllServices={scrollToAllServices} />
-          <div className="bg-white border border-white">
-          <TurtleSection />
-          </div>
+         <div className="w-screen ">
+  <TurtleSection />
+</div>
           <AllServices />
           <div ref={allServicesRef}>
             <ServiceCards />
@@ -114,7 +115,7 @@ const Dashboard = () => {
           <FooterSection />
         </div>
       )}
-    </div>
+    </>
   );
 };
 
