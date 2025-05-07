@@ -282,7 +282,7 @@ export default function SellCar() {
       <NewsSection
         videoId="TMAlw9_LvYQ"
         title="Student scammed out of almost $30,000 after online marketplace car scam"
-        source="9 News Australia"
+        source="9 News "
       />
       <WhyChooseUs />
 

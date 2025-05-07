@@ -293,7 +293,7 @@ const terms = [
         "Users acknowledge that the platform may contain links to third-party websites or resources. The platform disclaims any responsibility for the content, accuracy, or legality of third-party sites and encourages users to exercise caution and review the terms of use and privacy policies of such sites before accessing or using them."
       ]
     },{
-      title: "47. Wheelz.au Ambassador Terms and Conditions",
+      title: "47.  Ambassador Program Terms & Conditions",
       content: [
         {
           heading: "1. Eligibility and Enrollment",
@@ -301,16 +301,16 @@ const terms = [
             "Be at least 18 years of age.",
             <>
               Have an active{" "}
-              <a href="/" className="text-primary underline">
+             
                 Wheelz.au
-              </a>{" "}
+           
               account in good standing.
             </>,
             <>
               Comply with all applicable laws and{" "}
-              <a href="/" className="text-primary underline">
+            
                 Wheelz.au
-              </a>{" "}
+             
               community guidelines.
             </>,
           ],
@@ -320,16 +320,16 @@ const terms = [
           bullets: [
             <>
               Each participant must meet the eligibility criteria set forth by{" "}
-              <a href="/" className="text-primary underline">
+             
                 Wheelz.au
-              </a>{" "}
+          
               at the time of onboarding.
             </>,
             <>
               All 100 onboarded participants must remain active members of the{" "}
-              <a href="/" className="text-primary underline">
+             
                 Wheelz.au
-              </a>{" "}
+           
               community for a consecutive 12-month period.
             </>,
             "If the required retention threshold is not met, the Ambassador will not receive the bonus.",
@@ -340,9 +340,9 @@ const terms = [
           bullets: [
             <>
               Remain active members of the{" "}
-              <a href="/" className="text-primary underline">
+            
                 Wheelz.au
-              </a>{" "}
+             
               community for a full calendar month.
             </>,
             "Meet any defined minimum engagement or activity requirements, such as usage frequency, event participation, or platform contributions.",
@@ -353,9 +353,9 @@ const terms = [
           bullets: [
             "Commission rates and eligibility criteria are subject to periodic review.",
             <>
-              <a href="/" className="text-primary underline">
+              
                 Wheelz.au
-              </a>{" "}
+              
               reserves the right to modify, suspend, or discontinue commission structures and participation criteria at any time, with or without notice.
             </>,
           ],
@@ -365,9 +365,9 @@ const terms = [
           bullets: [
             <>
               Promote{" "}
-              <a href="/" className="text-primary underline">
+              
                 Wheelz.au
-              </a>{" "}
+              
               in an honest and ethical manner.
             </>,
             "Avoid spamming, misrepresentation, or coercive recruiting practices.",

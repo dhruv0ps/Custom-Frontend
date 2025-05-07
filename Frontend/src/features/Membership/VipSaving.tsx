@@ -148,7 +148,7 @@ const VipSavingsPage: React.FC = () => {
       <HoverArrowButton
   label="Sign Me Up"
   onClick={() => navigate("/access-form")}
-  className="bg-primary  transition-all  py-3 font-semibold text-base rounded-full shadow-md"
+    className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
   textClass="text-white"
   hoverTextClass="text-white"
 />

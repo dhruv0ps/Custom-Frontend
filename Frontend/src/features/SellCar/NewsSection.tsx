@@ -40,7 +40,7 @@ export default function NewsSection({
           <p className="text-[15px] font-bold leading-snug">
             {title} | {source}
           </p>
-          <p className="text-sm text-primary italic mt-1">Source: {source}</p>
+          <p className="text-sm text-primary italic mt-1">Source: 9 News Australia</p>
         </div>
       </div>
     </div>

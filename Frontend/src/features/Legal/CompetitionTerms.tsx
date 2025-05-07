@@ -32,8 +32,11 @@ const CompetitionTerms: React.FC = () => {
     <section key={state.value} className="mb-16">
       <h2 className="text-2xl font-bold text-black mb-2">{state.fullName}</h2>
       <h3 className="text-lg font-semibold text-gray-700 mb-2">
-        Trade Promotion for {state.value}: Membership Giveaway
+        Trade Promotion for {state.value}: 
       </h3>
+      <ul className="list-disc list-inside text-gray-700 mb-2 ">
+  <li className="text-base">Membership Prize Draws</li>
+</ul>
       <div className="space-y-4 text-sm text-gray-700">
         <p className="font-bold">Introduction</p>
         <p>
@@ -49,10 +52,11 @@ const CompetitionTerms: React.FC = () => {
           <li>Your Tank, Our Treat: Winners will receive cash prizes.</li>
           <li>Glow Goals: Winners will receive cash prizes.</li>
           <li>Drive, Relax, Spend: Winners will receive cash prizes.</li>
-          <li className="font-semibold">Bill Busters:</li>
+         
         </ul>
+        <p className="font-bold">Bill Busters:</p>
         <p>To be eligible for the draw, members must upload a current bill:</p>
-        <ul className="list-disc list-inside ml-4 space-y-1">
+        <ul className="list-disc list-inside sm:ml-4 space-y-1">
           <li>Electricity Bill</li>
           <li>Car Insurance Bill</li>
           <li>Loan Repayment Statement</li>
@@ -65,7 +69,7 @@ const CompetitionTerms: React.FC = () => {
           <li>Streaming Service or Subscription Bill</li>
         </ul>
         <p>The uploaded bill must clearly display:</p>
-        <ul className="list-disc list-inside ml-4 space-y-1">
+        <ul className="list-disc list-inside sm:ml-4 space-y-1">
           <li>The member's name</li>
           <li>The amount due</li>
           <li>A recent issue date (within 60 days)</li>
@@ -73,7 +77,7 @@ const CompetitionTerms: React.FC = () => {
         <p>Verified bills enter the draw; winners get bill value as a cash prize.</p>
 
         <p className="font-bold">Terms and Conditions</p>
-        <ul className="list-disc list-inside ml-4 space-y-1">
+        <ul className="list-disc list-inside sm:ml-4 space-y-1">
           <li>Eligibility: Residents of {state.label}, 18+.</li>
           <li>Entry: 1 per VIP member, no additional purchase.</li>
           <li>Promotion Period: Flexible; subject to change.</li>
@@ -86,14 +90,14 @@ const CompetitionTerms: React.FC = () => {
         </ul>
 
         <p className="font-bold">Privacy Policy</p>
-        <ul className="list-disc list-inside ml-4 space-y-1">
+        <ul className="list-disc list-inside sm:ml-4 space-y-1">
           <li>Data collected: name, email, phone, etc.</li>
           <li>Usage: Only for draw-related purposes.</li>
           <li>Security: Measures in place to protect info.</li>
         </ul>
 
         <p className="font-bold">How to Participate</p>
-        <ul className="list-disc list-inside ml-4 space-y-1">
+        <ul className="list-disc list-inside sm:ml-4 space-y-1">
           <li>Become a Wheelz VIP member.</li>
           <li>Keep membership active.</li>
           <li>Each VIP gets 1 entry per draw.</li>

@@ -109,7 +109,7 @@ const AboutUs: React.FC = () => {
               <p>We believe in giving back. Through our fundraisers, we contribute to supported charities on behalf of all our customers utilising our services for buying and selling cars, creating a ripple effect of positive change.</p>
               <p className="mt-2 font-bold">Join us today and become part of Australia’s #1 automotive ecosystem.</p>
               <p className="mt-2">Embrace a smarter, more efficient way to manage your car needs, and discover the power of collective savings with our trusted partners.</p>
-              <p>Welcome to the future of automotive excellence.</p>
+              <p className="mt-4 text-primary">Welcome to the future of automotive excellence.</p>
             </div>
           </div>
         </div>

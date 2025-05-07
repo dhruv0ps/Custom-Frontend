@@ -156,7 +156,7 @@ export default function FAQsPage() {
 
       <div className="sm:max-w-[80%] max-w-full mx-auto py-10 px-4">
         <h1 className="text-3xl font-bold text-center mb-4">General FAQs</h1>
-        <h2 className="font-semibold text-lg text-[#666] mb-2">
+        <h2 className="font-semibold text-lg text-[#666] mb-2 ">
           Have a question?</h2> <p className="text-[#666] text-sm leading-relaxed">
         Find answers to commonly asked questions below. If your query persists,&nbsp;
         <span
@@ -167,7 +167,7 @@ export default function FAQsPage() {
         </span>.
       </p>
         
-        <div className="space-y-8 sm:mt-8">
+        <div className="space-y-8 sm:mt-8 mt-8">
           {faqs.map((faq, idx) => (
             <div key={idx}>
               <h2 className="font-semibold text-lg text-[#666] mb-2">Q: {faq.question}</h2>

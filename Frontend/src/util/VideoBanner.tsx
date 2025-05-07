@@ -31,17 +31,17 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[65vh] lg:h-[89vh] overflow-hidden bg-black">
-    <div className="absolute inset-0 w-full h-full">
+    <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[65vh] lg:h-[89vh] overflow-hidden bg-white">
+  
       <video
-        className="absolute inset-0 w-full h-full object-fill md:object-cover z-0 filter brightness-125"
+       className="absolute inset-0 w-full h-full object-cover z-0 filter brightness-125"
         src={videoSrc}
         autoPlay
         loop
         muted
         playsInline
       />
-    </div>
+    
 
 
       {/* Black transparent overlay */}
