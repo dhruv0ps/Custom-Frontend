@@ -1545,8 +1545,8 @@ input[type="range"]::-ms-fill-lower{
   margin-left: 2.5rem;
 }
 
-.ml-16{
-  margin-left: 4rem;
+.ml-12{
+  margin-left: 3rem;
 }
 
 .ml-2{
@@ -1679,14 +1679,6 @@ input[type="range"]::-ms-fill-lower{
 
 .mt-auto{
   margin-top: auto;
-}
-
-.ml-12{
-  margin-left: 3rem;
-}
-
-.ml-14{
-  margin-left: 3.5rem;
 }
 
 .block{
@@ -5297,12 +5289,6 @@ input[type="range"]::-ms-fill-lower{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-2xl{
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-\[0_4px_12px_rgba\(0\2c 178\2c 255\2c 0\.3\)\]{
   --tw-shadow: 0 4px 12px rgba(0,178,255,0.3);
   --tw-shadow-colored: 0 4px 12px var(--tw-shadow-color);
@@ -5361,11 +5347,6 @@ input[type="range"]::-ms-fill-lower{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-black\/30{
-  --tw-shadow-color: rgb(0 0 0 / 0.3);
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .outline-none{
@@ -8612,11 +8593,6 @@ input[type="range"]::-ms-fill-lower{
     padding-bottom: 2rem;
   }
 
-  .sm\:px-1{
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
   .sm\:pb-11{
     padding-bottom: 2.75rem;
   }
@@ -8743,6 +8719,12 @@ input[type="range"]::-ms-fill-lower{
   .sm\:shadow-2xl{
     --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm\:shadow-xl{
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -9265,6 +9247,12 @@ input[type="range"]::-ms-fill-lower{
   .lg\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:shadow-2xl{
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
 
