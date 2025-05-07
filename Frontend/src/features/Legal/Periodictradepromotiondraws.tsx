@@ -100,7 +100,7 @@ const Periodictradepromotiondraws = () => {
         className="w-full h-full object-cover object-top"
       />
     </div>
-    <div className="max-w-[80%] mx-auto py-10 px-4">
+    <div className="max-w-full sm:max-w-[80%] mx-auto py-10 px-4">
       <h1 className="text-3xl font-bold text-center mb-8 ">Understanding Our Periodic Trade Promotion Draws</h1>
       <div className="space-y-6">
         {faqs.map((item, index) => (

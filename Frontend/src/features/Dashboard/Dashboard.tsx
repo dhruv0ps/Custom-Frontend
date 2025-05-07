@@ -58,7 +58,7 @@ const Dashboard = () => {
   }, [setIsLoading]);
 
   return (
-    <>
+    <div className=" bg-white border border-white">
       {/* VIDEO LOADER ANIMATION */}
       <AnimatePresence>
         {showVideo && (
@@ -93,7 +93,9 @@ const Dashboard = () => {
       {!isLoading && (
         <div>
           <HomeSlider scrollToAllServices={scrollToAllServices} />
+          <div className="bg-white border border-white">
           <TurtleSection />
+          </div>
           <AllServices />
           <div ref={allServicesRef}>
             <ServiceCards />
@@ -112,7 +114,7 @@ const Dashboard = () => {
           <FooterSection />
         </div>
       )}
-    </>
+    </div>
   );
 };
 

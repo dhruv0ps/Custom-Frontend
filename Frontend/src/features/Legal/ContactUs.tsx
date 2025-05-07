@@ -17,13 +17,14 @@ const ContactUs: React.FC = () => {
       
         </div>
 
-       <h2 className="sm:mt-4 w-full text-center text-xl sm:text-2xl md:text-3xl font-bold text-black">
-          Contact Us
-        </h2>
       
-      <div className="max-w-[90%] md:max-w-[80%] mx-auto mt-8">
+      
+        <div className="max-w-[90%] md:max-w-[80%] mx-auto mt-12 mb-24 space-y-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-center text-black">
+            Contact Us
+          </h1>
         
-        <h3 className="text-2xl font-bold mb-4">WE WOULD LOVE TO HEAR FROM YOU!</h3>
+        <h3 className="text-xl sm:text-2xl font-bold mb-4">WE WOULD LOVE TO HEAR FROM YOU!</h3>
         <p className="mb-8 text-[#666]">
           Our Aussie-based support team is here to help you. Whether you have a general enquiry,
           need assistance with our services, or want to learn more about our trade promotions,

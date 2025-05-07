@@ -8,7 +8,7 @@ interface NewsVideoSectionProps {
 export default function NewsSection({
   videoId = "TMAlw9_LvYQ",
   title = "Student scammed out of almost $30,000 after online marketplace car scam",
-  source = "9 NEWS AUSTRALIA",
+  source = "9 NEWS AUS",
   className,
 }: NewsVideoSectionProps) {
   

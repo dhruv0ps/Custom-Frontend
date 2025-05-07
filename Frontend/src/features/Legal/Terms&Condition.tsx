@@ -292,7 +292,118 @@ const terms = [
       content: [
         "Users acknowledge that the platform may contain links to third-party websites or resources. The platform disclaims any responsibility for the content, accuracy, or legality of third-party sites and encourages users to exercise caution and review the terms of use and privacy policies of such sites before accessing or using them."
       ]
+    },{
+      title: "47. Wheelz.au Ambassador Terms and Conditions",
+      content: [
+        {
+          heading: "1. Eligibility and Enrollment",
+          bullets: [
+            "Be at least 18 years of age.",
+            <>
+              Have an active{" "}
+              <a href="/" className="text-primary underline">
+                Wheelz.au
+              </a>{" "}
+              account in good standing.
+            </>,
+            <>
+              Comply with all applicable laws and{" "}
+              <a href="/" className="text-primary underline">
+                Wheelz.au
+              </a>{" "}
+              community guidelines.
+            </>,
+          ],
+        },
+        {
+          heading: "2. One-Time Onboarding Bonus",
+          bullets: [
+            <>
+              Each participant must meet the eligibility criteria set forth by{" "}
+              <a href="/" className="text-primary underline">
+                Wheelz.au
+              </a>{" "}
+              at the time of onboarding.
+            </>,
+            <>
+              All 100 onboarded participants must remain active members of the{" "}
+              <a href="/" className="text-primary underline">
+                Wheelz.au
+              </a>{" "}
+              community for a consecutive 12-month period.
+            </>,
+            "If the required retention threshold is not met, the Ambassador will not receive the bonus.",
+          ],
+        },
+        {
+          heading: "3. Monthly Commission Payments",
+          bullets: [
+            <>
+              Remain active members of the{" "}
+              <a href="/" className="text-primary underline">
+                Wheelz.au
+              </a>{" "}
+              community for a full calendar month.
+            </>,
+            "Meet any defined minimum engagement or activity requirements, such as usage frequency, event participation, or platform contributions.",
+          ],
+        },
+        {
+          heading: "4. Commission Rates and Adjustments",
+          bullets: [
+            "Commission rates and eligibility criteria are subject to periodic review.",
+            <>
+              <a href="/" className="text-primary underline">
+                Wheelz.au
+              </a>{" "}
+              reserves the right to modify, suspend, or discontinue commission structures and participation criteria at any time, with or without notice.
+            </>,
+          ],
+        },
+        {
+          heading: "5. Code of Conduct",
+          bullets: [
+            <>
+              Promote{" "}
+              <a href="/" className="text-primary underline">
+                Wheelz.au
+              </a>{" "}
+              in an honest and ethical manner.
+            </>,
+            "Avoid spamming, misrepresentation, or coercive recruiting practices.",
+            "Respect the privacy and consent of potential referrals.",
+          ],
+        },
+        {
+          heading: "6. Termination and Disqualification",
+          bullets: [
+            "Disqualify Ambassadors who breach these terms or engage in fraudulent activity.",
+            "Withhold or revoke payments in cases of suspected misconduct or violation of program rules.",
+          ],
+        },
+        {
+          heading: "7. General Provisions",
+          bullets: [
+            "These Terms and Conditions are governed by the laws of the jurisdiction in which Wheelz.au operates.",
+            "Participation in the program constitutes full agreement with these terms.",
+          ],
+        },
+        {
+          heading: "Contact",
+          bullets: [
+            <>
+              For any questions regarding your Ambassador status or these terms, please contact{" "}
+              <a href="mailto:hello@wheelz.au" className="text-primary underline">
+                hello@wheelz.au
+              </a>
+             
+            </>,
+          ],
+        },
+      ]
     }
+    
+    
   ];
 
 export default function TermsAndConditions() {
@@ -311,21 +422,51 @@ export default function TermsAndConditions() {
 
        <div className="sm:max-w-[80%] max-w-full mx-auto py-10 px-4">
        <h1 className="text-3xl font-bold text-center mb-6">Terms and Conditions</h1>
-      <section className="space-y-10">
-        {terms.map((term, idx) => (
-          <div key={idx} className="text-left">
-            <h2 className="text-[16px] font-[700] text-[#666] mb-2 leading-snug">{term.title}</h2>
-            {term.content.map((para, i) => (
+       <section className="space-y-10">
+  {terms.map((term, idx) => (
+    <div key={idx} className="text-left">
+      <h2 className="text-[16px] font-[700] text-[#666] mb-2 leading-snug">
+        {term.title}
+      </h2>
+
+      {/* Handle both string and structured (heading + bullets) formats */}
+      {Array.isArray(term.content) &&
+        term.content.map(  (
+          para: string | { heading: string; bullets: (string | JSX.Element)[] },
+          i: number
+        ) => {
+          if (typeof para === "string") {
+            return (
               <p
                 key={i}
                 className="text-[#666] font-light text-sm mb-2 leading-relaxed"
               >
-                <span className="font-bold lowercase mr-1">{String.fromCharCode(97 + i)}.</span>{para}
+                <span className="font-bold lowercase mr-1">
+                  {String.fromCharCode(97 + i)}.
+                </span>
+                {para}
               </p>
-            ))}
-          </div>
-        ))}
-      </section>
+            );
+          }
+
+          // Structured content for section 47
+          return (
+            <div key={i} className="mb-4">
+              <h3 className="font-semibold text-sm text-black mb-1">
+                {para.heading}
+              </h3>
+              <ul className="list-disc pl-5 text-[#666] text-sm space-y-1">
+                {para.bullets.map((point, j) => (
+                  <li key={j}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+    </div>
+  ))}
+</section>
+
     </div>
     </div>
     <AllFooterSection content={[]} mode="compact"/>

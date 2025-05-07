@@ -86,11 +86,11 @@ export default function PrivacyPolicy() {
     return (
         <>
    <div className="bg-white text-black w-full overflow-hidden">
-  <div className="relative w-full h-[32rem] overflow-hidden">
+  <div className="relative w-full sm:h-[32rem] overflow-hidden">
     <img 
       src={banner} 
       alt="Contact Banner" 
-      className="w-full h-full object-cover object-[center_20%]" 
+      className="w-full h-full object-cover sm:object-[center_20%]" 
     />
   </div>
   

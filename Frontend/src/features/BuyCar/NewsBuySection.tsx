@@ -8,7 +8,7 @@ interface NewsVideoSectionProps {
 
 export default function NewsSection({
   videoId = "Wk_nS9plbkQ",
-  title = "The number one scam in Australia costing victims millions every year | A Current Affair",
+  title = "The number one scam in Australia costing victims millions every year ",
   source = "A Current Affair",
   className,
 }: NewsVideoSectionProps) {

@@ -146,7 +146,7 @@ export default function FAQsPage() {
     <>
     <div className="bg-white text-black w-full overflow-hidden">
  
- <div className="relative w-full max-h-[32rem] overflow-hidden">
+ <div className="relative w-full sm:max-h-[32rem] overflow-hidden">
    <img
      src={faqBanner}
      alt="About Us Banner"
