@@ -19,7 +19,7 @@ const TurtleSection:React.FC = () => {
     muted
     loop
     playsInline
-    className="object-contain md:object-cover rounded-lg   w-full [&::-webkit-media-controls-panel]:bg-transparent"
+    className="object-contain md:object-cover  w-full "
 
   />
 </div>
