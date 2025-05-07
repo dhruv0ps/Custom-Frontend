@@ -76,7 +76,8 @@ const VipCard: React.FC<VipCardProps> = ({ className }) => {
       </div>
 
     {/* Footer */}
-<div className=" sm:mt-2 sm:pt-6 py-8">
+    
+<div className=" sm:mt-2 sm:pt-6 py-8 ">
   <div className="flex flex-row sm:flex-row sm:items-center sm:justify-between gap-2   sm:gap-0">
     <div className="text-black rounded-r-full pr-6  sm:pr-5 sm:pl-5  sm:text-xl font-semibold bg-white sm:bg-transparent">
       <span className="block sm:inline whitespace-nowrap text-base ml-4 sm:ml-0">
@@ -85,7 +86,7 @@ const VipCard: React.FC<VipCardProps> = ({ className }) => {
       <span className="sm:text-white font-bold text-primary text-xl ml-4 sm:ml-0"> MORE SAVINGS!</span>
     </div>
 
-    <div className=" sm:w-auto ml-12  mt-1.5 sm:ml-0 sm:mt-0  mr-4">
+    <div className=" sm:w-auto ml-14  mt-1.5 sm:ml-0 sm:mt-0  mr-4">
       <HoverArrowButton
   label="Sign Me Up"
   onClick={() => navigate("/access-form")}

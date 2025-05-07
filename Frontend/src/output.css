@@ -1545,10 +1545,6 @@ input[type="range"]::-ms-fill-lower{
   margin-left: 2.5rem;
 }
 
-.ml-12{
-  margin-left: 3rem;
-}
-
 .ml-2{
   margin-left: 0.5rem;
 }
@@ -1567,6 +1563,10 @@ input[type="range"]::-ms-fill-lower{
 
 .ml-6{
   margin-left: 1.5rem;
+}
+
+.ml-8{
+  margin-left: 2rem;
 }
 
 .ml-auto{
@@ -1679,6 +1679,18 @@ input[type="range"]::-ms-fill-lower{
 
 .mt-auto{
   margin-top: auto;
+}
+
+.ml-12{
+  margin-left: 3rem;
+}
+
+.ml-16{
+  margin-left: 4rem;
+}
+
+.ml-14{
+  margin-left: 3.5rem;
 }
 
 .block{
@@ -8716,23 +8728,6 @@ input[type="range"]::-ms-fill-lower{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
-  .sm\:shadow-2xl{
-    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
-
-  .sm\:shadow-xl{
-    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
-
-  .sm\:shadow-black\/30{
-    --tw-shadow-color: rgb(0 0 0 / 0.3);
-    --tw-shadow: var(--tw-shadow-colored);
-  }
-
   .sm\:transition{
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -8997,10 +8992,6 @@ input[type="range"]::-ms-fill-lower{
 
   .md\:gap-20{
     gap: 5rem;
-  }
-
-  .md\:gap-y-6{
-    row-gap: 1.5rem;
   }
 
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]){

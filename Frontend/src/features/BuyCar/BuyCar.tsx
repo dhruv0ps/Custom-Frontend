@@ -262,8 +262,8 @@ export default function BuyCar() {
       <HoverArrowButton
       label="Buy Now"
       onClick={() => navigate("/buy-car/form")}
-      className="px-3 py-3  font-semibold text-base rounded-full transition bg-primary text-white sm:bg-white sm:text-primary border border-primary shadow hover:scale-105 overflow-hidden mr-3 sm:mr-0"
-      textClass=" text-white sm:text-primary"
+      className="px-3 py-3  font-semibold text-base rounded-full transition bg-white text-white sm:bg-white sm:text-primary border border-primary shadow hover:scale-105 overflow-hidden mr-3 sm:mr-0"
+      textClass=" text-primary"
       hoverTextClass="text-primary"
     />
         </div>
