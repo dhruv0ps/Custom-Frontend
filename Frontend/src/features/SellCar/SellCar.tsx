@@ -139,7 +139,7 @@ export default function SellCar() {
               <div className="text-right">
                 <h4 className="text-base font-bold mb-2 text-black uppercase">Get paired with your perfect match</h4>
                 <p className="text-sm leading-relaxed text-white">
-                  Our platform swiftly analyses your car details, connecting you with the right dealer from our extensive
+                  Our platform swiftly reviews your car details, connecting you with the right dealer from our extensive
                   network of buyers.
                 </p>
               </div>
@@ -200,7 +200,7 @@ export default function SellCar() {
               <div className="text-right">
                 <h4 className="text-lg font-bold mb-2 text-black uppercase">Get paired with your perfect match</h4>
                 <p className="text-sm leading-relaxed text-white">
-                  Our platform swiftly analyses your car details, connecting you with the right dealer from our extensive
+                  Our platform swiftly reviews your car details, connecting you with the right dealer from our extensive
                   network of&nbsp;buyers.
                 </p>
               </div>

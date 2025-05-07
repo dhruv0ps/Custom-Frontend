@@ -16,7 +16,7 @@ const TurtleSection:React.FC = () => {
   <video
     src={turtleVideo}
     autoPlay
-    muted
+    muted 
     loop
     playsInline
     className="object-contain md:object-cover  w-full "
