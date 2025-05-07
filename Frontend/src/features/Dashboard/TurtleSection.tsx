@@ -12,16 +12,18 @@ const TurtleSection:React.FC = () => {
             <h3 className="hidden md:block text-primary text-xl md:text-2xl font-bold text-end mb-2">
               Yep, that's me!
             </h3>
-            <div className="w-full h-[200px] sm:h-[160px] md:h-[180px] lg:h-[200px]">
-              <video
-                src={turtleVideo}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover  filter brightness-100"
-              />
-            </div>
+            <div className="w-full h-[200px] sm:h-[160px] md:h-[180px] lg:h-[200px] ">
+  <video
+    src={turtleVideo}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover  rounded-xl filter brightness-100"
+  
+  />
+</div>
+
           </div>
           <h3 className="block md:hidden text-primary text-2xl font-bold text-center mt-3">
             Yep, that's me!
