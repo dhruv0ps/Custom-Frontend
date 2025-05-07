@@ -19,7 +19,7 @@ const TurtleSection:React.FC = () => {
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-cover rounded-lg filter brightness-100"
+                className="w-full h-full object-cover  filter brightness-100"
               />
             </div>
           </div>
