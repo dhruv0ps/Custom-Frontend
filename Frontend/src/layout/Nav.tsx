@@ -120,7 +120,7 @@ export default function Navbar() {
                         `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
                       }
                     >
-                      Demo & Pre-Owned
+                      Demo & Pre-Owned Cars
                     </NavLink>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -140,7 +140,7 @@ export default function Navbar() {
                         `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
                       }
                     >
-                      Trade Promotion
+                      Trade Promotion Draws
                     </NavLink>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -180,7 +180,7 @@ export default function Navbar() {
                         `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
                       }
                     >
-                      Overhauled
+                      Overhauled Competition
                     </NavLink>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -291,7 +291,7 @@ export default function Navbar() {
                 `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
               }
             >
-              Demo & Pre-Owned
+              Demo & Pre-Owned Cars
             </NavLink>
             <NavLink
               to="/mates-rates-discounts"
@@ -309,7 +309,7 @@ export default function Navbar() {
                 `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
               }
             >
-              Trade Promotion
+              Trade Promotion Draws
             </NavLink>
             <NavLink
               to="/virtual-tours"
@@ -346,7 +346,7 @@ export default function Navbar() {
                 `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
               }
             >
-              Overhauled
+              Overhauled Competition
             </NavLink>
             <NavLink
               to="/fundraisers"

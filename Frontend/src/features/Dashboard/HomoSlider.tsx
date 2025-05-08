@@ -20,6 +20,7 @@ import img16 from "@/assets/prize-draw-winners/iStock1481243237.jpg"
 import Typed from "react-typed"
 import { useNavigate } from "react-router-dom";
 import { ChevronRight } from "lucide-react"; 
+import { BASE_URL } from "@/config";
 interface HomeSliderProps {
   scrollToAllServices: () => void;
 }
@@ -43,12 +44,12 @@ const images = [
   img16
 ];
 const texts = [
-  { heading: "Membership", route: "/membership" },
-  { heading: "Sell Your Car", route: "/sell-your-car" },
-  { heading: "Buy A New Car", route: "/buy-your-car" },
-  { heading: "Demo & Pre-owned Cars", route: "/demo-pre-owned" },
-  { heading: "Mates Rates Discounts", route: "/mates-rates-discounts" },
-  { heading: "Trade Promotion Draws", route: "/trade-promotion" },
+  { heading: "Membership", route: `${BASE_URL}/become-member/membership` },
+  { heading: "Sell Your Car", route: `${BASE_URL}/sell/rego` },
+  { heading: "Buy A New Car", route: `${BASE_URL}/buy` },
+  { heading: "Demo & Pre-owned Cars", route: `${BASE_URL}/demo-preowned` },
+  { heading: "Mates Rates Discounts", route: `${BASE_URL}/mates-rates` },
+  { heading: "Trade Promotion Draws", route: `${BASE_URL}/mates-rates` },
   { heading: "Virtual Tours", route: "/virtual-tours" },
   { heading: "Finance", route: "/finance" },
   { heading: "Insurance", route: "/insurance" },
@@ -101,7 +102,7 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
 
   return (
     <div className="relative w-full">
-      {/* Blue section - wider and more prominent */}
+      
       <div className="bg-primary  pt-16 pb-36 md:py-20 z-10 relative mb-6 px-6 md:px-12 lg:px-24 w-full">
       <div className="block md:hidden  text-left mb-20">
   <h2 className="text-[22px] font-bold leading-tight text-black">
@@ -192,7 +193,15 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
             {images.map((slide, index) => (
               <div
               key={index}
-              onClick={() => navigate(texts[index].route)}
+              onClick={() => {
+                const route = texts[index].route;
+                const isFullUrl = route.startsWith("http") || route.startsWith(BASE_URL);
+                if (isFullUrl) {
+                  window.location.href = route;
+                } else {
+                  navigate(route);
+                }
+              }}
                 className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_calc(33.333%-12px)] min-w-0 mx-2 bg-white rounded-3xl overflow-hidden shadow-lg relative group"
               >
                

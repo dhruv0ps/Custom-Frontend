@@ -2,6 +2,7 @@ import React from "react";
 import HoverArrowButton from "@/util/HoverButton";
 import { ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import {motion} from "framer-motion"    
 
 const videos = [
     {
@@ -60,7 +61,94 @@ const videos = [
     }, {
         title: "BMW",
         url: "https://www.youtube.com/embed/TxgZVlwOpnM?si=C-buDv1lHXHOZxuU"
+    },{
+        title :"BMW",
+        url :"https://www.youtube.com/embed/4cKoW8PLHlw?si=4zxmTIlm893QKKi4" 
     }
+    ,{
+        title :"BMW",
+        url :"https://www.youtube.com/embed/qEfjAK4gVhU?si=6lTgwHtUGIDoo1iQ"
+    },{
+        title:"CUPRA",
+        url :"https://www.youtube.com/embed/rfnYB5MMGb4?si=Bm4i0amEANZavasB"
+    },{
+        title :"BMW",
+        url:"https://www.youtube.com/embed/DlTCkZZXx_U?si=yYK8k2MmIITfwOAE"
+    },{
+        title :"BMW",
+        url:"https://www.youtube.com/embed/hwUSJtHwJoQ?si=1U_SiWhPJtqTKtVE"
+    },
+    {
+        title :"BMW",
+        url:"https://www.youtube.com/embed/F3z8tI-pKJQ?si=udWvNX3yeDOrMaqO"
+    },
+    {   title :"Volvo",
+        url:"https://www.youtube.com/embed/cQX-QXxwGvA?si=Gdnr-0A8wgMK2yxC"
+    }
+,{
+    title :"Ex-90",
+    url:"https://www.youtube.com/embed/1ISzNfOgknY?si=cMJJywZ0oFUlYxVY"
+},{
+    title:"Peugeot",
+    url:"https://www.youtube.com/embed/-_eN53H2PEw?si=fqEH1OcS-MEbKrT4"
+},{
+    title:"Peugeot",
+    url:"https://www.youtube.com/embed/MuUW3eJlJv4?si=ImsuQ7xv8AbhmTKy"
+}
+,{
+    title:"Fiat",
+    url:"https://www.youtube.com/embed/eN-EHWsuRKA?si=Q7pYAtJYKby-fVsD"
+},{
+    title:"Fiat",
+    url:"https://www.youtube.com/embed/bAe9KcihiZM?si=vQ3dVvmhyDNag4xa"
+},{
+    title:"ISUZSU",
+    url:"https://www.youtube.com/embed/9rURg5ZV7gk?si=Ql5o4T6KPcuXF4tl"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/f49UNmDbsY0?si=2XbmcS2jGjiUGKQr"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/iPJDW5EaIzE?si=ig7XZCzPHxblQi-z"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/XpFBrqkyK0Y?si=vOk7e-eyrBSoCND8"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/I8MRuTKNA4U?si=0p9thCXi4pECC0HD"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/oO5xfJ3OglE?si=rv02AubhaEs5XN6S"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/d_c759sEYnI?si=qmasaI8MzI9ssqxU"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/o59KEC8WrzM?si=yPPq7_YXmFF721oi"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/A3rhonduZcY?si=wm2WSB21XvDpLbNJ"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/Qkqa3AkLK9E?si=qhfrjCu6CU0sm2Lf"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/61KxOUKyUa8?si=wNn3U5tEedAR8R2i"
+},
+{
+    title:"MG MOTORS",
+    url:"https://www.youtube.com/embed/oF9Zw8k9f9I?si=dfIB-_RaeOf5Ka09"
+}
 
 ];
 
@@ -83,10 +171,17 @@ export const VirtualToursCard1: React.FC = () => {
                 {/* YouTube Grid - Updated to match the image */}
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
                     {videos.map((video, index) => (
-                        <div
-                            key={index}
-                            className="w-full max-w-[440px] flex flex-col items-center gap-4"
-                        >
+                   
+                            <motion.div key={index}
+                       
+                              initial={{ opacity: 0, y: 30 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.4, delay: index * 0.05 }}
+                              viewport={{ once: true }}
+                               className="w-full max-w-[440px] flex flex-col items-center gap-4"
+                            >
+
+                            
                             {/* Video Glow Box */}
                             <div className="w-full rounded-xl overflow-hidden "
                                 style={{ boxShadow: "10px 10px 10px 0px #1cbeff" }}>
@@ -115,7 +210,7 @@ export const VirtualToursCard1: React.FC = () => {
                                     </span>
                                 </button>
                             </div>
-                        </div>
+                            </motion.div>
                     ))}
                 </div>
 
