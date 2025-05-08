@@ -7,6 +7,7 @@ import VipSavingsPage from './VipSaving';
 import WhyChooseUs from './WhyChooseUs';
 import AllFooterSection from '@/util/AllFooterSection';
 import { ChevronRight } from 'lucide-react';
+import { BASE_URL } from '@/config';
 const Membership: React.FC = () => {
 
   const navigate = useNavigate();
@@ -43,20 +44,21 @@ const Membership: React.FC = () => {
                 Home
               </button>
               <button
-                onClick={() => navigate("/view-all")}
-                className="group relative bg-white text-[#1cbeff] font-medium  px-4 sm:px-4 sm:py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden  text-center hover:bg-gray-100 shadow-sm hover:shadow-md"
-              >
-                {/* Default Text */}
-                <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">
-                  Sign Me Up
-                </span>
+    onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
+    className="group relative bg-white text-[#1cbeff] font-medium px-4 sm:px-4 sm:py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden text-center hover:bg-gray-100 shadow-sm hover:shadow-md"
+  >
+    {/* Default Text */}
+    <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">
+      Sign Me Up
+    </span>
 
-                {/* Hover Text + Arrow */}
-                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
-                  Sign Me Up
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </span>
-              </button>
+    {/* Hover Text + Arrow */}
+    <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
+      Sign Me Up
+      <ChevronRight className="ml-2 h-5 w-5" />
+    </span>
+  </button>
+
             </div>
           </div>
         </div>

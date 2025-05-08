@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import img1 from "@/assets/Membership/1312.jpg";
 import img2 from "@/assets/Membership/1221.jpg";
 import img3 from "@/assets/Membership/1291.jpg";
@@ -10,8 +10,9 @@ import img7 from "@/assets/Membership/1213.png";
 import img8 from "@/assets/Membership/1311.jpg";
 import adImage from "@/assets/Membership/For-Rent.webp";
 import HoverArrowButton from "@/util/HoverButton";
+import { BASE_URL } from "@/config";
 const VipSavingsPage: React.FC = () => {
-  const navigate = useNavigate();
+  
 
   const highlightText = (text: string) => {
     const pattern = /(\$\d{1,3}(?:,\d{3})*(?:\.\d+)?|\+\$?\d{1,3}(?:,\d{3})*(?:\.\d+)?|saving.*?\b|free\b|thousands\b|Sold car in 24Hrs?)/gi;  const highlightClass = "text-[#00ccff] font-semibold";  
@@ -93,7 +94,7 @@ const VipSavingsPage: React.FC = () => {
                 </div>
                 <HoverArrowButton
                   label="Sign Me Up"
-                  onClick={() => navigate("/signup")}
+                 onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
                   className="bg-white hover:bg-gray-100 px-6 py-2 rounded-full"
                   textClass="text-[#1cbeff] font-semibold"
                   hoverTextClass="text-[#1cbeff] font-semibold"
@@ -117,7 +118,7 @@ const VipSavingsPage: React.FC = () => {
             <div className="flex justify-end mb-4">
               <HoverArrowButton
                 label="Enquire Now"
-                onClick={() => navigate("/contact-us")}
+               onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
                 className="bg-white hover:bg-gray-100 px-6 py-2 rounded-full shadow hover:shadow-md"
                 textClass="text-[#1cbeff] font-semibold"
                 hoverTextClass="text-[#1cbeff] font-semibold"
@@ -147,7 +148,7 @@ const VipSavingsPage: React.FC = () => {
       <div className=" sm:w-auto mr-4 sm:mr-2">
       <HoverArrowButton
   label="Sign Me Up"
-  onClick={() => navigate("/access-form")}
+  onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
     className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
   textClass="text-white"
   hoverTextClass="text-white"

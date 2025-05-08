@@ -1,15 +1,15 @@
 import type React from "react";
-import { useNavigate } from "react-router-dom";
+
 import vip from "@/assets/Membership/vip-icon.webp";
 import HoverArrowButton from "@/util/HoverButton";
-
+import { BASE_URL } from "@/config";
 
 interface VipCardProps {
   className?: string;
 }
 
 const VipCard: React.FC<VipCardProps> = ({ className }) => {
-  const navigate = useNavigate();
+  
 
   return (
     <div className={`bg-[#25c2ff] rounded-3xl overflow-hidden shadow-lg w-full mx-auto h-[32.5rem] sm:h-[35.75rem] ${className}`}>
@@ -89,7 +89,7 @@ const VipCard: React.FC<VipCardProps> = ({ className }) => {
     <div className=" sm:w-auto ml-14  mt-1.5 sm:ml-0 sm:mt-0  mr-4">
       <HoverArrowButton
   label="Sign Me Up"
-  onClick={() => navigate("/access-form")}
+  onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
     className="bg-white transition-all px-4 sm:px-6 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
   textClass="text-primary"
   hoverTextClass="text-primary"

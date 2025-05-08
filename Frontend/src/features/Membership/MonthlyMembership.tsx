@@ -5,12 +5,12 @@ import img2 from "@/assets/Membership/Carboy.jpg";
 import img3 from "@/assets/Membership/125.jpg"
 import discountsImg from "@/assets/Membership/Discount-125760549.jpg";
 import logo from "@/assets/Wheelz-Australia-White-and-Blue-Color-scaled.webp"
+import { BASE_URL } from "@/config";
 
-import { useNavigate } from "react-router-dom";
 import VipCard from "./VipCard";
 
 const MembershipPricing: React.FC = () => {
-  const navigate = useNavigate();
+  
 
   return (
     <div className="bg-[#002b63] text-white py-10 sm:px-4">
@@ -54,7 +54,7 @@ const MembershipPricing: React.FC = () => {
           </div>
         <div className="flex w-full justify-end sm:w-auto sm:mr-2 px-4 sm:px-0">
   <button
-    onClick={() => navigate("/signup")}
+    onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
     className="group relative bg-primary font-semibold text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition overflow-hidden"
   >
     {/* Normal State */}

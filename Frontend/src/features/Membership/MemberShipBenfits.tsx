@@ -1,10 +1,11 @@
 
 import React from 'react';
 
-import { useNavigate } from 'react-router-dom'
+
 import HoverArrowButton from '@/util/HoverButton';
+import { BASE_URL } from '@/config';
 const MembershipBenefits: React.FC = () => {
-    const navigate = useNavigate()
+
     const benefits = [
         {
             number: "1",
@@ -105,7 +106,7 @@ const MembershipBenefits: React.FC = () => {
       <div className="flex justify-end flex-shrink-0 sm:ml-2 mr-4 sm:mr-0">
           <HoverArrowButton
             label="Sign Me Up"
-            onClick={() => navigate("/access-form")}
+            onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
             className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
             textClass="text-white"
             hoverTextClass="text-white"

@@ -1,6 +1,6 @@
 import checkbox from "@/assets/SellCar/Check-Box.png"
 import rightImage from "@/assets/Membership/Membership-Maximise-by-Wheelz.webp"
-
+import { BASE_URL } from "@/config";
 import HoverArrowButton from "@/util/HoverButton";
 import { useNavigate } from "react-router-dom";
 export default function WhyChooseUs() {
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
   textClass="text-black font-semibold"
   hoverTextClass="text-black font-semibold"/>
                    
-                    <HoverArrowButton   label="Sign Me Up" onClick={() => naviagte("/")}  className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
+                    <HoverArrowButton   label="Sign Me Up"onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}  className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
   textClass="text-[#1cbeff] font-semibold"
   hoverTextClass="text-[#1cbeff] font-semibold"/>
                   </div>
