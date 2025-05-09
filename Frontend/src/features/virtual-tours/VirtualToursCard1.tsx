@@ -154,10 +154,10 @@ const videos = [
 
 export const VirtualToursCard1: React.FC = () => {
     const navigate = useNavigate()
-    const [visibleCount, setVisibleCount] = useState(18); 
+    const [visibleCount, setVisibleCount] = useState(21); 
 
     const showMoreVideos = () => {
-      setVisibleCount((prev) => prev + 6); 
+        setVisibleCount(videos.length);
     };
     return (
         <div className="w-full bg-[#0c3366] py-16 font-sans">
