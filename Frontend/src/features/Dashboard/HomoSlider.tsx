@@ -221,9 +221,14 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
                 </div>
                 <div className="absolute bottom-3 right-3">
                 <button
-  onClick={(e) => {
-    e.stopPropagation();  
-    scrollToAllServices();
+   onClick={() => {
+    const route = texts[index].route;
+    const isFullUrl = route.startsWith("http") || route.startsWith(BASE_URL);
+    if (isFullUrl) {
+      window.location.href = route;
+    } else {
+      navigate(route);
+    }
   }}
   className="group relative text-white bg-primary border border-primary font-semibold px-4 py-1.5 rounded-full text-[10px] md:text-xs shadow-md hover:bg-primary hover:text-white transition-all overflow-hidden min-w-[80px] text-center"
 >

@@ -3,9 +3,10 @@ import { useState } from "react"
 import { PlusCircle, XCircle } from "lucide-react"
 import { ChevronRight } from "lucide-react"
 import img1 from "@/assets/Homepage/03-Helpdesk.gif"
+import { useNavigate } from "react-router-dom"
 const   AboutYouSection: React.FC = () => {
   const [expanded, setExpanded] = useState(false)
-
+const navigate = useNavigate()
   return (
     <>
 
@@ -75,7 +76,7 @@ const   AboutYouSection: React.FC = () => {
 
             <button
               className="bg-[#18b6ff] text-white px-4 py-2 rounded-full font-medium text-base hover:bg-[#0ca3eb] transition-colors"
-              
+            onClick={() => navigate("/contact-us")}
             >
               Get In Touch
             </button>
@@ -98,6 +99,7 @@ const   AboutYouSection: React.FC = () => {
 
             
             <button
+               onClick={() => navigate("/contact-us")}
   className="group relative bg-white text-primary px-8 py-3 rounded-full font-medium text-lg flex items-center justify-center overflow-hidden transition-transform hover:scale-105 cursor-pointer"
 >
   {/* Default state */}

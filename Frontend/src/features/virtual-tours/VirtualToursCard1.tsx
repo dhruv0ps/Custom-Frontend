@@ -2,7 +2,7 @@ import React from "react";
 import HoverArrowButton from "@/util/HoverButton";
 import { ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import {motion} from "framer-motion"    
+ 
 
 const videos = [
     {
@@ -172,13 +172,8 @@ export const VirtualToursCard1: React.FC = () => {
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
                     {videos.map((video, index) => (
                    
-                            <motion.div key={index}
-                       
-                              initial={{ opacity: 0, y: 30 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.4, delay: index * 0.05 }}
-                              viewport={{ once: true }}
-                               className="w-full max-w-[440px] flex flex-col items-center gap-4"
+                            <div key={index}
+                  className="w-full max-w-[440px] flex flex-col items-center gap-4"
                             >
 
                             
@@ -210,7 +205,7 @@ export const VirtualToursCard1: React.FC = () => {
                                     </span>
                                 </button>
                             </div>
-                            </motion.div>
+                            </div>
                     ))}
                 </div>
 

@@ -65,7 +65,7 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
 >
 
 
-            {/* Primary Button */}
+            {/* Primary Button */}  
             <button
               onClick={() => navigate(primaryButtonLink)}
               className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-8 py-2 rounded-full"
@@ -92,7 +92,7 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
 
             {/* Secondary Button with Hover Arrow */}
             <button
-  onClick={() => navigate(secondaryButtonLink)}
+  onClick={() => (window.location.href = secondaryButtonLink)}
   className={`group relative ${secondaryButtonBg || "bg-white"} ${secondaryButtonText || "text-[#1cbeff]"} font-medium px-8 py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden text-center shadow-sm hover:shadow-md`}
 >
   <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">

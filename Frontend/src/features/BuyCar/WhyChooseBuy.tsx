@@ -2,6 +2,7 @@ import checkbox from "@/assets/SellCar/Check-Box.png"
 import rightImage from "@/assets/Buy Car/4-Buy-car.jpg"
 import HoverArrowButton from "@/util/HoverButton"
 import { useNavigate } from "react-router-dom"
+import { BASE_URL } from "@/config"
 export default function WhyChooseBuy() {
   const navigate = useNavigate();
   const features = [
@@ -77,7 +78,7 @@ export default function WhyChooseBuy() {
                     />
                    <HoverArrowButton
             label="Access Form"
-            onClick={() => navigate("/sell-your-car/form")}
+          onClick={() => window.location.href = (`${BASE_URL}/buy`)}
             className="bg-white text-primary font-semibold px-8 py-3 rounded-full shadow-md transition-all min-w-[140px]"
             textClass="text-primary"
             hoverTextClass="text-primary bg-gray-100"

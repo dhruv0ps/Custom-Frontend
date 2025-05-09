@@ -9,13 +9,14 @@ import img6 from "@/assets/SellCar/iStock-1598042841(3).jpg"
 import img7 from "@/assets/SellCar/iStock1490441147.jpg"
 import NewsSection from "./NewsSection"
 import WhyChooseUs from "./WhyChooseUs"
-
+import { BASE_URL } from "@/config"
 import HoverArrowButton from "@/util/HoverButton"
-import { useNavigate } from "react-router-dom"
+
 import AllFooterSection from "@/util/AllFooterSection"
 import VideoBanner from "@/util/VideoBanner"
+
 export default function SellCar() {
-  const navigate = useNavigate()
+  
   return (
     <>
 
@@ -26,7 +27,7 @@ export default function SellCar() {
             primaryButtonLabel="Home"
             primaryButtonLink="/"
             secondaryButtonLabel="Access Form"
-            secondaryButtonLink="/"/>
+            secondaryButtonLink={`${BASE_URL}/sell-rego`}/>
       <div className="bg-[#b7eaff] py-12  sm:px-0">
   <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center px-4 sm:px-0 ">
     <h2 className="text-3xl md:text-3xl font-bold mb-12">We Work For You</h2>
@@ -92,7 +93,7 @@ export default function SellCar() {
       <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
       <HoverArrowButton
         label="Sell Now"
-        onClick={() => navigate("/")}
+        onClick={() => window.location.href = (`${BASE_URL}/sell/rego`)}
         className="px-6 py-3  font-semibold text-base rounded-full transition bg-primary text-white border border-primary shadow-lg hover:scale-105 overflow-hidden"
         textClass="text-white"
         hoverTextClass="text-white"
@@ -267,7 +268,7 @@ export default function SellCar() {
       <div className="flex justify-end flex-shrink-0  sm:ml-2 mr-3 sm:mr-0">
       <HoverArrowButton
         label="Sell Now"
-        onClick={() => navigate("/")}
+        onClick={() => window.location.href = (`${BASE_URL}/sell/rego`)}
         className="px-6 py-3  font-semibold text-base rounded-full transition bg-white  border border-primary shadow-lg hover:scale-105 overflow-hidden"
         textClass="text-primary"
         hoverTextClass="text-primary"

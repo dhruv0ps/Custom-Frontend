@@ -1,8 +1,9 @@
 import React from "react";
 import banner from "@/assets/Legal/iStock-16.jpg";
 import AllFooterSection from "@/util/AllFooterSection";
-
+import { useNavigate } from "react-router-dom";
 const ContactUs: React.FC = () => {
+  const navigate =useNavigate()
   return (
     <>
     <div className="bg-white text-black w-full overflow-hidden">
@@ -35,21 +36,21 @@ const ContactUs: React.FC = () => {
         <div className="mb-10">
           <h4 className="font-bold text-lg mb-1">GENERAL FAQS</h4>
           <p className="mb-1">Have a question?</p>
-          <p>Find answers to commonly <a className="text-sky-500 underline">asked questions</a></p>
+          <p>Find answers to commonly <a className="text-sky-500 underline cursor-pointer" onClick={() => navigate("/general-faqs")}>asked questions</a></p>
 
           <h4 className="font-bold text-lg mt-6 mb-1">UNDERSTANDING OUR TRADE PROMOTION DRAWS</h4>
           <p className="mb-1">Have a question?</p>
-          <p>Find answers to commonly <a className="text-sky-500 underline">asked questions</a></p>
+          <p>Find answers to commonly <a className="text-sky-500 underline cursor-pointer"  onClick={() => navigate("/periodic-trade-promotion-draws")}>asked questions</a></p>
 
           <h4 className="font-bold text-lg mt-6 mb-1">COMPETITION TERMS: WHEELZ TRADE PROMOTION DRAWS</h4>
           <p>Want to learn more about your state regulations?</p>
-          <p>Find all the <a className="text-sky-500 underline">information per state</a></p>
+          <p>Find all the <a className="text-sky-500 underline cursor-pointer" onClick={() => navigate("/competition-terms")}>information per state</a></p>
         </div>
 
         {/* Email */}
         <div className="mb-10">
           <h4 className="font-bold text-lg mb-1">EMAIL US ANYTIME 24/7</h4>
-          <p><a className="text-sky-500 underline">Get in touch.</a> Our team will respond to your enquiries in a timely manner.</p>
+          <p><a className="text-sky-500 underline cursor-pointer">Get in touch.</a> Our team will respond to your enquiries in a timely manner.</p>
         </div>
 
         {/* Phone & Locations */}

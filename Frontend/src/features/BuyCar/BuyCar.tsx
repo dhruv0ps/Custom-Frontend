@@ -11,11 +11,12 @@ import NewsSection from "./NewsBuySection"
 import WhyChooseBuy from "./WhyChooseBuy"
 
 import HoverArrowButton from "@/util/HoverButton"
-import { useNavigate } from "react-router-dom"
+
 import AllFooterSection from "@/util/AllFooterSection"
 import VideoBanner from "@/util/VideoBanner"
+import { BASE_URL } from "@/config"
 export default function BuyCar() {
-    const navigate = useNavigate()
+    
     return (
         <>
 
@@ -25,7 +26,7 @@ export default function BuyCar() {
             primaryButtonLabel="Home"
             primaryButtonLink="/"
             secondaryButtonLabel="Access Form"
-            secondaryButtonLink="/"/>
+            secondaryButtonLink={`${BASE_URL}/buy`}/>
             <div className="bg-[#b7eaff] py-12">
                 <div className=" max-w-[95%] sm:max-w-[80%]  mx-auto text-center px-4 sm:px-0">
                 <h1 className="text-3xl sm:text-4xl font-bold text-black mb-10">Putting You First</h1>
@@ -89,7 +90,7 @@ export default function BuyCar() {
       <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
       <HoverArrowButton
         label="Buy Now"
-        onClick={() => navigate("/")}
+        onClick={() => window.location.href = (`${BASE_URL}/buy`)}
         className="px-6 py-3  font-semibold text-base rounded-full transition bg-primary text-white border border-primary shadow-lg hover:scale-105 overflow-hidden"
         textClass="text-white"
         hoverTextClass="text-white"
@@ -261,7 +262,7 @@ export default function BuyCar() {
       <div className="flex justify-end flex-shrink-0 ml-2  sm:mr-0">
       <HoverArrowButton
       label="Buy Now"
-      onClick={() => navigate("/buy-car/form")}
+      onClick={() => window.location.href = (`${BASE_URL}/buy`)}
       className="px-3 py-3  font-semibold text-base rounded-full transition bg-white text-white sm:bg-white sm:text-primary border border-primary shadow hover:scale-105 overflow-hidden mr-3 sm:mr-0"
       textClass=" text-primary"
       hoverTextClass="text-primary"

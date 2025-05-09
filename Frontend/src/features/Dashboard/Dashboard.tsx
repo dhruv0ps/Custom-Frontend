@@ -17,6 +17,7 @@ import video from "@/assets/Home/3sec.mp4";
 import { Button } from "@/components/ui/button"; 
 import turtleVideo from "@/assets/Homepage/iStock-464391536.mp4";  
 import { ChevronRight } from "lucide-react"; 
+import { BASE_URL } from "@/config";
 
 const Dashboard = () => {
   const allServicesRef = useRef<HTMLDivElement>(null);
@@ -29,27 +30,29 @@ const Dashboard = () => {
     const targetPosition = allServicesRef.current.offsetTop - 60;
     const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
-    const duration = 1200; // in ms (increase for slower scroll)
+    const duration = 1200;
     let startTime: number | null = null;
   
-    const animation = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(0, run);
-  
-      if (timeElapsed < duration) requestAnimationFrame(animation);
-    };
-  
-    const easeInOutQuad = (t: number, b: number, c: number, d: number) => {
+    const easeInOutQuad = (t: number, b: number, c: number, d: number): number => {
       t /= d / 2;
       if (t < 1) return (c / 2) * t * t + b;
       t--;
       return (-c / 2) * (t * (t - 2) - 1) + b;
     };
   
+    const animation = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+  
+      const position = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, position);
+  
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    };
+  
     requestAnimationFrame(animation);
   };
+  
   
 
   useEffect(() => {
@@ -130,7 +133,7 @@ const Dashboard = () => {
           <p className="text-white text-center mt-6 sm:mt-0 md:text-right text-base md:text-xl font-semibold mb-4 md:mb-0">
             You're probably wondering how I ended up in this situation...
           </p>
-          <Button className="group relative bg-primary hover:bg-sky-500 text-white font-semibold rounded-full px-4 md:px-6 py-2 shadow transition-all flex items-center justify-center overflow-hidden">
+          <Button onClick={() => (window.location.href = `${BASE_URL}/ambassador`)} className="group relative bg-primary hover:bg-sky-500 text-white font-semibold rounded-full px-4 md:px-6 py-2 shadow transition-all flex items-center justify-center overflow-hidden">
             {/* Default Text */}
             <span className="transition-opacity duration-200 group-hover:opacity-0">
               Learn More

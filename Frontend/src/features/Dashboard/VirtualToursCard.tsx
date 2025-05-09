@@ -3,7 +3,9 @@ import personImage from "@/assets/Home/Virtual-Tours.jpg";
 import speedometerIcon from "@/assets/Homepage/Car-Speedometer.gif";
 import { ChevronRight } from "lucide-react";
 import HoverArrowButton from "@/util/HoverButton";
-import { useNavigate } from "react-router-dom";
+
+import { BASE_URL } from "@/config";
+
 const videos = [
     {
         title: "Porsche 911 GT3",
@@ -66,7 +68,7 @@ const videos = [
 ];
 
 export const VirtualToursCard: React.FC = () => {
-const navigate = useNavigate()
+
     const HoverButton = () => {
         const [hovered, setHovered] = useState(false);
 
@@ -87,6 +89,7 @@ const navigate = useNavigate()
                         boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
                         overflow: "hidden",
                     }}
+                    onClick={() => window.location.href = `${BASE_URL}/request-virtual-tour`}
                 >
                     {/* Static Text */}
                     <span
@@ -228,7 +231,7 @@ const navigate = useNavigate()
                     <div className="flex justify-end w-full sm:w-auto">
                     <HoverArrowButton
   label="View All"
-  onClick={() => navigate("/view-all")}
+  onClick={() => window.location.href = `${BASE_URL}/request-virtual-tour`}
   className="bg-primary text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition-all"
   textClass="text-white"
   hoverTextClass="text-white"

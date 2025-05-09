@@ -19,7 +19,7 @@ const Finance:React.FC = () => {
   videoSrc={Videp1}
   heading={
     <>
-      Every client's finance win… 
+      Every client's finance win…{` `} 
       <br className="block sm:hidden" />
       <span className="inline sm:inline-block">sparks an in-house celebration</span>
     </>

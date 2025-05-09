@@ -2,6 +2,7 @@ import checkbox from "@/assets/SellCar/Check-Box.png"
 import rightImage from "@/assets/SellCar/iStock-1441960045(2).jpg"
 import HoverArrowButton from "@/util/HoverButton"
 import { useNavigate } from "react-router-dom"
+import { BASE_URL } from "@/config"
 export default function WhyChooseUs() {
   const naviagte = useNavigate();
   const features = [
@@ -77,7 +78,7 @@ export default function WhyChooseUs() {
 
     <HoverArrowButton
       label="Acess Form"
-      onClick={() => naviagte("/")}
+      onClick={() => (window.location.href = `${BASE_URL}/sell-rego`)}
       className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
       textClass="text-[#1cbeff] font-semibold"
       hoverTextClass="text-[#1cbeff] font-semibold"
