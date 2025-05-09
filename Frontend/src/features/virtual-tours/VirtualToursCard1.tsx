@@ -154,7 +154,7 @@ const videos = [
 
 export const VirtualToursCard1: React.FC = () => {
     const navigate = useNavigate()
-    const [visibleCount, setVisibleCount] = useState(19); 
+    const [visibleCount, setVisibleCount] = useState(18); 
 
     const showMoreVideos = () => {
       setVisibleCount((prev) => prev + 6); 
