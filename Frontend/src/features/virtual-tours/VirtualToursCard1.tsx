@@ -2,7 +2,7 @@ import React from "react";
 import HoverArrowButton from "@/util/HoverButton";
 import { ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
- 
+import { useState } from "react";
 
 const videos = [
     {
@@ -154,6 +154,11 @@ const videos = [
 
 export const VirtualToursCard1: React.FC = () => {
     const navigate = useNavigate()
+    const [visibleCount, setVisibleCount] = useState(15); 
+
+    const showMoreVideos = () => {
+      setVisibleCount((prev) => prev + 6); 
+    };
     return (
         <div className="w-full bg-[#0c3366] py-16 font-sans">
             <div className="max-w-[95%] sm:max-w-[80%] mx-auto ">
@@ -170,7 +175,7 @@ export const VirtualToursCard1: React.FC = () => {
 
                 {/* YouTube Grid - Updated to match the image */}
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-                    {videos.map((video, index) => (
+                {videos.slice(0, visibleCount).map((video, index) => (
                    
                             <div key={index}
                   className="w-full max-w-[440px] flex flex-col items-center gap-4"
@@ -209,7 +214,16 @@ export const VirtualToursCard1: React.FC = () => {
                     ))}
                 </div>
 
-          
+                {visibleCount < videos.length && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={showMoreVideos}
+              className="bg-white text-primary font-semibold px-6 py-2 rounded-full shadow hover:bg-gray-100 transition"
+            >
+              Show More
+            </button>
+          </div>
+        )}
         
             </div>
             <div className="w-full py-4 sm:py-8 sm:mt-4 mt-12">
