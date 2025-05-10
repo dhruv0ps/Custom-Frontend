@@ -9,6 +9,7 @@ import img8 from "@/assets/FundRaisers/logo_sociall.png"
 import img9 from "@/assets/FundRaisers/PeterMacLogo.jpg"
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 import {  useRef } from 'react';
+import { BASE_URL } from "@/config";
 interface CharityImageProps {
     src: string;
     alt: string;
@@ -138,7 +139,7 @@ const PremiumPartner = () => {
                             />
                      
                             <div className="w-full flex justify-end">
-                              <button className="bg-[#e6022a] text-white font-bold py-2 px-6 rounded-full shadow-lg relative group transition-all duration-300 overflow-hidden h-11 w-[160px]">
+                              <button  onClick={() => (window.location.href = `${BASE_URL}/charities`)} className="bg-[#e6022a] text-white font-bold py-2 px-6 rounded-full shadow-lg relative group transition-all duration-300 overflow-hidden h-11 w-[160px]">
                                 
                                 {/* Default Text */}
                                 <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">

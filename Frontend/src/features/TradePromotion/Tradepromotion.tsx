@@ -1,6 +1,6 @@
 import React from 'react'
 import video1 from "@/assets/Loyalty-Program.mp4"
-import { useNavigate } from 'react-router-dom';
+
 import img1 from "@/assets/Trade Promotion/iStock1270040021-(1).jpg";
 import img2 from "@/assets/Trade Promotion/iStock-1442562842-(1).jpg";
 import img3 from "@/assets/Trade Promotion/iStock.jpg";
@@ -9,8 +9,9 @@ import WhyChooseUs from './WhyChooseUs';
 import AllFooterSection from '@/util/AllFooterSection';
 import VideoBanner from '@/util/VideoBanner';
 import HoverArrowButton from '@/util/HoverButton';
+import { BASE_URL } from '@/config';
 const Tradepromotion: React.FC = () => {
-  const navigate = useNavigate();
+ 
 
   return (
     <>
@@ -20,7 +21,7 @@ const Tradepromotion: React.FC = () => {
         primaryButtonLabel="Home"
         primaryButtonLink="/"
         secondaryButtonLabel="View All"
-        secondaryButtonLink="/view-all"
+        secondaryButtonLink={`${BASE_URL}/trade-promotion`}
       />
       <div className="bg-[#d9d9d9] sm:px-4 py-12">
         <div className='max-w-[95%] mx-auto sm:max-w-[80%]'>     <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-black">
@@ -102,7 +103,7 @@ const Tradepromotion: React.FC = () => {
             <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
               <HoverArrowButton
                 label="Sign Me Up"
-                onClick={() => navigate("/access-form")}
+              onClick={() => window.location.href = `${BASE_URL}/trade-promotion`}
                 className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
                 textClass="text-white"
                 hoverTextClass="text-white"

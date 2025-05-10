@@ -9,10 +9,10 @@ import WhyChooseUs from './WhyChooseUs';
 import AllFooterSection from '@/util/AllFooterSection';
 import VideoBanner from '@/util/VideoBanner';
 import HoverArrowButton from '@/util/HoverButton';
-import { useNavigate } from 'react-router-dom';
+
+import { BASE_URL } from '@/config';
 const Finance:React.FC = () => {
-  const navigate = useNavigate()
-   
+ 
   return (
     <>
        <VideoBanner
@@ -27,7 +27,7 @@ const Finance:React.FC = () => {
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Access Form"
-  secondaryButtonLink="/view-all"
+ secondaryButtonLink={`${BASE_URL}/finance `}
 />
 
       <div className="bg-[#b1e3ff] py-12 sm:px-4">
@@ -91,7 +91,7 @@ const Finance:React.FC = () => {
       <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
           <HoverArrowButton
             label="Access Form"
-            onClick={() => navigate("/access-form")}
+           onClick={() => window.location.href = `${BASE_URL}/finance`}
             className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
             textClass="text-white"
             hoverTextClass="text-white"
@@ -99,7 +99,7 @@ const Finance:React.FC = () => {
         </div>
     </div>
     </div>
-  <PremiumPartner/>
+  <PremiumPartner mode='finance'/>
 </div>
 <WhyChooseUs/>
 <AllFooterSection content={[

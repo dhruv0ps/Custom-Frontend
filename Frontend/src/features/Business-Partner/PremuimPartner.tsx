@@ -4,7 +4,7 @@ import benefitImg3 from "@/assets/Parnter/iStock-1528870176-(1).jpg";
 import benefitImg4 from "@/assets/Parnter/iStock-939485918 -2).jpg";
 import benefitImg5 from "@/assets/Parnter/iStock-939837316(1).jpg";
 import benefitImg6 from "@/assets/Parnter/iStock-950639314-(1).jpg";
-
+import { BASE_URL } from "@/config";
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 
 const PremiumPartner = () => {
@@ -89,7 +89,8 @@ const PremiumPartner = () => {
                             </div>
 
                             <div className="w-full flex justify-end">
-                              <button className="bg-[white] text-primary font-semibold py-2 px-4 rounded-full shadow-lg relative group transition-all duration-300 overflow-hidden h-11 w-[144px]">
+                              <button
+                               onClick={() => window.location.href = (`${BASE_URL}/business-partner/register-partner`)} className="bg-[white] text-primary font-semibold py-2 px-4 rounded-full shadow-lg relative group transition-all duration-300 overflow-hidden h-11 w-[144px]">
                                 
                                 {/* Default Text */}
                                 <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-100 group-hover:opacity-0">

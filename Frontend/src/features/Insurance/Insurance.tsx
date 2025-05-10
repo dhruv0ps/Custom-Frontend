@@ -1,6 +1,6 @@
 import React from 'react'
 import Videp1 from"@/assets/Insurance/Insurance.mp4";
-import { useNavigate } from 'react-router-dom';
+
 import HoverArrowButton from '@/util/HoverButton';
 import img1 from "@/assets/Insurance/Wheelz-icon-25.webp"
 import img2 from "@/assets/Insurance/Wheelz-icon-26.webp"
@@ -10,9 +10,9 @@ import VideoBanner from '@/util/VideoBanner';
 import AllFooterSection from '@/util/AllFooterSection';
 import PremiumPartner from '../Finance/Premuimpartners';
 import WhyChooseUs from './WhyChooseUs';
-
+import { BASE_URL } from '@/config';
 const Insurance:React.FC = () => {
-const navigate = useNavigate()
+
     
     const features = [
       {
@@ -45,7 +45,7 @@ const navigate = useNavigate()
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Access Form"
-  secondaryButtonLink="/view-all"
+  secondaryButtonLink={`${BASE_URL}/insurance`}
 />
 
       <div className="bg-[#b1e3ff] py-12 ">
@@ -112,7 +112,7 @@ const navigate = useNavigate()
   <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
       <HoverArrowButton
         label="Access Form"
-        onClick={() => navigate("/access-form")}
+      onClick={() => window.location.href = `${BASE_URL}/insurance`}
         className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
         textClass="text-white"
         hoverTextClass="text-white"
@@ -120,7 +120,7 @@ const navigate = useNavigate()
     </div>
 </div>
 </div>
-        <PremiumPartner />
+        <PremiumPartner mode='insurance' />
       </div>
       <WhyChooseUs />
       <AllFooterSection content={[

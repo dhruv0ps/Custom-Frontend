@@ -3,10 +3,10 @@ import img1 from "@/assets/Overhauled/iStock-1870018492-(1).jpg";
 import img2 from "@/assets/Overhauled/iStock-1870772344-(1).jpg"
 import img3 from "@/assets/Overhauled/iStock-1991131874-(1).jpg"
 import HoverArrowButton from '@/util/HoverButton'
-import { useNavigate } from 'react-router-dom'
+import { BASE_URL } from "@/config";
 
 const PremiumPartner = () => {
-  const navigate = useNavigate()
+
   const partners = [
     {
       title: "Get In To Win",
@@ -126,7 +126,7 @@ const PremiumPartner = () => {
       <div className="flex justify-end flex-shrink-0 ml-2 mr-4">
       <HoverArrowButton
   label="Access Form"
-  onClick={() => navigate("/access-form")}
+onClick={() => window.location.href = `${BASE_URL}/overhauled`}
   className="bg-white transition-all px-4 sm:px-8 py-3 text-primary font-semibold text-sm sm:text-base rounded-full shadow-md"
   textClass="text-primary"
   hoverTextClass="text-primary"

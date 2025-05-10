@@ -10,7 +10,7 @@ import img2 from "@/assets/Virtual Tour/Wheelz-icon-14.webp"
 import img3 from "@/assets/Virtual Tour/Wheelz-icon-15.webp"
 import img4 from "@/assets/Virtual Tour/Wheelz-icon-16.webp"
 import img10 from "@/assets/Virtual Tour/virtualTour.jpg"
-
+import { BASE_URL } from '@/config';
 import AllFooterSection from '@/util/AllFooterSection';
 import VideoBanner from '@/util/VideoBanner';
 import HoverArrowButton from '@/util/HoverButton';
@@ -25,7 +25,8 @@ const VirtualTours: React.FC = () => {
         primaryButtonLabel="Home"
         primaryButtonLink="/"
         secondaryButtonLabel="View All"
-        secondaryButtonLink="/view-all"
+        secondaryButtonLink={`${BASE_URL}/request-virtual-tour
+`}
       />
 
       <VirtualToursCard1 />

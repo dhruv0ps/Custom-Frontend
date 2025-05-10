@@ -3,7 +3,7 @@ import HoverArrowButton from "@/util/HoverButton";
 import { ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { FaYoutube } from "react-icons/fa6";
 const videos = [
     {
         title: "Porsche 911 GT3",
@@ -216,13 +216,14 @@ export const VirtualToursCard1: React.FC = () => {
 
                 {visibleCount < videos.length && (
           <div className="flex justify-center mt-10">
-            <button
-              onClick={showMoreVideos}
-              className="bg-white text-primary font-semibold px-6 py-2 rounded-full shadow hover:bg-gray-100 transition"
-            >
-              Show More
-            </button>
-          </div>
+  <button
+    onClick={showMoreVideos}
+    className="bg-white text-red-600 font-semibold px-6 py-2 rounded-md shadow hover:bg-gray-100 transition flex items-center gap-2"
+  >
+    <FaYoutube className="text-red-600 text-4xl" />
+    Show More
+  </button>
+</div>
         )}
         
             </div>

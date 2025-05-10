@@ -38,7 +38,7 @@ const navigate = useNavigate()
             {expanded && (
               <ul className="list-decimal list-inside text-gray-700 space-y-3 text-sm md:text-base mt-3 text-center sm:text-left">
                 <li>
-                  Powered by advanced technology and dynamic tools, we empower users to make informed
+                  Powered by advanced technology and dynamic tools, we empower you to make informed
                   decisions. With a user friendly interface and genuine discounts, we cater to all your
                   automotive needs.
                 </li>

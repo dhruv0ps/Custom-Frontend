@@ -10,6 +10,7 @@ import WhyChooseUs from './WhyChooseUs'
 import AllFooterSection from '@/util/AllFooterSection'
 import HoverArrowButton from '@/util/HoverButton'
 import { useNavigate } from 'react-router-dom'
+import { BASE_URL } from '@/config'
 // Add CSS for animations
 const animationStyles = `
   @keyframes fadeTop {
@@ -104,7 +105,7 @@ const Fleet: React.FC = () => {
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Access Form"
-  secondaryButtonLink="/view-all"
+   secondaryButtonLink={`${BASE_URL}/business-partner/fleet-management`}
 />
       <div className="bg-[#b1e3ff] py-12 sm:px-4">
       <div className=" max-w-[95%] sm:max-w-[80%] mx-auto text-center">

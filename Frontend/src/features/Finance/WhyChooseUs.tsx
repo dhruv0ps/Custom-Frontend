@@ -2,6 +2,7 @@ import checkbox from "@/assets/SellCar/Check-Box.png"
 import rightImage from "@/assets/Finance/Finance1.jpg"
 import HoverArrowButton from "@/util/HoverButton";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "@/config";
 export default function WhyChooseUs() {
   const navigate = useNavigate()
     const features = [
@@ -74,7 +75,7 @@ export default function WhyChooseUs() {
   textClass="text-black font-semibold"
   hoverTextClass="text-black font-semibold"/>
                    
-                    <HoverArrowButton   label="Acess Form" onClick={() => navigate("/")}  className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
+                    <HoverArrowButton   label="Acess Form" onClick={() => window.location.href = `${BASE_URL}/trade-promotion`}  className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
   textClass="text-[#1cbeff] font-semibold"
   hoverTextClass="text-[#1cbeff] font-semibold"/>
                   </div>

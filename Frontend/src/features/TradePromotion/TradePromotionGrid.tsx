@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+
 import img1 from "@/assets/Wheelz-Australia-White-and-Blue-Color-300x66.webp";
 import img2 from "@/assets/Trade Promotion/iStock1257605497.jpg"
 import img3 from "@/assets/Trade Promotion/Bucks-Bonanza.jpg"
@@ -7,8 +7,9 @@ import img5 from "@/assets/Trade Promotion/Glow-Goals.jpg"
 import img6 from "@/assets/Trade Promotion/Drive, Relax-Or-Spend.jpg"
 import img7 from "@/assets/MateRate/BillBusters.jpg"
 import HoverArrowButton from "@/util/HoverButton";
+import { BASE_URL } from "@/config";
 const TradePromotionGrid = () => {
-  const navigate = useNavigate();
+ 
 
   return (
     <div className="bg-[#002b63] py-16  text-white">
@@ -150,7 +151,7 @@ const TradePromotionGrid = () => {
       <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
           <HoverArrowButton
             label="Sign Me Up"
-            onClick={() => navigate("/access-form")}
+          onClick={() => window.location.href = `${BASE_URL}/trade-promotion`}
             className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
             textClass="text-white"
             hoverTextClass="text-white"

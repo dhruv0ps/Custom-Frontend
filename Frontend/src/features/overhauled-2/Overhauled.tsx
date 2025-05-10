@@ -9,7 +9,8 @@ import VideoBanner from '@/util/VideoBanner'
 import AllFooterSection from '@/util/AllFooterSection'
 import WhyChooseUs from './WhyChooseUs'
 import HoverArrowButton from '@/util/HoverButton'
-import { useNavigate } from 'react-router-dom'
+
+import { BASE_URL } from '@/config'
 // Add CSS for animations
 const animationStyles = `
   @keyframes fadeTop {
@@ -34,7 +35,7 @@ const animationStyles = `
 `;
 
 const Overhauled: React.FC = () => {
-    const navigate = useNavigate()
+    
     const iconRefs = useRef<(HTMLDivElement | null)[]>([]);
     
     useEffect(() => {
@@ -92,7 +93,8 @@ const Overhauled: React.FC = () => {
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Access Form"
-  secondaryButtonLink="/view-all"
+   secondaryButtonLink={`${BASE_URL}/overhauled
+`}
 />
       <div className="bg-[#b7eaff] py-12 ">
       <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center px-4">
@@ -158,7 +160,7 @@ const Overhauled: React.FC = () => {
     <div className="flex-shrink-0 ml-2 mr-4">
       <HoverArrowButton
         label="Access Form"
-        onClick={() => navigate("/access-form")}
+      onClick={() => window.location.href = `${BASE_URL}/overhauled`}
         className="bg-primary transition-all py-2 px-4 font-semibold text-sm rounded-full shadow-md"
         textClass="text-white"
         hoverTextClass="text-white"

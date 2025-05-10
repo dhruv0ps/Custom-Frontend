@@ -10,6 +10,7 @@ import PremiumPartner from './PremuimPartner'
 import VideoBanner from '@/util/VideoBanner'
 import HoverArrowButton from '@/util/HoverButton'
 import AllFooterSection from '@/util/AllFooterSection'
+import { BASE_URL } from '@/config'
 const animationStyles = `
   @keyframes fadeTop {
     0% {
@@ -98,7 +99,7 @@ const Fundraisers: React.FC = () => {
         primaryButtonLabel="Home"
         primaryButtonLink="/"
         secondaryButtonLabel="Donate Now"
-        secondaryButtonLink="/view-all"
+        secondaryButtonLink={`${BASE_URL}/charities`}
         secondaryButtonBg="bg-[#e6022a]"
         secondaryButtonText="text-white"
         backgroundColorClass="bg-[#ffcdf4]"
@@ -164,7 +165,7 @@ const Fundraisers: React.FC = () => {
             <div className="flex justify-end flex-shrink-0 ml-2 sm:mr-0 mr-2">
               <HoverArrowButton
                 label="Donate Now"
-                onClick={() => navigate("/donate")}
+                onClick={() => (window.location.href = `${BASE_URL}/charities`)}
                 className="bg-[#e6022a] hover:bg-[#e6022a]  text-white transition-all px-4 py-3  sm:px-8 sm:py-3 font-semibold   text-sm sm:text-base rounded-full shadow-md"
                 textClass="text-white"
                 hoverTextClass="text-white" />
@@ -227,7 +228,7 @@ const Fundraisers: React.FC = () => {
             {/* Donate Now Button */}
             <HoverArrowButton
               label="Donate Now"
-              onClick={() => navigate('/view-all')}
+               onClick={() => (window.location.href = `${BASE_URL}/charities`)}
               className="bg-[#e6022a] border border-[#e6022a] py-2 px-[30px] rounded-full transition-all duration-300 shadow-[0px_10px_10px_-6px_rgba(0,0,0,0.3)]"
               textClass="text-white text-[18px] font-semibold"
               hoverTextClass="text-white text-[18px] font-semibold"

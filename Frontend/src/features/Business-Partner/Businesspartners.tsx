@@ -10,6 +10,7 @@ import PremiumPartner from './PremuimPartner'
 import img66 from "@/assets/Parnter/Car.jpg"
 import AllFooterSection from '@/util/AllFooterSection'
 import VideoBanner from '@/util/VideoBanner'
+import { BASE_URL } from '@/config'
 import HoverArrowButton from '@/util/HoverButton'
 const Businesspartners:React.FC = () => {
     const navigate = useNavigate();
@@ -74,7 +75,8 @@ const Businesspartners:React.FC = () => {
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Access Form"
-  secondaryButtonLink="/view-all"
+  secondaryButtonLink={`${BASE_URL}/business-partner/register-partner
+ `}
 />
 
       <div className="bg-[#b7eaff] py-12">
@@ -138,7 +140,7 @@ const Businesspartners:React.FC = () => {
     <div className="flex-shrink-0 ml-2 mr-4">
       <HoverArrowButton
      label="Sell Now"
-     onClick={() => navigate("/")}
+     onClick={() => window.location.href = (`${BASE_URL}/business-partner/register-partner`)}
      className="px-6 py-3  font-semibold text-base rounded-full transition bg-primary text-white border border-primary shadow-lg hover:scale-105 overflow-hidden"
      textClass="text-white"
      hoverTextClass="text-white"
@@ -189,7 +191,7 @@ const Businesspartners:React.FC = () => {
 
   <HoverArrowButton
     label="Access Form"
-    onClick={() => navigate("/view-all")}
+   onClick={() => window.location.href = (`${BASE_URL}/business-partner/register-partner`)}
     className="text-white bg-[#1cbeff] hover:bg-[#00b2e3] border border-[#1cbeff] text-[18px] font-semibold py-2 px-8 rounded-full transition-all duration-300 shadow-md"
     textClass="text-white"
     hoverTextClass="text-white"

@@ -1,8 +1,12 @@
 import img1 from "@/assets/MateRate/soon.webp";
 import HoverArrowButton from "@/util/HoverButton";
-import { useNavigate } from "react-router-dom";
-const PremiumPartner = () => {
-  const navigate = useNavigate()
+
+import { BASE_URL } from "@/config";
+interface PremiumPartnerProps {
+   mode: "finance" | "insurance";
+}
+const PremiumPartner: React.FC<PremiumPartnerProps> = ({ mode }) => {
+ 
   const partners = [
     {
       title: "COMING SOON",
@@ -116,12 +120,12 @@ const PremiumPartner = () => {
   </div>
   <div className="flex justify-end flex-shrink-0 ml-2 mr-6 ">
       <HoverArrowButton
-        label="Access Form"
-        onClick={() => navigate("/access-form")}
-       className="bg-white  transition-all px-3 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md"
-       textClass="text-primary"
-  hoverTextClass="text-primary"
-      />
+              label="Access Form"
+              onClick={() => window.location.href = `${BASE_URL}/${mode}`}
+              className="bg-white transition-all px-3 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md"
+              textClass="text-primary"
+              hoverTextClass="text-primary"
+            />
     </div>
 </div>
 </div>
