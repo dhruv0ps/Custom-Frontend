@@ -1,10 +1,10 @@
 import rocket from "@/assets/Homepage/Icon-46-Rocket.gif"
 import manImg from "@/assets/Home/PremiumPartners.jpg"
 import { ChevronRight } from "lucide-react"
-import { BASE_URL } from "@/config";
 
+import { useNavigate } from "react-router-dom";
 export default function BusinessPartnerSection() {
- 
+ const navigate = useNavigate()
 
   return (
     <section className="bg-[#eef9ff]">
@@ -135,7 +135,7 @@ export default function BusinessPartnerSection() {
             {/* Simplified button that matches the image */}
             <button
   className="bg-[#18b6ff] text-white px-4 py-2 rounded-full font-medium text-base hover:bg-[#0ca3eb] transition-colors"
-  onClick={() => window.location.href = `${BASE_URL}/business-partner/register-partner`}
+   onClick={() => navigate("/business-partners")}
 >
   Partner Up
 </button>
@@ -147,12 +147,13 @@ export default function BusinessPartnerSection() {
 }
 
 function PartnerUpButton() {
+  const navigate = useNavigate()
   return (
     <button
       className={`group relative px-12 py-3 font-semibold text-lg rounded-full
       bg-[#00b2ff] text-white shadow-lg
       hover:scale-105 transition-all duration-300 overflow-hidden`}
-      onClick={() => window.location.href = `${BASE_URL}/business-partner/register-partner`}
+      onClick={() => navigate("/business-partners")}
     >
       <div className="flex items-center justify-center gap-1">
         <span className="block group-hover:opacity-0 transition-opacity duration-200">

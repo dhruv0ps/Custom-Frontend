@@ -214,17 +214,18 @@ export const VirtualToursCard1: React.FC = () => {
                     ))}
                 </div>
 
-                {visibleCount < videos.length && (
-          <div className="flex justify-center mt-10">
-  <button
-    onClick={showMoreVideos}
-    className="bg-white text-red-500 font-semibold px-6 py-2 rounded-md shadow hover:bg-gray-100 transition flex items-center gap-2"
-  >
-    <FaYoutube className=" text-5xl" />
-    Show More
-  </button>
-</div>
-        )}
+              {visibleCount < videos.length && (
+  <div className="flex justify-center mt-10">
+    <button
+      onClick={showMoreVideos}
+      className="bg-white font-semibold px-6 sm:py-2 py-1 rounded-md shadow hover:bg-gray-100 transition flex items-center gap-2"
+    >
+      <FaYoutube className="text-[#FF0000] text-5xl" />
+      <span className="text-[#FF0000]">Show More</span>
+    </button>
+  </div>
+)}
+
         
             </div>
             <div className="w-full py-4 sm:py-8 sm:mt-4 mt-12">

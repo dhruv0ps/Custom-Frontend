@@ -19,6 +19,15 @@ import { Card } from "@/components/ui/card"
 import { useState,useEffect } from "react"
 import { useRef } from "react"
 import { useNavigate } from "react-router-dom"
+type Service = {
+  title: string;
+  description: string;
+  image: string;
+  buttonText: string;
+  bg: string;
+  route: string;
+  counterGif?: string;
+};
 const services = [
   {
     title: "Sell Your Car",
@@ -229,7 +238,7 @@ export default function ServiceCards() {
     <div className="container max-w-full sm:max-w-[80%] mx-auto px-4 py-8">
       <h2 className="font-bold text-[#1cbeff] text-center text-2xl md:text-3xl mb-6 ">Our Service Breakdown</h2>
    <div className="block lg:hidden space-y-4">
-  {services.map((service, index) => (
+{services.map((service: Service, index: number) => (
     <Card
       key={index}
       onClick={() => navigate(service.route)}

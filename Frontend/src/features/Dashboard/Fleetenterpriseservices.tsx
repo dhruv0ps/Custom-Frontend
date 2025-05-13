@@ -3,7 +3,6 @@ import img1 from "@/assets/Homepage/Fleet.gif"
 import imgIcon from "@/assets/Home/OverhauledCompetition.jpg";
 import carImage from "@/assets/Homepage/Car-Washing.gif"
 import { ChevronRight } from "lucide-react";
-import { BASE_URL } from "@/config";
 import { useNavigate } from "react-router-dom";
 const FleetEnterpriseServices: React.FC = () => {
   const navigate = useNavigate()
@@ -144,7 +143,7 @@ const FleetEnterpriseServices: React.FC = () => {
 
           <button
             className="group absolute bottom-4 right-4 bg-primary text-white px-6 py-2 rounded-full font-semibold text-base shadow-md hover:scale-105 transition-transform overflow-hidden"
-          onClick={() => window.location.href = `${BASE_URL}/overhauled`}
+         onClick={() => navigate("/overhauled")}
           >
             <span className="block group-hover:opacity-0 transition-opacity duration-200">Enter Now</span>
             <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">

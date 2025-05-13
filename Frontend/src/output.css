@@ -4861,6 +4861,11 @@ input[type="range"]::-ms-fill-lower{
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 
+.text-\[\#FF0000\]{
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
 .text-\[\#FFFF\]{
   color: #FFFF;
 }

@@ -3,8 +3,9 @@ import teddyImage from "@/assets/Home/Charities-img.jpg";
 import donateGif from "@/assets/Homepage/Donate.gif";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
-import { BASE_URL } from "@/config";
+import { useNavigate } from "react-router-dom";
 const SupportCharitiesSection: React.FC = () => {
+  const navigate = useNavigate();
   const DonateNowButton = () => {
     const [hovered, setHovered] = useState(false);
 
@@ -29,7 +30,8 @@ const SupportCharitiesSection: React.FC = () => {
         text-center
         ${hovered ? 'scale-105' : 'scale-100'}
       `}
-      onClick={() => window.location.href = `${BASE_URL}/charities`}
+     
+      onClick={() => navigate("/fundraisers")}
     >
       {/* Static Text */}
       <span

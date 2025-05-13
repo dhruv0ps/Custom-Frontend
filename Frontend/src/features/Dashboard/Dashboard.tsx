@@ -9,7 +9,6 @@ import NewsVideoSection from "./NewsVideoSection";
 import ServiceCards from "./ServiceCard";
 import SupportCharitiesSection from "./SupportCharitiesSection";
 import ReviewCarousel from "./TestimonialCarousel";
-
 import { VirtualToursCard } from "./VirtualToursCard";
 import HomeSlider from "./HomoSlider";
 import { useLoadingContext } from "../../layout/Home";

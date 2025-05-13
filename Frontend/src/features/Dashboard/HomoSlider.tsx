@@ -237,10 +237,10 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
     Quick Link
   </span>
 
-  {/* Hover Text with Arrow */}
+ 
   <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
     Quick Link
-    <ChevronRight className="ml-1 h-3 w-3" /> {/* Smaller Arrow */}
+    <ChevronRight className="ml-1 h-3 w-3" /> 
   </span>
 </button>
       </div>

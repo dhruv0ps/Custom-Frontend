@@ -253,7 +253,7 @@ secondaryButtonLink={`${BASE_URL}/demo-preowned`}
   {/* View All Button */}
   <HoverArrowButton
     label="View All"
-    onClick={() => navigate("/view-all")}
+   onClick={() => window.location.href = `${BASE_URL}/demo-preowned`}
     className="border border-[#1cbeff] bg-[#1cbeff] px-6 py-2 rounded-full transition hover:opacity-90"
     textClass="text-white text-[18px] font-medium"
     hoverTextClass="text-white text-[18px] font-medium"

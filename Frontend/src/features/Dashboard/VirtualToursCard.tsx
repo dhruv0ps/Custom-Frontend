@@ -3,7 +3,7 @@ import personImage from "@/assets/Home/Virtual-Tours.jpg";
 import speedometerIcon from "@/assets/Homepage/Car-Speedometer.gif";
 import { ChevronRight } from "lucide-react";
 import HoverArrowButton from "@/util/HoverButton";
-
+import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "@/config";
 
 const videos = [
@@ -68,7 +68,7 @@ const videos = [
 ];
 
 export const VirtualToursCard: React.FC = () => {
-
+    const navigate = useNavigate()
     const HoverButton = () => {
         const [hovered, setHovered] = useState(false);
 
@@ -231,7 +231,7 @@ export const VirtualToursCard: React.FC = () => {
                     <div className="flex justify-end w-full sm:w-auto">
                     <HoverArrowButton
   label="View All"
-  onClick={() => window.location.href = `${BASE_URL}/request-virtual-tour`}
+  onClick={() => navigate("/virtual-tours")}
   className="bg-primary text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition-all"
   textClass="text-white"
   hoverTextClass="text-white"
