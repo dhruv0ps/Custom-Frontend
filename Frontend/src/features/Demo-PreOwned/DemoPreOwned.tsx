@@ -21,6 +21,7 @@ import logo5 from "@/assets/BMW-Car-Logo.webp"
 import AllFooterSection from "@/util/AllFooterSection";
 import HoverArrowButton from "@/util/HoverButton";
 import { ChevronRight } from "lucide-react";
+import { BASE_URL } from "@/config";
 export default function DemoPreCar() {
   const navigate = useNavigate();
  
@@ -151,7 +152,7 @@ export default function DemoPreCar() {
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="View All"
-  secondaryButtonLink="/view-all"
+secondaryButtonLink={`${BASE_URL}/demo-preowned`}
   mode="demo" 
 />
 

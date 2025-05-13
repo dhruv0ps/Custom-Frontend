@@ -10,17 +10,17 @@ const faqs = [
   {
     question: 'Does Wheelz.au have a network across Australia?',
     answer:
-      'Yes, we have a robust network, collaborating exclusively with leading, manufacturer-approved dealers and services providers within the automotive industry. This ensures you consistently receive the best market prices. While others may emphasise quantity, we focus on quality partnerships and effective marketing strategies. With our cutting-edge technology, our solutions promise exceptional deals for used vehicles and unveil exclusive pricing for new cars through our licensed partnerships.'
+      'Yes, we have a robust network, collaborating exclusively with leading, manufacturer-approved dealers and service providers within the automotive industry. This ensures you consistently receive the best market prices. While others may emphasise quantity, we focus on quality partnerships and effective marketing strategies. With our cutting-edge technology, our solutions promise exceptional deals for used vehicles and unveil exclusive pricing for new cars through our licensed partnerships.'
   },
   {
     question: 'Is Wheelz.au safe?',
     answer:
-      ' Absolutely! Your information is kept safe and secure. We only share your details with the appropriate service providers and dealers after finding the perfect match for your needs through our sales solution. Years of thorough research and collaboration with hundreds of dealerships and service providers have allowed us to develop a safe, fair, and effective automotive ecosystem and sales negotiation tool.'
+      ' Absolutely! Your information is kept safe and secure. We only share your details with the appropriate service providers and dealers after finding the perfect match for your needs through our sales solution. Years of thorough research and collaboration with hundreds of dealerships and service providers has allowed us to develop a safe, fair, and effective automotive ecosystem and sales negotiation tool.'
   },
   {
     question: 'Is Wheelz.au a legitimate business?',
     answer: `
-      We’re a reputable and trusted player in the Australian automotive industry. Our strong partnerships with top brands have firmly positioned us as a household name.
+      We’re a reputable and trusted player in the Australian automotive industry. Our strong partnerships with top brands has firmly positioned us as a household name.
       <div class="mt-4 mb-2 font-semibold">Here’s our company details:</div>
       <div class="mb-1">Company Name – Wheelz Pty Ltd</div>
       <div class="mb-1">ABN – 23 676 986 664</div>
@@ -56,7 +56,7 @@ const faqs = [
   {
     question: 'How is Wheelz.au different?',
     answer:
-      'We simplify selling, buying, and owning cars by providing exclusive access to substantial discounts across Australia, all without the hassle of haggling. Our partnerships ensure you receive exceptional, stress-free offers. No negotiations necessary – just unparalleled deals! We run periodic Trade Promotion cash draw prizes as part of your membership. Additionally, we empower change through fundraisers, contributing to meaningful causes on your behalf and creating positivity in communities across the country.'
+      'We simplify selling, buying, and owning cars by providing exclusive access to substantial discounts across Australia, all without the hassle of haggling. Our partnerships ensure you receive exceptional, stress-free offers. No negotiations necessary – just unparalleled deals! Our members also receive free periodic Trade Promotion Prize Draws for simply  joining our community. Additionally, we empower change through fundraisers, contributing to meaningful causes on your behalf and creating positivity in communities across the country.'
   },
   {
     question: 'How does Wheelz.au compare to private sales?',
@@ -136,7 +136,7 @@ const faqs = [
   {
     question: 'How do the fundraisers work when using your services for selling or buying cars?',
     answer:
-      ' It’s simple yet impactful! Every time you use our services to sell or buy a car, we contribute to meaningful fundraisers on your behalf. Your transaction triggers a donation from us to various causes, and you’ll have the opportunity to choose from one of our charities. This creates a powerful ripple effect of positivity throughout communities. So, by engaging with us, you not only benefit from our services but also contribute to making a difference in the lives of others.'
+      ' It’s simple yet impactful! Every time you use our services to sell or buy a car, we contribute to meaningful charities on your behalf. Your transaction triggers a donation from us to various causes, and you’ll have the opportunity to choose from one of our supported charities. This creates a powerful ripple effect of positivity throughout communities. So, by engaging with us, you not only benefit from our services but also contribute to making a difference in the lives of others.'
   }
 ];
 

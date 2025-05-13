@@ -214,7 +214,7 @@ const VirtualTours: React.FC = () => {
               <img
                 src={img10}
                 alt="Worker with phone"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-x-[-1]"
               />
             </div>
           </div>

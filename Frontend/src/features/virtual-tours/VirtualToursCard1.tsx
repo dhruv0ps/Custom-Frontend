@@ -218,9 +218,9 @@ export const VirtualToursCard1: React.FC = () => {
           <div className="flex justify-center mt-10">
   <button
     onClick={showMoreVideos}
-    className="bg-white text-red-600 font-semibold px-6 py-2 rounded-md shadow hover:bg-gray-100 transition flex items-center gap-2"
+    className="bg-white text-red-500 font-semibold px-6 py-2 rounded-md shadow hover:bg-gray-100 transition flex items-center gap-2"
   >
-    <FaYoutube className="text-red-600 text-4xl" />
+    <FaYoutube className=" text-5xl" />
     Show More
   </button>
 </div>

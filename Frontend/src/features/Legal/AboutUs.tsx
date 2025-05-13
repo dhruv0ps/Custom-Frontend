@@ -47,7 +47,7 @@ const AboutUs: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold">Exciting Periodic Trade Promotion</h3>
+              <h3 className="font-semibold">Exciting Periodic Trade Promotion Draws</h3>
               <p>Members participate in our exciting cash prize draws, including Bucks Bonanza, Fuel Rewards, Glow Goals, and more. As a VIP member, you gain exclusive access to these fantastic promotions with multiple opportunities to win!</p>
             </div>
 
@@ -77,7 +77,7 @@ const AboutUs: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="font-semibold">Overhauled</h3>
+              <h3 className="font-semibold">Overhauled Competition</h3>
               <p>Bring your dream car build to life with our exciting and exclusive member only prize draw. Enter to win and share your unique automotive story.</p>
             </div>
 
@@ -101,15 +101,15 @@ const AboutUs: React.FC = () => {
 
             <div>
               <h3 className="font-semibold">Member Benefits</h3>
-              <p>As a member, enjoy exclusive access to partner discounts, trade promotion prize draws, and more. Save time and money with our user-friendly platform.</p>
+              <p>As a member, enjoy exclusive access to partner discounts, trade promotion prize draws, and more. Save time and money with our user friendly platform.</p>
             </div>
 
             <div>
               <h3 className="font-semibold">Community Impact</h3>
               <p>We believe in giving back. Through our fundraisers, we contribute to supported charities on behalf of all our customers utilising our services for buying and selling cars, creating a ripple effect of positive change.</p>
-              <p className="mt-2 font-bold">Join us today and become part of Australia’s #1 automotive ecosystem.</p>
+              <p className="mt-2 font-bold sm:text-left text-center ">Join us today and become part of Australia’s #1 automotive ecosystem.</p>
               <p className="mt-2">Embrace a smarter, more efficient way to manage your car needs, and discover the power of collective savings with our trusted partners.</p>
-              <p className="mt-4 text-primary">Welcome to the future of automotive excellence.</p>
+              <p className="mt-4 text-primary sm:text-left text-center  font-bold">Welcome to the future of automotive excellence.</p>
             </div>
           </div>
         </div>

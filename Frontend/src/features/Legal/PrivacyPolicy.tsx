@@ -1,9 +1,7 @@
-
 import banner from "@/assets/Legal/iStock-171.jpg";
 import AllFooterSection from "@/util/AllFooterSection";
 
 const terms = [
- 
   {
     title: "1. Information We Collect",
     content: [
@@ -13,10 +11,8 @@ const terms = [
       "Vehicle Information: Details about your vehicle(s) such as make, model, year, VIN, maintenance history, and warranty information.",
       "Location Data: GPS and other location-based data when you use our mobile applications or connected services to provide real-time traffic updates, location-based services, and assistance in emergency situations.",
       "Usage Information: We gather data related to your interactions with our services, including log files, performance metrics, error reports, and other analytics.",
-
       "1.2 Payment Information",
       "For seamless transactions within our services, we collect payment information, including credit card details, billing address, and transaction history. Rest assured, all payment data is handled securely and complies with industry standards.",
-
       "1.3 Cookies and Similar Technologies",
       "We utilise cookies and similar technologies to understand your preferences, enhance user experience, analyse usage patterns, and deliver targeted content."
     ]
@@ -26,13 +22,10 @@ const terms = [
     content: [
       "2.1 Service Provision",
       "Your information is primarily used to provide and improve our automotive ecosystem services. This includes maintenance scheduling, vehicle diagnostics, and delivering relevant notifications.",
-
       "2.2 Communication",
       "We may contact you for service-related updates, communications, and promotional offers. You have the option to opt-out of promotional communications at any time.",
-
       "2.3 Personalisation",
       "We use your data to personalise your experience. This involves recommending relevant services, tailoring content based on your preferences, and optimising user interfaces.",
-
       "2.4 Analytics and Research",
       "User data is analysed to enhance our services, conduct research, and improve the overall performance of our automotive ecosystem. This includes studying usage patterns, identifying areas for improvement, and implementing updates."
     ]
@@ -42,10 +35,8 @@ const terms = [
     content: [
       "3.1 Third-Party Service Providers",
       "In delivering our services, we may share your information with carefully selected third-party service providers. These providers assist in payment processing, data storage, and other essential functions. All third-party relationships are governed by contractual agreements ensuring the protection of your data.",
-
       "3.2 Legal Compliance",
       "We may disclose your information in response to valid legal requests or to comply with applicable laws, regulations, or government requests.",
-
       "3.3 Business Transfers",
       "In the event of a merger, acquisition, or sale of all or part of our business, your information may be transferred as part of the transaction. We commit to notifying you promptly of any change in ownership or control."
     ]
@@ -77,39 +68,49 @@ const terms = [
   {
     title: "8. Contact Us",
     content: [
-      "If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact our dedicated privacy team at hello@wheelz.au."
+      `If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact our dedicated privacy team at <a href="mailto:hello@wheelz.au" class="text-primary">hello@wheelz.au</a>.`
     ]
   }
 ];
 
 export default function PrivacyPolicy() {
-    return (
-        <>
-   <div className="bg-white text-black w-full overflow-hidden">
-  <div className="relative w-full sm:h-[32rem] overflow-hidden">
-    <img 
-      src={banner} 
-      alt="Contact Banner" 
-      className="w-full h-full object-cover sm:object-[center_20%]" 
-    />
-  </div>
-  
+  return (
+    <>
+      <div className="bg-white text-black w-full overflow-hidden">
+        <div className="relative w-full sm:h-[32rem] overflow-hidden">
+          <img
+            src={banner}
+            alt="Contact Banner"
+            className="w-full h-full object-cover sm:object-[center_20%]"
+          />
+        </div>
+
         <div className="sm:max-w-[80%] max-w-full mx-auto py-10 px-4">
           <h1 className="text-3xl font-bold text-center mb-6">Privacy Policy</h1>
-          <h4 className="text-primary font-semibold">Last Updated: January 2025</h4>
-          <p className="text-[#666] font-light text-sm mb-6 leading-relaxed">Thank you for choosing Wheelz.au as your automotive ecosystem service provider. This Privacy Policy outlines how we collect, use, disclose, and protect your personal information in connection with our services. Please read this document carefully to understand our practices regarding your data and how we will treat it.</p>
-  
+          <h4 className="text-primary font-semibold mb-6">Last Updated: January 2025</h4>
+          <p className="text-[#666] font-light text-sm mb-6 leading-relaxed">
+            Thank you for choosing Wheelz.au as your automotive ecosystem service provider. This Privacy Policy outlines how we collect, use, disclose, and protect your personal information in connection with our services. Please read this document carefully to understand our practices regarding your data and how we will treat it.
+          </p>
+
           <section className="space-y-10">
             {terms.map((term, idx) => (
               <div key={idx} className="text-left">
                 <h2 className="text-[18px] font-bold text-[#666] mb-2 leading-snug">{term.title}</h2>
                 {term.content.map((para, i) => (
-                  <p
-                    key={i}
-                    className="text-[#666] font-light text-sm mb-2 leading-relaxed"
-                  >
-                    {para}
-                  </p>
+                  term.title === "8. Contact Us" ? (
+                    <p
+                      key={i}
+                      className="text-[#666] font-light text-sm mb-2 leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: para }}
+                    />
+                  ) : (
+                    <p
+                      key={i}
+                      className="text-[#666] font-light text-sm mb-2 leading-relaxed"
+                    >
+                      {para}
+                    </p>
+                  )
                 ))}
               </div>
             ))}
@@ -117,10 +118,7 @@ export default function PrivacyPolicy() {
         </div>
       </div>
 
-      <AllFooterSection content={[
-        ``
-      ]} mode="compact"/>
-      </>
-    );
-  }
-  
+      <AllFooterSection content={[]} mode="compact" />
+    </>
+  );
+}

@@ -43,6 +43,7 @@ import WhyChooseUs from './WhyChooseus';
 import AllFooterSection from '@/util/AllFooterSection';
 import {motion} from "framer-motion"
 import HoverArrowButton from '@/util/HoverButton';
+import { BASE_URL } from '@/config';
 const MateRateDiscount: React.FC = () => {
   const navigate = useNavigate();
   const [animateIcons, setAnimateIcons] = useState(false);
@@ -60,7 +61,8 @@ const MateRateDiscount: React.FC = () => {
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Book Service"
-  secondaryButtonLink="/view-all"
+   secondaryButtonLink={`${BASE_URL}/mates-rates
+`}
 />
 
       <div className='bg-white'>

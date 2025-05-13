@@ -42,7 +42,7 @@ const ContactUs: React.FC = () => {
           <p className="mb-1">Have a question?</p>
           <p>Find answers to commonly <a className="text-sky-500 underline cursor-pointer"  onClick={() => navigate("/periodic-trade-promotion-draws")}>asked questions</a></p>
 
-          <h4 className="font-bold text-lg mt-6 mb-1">COMPETITION TERMS: WHEELZ TRADE PROMOTION DRAWS</h4>
+          <h4 className="font-bold text-lg mt-6 mb-1">STATE SPECIFIC COMPETITION TERMS</h4>
           <p>Want to learn more about your state regulations?</p>
           <p>Find all the <a className="text-sky-500 underline cursor-pointer" onClick={() => navigate("/competition-terms")}>information per state</a></p>
         </div>

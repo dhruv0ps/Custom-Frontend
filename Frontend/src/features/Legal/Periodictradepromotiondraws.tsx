@@ -6,10 +6,10 @@ const Periodictradepromotiondraws = () => {
   const faqs = [
     {
       question: "How do the Wheelz.au draw prizes operate?",
-      answer: `Our Trade Promotion features periodic draws, with some offering substantial prizes. All winners will receive notifications within 24 hours. These draws are exclusively for our loyal members. If you haven’t joined yet, you can <a href="/finance" class="text-primary">register here </a><a href="/finance" class="text-primary">register here </a> .`
+      answer: `Our Trade Promotion features periodic draws, with some offering substantial prizes. All winners will receive notifications within 24 hours. These draws are exclusively for our loyal members. If you haven’t joined yet, you can <a href="/finance" class="text-primary">register here </a> .`
     },
     {
-      question: "Do I need to be a Wheelz.au Member to participate in the Periodic Trade Promotion?",
+      question: "Do I need to be a Wheelz.au Member to participate in the Periodic Trade Promotion Draws?",
       answer: `Yes, it’s compulsory to become a member for you to participate in these draws. Our platform is exclusively dedicated to Wheelz.au Members to show our appreciation through our ‘Trade Promotion’. To take part in these exciting draws, we encourage you to register as a member without delay. By joining, you not only gain eligibility for these special draws but also unlock a range of exclusive benefits tailored for our valued members. Don’t miss out –  <a href="/finance" class="text-primary">sign up</a> to enhance your automotive experience today!`
     },
     {
@@ -70,7 +70,7 @@ const Periodictradepromotiondraws = () => {
     },
     {
       question: "Are there age or location restrictions for participation?",
-      answer: "Members must be 18 years of age or older."
+      answer: "Members must be 18 years of age or older and reside in Australia."
     },
     {
       question: "What happens if the winner cannot be contacted within 24 hours?",
@@ -101,7 +101,7 @@ const Periodictradepromotiondraws = () => {
       />
     </div>
     <div className="max-w-full sm:max-w-[80%] mx-auto py-10 px-4">
-      <h1 className="text-3xl font-bold text-center mb-8 ">Understanding Our Periodic Trade Promotion Draws</h1>
+      <h1 className="text-3xl font-bold text-center mb-8 ">Understanding Our Periodic Trade Promotion Prize Draws</h1>
       <div className="space-y-6">
         {faqs.map((item, index) => (
           <div key={index}>
