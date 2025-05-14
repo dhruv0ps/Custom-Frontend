@@ -100,7 +100,7 @@ const Dashboard = () => {
       {!isLoading && (
         <div>
           <HomeSlider scrollToAllServices={scrollToAllServices} />
-          <div className="bg-white  border-white m-0 p-0 ">
+          <div className="bg-white border-[0px] border-white m-0 p-0 ">
 
             <div className="relative bg-black  w-full   p-0 " >
               <div className=" overflow-visible mb-12 min-h-[125px] py-8  mt-36 md:py-12 lg:mt-32 max-w-full sm:max-w-[80%] mx-auto ">
