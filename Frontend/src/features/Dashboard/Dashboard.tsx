@@ -98,7 +98,7 @@ const Dashboard = () => {
 
       {/* MAIN DASHBOARD */}
       {!isLoading && (
-        <div>
+        <div className="bg-white">
           <HomeSlider scrollToAllServices={scrollToAllServices} />
           <div className="bg-white border-[0px] border-white m-0 p-0 ">
 
