@@ -17,9 +17,9 @@ import img13 from "@/assets/Home/Car-Track-Pro.jpg";
 import img14 from "@/assets/Home/TotalActivityTracker.jpg";
 import img15 from "@/assets/Home/FleetEnquiries.jpg";
 import img16 from "@/assets/prize-draw-winners/iStock1481243237.jpg"
-import Typed from "react-typed"
+import { ReactTyped } from "react-typed"
 import { useNavigate } from "react-router-dom";
-import { ChevronRight } from "lucide-react"; 
+import { ChevronRight } from "lucide-react";
 import { BASE_URL } from "@/config";
 interface HomeSliderProps {
   scrollToAllServices: () => void;
@@ -102,87 +102,86 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
 
   return (
     <div className="relative w-full">
-      
-      <div className="bg-primary  pt-16 pb-36 md:py-20 z-10 relative mb-6 px-6 md:px-12 lg:px-24 w-full">
-      <div className="block md:hidden  text-left mb-20">
-  <h2 className="text-[22px] font-bold leading-tight text-black">
-    We empower you to,
-  </h2>
-  <p className="text-[22px] font-bold text-white mt-1">
-    <Typed
-       strings={[
-        "make informed decisions",
-        "sell fast, free and easy",
-        "buy  hassle-free",
-        "get the best offer",
-        "unlock loyalty benefits",
-        "simplify car affordability",
-        "join for perks",
-        "benefit nationwide",
-        "relish in discounts",
-        "save on services",
-        "unlock exclusive  deals",
-        "win cash prizes",
-        "sell smarter, earn more!",
-        "slash car costs",
-        "get more, spend less",
-        "access VIP savings",
-        "save more",
-        "rethink car buying",
-        "dream it, build it",
-        "aid worthy causes",
-      ]}
-      typeSpeed={100}
-      backSpeed={50}
-      backDelay={500}
-      loop
-      showCursor
-    />
-  </p>
-</div>
-<div className="hidden md:block text-white max-w-full sm:max-w-[80%] sm:px-4 mx-auto md:ml-16 sm:mb-16">
-  <h2 className="text-[25px] font-bold leading-tight text-black sm:mb-2 ">
-    We empower you to,
-  </h2>
 
-  <p
-    className={`text-[25px] font-bold text-white  transition-all duration-300 ease-in-out ${
-      isTransitioning ? "opacity-0 -translate-y-2" : "opacity-100 translate-y-0"
-    }`}
-  >
-    <Typed
-      strings={[
-        "make informed decisions",
-        "sell fast, free and easy",
-        "buy  hassle-free",
-        "get the best offer",
-        "unlock loyalty benefits",
-        "simplify car affordability",
-        "join for perks",
-        "benefit nationwide",
-        "relish in discounts",
-        "save on services",
-        "unlock exclusive  deals",
-        "win cash prizes",
-        "sell smarter, earn more!",
-        "slash car costs",
-        "get more, spend less",
-        "access VIP savings",
-        "save more",
-        "rethink car buying",
-        "dream it, build it",
-        "aid worthy causes",
-      ]}
-      typeSpeed={100}
-      backSpeed={50}
-      backDelay={500}
-      loop
-      showCursor
-      onTypingResumed={() => setIsTransitioning(false)}
-      onTypingPaused={() => setIsTransitioning(true)}
-    />
-  </p>
-</div>
+      <div className="bg-primary  pt-16 pb-36 md:py-20 z-10 relative mb-6 px-6 md:px-12 lg:px-24 w-full">
+        <div className="block md:hidden  text-left mb-20">
+          <h2 className="text-[22px] font-bold leading-tight text-black">
+            We empower you to,
+          </h2>
+          <p className="text-[22px] font-bold text-white mt-1">
+            <ReactTyped
+              strings={[
+                "make informed decisions",
+                "sell fast, free and easy",
+                "buy  hassle-free",
+                "get the best offer",
+                "unlock loyalty benefits",
+                "simplify car affordability",
+                "join for perks",
+                "benefit nationwide",
+                "relish in discounts",
+                "save on services",
+                "unlock exclusive  deals",
+                "win cash prizes",
+                "sell smarter, earn more!",
+                "slash car costs",
+                "get more, spend less",
+                "access VIP savings",
+                "save more",
+                "rethink car buying",
+                "dream it, build it",
+                "aid worthy causes",
+              ]}
+              typeSpeed={100}
+              backSpeed={50}
+              backDelay={500}
+              loop
+              showCursor
+            />
+          </p>
+        </div>
+        <div className="hidden md:block text-white max-w-full sm:max-w-[80%] sm:px-4 mx-auto md:ml-16 sm:mb-16">
+          <h2 className="text-[25px] font-bold leading-tight text-black sm:mb-2 ">
+            We empower you to,
+          </h2>
+
+          <p
+            className={`text-[25px] font-bold text-white  transition-all duration-300 ease-in-out ${isTransitioning ? "opacity-0 -translate-y-2" : "opacity-100 translate-y-0"
+              }`}
+          >
+            <ReactTyped
+              strings={[
+                "make informed decisions",
+                "sell fast, free and easy",
+                "buy  hassle-free",
+                "get the best offer",
+                "unlock loyalty benefits",
+                "simplify car affordability",
+                "join for perks",
+                "benefit nationwide",
+                "relish in discounts",
+                "save on services",
+                "unlock exclusive  deals",
+                "win cash prizes",
+                "sell smarter, earn more!",
+                "slash car costs",
+                "get more, spend less",
+                "access VIP savings",
+                "save more",
+                "rethink car buying",
+                "dream it, build it",
+                "aid worthy causes",
+              ]}
+              typeSpeed={100}
+              backSpeed={50}
+              backDelay={500}
+              loop
+              showCursor
+              onTypingResumed={() => setIsTransitioning(false)}
+              onTypingPaused={() => setIsTransitioning(true)}
+            />
+          </p>
+        </div>
 
       </div>
 
@@ -192,62 +191,62 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
           <div className="flex">
             {images.map((slide, index) => (
               <div
-              key={index}
-              onClick={() => {
-                const route = texts[index].route;
-                const isFullUrl = route.startsWith("http") || route.startsWith(BASE_URL);
-                if (isFullUrl) {
-                  window.location.href = route;
-                } else {
-                  navigate(route);
-                }
-              }}
+                key={index}
+                onClick={() => {
+                  const route = texts[index].route;
+                  const isFullUrl = route.startsWith("http") || route.startsWith(BASE_URL);
+                  if (isFullUrl) {
+                    window.location.href = route;
+                  } else {
+                    navigate(route);
+                  }
+                }}
                 className="flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_calc(33.333%-12px)] min-w-0 mx-2 bg-white rounded-3xl overflow-hidden shadow-lg relative group"
               >
-               
-               <div className="overflow-hidden h-64 w-full relative">
+
+                <div className="overflow-hidden h-64 w-full relative">
                   <img
                     src={slide || "/placeholder.svg"}
                     alt={`Slide ${index + 1}`}
                     className="object-cover h-64 w-full rounded-t-3xl border-none outline-none transition-all duration-700 ease-out group-hover:scale-125 "
                   />
- 
- 
-    </div>
+
+
+                </div>
                 <div className="absolute bottom-7 left-0 right-0 p-2 bg-white/90 rounded-r-3xl md:w-[90%] w-[80%]">
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 text-nowrap">
                     {texts[index].heading}
                   </h3>
                 </div>
                 <div className="absolute bottom-3 right-3">
-                <button
-   onClick={() => {
-    const route = texts[index].route;
-    const isFullUrl = route.startsWith("http") || route.startsWith(BASE_URL);
-    if (isFullUrl) {
-      window.location.href = route;
-    } else {
-      navigate(route);
-    }
-  }}
-  className="group relative text-white bg-primary border border-primary font-semibold px-4 py-1.5 rounded-full text-[10px] md:text-xs shadow-md hover:bg-primary hover:text-white transition-all overflow-hidden min-w-[80px] text-center"
->
-  {/* Normal Text */}
-  <span className="block transition-opacity duration-200 group-hover:opacity-0">
-    Quick Link
-  </span>
+                  <button
+                    onClick={() => {
+                      const route = texts[index].route;
+                      const isFullUrl = route.startsWith("http") || route.startsWith(BASE_URL);
+                      if (isFullUrl) {
+                        window.location.href = route;
+                      } else {
+                        navigate(route);
+                      }
+                    }}
+                    className="group relative text-white bg-primary border border-primary font-semibold px-4 py-1.5 rounded-full text-[10px] md:text-xs shadow-md hover:bg-primary hover:text-white transition-all overflow-hidden min-w-[80px] text-center"
+                  >
+                    {/* Normal Text */}
+                    <span className="block transition-opacity duration-200 group-hover:opacity-0">
+                      Quick Link
+                    </span>
 
- 
-  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-    Quick Link
-    <ChevronRight className="ml-1 h-3 w-3" /> 
-  </span>
-</button>
-      </div>
+
+                    <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                      Quick Link
+                      <ChevronRight className="ml-1 h-3 w-3" />
+                    </span>
+                  </button>
+                </div>
               </div>
-              
+
             ))}
-             
+
           </div>
 
           {/* Dots */}
@@ -266,22 +265,22 @@ export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {
 
       {/* Button section */}
       <div className="flex justify-center mt-12">
-  <button
-    onClick={scrollToAllServices}
-    className="group relative bg-primary text-white text-lg md:text-xl font-semibold px-6 py-3 rounded-full shadow-md transition-transform hover:scale-105 w-40 md:w-56 h-12 flex items-center justify-center overflow-hidden"
-  >
-    {/* Default state */}
-    <span className="transition-opacity duration-200 group-hover:opacity-0 whitespace-nowrap">
-      How It Works
-    </span>
+        <button
+          onClick={scrollToAllServices}
+          className="group relative bg-primary text-white text-lg md:text-xl font-semibold px-6 py-3 rounded-full shadow-md transition-transform hover:scale-105 w-40 md:w-56 h-12 flex items-center justify-center overflow-hidden"
+        >
+          {/* Default state */}
+          <span className="transition-opacity duration-200 group-hover:opacity-0 whitespace-nowrap">
+            How It Works
+          </span>
 
-    {/* Hover state */}
-    <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
-      How It Works
-      <ChevronDown className="mt-1 h-12 w-7" />
-    </span>
-  </button>
-</div>
+          {/* Hover state */}
+          <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+            How It Works
+            <ChevronDown className="mt-1 h-12 w-7" />
+          </span>
+        </button>
+      </div>
 
 
     </div>
