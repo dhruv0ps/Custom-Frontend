@@ -103,7 +103,7 @@ const Dashboard = () => {
      <div className="bg-white border-[0px] border-white m-0 p-0 bg-opacity-100" style={{backgroundColor: '#ffffff !important'}}>
 
             <div className="relative bg-black  w-full   p-0 " >
-              <div className=" overflow-visible mb-12 min-h-[125px] py-8  mt-36 md:py-12 lg:mt-32 max-w-full sm:max-w-[80%] mx-auto ">
+              <div className=" overflow-visible mb-12 min-h-[125px] py-8  mt-36 md:py-12 lg:mt-32 max-w-full sm:max-w-[80%] mx-auto bg-opacity-100 " style={{backgroundColor: '#ffffff !important'}}>
                 <div className="absolute -top-32 lg:-top-24 left-1/2 md:left-12 lg:left-24 transform -translate-x-1/2 md:translate-x-0 z-20 lg:mt-0 ">
                   <div className="bg-white border border-white rounded-3xl p-4 mt-6 w-[400px] sm:w-[320px] md:w-[380px] lg:w-[400px] lg:ml-16 lg:shadow-2xl">
                     <h3 className="hidden md:block text-primary text-xl md:text-2xl font-bold text-end mb-2">
