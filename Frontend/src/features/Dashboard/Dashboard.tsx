@@ -98,9 +98,9 @@ const Dashboard = () => {
       {!isLoading && (
         <div>
           <HomeSlider scrollToAllServices={scrollToAllServices} />
-       <div className="bg-white border border-white">
-        <TurtleSection/>
-       </div>
+       <div className="bg-white border border-white" style={{ margin: "-1px" }}>
+  <TurtleSection />
+</div>
           <AllServices />
           <div ref={allServicesRef}>
             <ServiceCards />
