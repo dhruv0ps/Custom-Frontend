@@ -96,7 +96,7 @@ const Dashboard = () => {
 
       {/* MAIN DASHBOARD */}
       {!isLoading && (
-        <div>
+        <div className="bg-[#ffff] ">
           <HomeSlider scrollToAllServices={scrollToAllServices} />
        <div className="bg-white border border-white" style={{ margin: "-1px" }}>
   <TurtleSection />
