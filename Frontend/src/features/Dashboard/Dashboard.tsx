@@ -49,8 +49,6 @@ const Dashboard = () => {
   
     requestAnimationFrame(animation);
   };
-  
-  
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -64,7 +62,7 @@ const Dashboard = () => {
   return (
     <>
       {/* VIDEO LOADER ANIMATION */}
-      <div className=" bg-white border border-white">      <AnimatePresence>
+      <AnimatePresence>
         {showVideo && (
           <motion.div
             className="fixed inset-0 z-50 bg-white flex items-center justify-center"
@@ -92,15 +90,17 @@ const Dashboard = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      </div>
 
       {/* MAIN DASHBOARD */}
       {!isLoading && (
-        <div className="bg-[#ffff] ">
+        <div className="bg-[#ffff] w-full overflow-hidden">
           <HomeSlider scrollToAllServices={scrollToAllServices} />
-       <div className="bg-white border border-white" style={{ margin: "-1px" }}>
-  <TurtleSection />
-</div>
+          
+          
+          <div className="bg-[#ffff]">
+            <TurtleSection />
+          </div>
+          
           <AllServices />
           <div ref={allServicesRef}>
             <ServiceCards />

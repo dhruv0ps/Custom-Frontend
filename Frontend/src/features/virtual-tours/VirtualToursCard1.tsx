@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import HoverArrowButton from "@/util/HoverButton";
 import { ChevronRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+
 import { useState } from "react";
 import { FaYoutube } from "react-icons/fa6";
 import { VideoApi } from "@/config/apiRoutes/virtualTour";
 import { VirtualTourVideo } from "@/config/models/VirtualTourVideo";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { Loading } from "@/components/common/Loading";
+import { BASE_URL } from "@/config";
 // const videos = [
 //     {
 //         title: "Porsche 911 GT3",
@@ -164,7 +165,7 @@ const getYoutubeEmbedUrl = (url: string) => {
     return match ? `https://www.youtube.com/embed/${match[1]}` : url;
 };
 export const VirtualToursCard1: React.FC = () => {
-    const navigate = useNavigate()
+    
 
     const [videoList, setVideoList] = useState<VirtualTourVideo[]>([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -301,7 +302,7 @@ export const VirtualToursCard1: React.FC = () => {
                     <div className="flex justify-end flex-shrink-0 ml-1 mr-3 sm:mr-0">
                         <HoverArrowButton
                             label="View All"
-                            onClick={() => navigate("/access-form")}
+                            onClick={() => window.location.href =(`${BASE_URL}/request-virtual-tour`)}
                             className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
                             textClass="text-white"
                             hoverTextClass="text-white"
