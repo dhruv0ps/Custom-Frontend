@@ -13,7 +13,7 @@ import img10 from "@/assets/Virtual Tour/virtualTour.jpg"
 import { BASE_URL } from '@/config';
 import AllFooterSection from '@/util/AllFooterSection';
 import VideoBanner from '@/util/VideoBanner';
-import HoverArrowButton from '@/util/HoverButton';
+import HoverArrowButton from '@/util/HoverButton';  
 const VirtualTours: React.FC = () => {
   const navigate = useNavigate();
 

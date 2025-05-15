@@ -3608,6 +3608,10 @@ input[type="range"]::-ms-fill-lower{
   background-color: rgb(255 205 244 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#ffff\]{
+  background-color: #ffff;
+}
+
 .bg-\[--color-bg\]{
   background-color: var(--color-bg);
 }
@@ -3928,14 +3932,6 @@ input[type="range"]::-ms-fill-lower{
 .bg-yellow-600{
   --tw-bg-opacity: 1;
   background-color: rgb(159 88 10 / var(--tw-bg-opacity));
-}
-
-.bg-\[\]{
-  background-color: ;
-}
-
-.bg-\[\#ffff\]{
-  background-color: #ffff;
 }
 
 .bg-opacity-50{

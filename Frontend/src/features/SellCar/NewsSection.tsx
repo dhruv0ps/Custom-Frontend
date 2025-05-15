@@ -25,7 +25,7 @@ export default function NewsSection({
         <iframe
           src={`https://www.youtube.com/embed/${videoId}?modestbranding=1&showinfo=0&rel=0&fs=1`}
           title={title}
-          frameBorder="0"
+          frameBorder="0"   
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
           loading="lazy"
