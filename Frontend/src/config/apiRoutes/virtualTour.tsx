@@ -6,7 +6,12 @@ const getAllVideos = async () => {
     return await axiosRequest.get<any>(apiUrl.virtualtour);
 }
 
+const getAllMake = async () => {
+    return await axiosRequest.get<any>(apiUrl.make)
+}
+
 export const VideoApi = {
-    getAllVideos
+    getAllVideos,
+    getAllMake
   
 }
