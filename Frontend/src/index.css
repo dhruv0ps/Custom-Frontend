@@ -22,44 +22,4 @@
       }
     }
   }
-  /* General white background fix */
-html, body {
-  background-color: #ffffff !important;
-  background: #ffffff !important;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Force all elements with .bg-white to stay white */
-.bg-white,
-.white-bg-fix,
-section,
-main,
-.container,
-article {
-  background-color: #ffffff !important;
-  background: #ffffff !important;
-}
-
-/* Fix Safari stacking context issue */
-div, section, main, article, .container {
-  transform: translateZ(0);
-  position: relative;
-  z-index: 1;
-}
-
-/* Safari-only hacks */
-@supports (-webkit-touch-callout: none) {
-  html, body, div, section, main, article, .container {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
-  }
-
-  section, main, article, .container {
-    position: relative;
-    z-index: 2;
-    will-change: transform;
-  }
-}
+  

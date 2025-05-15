@@ -21,14 +21,15 @@ const Home = observer(() => {
   }, [location.pathname]);
 
   return (
-    <div className="relative w-full min-h-screen overflow-x-hidden bg-white">
+    <div className="relative w-full overflow-x-hidden min-h-screen">
+    
       {!isLoading && (
         <div className="fixed top-0 left-0 right-0 z-50">
           <NavBar />
         </div>
       )}
 
-      <div className={`bg-white ${isLoading ? "" : "pt-20"}`}>
+      <div className={isLoading ? "" : "pt-20"}>
         <Outlet context={{ isLoading, setIsLoading }} />
       </div>
     </div>
