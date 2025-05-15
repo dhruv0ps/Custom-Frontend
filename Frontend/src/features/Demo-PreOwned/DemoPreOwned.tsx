@@ -10,7 +10,7 @@ import HoverArrowButton from "@/util/HoverButton";
 import { ChevronRight } from "lucide-react";
 import { BASE_URL } from "@/config";
 import CarCardMobile from "./CarCardMobile";
-
+import { IoIosArrowForward,IoIosArrowBack } from "react-icons/io";
 export default function DemoPreCar() {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
@@ -44,6 +44,30 @@ export default function DemoPreCar() {
       </div>
     );
   };
+  const PaginationControls = () => (
+    <>
+    <div className="flex justify-center items-center gap-6 ">  <span className="text-white font-medium text-lg">
+      Page {currentPage} of {totalPages}
+    </span>  </div>
+    <div className="flex justify-center items-center gap-6 my-6">
+    
+    <button
+      onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+      disabled={currentPage === 1}
+      className="bg-white text-primary px-4 py-2 rounded disabled:opacity-50"
+    >
+      <IoIosArrowBack className="w-10 h-10" />
+    </button>
+   
+    <button
+      onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+      disabled={currentPage === totalPages}
+      className="bg-white text-primary px-4 py-2 rounded disabled:opacity-50"
+    >
+         <IoIosArrowForward className="w-10 h-10" />
+    </button>
+  </div></>
+);
 
   return (
     <>
@@ -69,7 +93,7 @@ export default function DemoPreCar() {
               This Month's Top Deals
             </h2>
           </div>
-
+<PaginationControls />
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {paginatedCars.map((_, index) => (
               <div key={index}>
@@ -85,25 +109,9 @@ export default function DemoPreCar() {
               </div>
             ))}
           </div>
-
-          <div className="flex justify-center gap-6 mt-10">
-            <button
-              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-              disabled={currentPage === 1}
-              className="bg-white text-black px-4 py-2 rounded disabled:opacity-50"
-            >
-              Previous Page
-            </button>
-            <span className="text-white ">Page {currentPage} of {totalPages}</span>
-            <button
-              onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-              disabled={currentPage === totalPages}
-              className="bg-white text-black px-4 py-2 rounded disabled:opacity-50"
-            >
-              Next Page
-            </button>
-          </div>
-
+         <div className="mt-4">
+         <PaginationControls/>
+</div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center rounded-lg md:py-12 mt-4">
 
     <div className="text-white space-y-4 order-1 md:order-2">
