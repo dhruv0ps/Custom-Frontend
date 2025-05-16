@@ -1,5 +1,4 @@
-
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { FaYoutube } from "react-icons/fa6";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
@@ -8,39 +7,103 @@ import { BASE_URL } from "@/config";
 import HoverArrowButton from "@/util/HoverButton";
 import { VideoApi } from "@/config/apiRoutes/virtualTour";
 import { VirtualTourVideo } from "@/config/models/VirtualTourVideo";
+import { useRef } from "react";
 
-// Convert YouTube URLs to embed format
-const getYoutubeEmbedUrl = (url:string) => {
+const getYoutubeEmbedUrl = (url: string) => {
   const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w\-]+)/);
   return match ? `https://www.youtube.com/embed/${match[1]}` : url;
 };
 
+
+const SCROLL_POSITION_KEY = "virtual_tours_scroll_position";
+const CURRENT_PAGE_KEY = "virtual_tours_current_page";
+
 const VirtualToursCard = () => {
   const [videoList, setVideoList] = useState<VirtualTourVideo[]>([]);
   const [makesList, setMakesList] = useState<any[]>();
-  const [currentPage, setCurrentPage] = useState(1);
+
+  const [currentPage, setCurrentPage] = useState(() => {
+    const storedPage = localStorage.getItem(CURRENT_PAGE_KEY);
+    return storedPage ? parseInt(storedPage) : 1;
+  });
   const [loading, setLoading] = useState(false);
   const videosPerPage = 18;
+  const isFirstLoad = useRef(true);
+  const pageLoaded = useRef(false);
 
-  // Fetch data on component mount
+
   useEffect(() => {
-    fetchData();
+    if (pageLoaded.current) {
+      localStorage.setItem(CURRENT_PAGE_KEY, currentPage.toString());
+    }
+  }, [currentPage]);
+
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+
+    if (!isFirstLoad.current) return;
+    isFirstLoad.current = false;
+
+    fetchData().then(() => {
+
+      pageLoaded.current = true;
+      const savedScroll = localStorage.getItem(SCROLL_POSITION_KEY);
+      if (savedScroll) {
+        window.scrollTo({ top: parseInt(savedScroll), behavior: "auto" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "auto" });
+      }
+    });
+
+
+    const handleBeforeUnload = () => {
+      localStorage.setItem(
+        SCROLL_POSITION_KEY,
+        window.scrollY.toString()
+      );
+    };
+
+    const handleScroll = () => {
+      if (pageLoaded.current) {
+        localStorage.setItem(
+          SCROLL_POSITION_KEY,
+          window.scrollY.toString()
+        );
+      }
+    };
+
+    let timeout: NodeJS.Timeout;
+    const throttledHandleScroll = () => {
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(handleScroll, 200);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('scroll', throttledHandleScroll);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('scroll', throttledHandleScroll);
+      if (timeout) clearTimeout(timeout);
+    };
   }, []);
 
-  // Combined function to fetch all required data
   const fetchData = async () => {
     setLoading(true);
     try {
-      // Fetch videos and makes in parallel
+
       const [videosResponse, makesResponse] = await Promise.all([
         VideoApi.getAllVideos(),
         VideoApi.getAllMake()
       ]);
-      
+
       if (videosResponse?.data) {
         setVideoList(videosResponse.data);
       }
-      
+
       if (makesResponse?.data) {
         setMakesList(makesResponse.data);
       }
@@ -51,22 +114,28 @@ const VirtualToursCard = () => {
     }
   };
 
- const unmatchedMakes: { name: string; image: string }[] = (makesList ?? []).filter(
-  (makeItem) => !videoList.some(
-    (video) => video.vehicleDetails?.make?.name === makeItem.name
-  )
-);
+  const unmatchedMakes: { name: string; image: string }[] = (makesList ?? []).filter(
+    (makeItem) => !videoList.some(
+      (video) => video.vehicleDetails?.make?.name === makeItem.name
+    )
+  );
 
-  // Calculate total pages based on items to display (videos + unmatched makes)
+
   const totalItems = videoList.length + unmatchedMakes.length;
   const totalPages = Math.ceil(totalItems / videosPerPage);
 
-  // Get current page's items (videos first, then unmatched makes)
+  const handlePageChange = (newPage: number) => {
+    const validPage = Math.max(1, Math.min(newPage, totalPages));
+    setCurrentPage(validPage);
+
+  };
+
+  
   const getCurrentPageItems = () => {
     const startIndex = (currentPage - 1) * videosPerPage;
     const endIndex = startIndex + videosPerPage;
+
     
-    // If start index is beyond video list length, we only need unmatched makes
     if (startIndex >= videoList.length) {
       const unmatchedStartIndex = startIndex - videoList.length;
       const unmatchedEndIndex = endIndex - videoList.length;
@@ -75,8 +144,8 @@ const VirtualToursCard = () => {
         makes: unmatchedMakes.slice(unmatchedStartIndex, unmatchedEndIndex)
       };
     }
-    
-    // If end index is beyond video list length, we need both videos and some unmatched makes
+
+  
     if (endIndex > videoList.length) {
       const unmatchedCount = endIndex - videoList.length;
       return {
@@ -84,8 +153,8 @@ const VirtualToursCard = () => {
         makes: unmatchedMakes.slice(0, unmatchedCount)
       };
     }
+
     
-    // Otherwise, we only need videos for this page
     return {
       videos: videoList.slice(startIndex, endIndex),
       makes: []
@@ -104,7 +173,7 @@ const VirtualToursCard = () => {
       </div>
       <div className="flex justify-center items-center gap-2 my-6">
         <button
-          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+          onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
           className="bg-white text-[#0c3366] px-4 py-2 rounded"
         >
@@ -114,7 +183,7 @@ const VirtualToursCard = () => {
           <FaYoutube className="text-[#FF0000] text-5xl" />
         </div>
         <button
-          onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+          onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
           className="bg-white text-[#0c3366] px-4 py-2 rounded"
         >
@@ -124,33 +193,31 @@ const VirtualToursCard = () => {
     </>
   );
 
- const VideoCard = ({ video }: { video: VirtualTourVideo }) => {
+  const VideoCard = ({ video }: { video: VirtualTourVideo }) => {
     const { videoUrl, vehicleDetails } = video;
     const model = vehicleDetails?.model ?? "";
     const make = vehicleDetails?.make?.name ?? "";
     const videoEmbedUrl = getYoutubeEmbedUrl(videoUrl);
-const handleEnquireClick = async () => {
-  try {
-    const res = await VideoApi.getModelById(make, model);
 
+    const handleEnquireClick = async () => {
+      try {
+        const res = await VideoApi.getModelById(make, model);
 
-    if (res?.data && typeof res.data === "string") {
-      window.location.href = `${BASE_URL}/buy/car?model=${res.data}`;
-      return;
-    }
+        if (res?.data && typeof res.data === "string") {
+          window.location.href = `${BASE_URL}/buy/car?model=${res.data}`;
+          return;
+        }
 
+        if (res?.err === "No vehicle found for the given make and model.") {
+          window.location.href = `${BASE_URL}/buy/search?makes=${encodeURIComponent(make)}`;
+          return;
+        }
 
-    if (res?.err === "No vehicle found for the given make and model.") {
-      window.location.href = `${BASE_URL}/buy/search?makes=${encodeURIComponent(make)}`;
-      return;
-    }
-
-    console.warn("Unhandled API response:", res);
-  } catch (error) {
-    console.error("API call failed:", error);
-  }
-};
-
+        console.warn("Unhandled API response:", res);
+      } catch (error) {
+        console.error("API call failed:", error);
+      }
+    };
 
     return (
       <div className="w-full max-w-[440px] flex flex-col items-center gap-4">
@@ -168,8 +235,7 @@ const handleEnquireClick = async () => {
         </div>
         <div className="flex justify-end w-full mt-2">
           <button
-             onClick={handleEnquireClick}
-        
+            onClick={handleEnquireClick}
             className="group relative px-4 py-2 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
           >
             <span className="block group-hover:opacity-0 transition-opacity duration-200">
@@ -183,40 +249,40 @@ const handleEnquireClick = async () => {
       </div>
     );
   };
-const MakeImageCard = ({ makeItem }: { makeItem: { name: string; image: string } }) => {
-  const handleEnquireClick = () => {
-    window.location.href = `${BASE_URL}/buy/search?makes=${encodeURIComponent(makeItem.name)}`;
-  };
 
-  return (
-    <div className="w-full max-w-[440px] flex flex-col items-center gap-4">
-      <div
-        className="w-full rounded-xl overflow-hidden"
-        style={{ boxShadow: "10px 10px 10px 0px #1cbeff" }}
-      >
-        <img
-          src={makeItem.image}
-          alt={makeItem.name}
-          className="w-full h-auto aspect-video object-contain bg-white rounded-xl"
-        />
-      </div>
-      <div className="flex justify-end w-full mt-2">
-        <button
-          onClick={handleEnquireClick}
-          className="group relative px-4 py-2 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
+  const MakeImageCard = ({ makeItem }: { makeItem: { name: string; image: string } }) => {
+    const handleEnquireClick = () => {
+      window.location.href = `${BASE_URL}/buy/search?makes=${encodeURIComponent(makeItem.name)}`;
+    };
+
+    return (
+      <div className="w-full max-w-[440px] flex flex-col items-center gap-4">
+        <div
+          className="w-full rounded-xl overflow-hidden"
+          style={{ boxShadow: "10px 10px 10px 0px #1cbeff" }}
         >
-          <span className="block group-hover:opacity-0 transition-opacity duration-200">
-            Enquire Now
-          </span>
-          <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            Enquire Now <ChevronRight className="ml-1 h-4 w-4" />
-          </span>
-        </button>
+          <img
+            src={makeItem.image}
+            alt={makeItem.name}
+            className="w-full h-auto aspect-video object-contain bg-white rounded-xl"
+          />
+        </div>
+        <div className="flex justify-end w-full mt-2">
+          <button
+            onClick={handleEnquireClick}
+            className="group relative px-4 py-2 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
+          >
+            <span className="block group-hover:opacity-0 transition-opacity duration-200">
+              Enquire Now
+            </span>
+            <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              Enquire Now <ChevronRight className="ml-1 h-4 w-4" />
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
-  );
-};
-
+    );
+  };
 
   return (
     <div className="w-full bg-[#0c3366] py-16 font-sans">
@@ -229,7 +295,7 @@ const MakeImageCard = ({ makeItem }: { makeItem: { name: string; image: string }
             <span className="inline sm:inline-block">Virtual Tours</span>
           </h3>
         </div>
-        
+
         <div className="mt-6">
           <PaginationControls />
         </div>
@@ -242,7 +308,7 @@ const MakeImageCard = ({ makeItem }: { makeItem: { name: string; image: string }
             {videos.map((video, index) => (
               <VideoCard key={`video-${index}`} video={video} />
             ))}
-            
+
             {/* Then render image cards for makes without videos */}
             {makes.map((makeItem, index) => (
               <MakeImageCard key={`make-${index}`} makeItem={makeItem} />
@@ -252,7 +318,7 @@ const MakeImageCard = ({ makeItem }: { makeItem: { name: string; image: string }
 
         <PaginationControls />
       </div>
-      
+
       {/* Bottom section */}
       <div className="w-full py-4 sm:py-8 sm:mt-4 mt-12">
         <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between sm:px-0">
@@ -277,7 +343,7 @@ const MakeImageCard = ({ makeItem }: { makeItem: { name: string; image: string }
           </div>
         </div>
       </div>
-      
+
       {/* Bottom description */}
       <div className="justify-end text-end mt-12 max-w-[95%] sm:max-w-[80%] mx-auto">
         <h3 className="text-xl sm:text-3xl font-bold text-[#21c1ff] mb-4">
