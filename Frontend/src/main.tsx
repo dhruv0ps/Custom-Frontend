@@ -13,7 +13,7 @@ import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import Home from './layout/Home.tsx';
 import Dashboard from './features/Dashboard/Dashboard.tsx';
-import { ToastContainer } from 'react-toastify';
+
 import SellCar from './features/SellCar/SellCar.tsx';
 import BuyCar from './features/BuyCar/BuyCar.tsx';
 import DemoPreOwnedCar from './features/Demo-PreOwned/DemoPreOwned.tsx';
@@ -130,16 +130,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <DndProvider backend={HTML5Backend}>
         <RouterProvider router={router} />
       </DndProvider>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover />
+      
     </Provider>
   </React.StrictMode>,
 

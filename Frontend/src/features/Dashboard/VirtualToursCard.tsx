@@ -230,7 +230,7 @@ export const VirtualToursCard: React.FC = () => {
 
                     <div className="flex justify-end w-full sm:w-auto">
                     <HoverArrowButton
-  label="View All"
+  label="Tour Now"
   onClick={() => navigate("/virtual-tours")}
   className="bg-primary text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition-all"
   textClass="text-white"

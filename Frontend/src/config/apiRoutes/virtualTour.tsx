@@ -9,9 +9,14 @@ const getAllVideos = async () => {
 const getAllMake = async () => {
     return await axiosRequest.get<any>(apiUrl.make)
 }
-
+const getModelById = async (make: string, model: string) => {
+  return await axiosRequest.get<any>(apiUrl.carDetails, {
+    make,
+    model,
+  });
+};
 export const VideoApi = {
     getAllVideos,
-    getAllMake
-  
+    getAllMake,
+  getModelById
 }

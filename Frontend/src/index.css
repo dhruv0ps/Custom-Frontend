@@ -23,3 +23,21 @@
     }
   }
   
+
+
+/* Safari-only fix applied only to Turtle section */
+@supports (-webkit-touch-callout: none) {
+  .safari-bg-fix {
+    background-color: #ffffff !important;
+  }
+
+  .safari-bg-fix section,
+  .safari-bg-fix main,
+  .safari-bg-fix article,
+  .safari-bg-fix .container {
+    background-color: #ffffff !important;
+    position: relative;
+    z-index: 2;
+    will-change: transform;
+  }
+}

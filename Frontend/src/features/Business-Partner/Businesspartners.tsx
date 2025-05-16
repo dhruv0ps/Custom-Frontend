@@ -84,7 +84,7 @@ const Businesspartners:React.FC = () => {
         {/* Section Headers */}
        
         <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-black">
-    Get Ready For The Ride Of A Lifetime
+    Where Vision Meets Opportunity: Let’s Partner Up
   </h2>
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">

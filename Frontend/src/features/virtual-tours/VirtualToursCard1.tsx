@@ -129,6 +129,28 @@ const VirtualToursCard = () => {
     const model = vehicleDetails?.model ?? "";
     const make = vehicleDetails?.make?.name ?? "";
     const videoEmbedUrl = getYoutubeEmbedUrl(videoUrl);
+const handleEnquireClick = async () => {
+  try {
+    const res = await VideoApi.getModelById(make, model);
+
+
+    if (res?.data && typeof res.data === "string") {
+      window.location.href = `${BASE_URL}/buy/car?model=${res.data}`;
+      return;
+    }
+
+
+    if (res?.err === "No vehicle found for the given make and model.") {
+      window.location.href = `${BASE_URL}/buy/search?makes=${encodeURIComponent(make)}`;
+      return;
+    }
+
+    console.warn("Unhandled API response:", res);
+  } catch (error) {
+    console.error("API call failed:", error);
+  }
+};
+
 
     return (
       <div className="w-full max-w-[440px] flex flex-col items-center gap-4">
@@ -145,10 +167,9 @@ const VirtualToursCard = () => {
           />
         </div>
         <div className="flex justify-end w-full mt-2">
-          <a
-            href={`https://wheelzau.vercel.app/request-virtual-tour?make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}`}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+             onClick={handleEnquireClick}
+        
             className="group relative px-4 py-2 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
           >
             <span className="block group-hover:opacity-0 transition-opacity duration-200">
@@ -157,15 +178,22 @@ const VirtualToursCard = () => {
             <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
               Enquire Now <ChevronRight className="ml-1 h-4 w-4" />
             </span>
-          </a>
+          </button>
         </div>
       </div>
     );
   };
+const MakeImageCard = ({ makeItem }: { makeItem: { name: string; image: string } }) => {
+  const handleEnquireClick = () => {
+    window.location.href = `${BASE_URL}/buy/search?makes=${encodeURIComponent(makeItem.name)}`;
+  };
 
- const MakeImageCard = ({ makeItem }: { makeItem: { name: string; image: string } }) => (
+  return (
     <div className="w-full max-w-[440px] flex flex-col items-center gap-4">
-      <div className="w-full rounded-xl overflow-hidden" style={{ boxShadow: "10px 10px 10px 0px #1cbeff" }}>
+      <div
+        className="w-full rounded-xl overflow-hidden"
+        style={{ boxShadow: "10px 10px 10px 0px #1cbeff" }}
+      >
         <img
           src={makeItem.image}
           alt={makeItem.name}
@@ -173,10 +201,8 @@ const VirtualToursCard = () => {
         />
       </div>
       <div className="flex justify-end w-full mt-2">
-        <a
-          href={`https://wheelzau.vercel.app/request-virtual-tour?make=${encodeURIComponent(makeItem.name)}&model=`}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={handleEnquireClick}
           className="group relative px-4 py-2 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
         >
           <span className="block group-hover:opacity-0 transition-opacity duration-200">
@@ -185,10 +211,12 @@ const VirtualToursCard = () => {
           <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             Enquire Now <ChevronRight className="ml-1 h-4 w-4" />
           </span>
-        </a>
+        </button>
       </div>
     </div>
   );
+};
+
 
   return (
     <div className="w-full bg-[#0c3366] py-16 font-sans">

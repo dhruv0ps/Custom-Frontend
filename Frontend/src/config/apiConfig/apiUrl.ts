@@ -5,5 +5,7 @@ const base = `https://wheelz-backend.vercel.app/api`
 export const apiUrl = {
  client : `${base}/idea`,
  virtualtour : `${base}/virtual-tour-video/list`,
- make :`${base}/makes`
+ make :`${base}/makes`,
+carDetails: `${base}/car/fetch/details`,
+
 }

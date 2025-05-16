@@ -122,7 +122,7 @@ const PremiumPartner: React.FC<PremiumPartnerProps> = ({ mode }) => {
       <HoverArrowButton
               label="Access Form"
               onClick={() => window.location.href = `${BASE_URL}/${mode}`}
-              className="bg-white transition-all px-3 sm:px-8 py-3 text-primary font-semibold text-base rounded-full shadow-md"
+              className="bg-white  transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
               textClass="text-primary"
               hoverTextClass="text-primary"
             />

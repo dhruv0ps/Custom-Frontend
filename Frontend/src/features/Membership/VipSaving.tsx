@@ -46,7 +46,7 @@ const VipSavingsPage: React.FC = () => {
           UNLOCK GENUINE SAVINGS!
         </h2>
         <p className="text-center text-gray-600 mb-10">
-          A Year in the Life of Our Members Discounts*
+          A Year In The Life Of Our Members Discounts*
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 justify-items-center">
