@@ -8,7 +8,7 @@ import HoverArrowButton from "@/util/HoverButton";
 import { VideoApi } from "@/config/apiRoutes/virtualTour";
 import { VirtualTourVideo } from "@/config/models/VirtualTourVideo";
 import { useRef } from "react";
-
+import gif2 from "@/assets/Wheelz-Australia-Coming-Soon-icon.webp";
 const getYoutubeEmbedUrl = (url: string) => {
   const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w\-]+)/);
   return match ? `https://www.youtube.com/embed/${match[1]}` : url;
@@ -23,7 +23,7 @@ const VirtualToursCard = () => {
   const [makesList, setMakesList] = useState<any[]>();
 
   const [currentPage, setCurrentPage] = useState(() => {
-    const storedPage = localStorage.getItem(CURRENT_PAGE_KEY);
+    const storedPage = sessionStorage.getItem(CURRENT_PAGE_KEY);
     return storedPage ? parseInt(storedPage) : 1;
   });
   const [loading, setLoading] = useState(false);
@@ -34,7 +34,7 @@ const VirtualToursCard = () => {
 
   useEffect(() => {
     if (pageLoaded.current) {
-      localStorage.setItem(CURRENT_PAGE_KEY, currentPage.toString());
+      sessionStorage.setItem(CURRENT_PAGE_KEY, currentPage.toString());
     }
   }, [currentPage]);
 
@@ -50,7 +50,7 @@ const VirtualToursCard = () => {
     fetchData().then(() => {
 
       pageLoaded.current = true;
-      const savedScroll = localStorage.getItem(SCROLL_POSITION_KEY);
+      const savedScroll = sessionStorage.getItem(SCROLL_POSITION_KEY);
       if (savedScroll) {
         window.scrollTo({ top: parseInt(savedScroll), behavior: "auto" });
       } else {
@@ -60,7 +60,7 @@ const VirtualToursCard = () => {
 
 
     const handleBeforeUnload = () => {
-      localStorage.setItem(
+      sessionStorage.setItem(
         SCROLL_POSITION_KEY,
         window.scrollY.toString()
       );
@@ -68,7 +68,7 @@ const VirtualToursCard = () => {
 
     const handleScroll = () => {
       if (pageLoaded.current) {
-        localStorage.setItem(
+        sessionStorage.setItem(
           SCROLL_POSITION_KEY,
           window.scrollY.toString()
         );
@@ -100,7 +100,7 @@ const VirtualToursCard = () => {
         VideoApi.getAllMake()
       ]);
 
-      if (videosResponse?.data) {
+      if (videosResponse?.data) { 
         setVideoList(videosResponse.data);
       }
 
@@ -132,36 +132,25 @@ const VirtualToursCard = () => {
 
   
   const getCurrentPageItems = () => {
-    const startIndex = (currentPage - 1) * videosPerPage;
-    const endIndex = startIndex + videosPerPage;
+  const startIndex = (currentPage - 1) * videosPerPage;
+  const endIndex = startIndex + videosPerPage;
 
-    
-    if (startIndex >= videoList.length) {
-      const unmatchedStartIndex = startIndex - videoList.length;
-      const unmatchedEndIndex = endIndex - videoList.length;
-      return {
-        videos: [],
-        makes: unmatchedMakes.slice(unmatchedStartIndex, unmatchedEndIndex)
-      };
-    }
+  let allCards: (VirtualTourVideo | { name: string; image: string })[] = [
+    ...videoList,
+    ...unmatchedMakes,
+  ];
 
-  
-    if (endIndex > videoList.length) {
-      const unmatchedCount = endIndex - videoList.length;
-      return {
-        videos: videoList.slice(startIndex, videoList.length),
-        makes: unmatchedMakes.slice(0, unmatchedCount)
-      };
-    }
+  const pageItems = allCards.slice(startIndex, endIndex);
 
-    
-    return {
-      videos: videoList.slice(startIndex, endIndex),
-      makes: []
-    };
+  return {
+    items: pageItems,
+    isLastPage: endIndex >= allCards.length,
+    remainingSlots: videosPerPage - pageItems.length,
   };
+};
 
-  const { videos, makes } = getCurrentPageItems();
+
+  const { items, isLastPage, remainingSlots } = getCurrentPageItems();
 
   // Pagination controls component
   const PaginationControls = () => (
@@ -304,15 +293,43 @@ const VirtualToursCard = () => {
           <Loading />
         ) : (
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-            {/* Render video cards first */}
-            {videos.map((video, index) => (
-              <VideoCard key={`video-${index}`} video={video} />
-            ))}
+        <>
+ 
+  {items.map((item, index) => {
+    
+    if ((item as VirtualTourVideo).videoUrl) {
+      return <VideoCard key={`video-${index}`} video={item as VirtualTourVideo} />;
+    }
 
-            {/* Then render image cards for makes without videos */}
-            {makes.map((makeItem, index) => (
-              <MakeImageCard key={`make-${index}`} makeItem={makeItem} />
-            ))}
+    return <MakeImageCard key={`make-${index}`} makeItem={item as { name: string; image: string }} />;
+  })}
+
+  {isLastPage &&
+    [...Array(remainingSlots)].map((_, index) => (
+      <div key={`coming-soon-${index}`} className="w-full max-w-[440px] flex flex-col items-center gap-4">
+        <div
+          className="w-full rounded-xl overflow-hidden"
+          style={{ boxShadow: "10px 10px 10px 0px #1cbeff" }}
+        >
+          <img
+            src={gif2}
+            alt="Coming Soon"
+            className="w-full h-auto aspect-video object-contain bg-white rounded-xl"
+          />
+        </div>
+        <div className="flex justify-end w-full mt-2">
+          <button
+            disabled
+            className="group relative px-4 py-2 font-semibold text-base rounded-full bg-gray-300 text-gray-600 border border-gray-300 shadow opacity-70 cursor-not-allowed"
+          >
+            <span className="block">Coming Soon</span>
+          </button>
+        </div>
+      </div>
+    ))}
+</>
+
+
           </div>
         )}
 
