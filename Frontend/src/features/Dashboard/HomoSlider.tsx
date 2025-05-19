@@ -17,6 +17,8 @@ import img13 from "@/assets/Home/Car-Track-Pro.jpg";
 import img14 from "@/assets/Home/TotalActivityTracker.jpg";
 import img15 from "@/assets/Home/FleetEnquiries.jpg";
 import img16 from "@/assets/prize-draw-winners/iStock1481243237.jpg"
+import img17 from "@/assets/Garage/TurtleQuickLink.jpg"
+import img18 from "@/assets/Garage/MyGarage.png"
 import { ReactTyped } from "react-typed"
 import { useNavigate } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
@@ -41,7 +43,8 @@ const images = [
   img15,
   img13,
   img14,
-  img16
+  img16,
+  img17,img18
 ];
 const texts = [
   { heading: "Membership", route: `${BASE_URL}/become-member/membership` },
@@ -60,6 +63,8 @@ const texts = [
   { heading: "Registered Vehicle Tracker", route: `${BASE_URL}/savings-tracker` },
   { heading: "Total Activity Report", route: `${BASE_URL}/my-reports` },
   { heading: "Prize Draw Winners", route: `${BASE_URL}/trade-promotion` },
+  { heading: "Ambassador", route: `${BASE_URL}/ambassador` },
+  { heading: "My Garage", route: `${BASE_URL}/trade-promotion` },
 ];
 
 export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {

@@ -35,6 +35,7 @@ import FAQsPage from './features/Legal/FAQsPages.tsx';
 import Periodictradepromotiondraws from './features/Legal/Periodictradepromotiondraws.tsx';
 import AboutUs from './features/Legal/AboutUs.tsx';
 import CompetitionTerms from './features/Legal/CompetitionTerms.tsx';
+import Garage from './features/MyGarage/Garage.tsx';
 
 const stores = { authStore };
 const router = createBrowserRouter([
@@ -111,6 +112,10 @@ const router = createBrowserRouter([
       },{
         path:"/competition-terms",
         element:<CompetitionTerms/>
+      },
+      {
+        path:"/mygarage",
+        element:<Garage/>
       }
     ]
   },

@@ -20,7 +20,7 @@ const Dashboard = () => {
   const allServicesRef = useRef<HTMLDivElement>(null);
   const { isLoading, setIsLoading } = useLoadingContext();
   const [showVideo, setShowVideo] = useState(true);
-
+const [_isReady, setIsReady] = useState(false);
   const scrollToAllServices = () => {
     if (!allServicesRef.current) return;
   
@@ -50,14 +50,39 @@ const Dashboard = () => {
     requestAnimationFrame(animation);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
+useEffect(() => {
+  const visitedInfo = localStorage.getItem("dashboardVisit");
+  const now = Date.now();
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  // If visited within a day, skip loader
+  if (visitedInfo) {
+    const { timestamp } = JSON.parse(visitedInfo);
+    if (now - timestamp < oneDay) {
       setShowVideo(false);
       setIsLoading(false);
-    }, 3500);
+      setIsReady(true);
+      return;
+    }
+  }
 
-    return () => clearTimeout(timer);
-  }, [setIsLoading]);
+  // First-time visit or expired: show loader video
+  const timer = setTimeout(() => {
+    setShowVideo(false);
+    setIsLoading(false);
+    localStorage.setItem(
+      "dashboardVisit",
+      JSON.stringify({ timestamp: Date.now() })
+    );
+
+
+    setTimeout(() => {
+      setIsReady(true);
+    }, 400);
+  }, 3000);
+
+  return () => clearTimeout(timer);
+}, [setIsLoading]);
 
   return (
     <>

@@ -223,6 +223,16 @@ export default function Navbar() {
                       Prize Draw Winners
                     </NavLink>
                   </DropdownMenuItem>
+                   <DropdownMenuItem asChild>
+                    <NavLink
+                      to="/mygarage"
+                      className={({ isActive }) =>
+                        `block px-2 py-1 rounded transition-colors duration-200 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+                      }
+                    >
+                      My Garage
+                    </NavLink>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -385,6 +395,15 @@ export default function Navbar() {
               }
             >
               Prize Draw Winners
+            </NavLink>
+            <NavLink
+              to="/mygarage"
+              onClick={handleNavLinkClick}
+              className={({ isActive }) =>
+                `block px-4 py-2 hover:text-primary ${isActive ? "text-primary" : "text-gray-700"}`
+              }
+            >
+              My Garage
             </NavLink>
          
           </div>
