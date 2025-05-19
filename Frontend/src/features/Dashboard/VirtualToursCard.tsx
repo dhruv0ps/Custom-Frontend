@@ -1,128 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import personImage from "@/assets/Home/Virtual-Tours.jpg";
 import speedometerIcon from "@/assets/Homepage/Car-Speedometer.gif";
 import { ChevronRight } from "lucide-react";
 import HoverArrowButton from "@/util/HoverButton";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "@/config";
+import { VideoApi } from "@/config/apiRoutes/virtualTour";
+import { VirtualTourVideo } from "@/config/models/VirtualTourVideo";
 
-const videos = [
-    {
-        title: "Porsche 911 GT3",
-        url: "https://www.youtube.com/embed/DZAdVY9kKbc",
-    },
-    {
-        title: "Mercedes G-Class",
-        url: "https://www.youtube.com/embed/Wcv8GwzfPXc",
-    },
-    {
-        title: "Mazda BT-50",
-        url: "https://www.youtube.com/embed/Fef7uEfqlT4?si=lk25Ywvr5_07oGJ4",
-    },
-    {
-        title: "Kia Tasman",
-        url: "https://www.youtube.com/embed/AzSWmOGaGcY?si=CIeZYyOa62uDgwmR",
-    },
-    {
-        title: "Toyota Prado",
-        url: "https://www.youtube.com/embed/1E02tAWTrAY?si=uLceMfWs4BYntkt5",
-    },
-    {
-        title: "Polestar 4",
-        url: "https://www.youtube.com/embed/0n8W-GtfHYw?si=wtbo1tpfEvX7uSCJ",
-    },
-    {
-        title: "ferrari F80",
-        url: "https://www.youtube.com/embed/tYSo0LsHhvo?si=Jbic4u_fL7K8zDad"
-    },
-    {
-        title: "Lam",
-        url: "https://www.youtube.com/embed/sitXeGjm4Mc?si=qwqEfVGW2sW03PaO"
-    },
-    {
-        title: "BMW",
-        url: "https://www.youtube.com/embed/o6WgDKvurnw?si=coPsQnlws9ESRGRZ"
-    },
-    {
-        title: "BMW",
-        url: "https://www.youtube.com/embed/TRrxlWzoySA?si=800S5lz4c-A9JFsH"
-    },
-    {
-        title: "BMW",
-        url: "https://www.youtube.com/embed/dWct0ruIBAE?si=_55dzW8-lSXh7qA3"
-    }
-    , {
-        title: "BMW",
-        url: "https://www.youtube.com/embed/Y3iXrBWNNRA?si=oLIdqCjhP5qldtqm"
-    }, {
-        title: "BMW",
-        url: "https://www.youtube.com/embed/Y-VGQp_Hmg0?si=-pMg_si8tpP4hn52"
-    }, {
-        title: "BMW",
-        url: "https://www.youtube.com/embed/96ZEreEExuU?si=VnVbvJl2g1qIWMd3"
-    }, {
-        title: "BMW",
-        url: "https://www.youtube.com/embed/TxgZVlwOpnM?si=C-buDv1lHXHOZxuU"
-    }
-
-];
 
 export const VirtualToursCard: React.FC = () => {
     const navigate = useNavigate()
-    const HoverButton = () => {
-        const [hovered, setHovered] = useState(false);
+    const [videoList, setVideoList] = useState<VirtualTourVideo[]>([]);
+    
+    
+    const getYoutubeEmbedUrl = (url: string) => {
+  const match = url.match(
+    /(?:youtube\.com\/(?:embed\/|watch\?v=)|youtu\.be\/)([a-zA-Z0-9_-]+)/
+  );
+  return match ? `https://www.youtube.com/embed/${match[1]}` : url;
+};
+    useEffect( () => {
 
-        return (
-            <div style={{ display: "flex", justifyContent: "flex-end", width: "100%" }}>
-                <button
-                    onMouseEnter={() => setHovered(true)}
-                    onMouseLeave={() => setHovered(false)}
-                    style={{
-                        position: "relative",
-                        padding: "0.5rem 1rem",
-                        fontWeight: 600,
-                        borderRadius: "9999px",
-                        transition: "transform 0.3s ease",
-                        backgroundColor: "#fff",
-                        color: "#00b2ff",
-                        border: "1px solid #007bff",
-                        boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
-                        overflow: "hidden",
-                    }}
-                    onClick={() => window.location.href = `${BASE_URL}/request-virtual-tour`}
-                >
-                    {/* Static Text */}
-                    <span
-                        style={{
-                            opacity: hovered ? 0 : 1,
-                            transition: "opacity 0.2s ease",
-                            position: "relative",
-                            zIndex: 2,
-                        }}
-                    >
-                        Enquire Now
-                    </span>
+    fetchData();
 
-                    {/* Hover Text */}
-                    <span
-                        style={{
-                            position: "absolute",
-                            inset: 0,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            opacity: hovered ? 1 : 0,
-                            transition: "opacity 0.2s ease",
-                            zIndex: 3,
-                        }}
-                    >
-                        Enquire Now <ChevronRight style={{ marginLeft: "0.25rem", width: 16, height: 16 }} />
-                    </span>
-                </button>
-            </div>
-        );
-    };
+    },[])
+ const fetchData = async () => {
+   
+    try {
 
+      const videosResponse = await VideoApi.getAllVideos();
+
+      if (videosResponse?.data) { 
+        setVideoList(videosResponse.data);
+      }
+
+    
+    } catch (err) {
+      console.error("Failed to load data", err);
+    } finally {
+     
+    }
+  };
     return (
         <div className="w-full bg-[#0c3366] py-16 font-sans">
             <div className="max-w-full sm:max-w-[80%] mx-auto px-4">
@@ -195,35 +114,63 @@ export const VirtualToursCard: React.FC = () => {
 
 
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-                    {videos.map((video, index) => (
-                        <div
-                            key={index}
-                            className="w-full max-w-[520px] flex flex-col items-center gap-4"
-                        >
-                            <div
-                                className="w-full rounded-xl overflow-hidden"
-                                style={{
-                                    boxShadow: "10px 10px 10px 0px #1cbeff"
-                                }}
-                            >
-                                <iframe
-                                    src={`${video.url}?modestbranding=1&showinfo=0&rel=0&fs=1`}
-                                    title={video.title}
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowFullScreen
-                                    loading="lazy"
-                                    className="w-full h-auto aspect-video"
-                                    style={{
-                                        border: "none",
-                                        backgroundColor: "#000"
-                                    }}
-                                />
-                            </div>
+                 {videoList.slice(0, 15).map((video, index) => {
+  const videoUrl = getYoutubeEmbedUrl(video.videoUrl);
+  const model = video.vehicleDetails?.model ?? "";
+  const make = video.vehicleDetails?.make?.name ?? "";
 
-                            <HoverButton />
-                        </div>
-                    ))}
+  const handleEnquireClick = async () => {
+    try {
+      const res = await VideoApi.getModelById(make, model);
+      if (res?.data && typeof res.data === "string") {
+        window.location.href = `${BASE_URL}/buy/car?model=${res.data}`;
+        return;
+      }
+      if (res?.err === "No vehicle found for the given make and model.") {
+        window.location.href = `${BASE_URL}/buy/search?makes=${encodeURIComponent(make)}`;
+        return;
+      }
+      console.warn("Unhandled API response:", res);
+    } catch (error) {
+      console.error("API call failed:", error);
+    }
+  };
+
+  return (
+    <div key={index} className="w-full max-w-[520px] flex flex-col items-center gap-4">
+      <div
+        className="w-full rounded-xl overflow-hidden"
+        style={{ boxShadow: "10px 10px 10px 0px #1cbeff" }}
+      >
+        <iframe
+          src={`${videoUrl}?modestbranding=1&showinfo=0&rel=0&fs=1`}
+          title={`${make} ${model}`}
+
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          loading="lazy"
+          className="w-full h-auto aspect-video"
+          style={{ border: "none", backgroundColor: "#000" }}
+        />
+      </div>
+     <div className="flex justify-end w-full mt-2">
+              <button
+                onClick={handleEnquireClick}
+                className="group relative px-4 py-2 font-semibold text-base rounded-full transition bg-white text-primary border border-primary shadow hover:scale-105 overflow-hidden"
+              >
+                <span className="block group-hover:opacity-0 transition-opacity duration-200">
+                  Enquire Now
+                </span>
+                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Enquire Now <ChevronRight className="ml-1 h-4 w-4" />
+                </span>
+              </button>
+            </div>
+    </div>
+  );
+})}
+
                 </div>
                 <div className="mt-16 flex flex-row sm:flex-row sm:justify-end sm:items-center gap-4 w-full">
                     <h3 className="text-2xl font-bold text-white sm:mr-4 sm:mb-0 text-nowrap">More Reviews</h3>
