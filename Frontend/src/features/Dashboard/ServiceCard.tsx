@@ -143,10 +143,10 @@ const services = [
     route: "/fundraisers",
   },
   {
-    title: "Made You Look",
-    description: "Rent This Space And Boost Your Business Visibility!",
+    title: "My Garage",
+    description: "Seamless Automotive Management. Stay in Control!",
     image: gif16,
-    buttonText: "Enquire Now",
+    buttonText: "Acess Now",
     bg: "#ebecec",
     route: "/",
   },

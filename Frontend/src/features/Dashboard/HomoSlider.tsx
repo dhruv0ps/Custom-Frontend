@@ -63,7 +63,7 @@ const texts = [
   { heading: "Registered Vehicle Tracker", route: `${BASE_URL}/savings-tracker` },
   { heading: "Total Activity Report", route: `${BASE_URL}/my-reports` },
   { heading: "Prize Draw Winners", route: `${BASE_URL}/trade-promotion` },
-  { heading: "Ambassador", route: `${BASE_URL}/ambassador` },
+  { heading: "Ambassador Programme", route: `${BASE_URL}/ambassador` },
   { heading: "My Garage", route: `${BASE_URL}/trade-promotion` },
 ];
 

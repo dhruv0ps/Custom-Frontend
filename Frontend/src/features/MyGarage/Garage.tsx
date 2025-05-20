@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Gauge } from "lucide-react";
 import { useNavigate } from 'react-router-dom'
 import { cn, timeAgo } from "@/lib/utils";
-
+import { ChevronRight } from 'lucide-react'
 import WhyChooseGarage from './WhyChooseGarage'
 import AllFooterSection from '@/util/AllFooterSection'
 
@@ -149,10 +149,42 @@ const Garage: React.FC = () => {
                 totalSavings: 207.00,
             },
         },
+        {
+            _id: "4",
+            type: "Mates Rates",
+            service_type: "Tyre Replacement",
+            quoteDetails: {
+                totalSavings: 207.00,
+            },
+        },
+        {
+            _id: "4",
+            type: "Mates Rates",
+            service_type: "Tyre Replacement",
+            quoteDetails: {
+                totalSavings: 207.00,
+            },
+        },
+        {
+            _id: "4",
+            type: "Mates Rates",
+            service_type: "Tyre Replacement",
+            quoteDetails: {
+                totalSavings: 207.00,
+            },
+        },
+        {
+            _id: "4",
+            type: "Mates Rates",
+            service_type: "Tyre Replacement",
+            quoteDetails: {
+                totalSavings: 207.00,
+            },
+        },
     ];
     return (
         <>
-            <VideoBanner
+            {/* <VideoBanner
                 videoSrc={video}
                 heading="Seamless Automotive Management. Stay in Control!"
                 primaryButtonLabel="Home"
@@ -160,7 +192,58 @@ const Garage: React.FC = () => {
                 secondaryButtonLabel="Enter"
                 secondaryButtonLink={`${BASE_URL}/overhauled
 `}
-            />
+            /> */}
+             <div className="relative w-full h-[60vh] sm:h-[60vh] md:h-[65vh] lg:h-[89vh]  overflow-hidden bg-white">
+                    <video
+                      className="absolute inset-0 w-full h-full object-cover object-left z-0 filter brightness-125 "
+                      src={video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
+            
+                    <div className="absolute inset-0 bg-black/10 z-10" />
+            
+                    {/* Foreground content */}
+                    <div className="relative z-20 flex flex-col justify-end h-full">
+                      {/* White strip with heading */}
+                      <div className="bg-white text-center py-2 sm:py-2 px-4">
+                        <h1 className="text-base md:text-2xl  font-bold text-black whitespace-nowrap">
+                      Seamless Automotive Management 
+                        </h1>
+                      </div>
+            
+                      {/* Buttons Section */}
+                      <div className="bg-primary py-4 px-2 sm:py-4 w-full">
+                        <div className="flex justify-center gap-4 space-x-8 sm:space-x-32 flex-wrap">
+                          <button
+                            onClick={() => navigate("/")}
+                            className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-8 py-2 rounded-full"
+                          >
+                            Home
+                          </button>
+                          <button
+                onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
+                className="group relative bg-white text-[#1cbeff] font-medium px-4 sm:px-4 sm:py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden text-center hover:bg-gray-100 shadow-sm hover:shadow-md"
+              >
+                {/* Default Text */}
+                <span className="block w-full transition-opacity duration-200 group-hover:opacity-0">
+               Enter 
+                </span>
+            
+                {/* Hover Text + Arrow */}
+                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none w-full">
+                Enter
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </span>
+              </button>
+            
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
 
             <div className="bg-[#b7eaff] py-12 ">
                 <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center px-4">
@@ -184,13 +267,13 @@ const Garage: React.FC = () => {
                             >
                                 <div
                                     ref={el => iconRefs.current[index] = el}
-                                    className="bg-white p-2  rounded-xl shadow-md mb-4 icon-animation flex items-center justify-center"
+                                    className="bg-white rounded-xl p-2 shadow-md mb-4  flex items-center justify-center overflow-hidden icon-animation"
                                 >
 
                                     <img
                                         src={item.icon}
                                         alt={item.title}
-                                        className="w-32 h-32 object-contain"
+                                        className="w-28 h-28 object-contain"
                                     />
 
                                 </div>
@@ -235,7 +318,9 @@ const Garage: React.FC = () => {
             </div>
             <div className='bg-primary'>
             <div className='sm:max-w-[80%] max-w-[95%] mx-auto'>
-                <h1 className="text-primary font-bold text-2xl mb-2">My Garage</h1>
+                
+                <h1 className="text-black font-bold  text-xl sm:text-3xl mb-2 flex justify-center pt-6">My Garage</h1>
+                <h3 className='text-white flex justify-center pb-6  text-lg sm:text-3xl font-semibold'>Sample Date Preview</h3>
                 <Tabs defaultValue="listing" className="w-full ">
                     <div className="flex flex-col ">
                         <div className="relative md:p-2">
@@ -609,7 +694,7 @@ const Garage: React.FC = () => {
 <WhyChooseGarage/>
 <AllFooterSection
   content={[
-    `Important: In our collaboration with dealerships, service providers, and the automotive industry, Wheelz.au reserves the right to modify terms and conditions—including features, policies, exclusive lead opportunities, and associated costs related to our partnerships. Any changes will be communicated promptly, ensuring transparency and a positive experience for both our valued partners and customers.`
+    ` <strong>Important:</strong>The features and functionalities described above are provided for user convenience and are subject to availability and service terms. While we strive to ensure accurate and up-to-date information, users are encouraged to verify details independently. The platform is not liable for any inaccuracies or user activities documented and shared within the information.`
   ]}
 />
            

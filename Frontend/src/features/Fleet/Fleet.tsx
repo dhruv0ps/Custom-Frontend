@@ -128,12 +128,12 @@ const Fleet: React.FC = () => {
       >
         <div
           ref={(el) => (iconRefs.current[index] = el)}
-          className="bg-white p-4 rounded-xl shadow-md mb-4 icon-animation"
+          className="bg-white rounded-xl shadow-md mb-4  flex items-center justify-center overflow-hidden icon-animation"
         >
           <img
             src={item.icon || "/placeholder.svg"}
             alt={item.title}
-            className="w-[75px] h-[75px] object-contain"
+         className="w-32 h-32 object-contain"
             loading="lazy"
             decoding="async"
           />
@@ -159,12 +159,12 @@ const Fleet: React.FC = () => {
       >
         <div
           ref={(el) => (iconRefs.current[index + 2] = el)}
-          className="bg-white p-4 rounded-xl shadow-md mb-4 icon-animation"
+          className="bg-white rounded-xl shadow-md mb-4  flex items-center justify-center overflow-hidden icon-animation"
         >
           <img
             src={item.icon || "/placeholder.svg"}
             alt={item.title}
-            className="w-[75px] h-[75px] object-contain"
+            className="w-32 h-32 object-contain"
             loading="lazy"
             decoding="async"
           />
