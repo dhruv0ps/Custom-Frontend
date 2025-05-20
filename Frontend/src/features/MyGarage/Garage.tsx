@@ -336,7 +336,7 @@ const Garage: React.FC = () => {
     <TabsTrigger
       key={val}
       value={val}
-    className="h-full  rounded-md transition-all duration-200 data-[state=active]:bg-black data-[state=active]:text-white"
+    className="h-full  rounded-md transition-all duration-200 data-[state=active]:bg-gray-900 data-[state=active]:text-white"
     >
       {val.charAt(0).toUpperCase() + val.slice(1)}
     </TabsTrigger>
