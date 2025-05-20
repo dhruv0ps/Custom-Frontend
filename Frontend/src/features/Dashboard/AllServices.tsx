@@ -46,12 +46,9 @@ const AutomotiveSavings = () => {
       {/* Mobile layout (vertical) */}
       <div className="md:hidden flex flex-col space-y-6 px-1 gap-x-6">
   {services.map((service, index) => (
-    <motion.div
+    <div
       key={index}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3, delay: index * 0.1 }}
+     
       className="flex items-start gap-3"
     >
       <Card className="w-24 h-24 flex-shrink-0 flex items-center justify-center p-3 rounded-xl border border-gray-200 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
@@ -75,7 +72,7 @@ const AutomotiveSavings = () => {
           <p className="text-primary mt-1 text-sm font-medium">{service.badge}</p>
         )}
       </div>
-    </motion.div>
+    </div>
   ))}
 </div>
 
