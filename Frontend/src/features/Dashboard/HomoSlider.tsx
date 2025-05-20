@@ -64,7 +64,7 @@ const texts = [
   { heading: "Total Activity Report", route: `${BASE_URL}/my-reports` },
   { heading: "Prize Draw Winners", route: `${BASE_URL}/trade-promotion` },
   { heading: "Ambassador Programme", route: `${BASE_URL}/ambassador` },
-  { heading: "My Garage", route: `${BASE_URL}/trade-promotion` },
+  { heading: "My Garage", route: `${BASE_URL}/my-garage` },
 ];
 
 export default function HomeSlider({ scrollToAllServices }: HomeSliderProps) {

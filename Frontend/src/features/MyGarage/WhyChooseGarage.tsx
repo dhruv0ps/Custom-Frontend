@@ -12,10 +12,10 @@ export default function WhyChooseGarage() {
         {/* Left: Text Content */}
         <div>
           <h2 className="text-xl md:text-2xl font-bold mb-6 text-center md:text-left text-primary">
-           Why Choose Wheelz.au
+           Simply Your Experience
           </h2>
           <p className="text-[#444] text-sm leading-relaxed">
-            At Wheelz.au, we simplify your automotive experience. From managing listings to tracking enquiries and booking services, everything is designed for ease, accuracy, and control. Experience a smarter way to stay on top of your automotive needs.
+            From managing listings to tracking enquiries and booking services, everything is designed for ease, accuracy, and control. Experience a smarter way to stay on top of your automotive needs.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function WhyChooseGarage() {
           />
           <HoverArrowButton
             label="Enter"
-            onClick={() => window.location.href = `${BASE_URL}/overhauled`}
+            onClick={() => window.location.href = `${BASE_URL}/my-garage`}
             className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
             textClass="text-[#1cbeff] font-semibold"
             hoverTextClass="text-[#1cbeff] font-semibold"

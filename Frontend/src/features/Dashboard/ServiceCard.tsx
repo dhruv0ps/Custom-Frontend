@@ -148,7 +148,7 @@ const services = [
     image: gif16,
     buttonText: "Acess Now",
     bg: "#ebecec",
-    route: "/",
+    route: "/mygarage",
   },
   
 ]

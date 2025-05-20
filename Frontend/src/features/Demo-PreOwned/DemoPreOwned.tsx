@@ -157,7 +157,7 @@ export default function DemoPreCar() {
       </div>
 
       <AllFooterSection content={[
-        `<strong>Important</strong>: All information regarding demonstrator and pre-owned vehicles is provided directly by the dealership...`
+        `<strong>Important</strong>:  All information regarding demonstrator and pre-owned vehicles is provided directly by the dealership. We do not take responsibility for the accuracy, completeness, or reliability of this information. Deals for demonstrator and pre-owned vehicles are solely between the Buyer and the Seller, with no involvement from us in the negotiation, execution, or outcome of these deals.`
       ]} />
     </>
   );

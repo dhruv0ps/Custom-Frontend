@@ -53,6 +53,48 @@ const MateRateDiscount: React.FC = () => {
     const timer = setTimeout(() => setAnimateIcons(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
+ const services = [
+  { name: "Mechanic", img: img1, route: `${BASE_URL}/mates-rates?service_type=Mechanical+Service` },
+  { name: "Tyres", img: img2, route: `${BASE_URL}/mates-rates?service_type=Tyres` },
+  { name: "Brakes", img: img3, route: `${BASE_URL}/mates-rates?service_type=Brakes` },
+  { name: "Suspension", img: img4, route: `${BASE_URL}/mates-rates?service_type=Suspension` },
+  { name: "Windscreens", img: img5, route: `${BASE_URL}/mates-rates?service_type=Windscreens` },
+  { name: "Tinting", img: img6, route: `${BASE_URL}/mates-rates?service_type=Tinting` },
+  { name: "Carwash", img: img7, route: `${BASE_URL}/mates-rates?service_type=Car+Wash` },
+  { name: "Detailing", img: img8, route: `${BASE_URL}/mates-rates?service_type=Detailing` },
+  { name: "Bodywork", img: img9, route: `${BASE_URL}/mates-rates?service_type=Bodywork` },
+  { name: "Dent Repairs", img: img10, route: `${BASE_URL}/mates-rates?service_type=Dent+Repairs` },
+  { name: "Batteries", img: img11, route: `${BASE_URL}/mates-rates?service_type=Batteries` },
+  { name: "Exhausts", img: img12, route: `${BASE_URL}/mates-rates?service_type=Exhausts` },
+  { name: "Performance", img: img13, route: `${BASE_URL}/mates-rates?service_type=Performance` },
+  { name: "Car Rentals", img: img14, route: `${BASE_URL}/mates-rates?service_type=Car+Rentals` },
+  { name: "Air Conditioning", img: img15, route: `${BASE_URL}/mates-rates?service_type=Air+Conditioning` },
+  { name: "Roadside Assist", img: img16, route: `${BASE_URL}/mates-rates?service_type=Roadside+Assist` },
+  { name: "Towing", img: img17, route: `${BASE_URL}/mates-rates?service_type=Towing` },
+  { name: "Car Inspections", img: img18, route: `${BASE_URL}/mates-rates?service_type=Car+Inspections` },
+  { name: "Retail Stores", img: img19, route: `${BASE_URL}/mates-rates?service_type=Retail+Stores` },
+  { name: "Car Leasing", img: img20, route: `${BASE_URL}/mates-rates?service_type=Car+Leasing` },
+  { name: "Fuel Offers", img: img21, route: `${BASE_URL}/mates-rates?service_type=Fuel+Offers` },
+  { name: "Fleet", img: img22, route: `${BASE_URL}/mates-rates?service_type=Fleet` },
+  { name: "Finance", img: img23, route: `${BASE_URL}/mates-rates?service_type=Finance` },
+  { name: "Insurance", img: img24, route: `${BASE_URL}/mates-rates?service_type=Insurance` },
+
+  // These don't need routing
+  { name: "Partnerships", img: img25 },
+  { name: "Fundraisers", img: img26 },
+  { name: "Prize Winners", img: img27 },
+  { name: "Membership", img: img28 },
+  { name: "Trade Promotion", img: img29 },
+  { name: "Overhauled", img: img30 },
+  { name: "Sell Your Car", img: img31 },
+  { name: "Buy A New Car", img: img32 },
+  { name: "Virtual Tours", img: img33 },
+  { name: "Demo & Used", img: img34 },
+  { name: "Coming Soon", img: img35 },
+  { name: "Coming Soon", img: img35 },
+];
+
   return (
     <>
       <VideoBanner
@@ -75,47 +117,11 @@ const MateRateDiscount: React.FC = () => {
 </div>
 
 <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 pb-16">
-  {[
-  { name: "Mechanic", img: img1 },
-  { name: "Tyres", img: img2 },
-  { name: "Brakes", img: img3 },
-  { name: "Suspension", img: img4 },
-  { name: "Windscreens", img: img5 },
-  { name: "Tinting", img: img6 },
-  { name: "Carwash", img: img7 },
-  { name: "Detailing", img: img8 },
-  { name: "Bodywork", img: img9 },
-  { name: "Dent Repairs", img: img10 },
-  { name: "Batteries", img: img11 },
-  { name: "Exhausts", img: img12 },
-  { name: "Performance", img: img13 },
-  { name: "Car Rentals", img: img14 },
-  { name: "Air Conditioning", img: img15 },
-  { name: "Roadside Assist", img: img16 },
-  { name: "Towing", img: img17 },
-  { name: "Car Inspections", img: img18 },
-  { name: "Retail Stores", img: img19 },
-  { name: "Car Leasing", img: img20 },
-  { name: "Fuel Offers", img: img21 },
-  { name: "Fleet", img: img22 },
-  { name: "Finance", img: img23 },
-  { name: "Insurance", img: img24 },
-  { name: "Partnerships", img: img25 },
-  { name: "Fundraisers", img: img26 },
-  { name: "Prize Winners", img: img27 },
-  { name: "Membership", img: img28 },
-  { name: "Trade Promotion", img: img29 },
-  { name: "Overhauled", img: img30 },
-  { name: "Sell Your Car", img: img31 },
-  { name: "Buy A New Car", img: img32 },
-  { name: "Virtual Tours", img: img33 },
-  { name: "Demo & Used", img: img34 },
-  { name: "Coming Soon", img: img35 },
-  { name: "Coming Soon", img: img35 },
-]
+  {services
 .map((item, index) => (
   <motion.div
   key={index}
+  onClick={() => (window.location.href = item.route ?? "/coming-soon")}
   className="flex flex-col items-center gap-3 cursor-pointer"
   whileHover={{ scale: 1.1 }}
   whileTap={{ scale: 1.1 }}

@@ -77,7 +77,7 @@ const VideoBanner: React.FC<VideoBannerProps> = ({
   value={selectedState}
   onChange={(e) => setSelectedState(e.target.value)}
 >
-  <option value="" >Select State</option>
+  <option value="" >State</option>
   <option value="NSW">New South Wales</option>
   <option value="VIC">Victoria</option>
   <option value="QLD">Queensland</option>
