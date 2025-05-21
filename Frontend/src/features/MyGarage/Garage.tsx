@@ -284,7 +284,7 @@ const mockBuyLeads = [
                     {/* Section Headers */}
 
                     <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-black">
-                        Adds Value To Your Garage Experience:
+                        Add Value To Your Garage Experience
                         <br className="block sm:hidden" />
                         <span className="inline sm:inline-block"></span>
                     </h2>

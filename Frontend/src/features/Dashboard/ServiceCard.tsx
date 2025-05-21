@@ -13,7 +13,8 @@ import gif12 from "@/assets/Homepage/Car-Washing.gif"
 import gif13 from "@/assets/Homepage/Business-Partners.gif"
 import gif14 from "@/assets/Homepage/Winners.gif"
 import gif15 from "@/assets/Homepage/Teddy-Bear.gif"
-import gif16 from "@/assets/Homepage/megaphone.gif"
+// import gif16 from "@/assets/Homepage/megaphone.gif"
+import gif17 from "@/assets/Homepage/CAR.gif"
 import { ChevronRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { useState,useEffect } from "react"
@@ -144,8 +145,8 @@ const services = [
   },
   {
     title: "My Garage",
-    description: "Seamless Automotive Management. Stay in Control!",
-    image: gif16,
+    description: "Seamless Automotive Management. Stay In Control!",
+    image: gif17,
     buttonText: "Acess Now",
     bg: "#ebecec",
     route: "/mygarage",

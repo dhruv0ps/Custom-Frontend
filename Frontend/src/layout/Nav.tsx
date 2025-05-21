@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { ChevronDown, Home, Menu } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import img1 from "@/assets/Wheelz-Australia-Black-and-Blue-Color-scaled.webp"
-
+import { BASE_URL } from "@/config";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -223,6 +223,16 @@ export default function Navbar() {
                       Prize Draw Winners
                     </NavLink>
                   </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                    <a
+  href={`${BASE_URL}/ambassador-dashboard`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block px-2 py-1 rounded transition-colors duration-200 hover:text-primary text-gray-700"
+>
+  Ambassador Programme
+</a>
+                  </DropdownMenuItem>
                    <DropdownMenuItem asChild>
                     <NavLink
                       to="/mygarage"
@@ -396,6 +406,15 @@ export default function Navbar() {
             >
               Prize Draw Winners
             </NavLink>
+             <a
+  href={`${BASE_URL}/ambassador-dashboard`}
+  onClick={handleNavLinkClick}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block px-4 py-2 hover:text-primary text-gray-700"
+>
+  Ambassador Programme
+</a>
             <NavLink
               to="/mygarage"
               onClick={handleNavLinkClick}

@@ -69,7 +69,7 @@ const Businesspartners:React.FC = () => {
     <>
       Drive your business forward
       <br className="block sm:hidden" />
-      <span className="inline sm:inline-block"> with the force of our strategic alliance</span>
+      <span className="inline sm:inline-block sm:ml-2"> with the force of our strategic alliance</span>
     </>
   }
   primaryButtonLabel="Home"
