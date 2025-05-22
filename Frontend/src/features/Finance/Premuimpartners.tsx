@@ -115,7 +115,7 @@ const PremiumPartner: React.FC<PremiumPartnerProps> = ({ mode }) => {
     >
     <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap pr-12">
     Triple Check, 
-     <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> TRIPLE SAVE!</span>
+     <span className="block sm:inline text-primary text-lg sm:text-3xl  uppercase"> TRIPLE SAVE!</span>
     </h2>
   </div>
   <div className="flex justify-end flex-shrink-0 ml-2 mr-6 ">

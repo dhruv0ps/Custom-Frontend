@@ -83,8 +83,8 @@ const Businesspartners:React.FC = () => {
       <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center px-4">
         {/* Section Headers */}
        
-        <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-black">
-    Where Vision Meets Opportunity: Let’s Partner Up
+        <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-black leading-snug sm:leading-tight  ">
+    Where Vision Meets Opportunity: Let’s Partner Up!
   </h2>
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">

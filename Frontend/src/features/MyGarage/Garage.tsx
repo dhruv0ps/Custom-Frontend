@@ -182,41 +182,42 @@ const mockBuyLeads = [
         {
             _id: "4",
             type: "Mates Rates",
-            service_type: "Tyre Replacement",
+            service_type: "Mechanical Service",
             quoteDetails: {
-                totalSavings: 207.0,
+                totalSavings: 158.20,
             },
         },
         {
             _id: "4",
             type: "Mates Rates",
-            service_type: "Tyre Replacement",
+            service_type: "Dent Repair",
             quoteDetails: {
-                totalSavings: 207.0,
+                totalSavings: 98.00,
             },
         },
         {
             _id: "4",
             type: "Mates Rates",
-            service_type: "Tyre Replacement",
+            service_type: "Carwash Service",
             quoteDetails: {
-                totalSavings: 207.0,
+                totalSavings: 299.00,
             },
         },
         {
             _id: "4",
             type: "Mates Rates",
-            service_type: "Tyre Replacement",
+            service_type: "Finance Service",
             quoteDetails: {
-                totalSavings: 207.0,
+                totalSavings: 3985.11
+                ,
             },
         },
         {
             _id: "4",
             type: "Mates Rates",
-            service_type: "Tyre Replacement",
+            service_type: "Insurance Service",
             quoteDetails: {
-                totalSavings: 207.0,
+                totalSavings: 411.08,
             },
         },
     ]
@@ -644,7 +645,7 @@ const mockBuyLeads = [
             <WhyChooseGarage />
             <AllFooterSection
                 content={[
-                    ` <strong>Important:</strong>The features and functionalities described above are provided for user convenience and are subject to availability and service terms. While we strive to ensure accurate and up-to-date information, users are encouraged to verify details independently. The platform is not liable for any inaccuracies or user activities documented and shared within the information.`,
+                    ` <strong>Important:</strong>The features and functionalities described above are provided for user convenience and are subject to availability and service terms. While we strive to ensure accurate and up-to-date information, users are encouraged to verify details independently. The platform is not liable for any inaccuracies or user activities documented and shared within the information provided.`,
                 ]}
             />
         </>

@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
         },
         {
           title: "Membership: Your Ticket To Win",
-          desc: "Secure your entry by purchasing a membership, it’s your gateway to the chance of a lifetime",
+          desc: "Secure your entry by purchasing a specific membership, it’s your gateway to the chance of a lifetime",
         },
         {
           title :"Unleash Your Dream Build",

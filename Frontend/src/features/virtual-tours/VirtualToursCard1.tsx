@@ -10,10 +10,15 @@ import { VirtualTourVideo } from "@/config/models/VirtualTourVideo";
 import { useRef } from "react";
 import gif2 from "@/assets/Wheelz-Australia-Coming-Soon-icon.webp";
 const getYoutubeEmbedUrl = (url: string) => {
-  const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w\-]+)/);
-  return match ? `https://www.youtube.com/embed/${match[1]}` : url;
+  try {
+    const videoId = new URL(url).searchParams.get("v");
+    if (videoId) return `https://www.youtube.com/embed/${videoId}`;
+    const match = url.match(/(?:youtu\.be\/|embed\/)([\w\-]+)/);
+    return match ? `https://www.youtube.com/embed/${match[1]}` : "";
+  } catch {
+    return "";
+  }
 };
-
 
 const SCROLL_POSITION_KEY = "virtual_tours_scroll_position";
 const CURRENT_PAGE_KEY = "virtual_tours_current_page";
@@ -346,7 +351,7 @@ const VirtualToursCard = () => {
           >
             <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
               Virtual Tours
-              <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> ALL FROM HOME</span>
+              <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-1 uppercase">ALL FROM HOME</span>
             </h2>
           </div>
           <div className="flex justify-end flex-shrink-0 ml-1 mr-3 sm:mr-0">

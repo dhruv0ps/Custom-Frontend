@@ -77,7 +77,7 @@ export default function WhyChooseBuy() {
                      hoverTextClass="text-black bg-gray-200"                 
                     />
                    <HoverArrowButton
-            label="Access Form"
+            label="Buy Now"
           onClick={() => window.location.href = (`${BASE_URL}/buy`)}
             className="bg-white text-primary font-semibold px-8 py-3 rounded-full shadow-md transition-all min-w-[140px]"
             textClass="text-primary"

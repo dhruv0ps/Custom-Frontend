@@ -49,12 +49,12 @@ const MembershipPricing: React.FC = () => {
        style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}>
        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
                 That’s less than  
-                <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> $2.31 A WEEK</span>
+                <span className="block sm:inline text-primary text-lg sm:text-3xl  uppercase"> $2.31 A WEEK</span>
             </h2>
           </div>
         <div className="flex w-full justify-end sm:w-auto sm:mr-2 px-4 sm:px-0">
   <button
-    onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
+    onClick={() => (window.location.href = `${BASE_URL}/become-member/membership`)}
     className="group relative bg-primary font-semibold text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition overflow-hidden"
   >
     {/* Normal State */}

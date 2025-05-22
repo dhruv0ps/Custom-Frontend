@@ -23,7 +23,7 @@ const TradePromotionGrid = () => {
         <h1 className="text-3xl sm:text-3xl font-bold uppercase mb-10 text-center">
   Trade Promotion
   <br className="block sm:hidden" />
-  <span className="inline sm:inline-block"> Prize Draws</span>
+  <span className="inline sm:inline-block sm:ml-1.5"> Prize Draws</span>
 </h1>
 
         {/* Grid */}
@@ -136,16 +136,16 @@ const TradePromotionGrid = () => {
      
       </div>
       <div className="w-full py-4 sm:py-8">
-      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between   sm:px-0">
+      <div className="max-w-full mx-auto sm:max-w-[80%] flex items-center justify-between   sm:px-2">
         
         {/* Text Block */}
         <div
           className="bg-white rounded-r-full py-1 sm:py-2 pr-24 sm:px-6 flex-shrink "
           style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}
         >
-        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4">
+        <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap sm:ml-0 ml-2">
         Join Today 
-         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> FOR JUST $10!</span>
+         <span className="block sm:inline text-primary text-lg sm:text-3xl  uppercase"> FOR JUST $10!</span>
         </h2>
       </div>
       <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">

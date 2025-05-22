@@ -219,7 +219,7 @@ const Fleet: React.FC = () => {
        style={{ boxShadow: 'inset -6px 0 10px rgba(0, 0, 0, 0.1)' }}>
         <h2 className="text-base sm:text-base  font-bold whitespace-nowrap">
         Simplified,Tailored
-          <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">
+          <span className="block sm:inline text-primary text-lg sm:text-3xl  uppercase">
           {""} Hassle-Free
           </span>
         </h2>

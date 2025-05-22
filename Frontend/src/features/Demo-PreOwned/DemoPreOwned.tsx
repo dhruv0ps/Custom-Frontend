@@ -109,22 +109,32 @@ export default function DemoPreCar() {
               </div>
             ))}
           </div>
+          <div className="mt-6 flex justify-center sm:justify-end ">
+ <HoverArrowButton
+            label="View All"
+            onClick={() => window.location.href = `${BASE_URL}/demo-preowned`}
+            className="border border-[#1cbeff] bg-[#1cbeff] px-6 py-2 rounded-full transition hover:opacity-90"
+            textClass="text-white text-[18px] font-medium"
+            hoverTextClass="text-white text-[18px] font-medium"
+          />
+</div>
          <div className="mt-4">
          <PaginationControls/>
 </div>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center rounded-lg md:py-12 mt-4">
 
     <div className="text-white space-y-4 order-1 md:order-2">
     <h2 className="text-2xl md:text-[1.4em] font-semibold md:font-bold ">
     Certified Confidence,
     <br className="block md:hidden" />
-    <span className="inline md:inline-block"> Dealer-Backed Assurance</span>
+    <span className="inline md:inline-block sm:ml-1"> Dealer-Backed Assurance</span>
   </h2>
 
       <p>Every Demo and Pre-Owned vehicle on our platform is offered exclusively by licensed dealerships, so you can drive away with complete peace of mind.</p>
       <p>Each car has been carefully inspected, professionally tested, and meets the quality standards you’d expect from trusted, regulated sellers.</p>
       <p>Whether you’re after near new performance or dependable value, you’re not just getting a great deal, you’re making a smart, safe, and secure choice.</p>
-      <p>Explore with confidence, knowing every listing is backed by credibility and care.</p>
+      <p>Explore with confidence, knowing every listing is backed by dealership credibility and care.</p>
     </div>
 
     {/* Image Second */}

@@ -33,7 +33,7 @@ const TurtleSection: React.FC = () => {
       <p className="text-white text-center mt-6 sm:mt-0 md:text-right text-base md:text-base font-semibold mb-4 md:mb-0">
         You're probably wondering how I ended up in this situation...
       </p>
-      <div className="flex gap-x-4 ">
+      <div className="flex gap-x-10 sm:gap-x-4 ">
       <Button
   onClick={() => (window.location.href = `${BASE_URL}/ambassador-dashboard`)}
   className="group relative bg-primary hover:bg-sky-500 text-white font-semibold rounded-full px-4 md:px-6 py-2 shadow transition-all flex items-center justify-center overflow-hidden"

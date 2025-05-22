@@ -6,9 +6,10 @@ import WhyChooseUs from '@/util/WhyChooseUs'
 import happyUsersImg from "@/assets/prize-draw-winners/iStock1481243237.jpg";
 import AllFooterSection from '@/util/AllFooterSection'
 import VideoBanner from '@/util/VideoBanner'
-import { useNavigate } from 'react-router-dom'
+
+import { BASE_URL } from '@/config'
 const Prizedrawwinners:React.FC = () => {
-   const navigate = useNavigate()
+   
     const featureList = [
         {
           title: "Cash Prizes",
@@ -39,13 +40,15 @@ const Prizedrawwinners:React.FC = () => {
     <>
       Meet our latest trade promotion
       <br className="block sm:hidden" />
-      <span className="inline sm:inline-block"> prize draw champions</span>
+      <span className="inline sm:inline-block sm:ml-1.5"> prize draw champions</span>
     </>
   }
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Sign Me Up"
-  secondaryButtonLink="/view-all"
+  secondaryButtonLink={`${BASE_URL}/become-member/membership
+
+ `}
 />
 
       <div className="bg-primary pb-10">
@@ -82,7 +85,8 @@ const Prizedrawwinners:React.FC = () => {
       <div className=" sm:w-auto mr-4">
       <HoverArrowButton
   label="Sign Me Up"
-  onClick={() => navigate("/access-form")}
+  onClick={() => window.location.href = `${BASE_URL}/become-member/membership
+`}
   className="bg-white  transition-all  py-3 font-semibold text-base rounded-full shadow-md"
   textClass="text-primary"
   hoverTextClass="text-primary"

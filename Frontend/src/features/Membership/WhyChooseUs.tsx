@@ -23,8 +23,8 @@ export default function WhyChooseUs() {
           desc: "When we run Trade Promotion activities you will automatically earn entry into every draw, giving you multiple chances to win exciting prizes just by being a valued member of our community.",
         },
         {
-          title: "Experience Virtual Tours",
-          desc: "Be among the first to explore new vehicles with our virtual tours, guided by car experts who provide insights tailored to your preferences. Make informed decisions without leaving your home.",
+          title: "Drive Rewards. Share the Thrill",
+          desc: "Help Jetson Wheelz take over the automotive world. Invite your crew, earn rewards, and boost your savings. The more members in our ecosystem, the better the benefits for everyone!",
         },
       ];
       
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
   textClass="text-black font-semibold"
   hoverTextClass="text-black font-semibold"/>
                    
-                    <HoverArrowButton   label="Sign Me Up"onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}  className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
+                    <HoverArrowButton   label="Sign Me Up"onClick={() => (window.location.href = `${BASE_URL}/become-member/membership`)}  className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
   textClass="text-[#1cbeff] font-semibold"
   hoverTextClass="text-[#1cbeff] font-semibold"/>
                   </div>

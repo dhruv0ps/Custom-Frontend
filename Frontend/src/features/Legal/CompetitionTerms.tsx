@@ -103,6 +103,89 @@ const CompetitionTerms: React.FC = () => {
           <li>Each VIP gets 1 entry per draw.</li>
           <li>Watch for draw notifications via email.</li>
         </ul>
+
+       <h3 className="text-lg font-semibold text-gray-700 mb-2">Ambassador Programme Terms & Conditions</h3>
+
+       <p className="font-bold">Eligibility</p>
+        <ul className="list-disc list-inside sm:ml-4 space-y-1">
+          <li>Open to residents of Australia aged 18 years or older.</li>
+          <li>Participants must have a valid and active Ambassador Programme account in good standing.</li>
+          <li>Employees, contractors, and affiliates of The Platform and their immediate family members are not eligible for tiered cash rewards.</li>
+        </ul>
+        
+          <p className="font-bold">How the Programme Works</p>
+        <ul className="list-disc list-inside sm:ml-4 space-y-1">
+          <li>Participants receive rewards by referring new users to The Platform using their unique referral link or code. </li>
+          <li>	A referred user must:
+<div className="pl-6 mt-2">- Be new to the platform (not previously registered),
+<br></br>- Sign up via the referral link or by entering the code during registration,
+<br></br>- Complete verification and any necessary payment,
+<br></br>- Remain active for the required time period as per the relevant reward tier.</div>
+
+</li>
+       
+        </ul>
+
+        <p className="font-bold">Referral Tiers & Rewards</p>
+        <ul className="list-disc list-inside sm:ml-4 space-y-1">
+          <li>Tier 1: Spark Starter - 10 Friends - $100 Cash Bonus (Guaranteed^), 1 Month Free Membership</li>
+          <li>Tier 2: Growth Champ - 25 Friends - $250 Cash Bonus (Guaranteed^), Entry into Growth Draw*, 6 Months Free</li>
+          <li>Tier 3: VIP Influencer - 50 Friends - $500 Cash Bonus (Guaranteed^), Entry into VIP Prize Draw*, 9 Months Free</li>
+          <li>Tier 4: Power Ambassador - 100+ Friends - $1000 Cash Bonus (Guaranteed^), $100 Monthly Commission~, 12 Months Free</li>
+          <li>Guaranteed cash bonuses are awarded only once the referral threshold is reached and all referred users have successfully registered, verified, completed payments, and remained active for six (6) consecutive calendar months.</li>
+          <li>Prize Draws are conducted periodically; eligible participants will be notified via the website or member portal. Winners are selected at random from qualified entries.</li>
+          <li>Monthly commission is paid only when the participant maintains 100 active, verified, and engaged referrals per calendar month, as shown in their Ambassador Programme dashboard.</li>
+        </ul>
+
+        <p className="font-bold">Referral Tracking & Visibility</p>
+<ul className="list-disc list-inside sm:ml-4 space-y-1 mb-6">
+  <li>Participants can track their referrals, rewards, and status via the Ambassador dashboard within the The Platform member portal.</li>
+  <li>The Platform is not responsible for any referral tracking issues due to incorrect links, user error, or technical malfunction.</li>
+</ul>
+
+<p className="font-bold">Reward Distribution</p>
+<ul className="list-disc list-inside sm:ml-4 space-y-1 mb-6">
+  <li>Cash bonuses are paid via direct deposit or through approved third-party payment services.</li>
+  <li>Membership extensions are automatically applied to user accounts.</li>
+  <li>Rewards are subject to verification, eligibility, and approval by The Platform.</li>
+</ul>
+
+<p className="font-bold">Fraud & Disqualification</p>
+<ul className="list-disc list-inside sm:ml-4 space-y-1 mb-6">
+  <li>The Platform reserves the right to investigate and disqualify participants for suspected:
+    <ul className="list-disc list-inside sm:ml-4 mt-1 space-y-1">
+      <li>Fake or duplicate accounts</li>
+      <li>Use of bots or automation tools</li>
+      <li>Misuse of the referral system</li>
+      <li>Violation of Australian laws or The Platform policies</li>
+    </ul>
+  </li>
+  <li>All pending rewards may be forfeited if fraud or manipulation is suspected.</li>
+</ul>
+
+<p className="font-bold">Modifications & Termination</p>
+<ul className="list-disc list-inside sm:ml-4 space-y-1 mb-6">
+  <li>The Platform reserves the right to change, suspend, or discontinue the Referral Programme or its Terms at any time, for any reason, and without prior notice.</li>
+  <li>Updates will be made available through official The Platform communication channels including the website and email.</li>
+</ul>
+
+<p className="font-bold">Taxes</p>
+<ul className="list-disc list-inside sm:ml-4 space-y-1 mb-6">
+  <li>Participants are solely responsible for reporting and paying any applicable taxes on rewards received.</li>
+  <li>The Platform does not provide tax advice and recommends consulting a licenced tax professional.</li>
+</ul>
+
+<p className="font-bold">Limitation of Liability</p>
+<ul className="list-disc list-inside sm:ml-4 space-y-1 mb-6">
+  <li>The Platform shall not be liable for any indirect, incidental, or consequential damages arising from participation in the Programme.</li>
+  <li>Rewards are provided "as is" and without any warranties, express or implied.</li>
+</ul>
+
+<p className="font-bold">Governing Law</p>
+<ul className="list-disc list-inside sm:ml-4 space-y-1 mb-6">
+  <li>These Terms & Conditions are governed by the laws of Australia.</li>
+  <li>Any disputes or claims related to this Programme will be subject to the jurisdiction of the courts of Australia, in accordance with federal consumer and business protection laws.</li>
+</ul>
       </div>
     </section>
   );
@@ -114,7 +197,7 @@ const CompetitionTerms: React.FC = () => {
       </div>
 
       <div className="max-w-full sm:max-w-[80%] mx-auto py-12 px-4">
-        <h1 className="text-3xl font-bold text-center mb-4">Competition Terms:<br />Wheelz Trade Promotion</h1>
+        <h1 className="text-3xl font-bold text-center mb-4">Competition Terms:<br />Wheelz Trade Promotion & Ambassador Programme</h1>
         <p className="text-primary font-semibold text-sm mb-8 text-center">Last Updated: January 2025</p>
 
       

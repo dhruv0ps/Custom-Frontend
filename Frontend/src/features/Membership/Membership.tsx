@@ -44,7 +44,7 @@ const Membership: React.FC = () => {
                 Home
               </button>
               <button
-    onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
+    onClick={() => (window.location.href = `${BASE_URL}/become-member/membership`)}
     className="group relative bg-white text-[#1cbeff] font-medium px-4 sm:px-4 sm:py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden text-center hover:bg-gray-100 shadow-sm hover:shadow-md"
   >
     {/* Default Text */}

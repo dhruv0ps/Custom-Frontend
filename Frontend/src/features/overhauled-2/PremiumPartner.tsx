@@ -116,7 +116,7 @@ const PremiumPartner = () => {
     >
           <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
         Join, Share, Win,
-        <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">
+        <span className="block sm:inline text-primary text-lg sm:text-3xl  uppercase">
           {""} OVERHAULED AWAITS
           </span>
         </h2>

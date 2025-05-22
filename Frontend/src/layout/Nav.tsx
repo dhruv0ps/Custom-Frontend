@@ -226,8 +226,7 @@ export default function Navbar() {
                     <DropdownMenuItem asChild>
                     <a
   href={`${BASE_URL}/ambassador-dashboard`}
-  target="_blank"
-  rel="noopener noreferrer"
+ 
   className="block px-2 py-1 rounded transition-colors duration-200 hover:text-primary text-gray-700"
 >
   Ambassador Programme
@@ -409,8 +408,7 @@ export default function Navbar() {
              <a
   href={`${BASE_URL}/ambassador-dashboard`}
   onClick={handleNavLinkClick}
-  target="_blank"
-  rel="noopener noreferrer"
+ 
   className="block px-4 py-2 hover:text-primary text-gray-700"
 >
   Ambassador Programme

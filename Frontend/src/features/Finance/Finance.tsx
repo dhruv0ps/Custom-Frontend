@@ -85,7 +85,7 @@ const Finance:React.FC = () => {
         >
         <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
         Tailored Finance,
-         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> TRUSTED GUIDANCE</span>
+         <span className="block sm:inline text-primary text-lg sm:text-3xl  uppercase"> TRUSTED GUIDANCE</span>
         </h2>
       </div>
       <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">

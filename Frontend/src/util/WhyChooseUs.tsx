@@ -2,6 +2,7 @@ import React from "react";
 import HoverArrowButton from "./HoverButton";
 import { useNavigate } from "react-router-dom";
 import checkbox from "@/assets/SellCar/Check-Box.png"
+import { BASE_URL } from "@/config";
 interface Feature {
   title: string ;
   desc: string;
@@ -63,7 +64,8 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ title, features, image }) => 
             textClass="text-black font-semibold"
             hoverTextClass="text-black font-semibold" />
 
-          <HoverArrowButton label="Sign Me Up" onClick={() => navigate("/")} className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
+          <HoverArrowButton label="Sign Me Up"  onClick={() => window.location.href = `${BASE_URL}/become-member/membership
+          `} className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
             textClass="text-[#1cbeff] font-semibold"
             hoverTextClass="text-[#1cbeff] font-semibold" />
         </div>

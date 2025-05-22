@@ -20,14 +20,14 @@ const Tradepromotion: React.FC = () => {
         heading="Free cash prize draws for loyal members"
         primaryButtonLabel="Home"
         primaryButtonLink="/"
-        secondaryButtonLabel="View All"
+        secondaryButtonLabel="Sign Me Up"
         secondaryButtonLink={`${BASE_URL}/trade-promotion`}
       />
       <div className="bg-[#d9d9d9] sm:px-4 py-12">
         <div className='max-w-[95%] mx-auto sm:max-w-[80%]'>     <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-black">
           Trade Promotion Draws
           <br className="block md:hidden" />
-          <span className="inline md:inline-block"> At No Cost</span>
+          <span className="inline md:inline-block sm:ml-1"> At No Cost</span>
         </h2>
 
           {/* Layout */}
@@ -59,7 +59,7 @@ const Tradepromotion: React.FC = () => {
               </p>
               <p className="text-gray-700 text-sm mb-4">
                 Along with your entry into these thrilling draws, you'll also enjoy fantastic
-                Mates Rates prices on automotive services from our trusted partners, ensuring
+                Mates Rates pricing on automotive services from our trusted partners, ensuring
                 you get great value every time.
               </p>
               <p className="text-gray-700 text-sm">
@@ -97,7 +97,7 @@ const Tradepromotion: React.FC = () => {
             >
               <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4">
                 Join, Save &
-                <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> WIN!</span>
+                <span className="block sm:inline text-primary text-lg sm:text-3xl  uppercase"> WIN!</span>
               </h2>
             </div>
             <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">

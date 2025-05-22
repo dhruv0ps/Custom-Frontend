@@ -33,7 +33,7 @@ export default function WhyChooseGarage() {
 
       {/* CTA Buttons */}
       <div className="mt-12 w-full">
-        <div className="flex justify-center gap-6 sm:flex-wrap sm:px-4">
+        <div className="flex justify-center gap-16 sm:flex-wrap sm:px-4">
           <HoverArrowButton
             label="Home"
             onClick={() => navigate("/")}

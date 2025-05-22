@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import video1 from "@/assets/Mates-Rates.mp4";
 import img1 from "@/assets/MateRate/Setting.png"
 import img2 from "@/assets/MateRate/Tyer-icon.png"
@@ -45,7 +45,7 @@ import {motion} from "framer-motion"
 import HoverArrowButton from '@/util/HoverButton';
 import { BASE_URL } from '@/config';
 const MateRateDiscount: React.FC = () => {
-  const navigate = useNavigate();
+  
   const [animateIcons, setAnimateIcons] = useState(false);
 
   useEffect(() => {
@@ -81,16 +81,16 @@ const MateRateDiscount: React.FC = () => {
   { name: "Insurance", img: img24, route: `${BASE_URL}/mates-rates?service_type=Insurance` },
 
   // These don't need routing
-  { name: "Partnerships", img: img25 },
-  { name: "Fundraisers", img: img26 },
-  { name: "Prize Winners", img: img27 },
-  { name: "Membership", img: img28 },
-  { name: "Trade Promotion", img: img29 },
-  { name: "Overhauled", img: img30 },
-  { name: "Sell Your Car", img: img31 },
-  { name: "Buy A New Car", img: img32 },
-  { name: "Virtual Tours", img: img33 },
-  { name: "Demo & Used", img: img34 },
+  { name: "Partnerships", img: img25, route: `${BASE_URL}/business-partner/register-partner`},
+  { name: "Fundraisers", img: img26 ,route :`${BASE_URL}/charities`},
+  { name: "Prize Winners", img: img27,route :`${BASE_URL}/trade-promotion` },
+  { name: "Membership", img: img28,route :`${BASE_URL}/become-member/membership` },
+  { name: "Trade Promotion", img: img29,route :`${BASE_URL}/trade-promotion` },
+  { name: "Overhauled", img: img30,route :`${BASE_URL}/overhauled` },
+  { name: "Sell Your Car", img: img31,route :`${BASE_URL}/sell/rego` },
+  { name: "Buy A New Car", img: img32,route :`${BASE_URL}/buy` },
+  { name: "Virtual Tours", img: img33,route :`${BASE_URL}/request-virtual-tour` },
+  { name: "Demo & Used", img: img34,route :`${BASE_URL}/demo-preowned` },
   { name: "Coming Soon", img: img35 },
   { name: "Coming Soon", img: img35 },
 ];
@@ -178,7 +178,7 @@ const MateRateDiscount: React.FC = () => {
       <div className="flex justify-end flex-shrink-0 sm:ml-2 mr-4 sm:mr-0">
           <HoverArrowButton
             label="Submit"
-            onClick={() => navigate("/access-form")}
+            onClick={() => window.location.href = `${BASE_URL}/mates-rates?service_type=Other&showServiceDialog=true`}
             className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
             textClass="text-white"
             hoverTextClass="text-white"

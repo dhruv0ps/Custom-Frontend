@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
         <div>
           <h2 className="text-xl md:text-2xl font-bold mb-8 text-center md:text-left">
             Why Selling With Us<br className="block sm:hidden" />
-            <span className="inline sm:inline-block"> Is Your Smart Choice</span>
+            <span className="inline sm:inline-block sm:ml-2"> Is Your Smart Choice</span>
           </h2>
           <ul className="space-y-6">
             {features.map((feature, idx) => (
@@ -77,8 +77,8 @@ export default function WhyChooseUs() {
     />
 
     <HoverArrowButton
-      label="Acess Form"
-      onClick={() => (window.location.href = `${BASE_URL}/sell-rego`)}
+      label="Sell Now"
+      onClick={() => (window.location.href = `${BASE_URL}/sell/rego`)}
       className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
       textClass="text-[#1cbeff] font-semibold"
       hoverTextClass="text-[#1cbeff] font-semibold"

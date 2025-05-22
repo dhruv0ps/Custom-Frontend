@@ -26,8 +26,8 @@ export default function SellCar() {
 "
             primaryButtonLabel="Home"
             primaryButtonLink="/"
-            secondaryButtonLabel="Access Form"
-            secondaryButtonLink={`${BASE_URL}/sell-rego`}/>
+            secondaryButtonLabel="Sell Now"
+            secondaryButtonLink={`${BASE_URL}/sell/rego`}/>
       <div className="bg-[#b7eaff] py-12  sm:px-0">
   <div className="max-w-[95%] sm:max-w-[80%] mx-auto text-center px-4 sm:px-0 ">
     <h2 className="text-3xl md:text-3xl font-bold mb-12">We Work For You</h2>
@@ -52,7 +52,7 @@ export default function SellCar() {
     {
       icon: img4,
       title: "Trustworthy Dealership Network",
-      desc: "Rely on our manufacturer approved dealers for transparency and customer satisfaction.",
+      desc: "Rely on our manufacturer-approved licensed dealers for transparency and customer satisfaction.",
     },
   ].map((item, index) => (
     <div key={index} className="flex flex-col items-center text-center">
@@ -138,7 +138,7 @@ export default function SellCar() {
             <div className="flex items-start text-left gap-4  mb-8">
               <div className="text-[100px] font-extrabold leading-none text-white">2</div>
               <div className="text-right">
-                <h4 className="text-base font-bold mb-2 text-black uppercase">Get paired with your perfect match</h4>
+                <h4 className="text-base font-bold mb-2 text-black uppercase">Find Your Perfect Match</h4>
                 <p className="text-sm leading-relaxed text-white">
                   Our platform swiftly reviews your car details, connecting you with the right dealer from our extensive
                   network of buyers.
@@ -262,7 +262,7 @@ export default function SellCar() {
         >
         <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4 sm:ml-0">
         Free Service, Fast Match,
-         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">  INSTANT PAY</span>
+         <span className="block sm:inline text-primary text-lg sm:text-3xl  uppercase">  INSTANT PAY</span>
         </h2>
       </div>
       <div className="flex justify-end flex-shrink-0  sm:ml-2 mr-3 sm:mr-0">

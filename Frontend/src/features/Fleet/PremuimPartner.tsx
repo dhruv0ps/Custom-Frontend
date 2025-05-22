@@ -107,7 +107,7 @@ const PremiumPartner = () => {
     >
       <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
         Share Details,
-        <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">
+        <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-1 uppercase">
           GET EXPERT HELP
         </span>
       </h2>

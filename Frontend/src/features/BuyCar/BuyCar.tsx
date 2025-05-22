@@ -37,7 +37,7 @@ export default function BuyCar() {
     {
       icon: img1,
       title: "Effortless Buying Experience",
-      desc: "Unlock the future of hassle-free sales with our cutting edge technology.Discover a simpler way to buy cars with us, hassle free, no haggling, just great deals!",
+      desc: "Unlock the future of hassle-free sales with our cutting edge technology. Discover a simpler way to buy cars with us, hassle free, no haggling, just great deals!",
     },
     {
       icon: img2,
@@ -256,7 +256,7 @@ export default function BuyCar() {
         >
         <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap ml-4 sm:ml-0">
         Choose Your Car,
-         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">  WE SECURE THE DEAL</span>
+         <span className="block sm:inline text-primary text-lg sm:text-3xl  uppercase">  WE SECURE THE DEAL</span>
         </h2>
       </div>
       <div className="flex justify-end flex-shrink-0 ml-2  sm:mr-0">

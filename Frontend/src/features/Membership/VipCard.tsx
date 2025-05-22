@@ -89,7 +89,7 @@ const VipCard: React.FC<VipCardProps> = ({ className }) => {
     <div className=" sm:w-auto ml-14  mt-1.5 sm:ml-0 sm:mt-0  mr-4">
       <HoverArrowButton
   label="Sign Me Up"
-  onClick={() => (window.location.href = `${BASE_URL}/auth/register`)}
+  onClick={() => (window.location.href = `${BASE_URL}/become-member/membership`)}
     className="bg-white transition-all px-4 sm:px-6 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
   textClass="text-primary"
   hoverTextClass="text-primary"

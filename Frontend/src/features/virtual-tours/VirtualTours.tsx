@@ -112,13 +112,13 @@ const VirtualTours: React.FC = () => {
         >
         <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
         Desired Car Missing?
-         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase">REQUEST A TOUR!</span>
+         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-1 uppercase">REQUEST A TOUR!</span>
         </h2>
       </div>
       <div className="flex justify-end flex-shrink-0 ml-2 mr-3 sm:mr-0">
           <HoverArrowButton
             label="Acess Form"
-            onClick={() => navigate("/access-form")}
+            onClick={() => window.location.href = `${BASE_URL}/request-virtual-tour`}
             className="bg-white transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
             textClass="text-primary"
             hoverTextClass="text-primary"
@@ -191,7 +191,7 @@ const VirtualTours: React.FC = () => {
         >
         <h2 className="text-base sm:text-3xl text-black font-bold whitespace-nowrap">
         Immersive, Experts,
-         <span className="block sm:inline text-primary text-lg sm:text-3xl sm:ml-2 uppercase"> CONVENIENCE</span>
+         <span className="block sm:inline text-primary text-lg sm:text-3xl  uppercase"> CONVENIENCE</span>
         </h2>
       </div>
       <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
