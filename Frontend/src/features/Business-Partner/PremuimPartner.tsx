@@ -94,12 +94,12 @@ const PremiumPartner = () => {
                                 
                                 {/* Default Text */}
                                 <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-100 group-hover:opacity-0">
-                                Access Form
+                                Partner Up
                                 </span>
 
                                 {/* Text + Chevron on Hover */}
                                 <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-100 opacity-0 group-hover:opacity-100">
-                                  Access Form
+                                  Partner Up
                                   <ChevronRightIcon className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
                                 </span>
 

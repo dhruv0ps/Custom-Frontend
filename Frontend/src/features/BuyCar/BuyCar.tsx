@@ -25,7 +25,7 @@ export default function BuyCar() {
             heading="We’ll ensure you buy your car for less"
             primaryButtonLabel="Home"
             primaryButtonLink="/"
-            secondaryButtonLabel="Access Form"
+            secondaryButtonLabel="Buy Now"
             secondaryButtonLink={`${BASE_URL}/buy`}/>
             <div className="bg-[#b7eaff] py-12">
                 <div className=" max-w-[95%] sm:max-w-[80%]  mx-auto text-center px-4 sm:px-0">

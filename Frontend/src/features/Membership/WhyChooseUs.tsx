@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
           desc: "When we run Trade Promotion activities you will automatically earn entry into every draw, giving you multiple chances to win exciting prizes just by being a valued member of our community.",
         },
         {
-          title: "Drive Rewards. Share the Thrill",
+          title: "Drive Rewards. Share The Thrill",
           desc: "Help Jetson Wheelz take over the automotive world. Invite your crew, earn rewards, and boost your savings. The more members in our ecosystem, the better the benefits for everyone!",
         },
       ];

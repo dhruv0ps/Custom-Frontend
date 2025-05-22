@@ -104,8 +104,10 @@ const CompetitionTerms: React.FC = () => {
           <li>Watch for draw notifications via email.</li>
         </ul>
 
-       <h3 className="text-lg font-semibold text-gray-700 mb-2">Ambassador Programme Terms & Conditions</h3>
+       <h3 className="text-lg font-semibold text-gray-700 mb-2">Ambassador Programme </h3>
 
+
+       <h4 className="text-lg font-semibold ">Terms & Conditions</h4>
        <p className="font-bold">Eligibility</p>
         <ul className="list-disc list-inside sm:ml-4 space-y-1">
           <li>Open to residents of Australia aged 18 years or older.</li>
@@ -117,10 +119,10 @@ const CompetitionTerms: React.FC = () => {
         <ul className="list-disc list-inside sm:ml-4 space-y-1">
           <li>Participants receive rewards by referring new users to The Platform using their unique referral link or code. </li>
           <li>	A referred user must:
-<div className="pl-6 mt-2">- Be new to the platform (not previously registered),
-<br></br>- Sign up via the referral link or by entering the code during registration,
-<br></br>- Complete verification and any necessary payment,
-<br></br>- Remain active for the required time period as per the relevant reward tier.</div>
+<li>Be new to the platform (not previously registered),</li>
+ <li>Sign up via the referral link or by entering the code during registration,</li>
+  <li>Complete verification and any necessary payment,</li>
+   <li> Remain active for the required time period as per the relevant reward tier.</li>
 
 </li>
        
@@ -132,9 +134,9 @@ const CompetitionTerms: React.FC = () => {
           <li>Tier 2: Growth Champ - 25 Friends - $250 Cash Bonus (Guaranteed^), Entry into Growth Draw*, 6 Months Free</li>
           <li>Tier 3: VIP Influencer - 50 Friends - $500 Cash Bonus (Guaranteed^), Entry into VIP Prize Draw*, 9 Months Free</li>
           <li>Tier 4: Power Ambassador - 100+ Friends - $1000 Cash Bonus (Guaranteed^), $100 Monthly Commission~, 12 Months Free</li>
-          <li>Guaranteed cash bonuses are awarded only once the referral threshold is reached and all referred users have successfully registered, verified, completed payments, and remained active for six (6) consecutive calendar months.</li>
-          <li>Prize Draws are conducted periodically; eligible participants will be notified via the website or member portal. Winners are selected at random from qualified entries.</li>
-          <li>Monthly commission is paid only when the participant maintains 100 active, verified, and engaged referrals per calendar month, as shown in their Ambassador Programme dashboard.</li>
+          <li>^Guaranteed cash bonuses are awarded only once the referral threshold is reached and all referred users have successfully registered, verified, completed payments, and remained active for six (6) consecutive calendar months.</li>
+          <li>*Prize Draws are conducted periodically; eligible participants will be notified via the website or member portal. Winners are selected at random from qualified entries.</li>
+          <li>~Monthly commission is paid only when the participant maintains 100 active, verified, and engaged referrals per calendar month, as shown in their Ambassador Programme dashboard.</li>
         </ul>
 
         <p className="font-bold">Referral Tracking & Visibility</p>
