@@ -47,7 +47,7 @@ const CompetitionTerms: React.FC = () => {
           All eligible members will automatically receive 1 entry per draw based on the VIP membership.
         </p>
         <p className="font-bold">Prizes and Promotions</p>
-        <ul className="list-disc list-inside space-y-1">
+        <ul className="list-disc list-inside sm:ml-4 space-y-1">
           <li>Bucks Bonanza: Winners will receive cash prizes.</li>
           <li>Your Tank, Our Treat: Winners will receive cash prizes.</li>
           <li>Glow Goals: Winners will receive cash prizes.</li>
