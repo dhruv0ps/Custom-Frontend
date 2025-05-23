@@ -53,7 +53,7 @@ const [_isReady, setIsReady] = useState(false);
 useEffect(() => {
   const visitedInfo = localStorage.getItem("dashboardVisit");
   const now = Date.now();
-  const oneDay = 14400000;
+  const oneDay = 24 * 60 * 60 * 1000;
 
   // If visited within a day, skip loader
   if (visitedInfo) {

@@ -227,7 +227,7 @@ export default function Navbar() {
                     <a
   href={`${BASE_URL}/ambassador-dashboard`}
  
-  className="block px-2 py-1 rounded transition-colors duration-200 hover:text-primary text-gray-700"
+  className="block px-2 py-1 rounded transition-colors duration-200 hover:text-primary "
 >
   Ambassador Programme
 </a>
@@ -409,7 +409,7 @@ export default function Navbar() {
   href={`${BASE_URL}/ambassador-dashboard`}
   onClick={handleNavLinkClick}
  
-  className="block px-4 py-2 hover:text-primary text-gray-700"
+  className="block px-4 py-2 hover:text-primary "
 >
   Ambassador Programme
 </a>
