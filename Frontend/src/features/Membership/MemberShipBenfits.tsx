@@ -34,8 +34,8 @@ const MembershipBenefits: React.FC = () => {
         {
             number: "5",
             title: "Ambassador",
-            subtitle: "Jeston Wheelz Rewards",
-            description: "Help Jestson blast through the automotive world by inviting your crew and get rewarded every step of the way!",
+            subtitle: "Jetson Wheelz Rewards",
+            description: "Help Jetson blast through the automotive world by inviting your crew and get rewarded every step of the way!",
         },
     ];
 

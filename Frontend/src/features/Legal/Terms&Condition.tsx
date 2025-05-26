@@ -1,6 +1,8 @@
 
 import banner from "@/assets/Legal/iStock-131.jpg"
 import AllFooterSection from "@/util/AllFooterSection";
+import { useNavigate } from "react-router-dom";
+import HoverArrowButton from "@/util/HoverButton";
 const terms = [
     {
       title: "1. Acceptance of Terms",
@@ -407,6 +409,7 @@ const terms = [
   ];
 
 export default function TermsAndConditions() {
+  const navigate = useNavigate()
   return (
     <>
   
@@ -468,6 +471,15 @@ export default function TermsAndConditions() {
 </section>
 
     </div>
+      <div className="flex justify-center">
+         <HoverArrowButton
+            label="Home"
+            onClick={() => navigate("/")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+          </div>
     </div>
     <AllFooterSection content={[]} mode="compact"/>
     </>

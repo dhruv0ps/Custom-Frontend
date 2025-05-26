@@ -2,6 +2,7 @@ import React from "react";
 import banner from "@/assets/Legal/iStock-16.jpg";
 import AllFooterSection from "@/util/AllFooterSection";
 import { useNavigate } from "react-router-dom";
+import HoverArrowButton from "@/util/HoverButton";
 const ContactUs: React.FC = () => {
   const navigate =useNavigate()
   return (
@@ -106,6 +107,15 @@ const ContactUs: React.FC = () => {
             accelerate your savings and satisfaction.
           </p>
         </div>
+         <div className="flex justify-center">
+         <HoverArrowButton
+            label="Home"
+            onClick={() => navigate("/")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+          </div>
       </div>
     </div>
 <AllFooterSection content={[

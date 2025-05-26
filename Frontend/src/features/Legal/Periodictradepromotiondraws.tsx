@@ -1,8 +1,9 @@
 import faqBanner from '@/assets/Legal/iStock-155.jpg';
 import AllFooterSection from '@/util/AllFooterSection';
-
+import HoverArrowButton from '@/util/HoverButton';
+import { useNavigate } from 'react-router-dom';
 const Periodictradepromotiondraws = () => {
-
+const navigate = useNavigate()
   const faqs = [
     {
       question: "How do the Wheelz.au draw prizes operate?",
@@ -115,6 +116,16 @@ const Periodictradepromotiondraws = () => {
         ))}
       </div>
     </div>
+
+      <div className="flex justify-center">
+         <HoverArrowButton
+            label="Home"
+            onClick={() => navigate("/")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+          </div>
     </div>
     <AllFooterSection content={[]} mode='compact'/>
     </>

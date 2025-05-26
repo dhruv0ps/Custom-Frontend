@@ -155,7 +155,7 @@ const VirtualToursCard = () => {
 };
 
 
-  const { items, isLastPage, remainingSlots } = getCurrentPageItems();
+  const { items, isLastPage } = getCurrentPageItems();
 
   // Pagination controls component
   const PaginationControls = () => (
@@ -310,7 +310,7 @@ const VirtualToursCard = () => {
   })}
 
   {isLastPage &&
-    [...Array(remainingSlots)].map((_, index) => (
+    [...Array(3)].map((_, index) => (
       <div key={`coming-soon-${index}`} className="w-full max-w-[440px] flex flex-col items-center gap-4">
         <div
           className="w-full rounded-xl overflow-hidden"

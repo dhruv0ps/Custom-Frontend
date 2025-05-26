@@ -12,7 +12,7 @@ export default function WhyChooseGarage() {
         {/* Left: Text Content */}
         <div>
           <h2 className="text-xl md:text-2xl font-bold mb-6 text-center md:text-left text-primary">
-           Simplify Your Experience
+          We Simplify Your Experience
           </h2>
           <p className="text-[#444] text-sm leading-relaxed">
             From managing listings to tracking enquiries and booking services, everything is designed for ease, accuracy, and control. Experience a smarter way to stay on top of your automotive needs.

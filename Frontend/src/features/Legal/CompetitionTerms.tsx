@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import banner from "@/assets/Legal/iStock-121.jpg";
 import AllFooterSection from "@/util/AllFooterSection";
-
+import HoverArrowButton from "@/util/HoverButton";
+import { useNavigate } from "react-router-dom";
 const CompetitionTerms: React.FC = () => {
+  const navigate = useNavigate()
   const states = [
     { 
       value: "VIC", label: "Victoria", fullName: "VICTORIA",
@@ -231,7 +233,15 @@ const CompetitionTerms: React.FC = () => {
           </p>
         </div>
       </div>
-
+  <div className="flex justify-center">
+         <HoverArrowButton
+            label="Home"
+            onClick={() => navigate("/")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+          </div>
       <AllFooterSection content={[""]} />
     </div>
   );

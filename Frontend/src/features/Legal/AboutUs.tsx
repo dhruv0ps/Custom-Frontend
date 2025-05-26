@@ -1,8 +1,10 @@
 import React from "react";
 import banner from "@/assets/Legal/iStock-111.jpg";
 import AllFooterSection from "@/util/AllFooterSection";
-
+import HoverArrowButton from "@/util/HoverButton";
+import { useNavigate } from "react-router-dom";
 const AboutUs: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <>
       <div className="bg-white text-black w-full overflow-hidden">
@@ -111,6 +113,16 @@ const AboutUs: React.FC = () => {
               <p className="mt-2">Embrace a smarter, more efficient way to manage your car needs, and discover the power of collective savings with our trusted partners.</p>
               <p className="mt-4 text-primary sm:text-left text-center  font-bold">Welcome to the future of automotive excellence.</p>
             </div>
+
+              <div className="flex justify-center">
+         <HoverArrowButton
+            label="Home"
+            onClick={() => navigate("/")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+          </div>
           </div>
         </div>
       </div>

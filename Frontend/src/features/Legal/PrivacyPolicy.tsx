@@ -1,6 +1,7 @@
 import banner from "@/assets/Legal/iStock-171.jpg";
 import AllFooterSection from "@/util/AllFooterSection";
-
+import HoverArrowButton from "@/util/HoverButton";
+import { useNavigate } from "react-router-dom";
 const terms = [
   {
     title: "1. Information We Collect",
@@ -74,6 +75,7 @@ const terms = [
 ];
 
 export default function PrivacyPolicy() {
+  const navigate = useNavigate()
   return (
     <>
       <div className="bg-white text-black w-full overflow-hidden">
@@ -116,6 +118,15 @@ export default function PrivacyPolicy() {
             ))}
           </section>
         </div>
+          <div className="flex justify-center">
+         <HoverArrowButton
+            label="Home"
+            onClick={() => navigate("/")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+          </div>
       </div>
 
       <AllFooterSection content={[]} mode="compact" />

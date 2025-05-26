@@ -1,6 +1,7 @@
 import faqBanner from '@/assets/Legal/iStock-141.jpg';
 import AllFooterSection from '@/util/AllFooterSection';
 import { useNavigate } from 'react-router-dom';
+import HoverArrowButton from '@/util/HoverButton';
 const faqs = [
   {
     question: 'Where is Wheelz.au based?',
@@ -179,7 +180,18 @@ export default function FAQsPage() {
           ))}
         </div>
       </div>
+
+        <div className="flex justify-center">
+         <HoverArrowButton
+            label="Home"
+            onClick={() => navigate("/")}
+            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            textClass="text-white"
+            hoverTextClass="text-white"
+          />
+          </div>
     </div>
+
     <AllFooterSection content={[``]} mode='compact'/>
     </>
   );
