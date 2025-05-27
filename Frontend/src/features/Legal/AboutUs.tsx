@@ -109,22 +109,25 @@ const AboutUs: React.FC = () => {
             <div>
               <h3 className="font-semibold">Community Impact</h3>
               <p>We believe in giving back. Through our fundraisers, we contribute to supported charities on behalf of all our customers utilising our services for buying and selling cars, creating a ripple effect of positive change.</p>
-              <p className="mt-2 font-bold sm:text-left text-center ">Join us today and become part of Australia’s #1 automotive ecosystem.</p>
-              <p className="mt-2">Embrace a smarter, more efficient way to manage your car needs, and discover the power of collective savings with our trusted partners.</p>
+              <p className="mt-4 font-bold sm:text-left text-center ">Join us today and become part of Australia’s #1 automotive ecosystem.</p>
+              <p className="mt-4">Embrace a smarter, more efficient way to manage your car needs, and discover the power of collective savings with our trusted partners.</p>
               <p className="mt-4 text-primary sm:text-left text-center  font-bold">Welcome to the future of automotive excellence.</p>
             </div>
 
-              <div className="flex justify-center">
+    
+          </div>
+          
+        </div>
+
+                  <div className="flex justify-center">
          <HoverArrowButton
             label="Home"
             onClick={() => navigate("/")}
-            className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
+            className="bg-primary transition-all px-4 sm:px-8 py-3   font-semibold text-sm sm:text-base rounded-full shadow-md"
             textClass="text-white"
             hoverTextClass="text-white"
           />
           </div>
-          </div>
-        </div>
       </div>
 
       <AllFooterSection content={[]} mode="compact" />

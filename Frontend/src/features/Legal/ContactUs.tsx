@@ -107,7 +107,9 @@ const ContactUs: React.FC = () => {
             accelerate your savings and satisfaction.
           </p>
         </div>
-         <div className="flex justify-center">
+       
+      </div>
+        <div className="flex justify-center">
          <HoverArrowButton
             label="Home"
             onClick={() => navigate("/")}
@@ -116,7 +118,6 @@ const ContactUs: React.FC = () => {
             hoverTextClass="text-white"
           />
           </div>
-      </div>
     </div>
 <AllFooterSection content={[
 

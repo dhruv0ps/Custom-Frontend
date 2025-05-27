@@ -366,7 +366,7 @@ const mockBuyLeads = [
                                     className="grid w-full grid-cols-3 bg-white rounded-lg overflow-hidden text-black"
                                     style={{ boxShadow: "inset 0 1px 5px rgba(0, 0, 0, 0.3)" }}
                                 >
-                                    {["listing", "enquiry", "services"].map((val) => (
+                                    {["listings", "enquiries", "services"].map((val) => (
                                         <TabsTrigger
                                             key={val}
                                             value={val}
@@ -383,7 +383,7 @@ const mockBuyLeads = [
 
                                 <div className="hidden md:block absolute left-1/2 top-0 w-[250%] h-full -translate-x-1/2 bg-primary -z-10"></div>
 
-                                <TabsContent value="listing">
+                                <TabsContent value="listings">
                                     <div className="p-2">
                                         <div className="flex items-center justify-between">
                                             <div className="space-y-1 mb-4">
@@ -466,7 +466,7 @@ const mockBuyLeads = [
                                     </div>
                                 </TabsContent>
 
-                                <TabsContent value="enquiry">
+                                <TabsContent value="enquiries">
                                     <div className="p-2">
                                         <div className="flex items-center justify-between">
                                             <div className="space-y-1 mb-4">

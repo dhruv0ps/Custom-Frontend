@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
           desc: "Join now to access exclusive discounts on all cars through our network. Why pay more when you can leverage our buying power to save big on your next vehicle?",
         },
         {
-          title: "Take Advantage Of ‘Mates Rates Services’",
+          title: "Take Advantage Of 'Mates Rates' Services",
           desc: "As a member, you’ll enjoy special pricing on a diverse range of automotive services. This is your chance to save on all things automotive.",
         },
         {
