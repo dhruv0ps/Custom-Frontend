@@ -25,19 +25,23 @@
   
 
 
-/* Safari-only fix applied only to Turtle section */
-/* @supports (-webkit-touch-callout: none) {
-  .safari-bg-fix {
-    background-color: #ffffff !important;
-  }
+@supports (-webkit-touch-callout: none) {
+ .safari-video-fix {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+}
+  /* Ensure the black background is preserved */
+  /* .bg-black {
+    background-color: #000000 !important;
+  } */
 
-  .safari-bg-fix section,
-  .safari-bg-fix main,
-  .safari-bg-fix article,
-  .safari-bg-fix .container {
-    background-color: #ffffff !important;
-    position: relative;
-    z-index: 2;
-    will-change: transform;
-  }
-} */
+  /* Reset any grey shadow or border on the card */
+  /* .shadow-lg {
+    box-shadow: 0 10px 15px -3
+
+px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    border: none !important;
+  } */
+}

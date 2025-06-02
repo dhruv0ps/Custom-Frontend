@@ -89,7 +89,7 @@ const Overhauled: React.FC = () => {
       <style>{animationStyles}</style>
       <VideoBanner
   videoSrc={vide}
-  heading="Is your car next in line to be OVERHAULED"
+  heading="Could your wheelz be the next to wow?"
   primaryButtonLabel="Home"
   primaryButtonLink="/"
   secondaryButtonLabel="Access Form"

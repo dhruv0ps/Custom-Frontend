@@ -109,7 +109,7 @@ const Garage: React.FC = () => {
             _id: "2",
             exteriorImages: [
                 {
-                    url: "https://s3.ap-southeast-2.amazonaws.com/wheelz.au/sell/exteriorPhotos/16755b7f-ffbb-4de4-81ff-b068cc10c1bc",
+                    url: "https://s3.ap-southeast-2.amazonaws.com/wheelz.au/media/car/BMW/BMW+X4.png",
                 },
             ],
             carDetails: {
@@ -263,7 +263,7 @@ const mockBuyLeads = [
                                 Home
                             </button>
                             <button
-                                onClick={() => (window.location.href = `${BASE_URL}/my-garge`)}
+                                onClick={() => (window.location.href = `${BASE_URL}/my-garage`)}
                                 className="group relative bg-white  text-primary font-medium px-10 py-2 rounded-full transition-all duration-300 ease-in-out overflow-hidden text-center shadow-sm hover:shadow-md"
                             >
                                 {/* Default Text */}
@@ -352,7 +352,7 @@ const mockBuyLeads = [
                     <h3 className="text-white flex justify-center pb-6  text-lg sm:text-3xl font-semibold">
                         Sample Data Preview
                     </h3>
-                    <Tabs defaultValue="listing" className="w-full ">
+                    <Tabs defaultValue="listings" className="w-full ">
                         <div className="flex flex-col ">
                             <div className="relative md:p-2">
                                 <div
@@ -645,7 +645,7 @@ const mockBuyLeads = [
             <WhyChooseGarage />
             <AllFooterSection
                 content={[
-                    ` <strong>Important:</strong>The features and functionalities described above are provided for user convenience and are subject to availability and service terms. While we strive to ensure accurate and up-to-date information, users are encouraged to verify details independently. The platform is not liable for any inaccuracies or user activities documented and shared within the information provided.`,
+                    ` <strong>Important:</strong> The features and functionalities described above are provided for user convenience and are subject to availability and service terms. While we strive to ensure accurate and up-to-date information, users are encouraged to verify details independently. The platform is not liable for any inaccuracies or user activities documented and shared within the information provided.`,
                 ]}
             />
         </>
