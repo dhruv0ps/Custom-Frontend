@@ -12,25 +12,29 @@ const TurtleSection: React.FC = () => {
         <h3 className="hidden md:block text-primary text-xl md:text-2xl font-bold text-end mb-2">
           Yep, that's me!
         </h3>
-        <div className="w-full h-[200px] sm:h-[160px] md:h-[180px] lg:h-[200px]">
-          <video
-            src={turtleVideo}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover rounded-lg filter brightness-100 safari-video-fix"
-            style={{
-              backgroundColor: 'white',
-              WebkitMaskImage: 'none',
-              maskImage: 'none',
-              WebkitBackfaceVisibility: 'hidden',
-              backfaceVisibility: 'hidden',
-              WebkitTransform: 'translateZ(0)',
-              transform: 'translateZ(0)'
-            }}
-          />
-        </div>
+    <div className="w-full h-[200px] sm:h-[160px] md:h-[180px] lg:h-[200px] bg-white rounded-lg overflow-hidden">
+  <video
+    src={turtleVideo}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover safari-video-fix"
+    style={{
+      backgroundColor: 'white',
+      border: 'none',
+      outline: 'none',
+      boxShadow: 'none',
+      WebkitBoxShadow: 'none',
+      WebkitMaskImage: 'none',
+      maskImage: 'none',
+      WebkitBackfaceVisibility: 'hidden',
+      backfaceVisibility: 'hidden',
+      WebkitTransform: 'translateZ(0)',
+      transform: 'translateZ(0)'
+    }}
+  />
+</div>
       </div>
       <h3 className="block md:hidden text-primary text-2xl font-bold text-center mt-3">
         Yep, that's me!
