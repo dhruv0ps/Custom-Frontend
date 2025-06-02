@@ -27,10 +27,11 @@
 
 @supports (-webkit-touch-callout: none) {
  .safari-video-fix {
+  background: #fff !important;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  -webkit-appearance: none;
+  -webkit-box-shadow: none !important;
 }
   /* Ensure the black background is preserved */
   /* .bg-black {
