@@ -1958,6 +1958,10 @@ input[type="range"]::-ms-fill-lower{
   height: 160px;
 }
 
+.h-\[180px\]{
+  height: 180px;
+}
+
 .max-h-60{
   max-height: 15rem;
 }
