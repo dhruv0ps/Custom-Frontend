@@ -1685,6 +1685,10 @@ input[type="range"]::-ms-fill-lower{
   margin-top: auto;
 }
 
+.-mt-20{
+  margin-top: -5rem;
+}
+
 .block{
   display: block;
 }
@@ -1948,6 +1952,10 @@ input[type="range"]::-ms-fill-lower{
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[160px\]{
+  height: 160px;
 }
 
 .max-h-60{
@@ -5465,11 +5473,6 @@ input[type="range"]::-ms-fill-lower{
   --tw-ring-color: rgb(250 202 21 / var(--tw-ring-opacity));
 }
 
-.brightness-100{
-  --tw-brightness: brightness(1);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .brightness-125{
   --tw-brightness: brightness(1.25);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -5604,28 +5607,27 @@ input[type="range"]::-ms-fill-lower{
 
 @supports (-webkit-touch-callout: none) {
   .safari-video-fix {
-    /* Fix grey border or background issues on video element */
+    background: #fff !important;
     border: none !important;
-    background-color: transparent !important;
-    -webkit-appearance: none !important;
-    isolation: isolate;
-    /* Prevent background bleed */
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
   }
 
   /* Ensure the black background is preserved */
 
-  .bg-black {
+  /* .bg-black {
     background-color: #000000 !important;
-  }
+  } */
 
   /* Reset any grey shadow or border on the card */
 
-  .shadow-lg {
+  /* .shadow-lg {
     box-shadow: 0 10px 15px -3
 
 px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
     border: none !important;
-  }
+  } */
 }
 
 .file\:border-0::file-selector-button{
