@@ -43,8 +43,8 @@ const TurtleSection: React.FC = () => {
 
         
 <div className="block md:hidden relative z-20 -mt-20 text-center ">
-  <div className="bg-white rounded-3xl p-4 mx-auto  ">
-     <div className="w-full h-[180px]  overflow-hidden">
+  <div className="bg-white rounded-3xl  mx-auto  ">
+     <div className="w-full h-[210px]  overflow-hidden">
       <video
         src={turtleVideo}
         autoPlay

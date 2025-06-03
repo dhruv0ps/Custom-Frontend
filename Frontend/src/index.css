@@ -1,48 +1,44 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+/* Chevron animation */
 .chevron-button .chevron-icon {
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-  
-  .chevron-button:hover .chevron-icon {
-    opacity: 1;
-    transform: translateX(8px);
-  }
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.chevron-button:hover .chevron-icon {
+  opacity: 1;
+  transform: translateX(8px);
+}
 
-  @media not all and (min-resolution:.001dpcm) { 
-    @supports (-webkit-appearance:none) {
-      video {
-        background-color: #000 !important;
-      }
+/* Specific fix for Safari grey border in video */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    video {
+      background-color: #000 !important;
     }
   }
-  
-
+}
 
 @supports (-webkit-touch-callout: none) {
- .safari-video-fix {
-  background: #fff !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-}
-  /* Ensure the black background is preserved */
-  /* .bg-black {
-    background-color: #000000 !important;
-  } */
-
-  /* Reset any grey shadow or border on the card */
-  /* .shadow-lg {
-    box-shadow: 0 10px 15px -3
-
-px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  .safari-video-fix {
+    background-color: #ffffff !important;
     border: none !important;
-  } */
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-transform: translateZ(0) !important;
+    transform: translateZ(0) !important;
+  }
+}
+
+/* Optional: Force page background */
+html, body {
+  background-color: #000000;
 }
