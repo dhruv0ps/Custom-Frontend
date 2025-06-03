@@ -2260,6 +2260,10 @@ input[type="range"]::-ms-fill-lower{
   width: 420px;
 }
 
+.w-\[410px\]{
+  width: 410px;
+}
+
 .min-w-0{
   min-width: 0px;
 }
