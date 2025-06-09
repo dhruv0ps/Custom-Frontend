@@ -14,7 +14,7 @@ const AutomotiveSavings = () => {
       image: gif1,
     },
     {
-      title: "Exciting Trade Promotion",
+      title: "Trade Promotion Draws",
       description: "Win cash prizes with every draw, including our Bucks Bonanza, Fuel Rewards, Glow Goals, and more!",
       image: gif2,
     },
