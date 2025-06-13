@@ -197,7 +197,7 @@ const VirtualTours: React.FC = () => {
       <div className="flex justify-end flex-shrink-0 ml-2 mr-4 sm:mr-0">
           <HoverArrowButton
             label="View All"
-            onClick={() => navigate("/access-form")}
+          onClick={() => window.location.href = `${BASE_URL}/request-virtual-tour`}
             className="bg-primary transition-all px-4 sm:px-8 py-3  font-semibold text-sm sm:text-base rounded-full shadow-md"
             textClass="text-white"
             hoverTextClass="text-white"
@@ -225,7 +225,7 @@ const VirtualTours: React.FC = () => {
             textClass="text-black font-semibold"
             hoverTextClass="text-black font-semibold" />
 
-          <HoverArrowButton label="View All" onClick={() => navigate("/")} className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
+          <HoverArrowButton label="View All"  onClick={() => window.location.href = `${BASE_URL}/request-virtual-tour`} className="bg-white hover:bg-gray-100 rounded-full shadow-md px-8 py-3"
             textClass="text-[#1cbeff] font-semibold"
             hoverTextClass="text-[#1cbeff] font-semibold" />
         </div>
