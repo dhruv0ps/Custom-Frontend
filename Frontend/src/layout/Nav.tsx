@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { ChevronDown, Home, Menu } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import img1 from "@/assets/Wheelz-Australia-Black-and-Blue-Color-scaled.webp"
+import img2 from "@/assets/Homepage/Img1.jpg"
 import { BASE_URL } from "@/config";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -53,12 +54,16 @@ export default function Navbar() {
                 className={`w-auto transition-all duration-300 ease-in-out ${scrolled ? "h-8" : "h-10"}`}
               />
             </Link>
-
+  <div className="flex  justify-end flex-1">
+    <button onClick={() => window.location.href = `${BASE_URL}/auth/login`}>
+      <img src={img2} alt="Login" className="w-10 h-10" />
+    </button>
+  </div>
             <div className="hidden md:block">
 
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-2 px-6 py-2 rounded hover:bg-gray-100 text-sm font-medium text-gray-700">
-                  <Home className="text-[#00b2ff]" />
+                  <Home className="text-[#00b2ff] " />
                   All Services
                   <ChevronDown />
                 </DropdownMenuTrigger>
@@ -245,7 +250,7 @@ export default function Navbar() {
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
-
+      
             <button
               className="text-gray-700 p-2 md:hidden mobile-menu-button"
               onClick={toggleMenu}
