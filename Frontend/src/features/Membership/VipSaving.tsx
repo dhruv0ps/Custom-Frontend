@@ -15,7 +15,8 @@ const VipSavingsPage: React.FC = () => {
   
 
   const highlightText = (text: string) => {
-    const pattern = /(\$\d{1,3}(?:,\d{3})*(?:\.\d+)?|\+\$?\d{1,3}(?:,\d{3})*(?:\.\d+)?|saving.*?\b|free\b|thousands\b|Sold car in 24Hrs?)/gi;  const highlightClass = "text-[#00ccff] font-semibold";  
+    const pattern = /(\$\d{1,3}(?:,\d{3})*(?:\.\d+)?|\+\$?\d{1,3}(?:,\d{3})*(?:\.\d+)?|saving.*?\b|free\b|thousands\b|Sold car in 24Hrs\b|instant[ \u00A0]offer\b|under ?\d+ ?hr(?:s)?\b|under an hour\b)/gi;
+ const highlightClass = "text-[#00ccff] font-semibold";  
     return text.split(pattern).map((part, index) =>
       pattern.test(part) ? (
         <span key={index} className={highlightClass}>
@@ -28,10 +29,10 @@ const VipSavingsPage: React.FC = () => {
   };
 
   const cards = [
-    { img: img1, region: "NT", benefits: ["Saved +$150 on a mechanical service", "Sold old car without spending a dollar", "Won $100 in our ‘bucks bonanza’ draw", "Bought new tyres saving him +$350", "Saved +$300 switching insurance provider"], name: "Meet Cyril, He Saved Over", saved: "$800 WITH US", bg: "#ceedff" },
-    { img: img2, region: "ACT", benefits: ["Bought a new car and saved +$1,800", "Sold old car without spending a dollar", "Won $150 in ‘your tank, our treat’ draw", "Saved +$50 on a dent repair", "Tinted car windows saving him +$100"], name: "Meet Eric, He Saved Over", saved: "$2,000 WITH US", bg: "#b1e3ff" },
-    { img: img3, region: "SA", benefits: ["Bought a new car and saved +$2,000", "Sold old car without spending a dollar", "Won $50 in ‘your tank, our treat’ draw", "Saved +$250 on ‘mates rates’ services", "Saved +$411 switching insurance provider"], name: "Meet Barry, He Saved Over", saved: "$2,500 WITH US", bg: "#86d1fc" },
-    { img: img4, region: "TAS", benefits: ["Secured new car at a great price", "Sold her old car in under an hour for free", "Won $250 in our ‘glow goals’ draw", "Saved $1,250 through mates rates services", "Saved +$250 switching insurance provider"], name: "Meet Sally, She Saved Over", saved: "$3,500 WITH US", bg: "#c6e8ff" },
+    { img: img1, region: "NT", benefits: ["Saved +$150 on a mechanical service", "Sold his used car for free", "Won $100 in our ‘bucks bonanza’ draw", "Bought new tyres saving him +$350", "Saved +$300 switching insurance provider"], name: "Meet Cyril, He Saved Over", saved: "$800 WITH US", bg: "#ceedff" },
+    { img: img2, region: "ACT", benefits: ["Bought a new car and saved +$1,800", "Sold his used car in under 1hr", "Won $150 in ‘your tank, our treat’ draw", "Saved +$50 on a dent repair", "Tinted car windows saving him +$100"], name: "Meet Eric, He Saved Over", saved: "$2,000 WITH US", bg: "#b1e3ff" },
+    { img: img3, region: "SA", benefits: ["Bought a new car and saved +$2,000", "Sold his car for more Vs. instant offer", "Won $50 in ‘your tank, our treat’ draw", "Saved +$250 on ‘mates rates’ services", "Saved +$411 switching insurance provider"], name: "Meet Barry, He Saved Over", saved: "$2,500 WITH US", bg: "#86d1fc" },
+    { img: img4, region: "TAS", benefits: ["Secured new car at a great price +1888", "Sold her old car in under an hour for free", "Won $250 in our ‘glow goals’ draw", "Saved $1,250 through mates rates services", "Saved +$250 switching insurance provider"], name: "Meet Sally, She Saved Over", saved: "$3,500 WITH US", bg: "#c6e8ff" },
     { img: img5, region: "WA", benefits: ["Saved over $3,500 on his new car purchase", "Saved over $1,500 on ‘mates rates’ services", "Won $100 in our ‘bucks bonanza’ draw", "Saved $400 switching insurance provider", "Saved thousands via his new finance deal"], name: "Meet Paul, He Saved Over", saved: "$5,000 WITH US", bg: "#b7eaff" },
     { img: img6, region: "QLD", benefits: ["Saved +$1,750 on ‘mates rates’ services", "Sold car in 24Hrs, cash received same day", "Won $5,000 in our ‘drive, relax, spend’ draw", "Bought a new car saving +$4,500", "Saved +$3,985 refinancing her car loan"], name: "Meet Milly, She Saved Over", saved: "$9,000 WITH US", bg: "#5ccbf5" },
     { img: img7, region: "VIC", benefits: ["Saved over $3,500 on her new car purchase", "Won $500 in our ‘glow goals’ draw", "Saved over $2,500 on mates rates services", "Saved $500 switching insurance provider", "Saved thousands via her new finance offer"], name: "Meet Tiffany, She Saved Over", saved: "$11,000 WITH US", bg: "#1cbeff" },
