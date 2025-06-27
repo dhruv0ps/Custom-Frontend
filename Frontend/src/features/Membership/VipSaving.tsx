@@ -16,7 +16,7 @@ const VipSavingsPage: React.FC = () => {
 
  const highlightText = (text: string) => {
   const pattern =
-    /(\$\d{1,3}(?:,\d{3})*(?:\.\d+)?|\+\$?\d{1,3}(?:,\d{3})*(?:\.\d+)?|saving.*?\b|free\b|thousands\b|Sold car in 24Hrs\b|instant[ \u00A0]offer\b|under[ \u00A0]?\d+[ \u00A0]?hr(?:s)?\b|under an hour\b)/gi;
+    /(\$\d{1,3}(?:,\d{3})*(?:\.\d+)?|\+\$?\d{1,3}(?:,\d{3})*(?:\.\d+)?|saving.*?\b|free\b|thousands\b|Sold car in 24Hrs\b|instant[ \u00A0]offer\b|under[ \u00A0]?\d+[ \u00A0]?hr(?:s)?\b|under an hour for\b)/gi;
 
 
   const highlightClass = "text-[#00ccff] font-semibold";
