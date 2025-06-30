@@ -80,7 +80,7 @@ const Overhauled: React.FC = () => {
           {
             icon: icon4,
             title: "Jaw-Dropping Makeover",
-            desc: "We are on the lookout for the next lucky overhauled Member whose car will undergo a jaw-dropping transformation. It could be you!",
+            desc: "We are on the lookout for the next lucky overhauled member whose car will undergo a jaw-dropping transformation. It could be you!",
           },
       ];
      
