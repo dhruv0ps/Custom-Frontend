@@ -55,9 +55,9 @@ const PremiumPartner = () => {
         },
         {
             number: 7,
-            title: "Peter MacCallum Cancer Foundation",
+            title: "Peter MacCallum Cancer Centre",
             description:
-              "The Peter MacCallum Cancer Foundation funds life-saving cancer research, supporting one of the world's leading cancer centres to improve treatment, care and outcomes for patients.",
+              "The Peter MacCallum Cancer Centre funds life-saving cancer research, supporting one of the world's leading cancer centres to improve treatment, care and outcomes for patients.",
             img: img9,
           },
           {
