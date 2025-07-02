@@ -247,6 +247,24 @@ export default function Navbar() {
                       My Garage
                     </NavLink>
                   </DropdownMenuItem>
+                   <DropdownMenuItem asChild>
+                     <a
+  href={`${BASE_URL}/savings-tracker`}
+ 
+  className="block px-2 py-1 rounded transition-colors duration-200 hover:text-primary "
+>
+                      Registered Vehicle Tracker
+                    </a>
+                  </DropdownMenuItem>
+                   <DropdownMenuItem asChild>
+                    <a
+  href={`${BASE_URL}/my-reports`}
+ 
+  className="block px-2 py-1 rounded transition-colors duration-200 hover:text-primary "
+>
+                   Total Activity Report 
+                    </a>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -261,10 +279,9 @@ export default function Navbar() {
           </div>
         </div>
       </header>
-
-      {isMenuOpen && (
-        <div className="absolute top-full left-0 right-0 ml-10 mr-10 bg-white shadow-lg z-50 md:hidden mobile-menu border-t-4 border-[#1cbeff]">
-          <div className="bg-white py-2">
+{isMenuOpen && (
+  <div className="absolute top-full left-0 right-0 ml-10 mr-10 bg-white shadow-lg z-50 md:hidden mobile-menu border-t-4 border-[#1cbeff]">
+    <div className="bg-white py-2 max-h-[70vh] overflow-y-auto">
             <NavLink
               to="/"
               onClick={handleNavLinkClick}
@@ -427,7 +444,22 @@ export default function Navbar() {
             >
               My Garage
             </NavLink>
-         
+          <a
+  href={`${BASE_URL}/savings-tracker`}
+  onClick={handleNavLinkClick}
+ 
+  className="block px-4 py-2 hover:text-primary "
+>
+ Registered Vehicle Tracker
+</a>
+ <a
+  href={`${BASE_URL}/my-reports`}
+  onClick={handleNavLinkClick}
+ 
+  className="block px-4 py-2 hover:text-primary "
+>
+Total Activity Report 
+</a>
           </div>
         </div>
       )}
